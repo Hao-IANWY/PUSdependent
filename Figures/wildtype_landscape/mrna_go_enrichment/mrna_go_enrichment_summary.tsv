@@ -1,0 +1,5 @@
+Group	Input_genes	Mapped_Entrez_genes	Significant_GO_terms	Plotted_GO_terms
+Root_unique	154	153	9	8
+Leaf_unique	145	136	4	4
+Flower_unique	60	57	2	2
+Common	104	96	8	7

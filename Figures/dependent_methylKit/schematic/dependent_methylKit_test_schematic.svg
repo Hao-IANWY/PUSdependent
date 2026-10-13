@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='648.00pt' height='792.00pt' viewBox='0 0 648.00 792.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHw3OTIuMDA='>
+    <rect x='0.00' y='0.00' width='648.00' height='792.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw3OTIuMDA=)'>
+<rect x='0.00' y='0.00' width='648.00' height='792.00' style='stroke-width: 0.00; stroke: none;' />
+<text x='324.00' y='23.99' text-anchor='middle' style='font-size: 12.80px; font-weight: bold; font-family: "Arial";'>How call_dependent_methylKit.R tests one candidate site</text>
+<text x='12.96' y='46.57' style='font-size: 10.81px; font-weight: bold; font-family: "Arial";'>1 | Input — one candidate site, six libraries</text>
+<text x='178.20' y='71.79' text-anchor='middle' style='font-size: 9.67px; font-weight: bold;fill: #3C5488; font-family: "Arial";'>WT  (x = 1)</text>
+<text x='469.80' y='71.79' text-anchor='middle' style='font-size: 9.67px; font-weight: bold;fill: #E64B35; font-family: "Arial";'>mutant  (x = 0)</text>
+<rect x='38.88' y='85.41' width='84.24' height='42.71' style='stroke-width: 1.49; stroke: #3C5488; stroke-linecap: butt; stroke-linejoin: miter; fill: #3C5488; fill-opacity: 0.10;' />
+<text x='81.00' y='104.96' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>rep1</text>
+<text x='81.00' y='114.69' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>(depth, ratio)</text>
+<rect x='136.08' y='85.41' width='84.24' height='42.71' style='stroke-width: 1.49; stroke: #3C5488; stroke-linecap: butt; stroke-linejoin: miter; fill: #3C5488; fill-opacity: 0.10;' />
+<text x='178.20' y='104.96' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>rep2</text>
+<text x='178.20' y='114.69' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>(depth, ratio)</text>
+<rect x='233.28' y='85.41' width='84.24' height='42.71' style='stroke-width: 1.49; stroke: #3C5488; stroke-linecap: butt; stroke-linejoin: miter; fill: #3C5488; fill-opacity: 0.10;' />
+<text x='275.40' y='104.96' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>rep3</text>
+<text x='275.40' y='114.69' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>(depth, ratio)</text>
+<rect x='330.48' y='85.41' width='84.24' height='42.71' style='stroke-width: 1.49; stroke: #E64B35; stroke-linecap: butt; stroke-linejoin: miter; fill: #E64B35; fill-opacity: 0.10;' />
+<text x='372.60' y='104.96' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>rep1</text>
+<text x='372.60' y='114.69' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>(depth, ratio)</text>
+<rect x='427.68' y='85.41' width='84.24' height='42.71' style='stroke-width: 1.49; stroke: #E64B35; stroke-linecap: butt; stroke-linejoin: miter; fill: #E64B35; fill-opacity: 0.10;' />
+<text x='469.80' y='104.96' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>rep2</text>
+<text x='469.80' y='114.69' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>(depth, ratio)</text>
+<rect x='524.88' y='85.41' width='84.24' height='42.71' style='stroke-width: 1.49; stroke: #E64B35; stroke-linecap: butt; stroke-linejoin: miter; fill: #E64B35; fill-opacity: 0.10;' />
+<text x='567.00' y='104.96' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>rep3</text>
+<text x='567.00' y='114.69' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>(depth, ratio)</text>
+<line x1='324.00' y1='128.12' x2='324.00' y2='145.98' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='320.76,140.36 324.00,145.98 327.24,140.36 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<rect x='129.60' y='147.53' width='388.80' height='50.47' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
+<text x='324.00' y='170.96' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>each sample → counts:  modified  k = round(depth × ratio),  unmodified  depth − k</text>
+<text x='324.00' y='180.69' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>depth matters: 10/20 carries more weight than 1/2</text>
+<line x1='324.00' y1='198.00' x2='324.00' y2='211.98' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='320.76,206.36 324.00,211.98 327.24,206.36 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<rect x='51.84' y='213.53' width='544.32' height='54.35' style='stroke-width: 1.49; stroke: #595959; stroke-dasharray: 7.97,7.97; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
+<text x='324.00' y='234.26' text-anchor='middle' style='font-size: 8.25px; font-family: "Arial";'>depth = 0 replicate  →  treated as MISSING (not "modification lost")</text>
+<text x='324.00' y='243.66' text-anchor='middle' style='font-size: 8.25px; font-family: "Arial";'>excluded from Mut_Ratio mean and from the test:  3v3 → 3v2</text>
+<text x='324.00' y='253.07' text-anchor='middle' style='font-size: 8.25px; font-family: "Arial";'>if a whole group is wiped out  →  p = NA</text>
+<line x1='324.00' y1='267.88' x2='324.00' y2='281.86' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='320.76,276.25 324.00,281.86 327.24,276.25 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<text x='12.96' y='298.93' style='font-size: 10.81px; font-weight: bold; font-family: "Arial";'>2 | Weighted binomial logistic regression (per site)</text>
+<rect x='77.76' y='302.82' width='492.48' height='50.47' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
+<text x='324.00' y='326.12' text-anchor='middle' style='font-size: 9.10px; font-family: "Arial";'>logit(π) = β0 + β1 · x        x = 1 (WT) / 0 (mutant),   weight = depth</text>
+<text x='324.00' y='336.50' text-anchor='middle' style='font-size: 9.10px; font-family: "Arial";'>β1 &gt; 0  means  WT &gt; mutant   →   the dependent direction</text>
+<line x1='324.00' y1='353.29' x2='324.00' y2='367.27' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='320.76,361.66 324.00,367.27 327.24,361.66 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<text x='12.96' y='384.34' style='font-size: 10.81px; font-weight: bold; font-family: "Arial";'>3 | Overdispersion-corrected test</text>
+<rect x='194.40' y='388.24' width='259.20' height='27.18' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
+<text x='324.00' y='405.08' text-anchor='middle' style='font-size: 9.10px; font-family: "Arial";'>overdispersion factor  φ  (MN)</text>
+<line x1='285.12' y1='415.41' x2='181.44' y2='444.14' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='185.98,439.52 181.44,444.14 187.71,445.76 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<line x1='362.88' y1='415.41' x2='466.56' y2='444.14' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='460.29,445.76 466.56,444.14 462.02,439.52 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<rect x='38.88' y='446.47' width='272.16' height='54.35' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
+<text x='174.96' y='467.20' text-anchor='middle' style='font-size: 8.25px; font-family: "Arial";'>φ &gt; 1   →   F test</text>
+<text x='174.96' y='476.60' text-anchor='middle' style='font-size: 8.25px; font-family: "Arial";'>deviance/φ ~ F(1, n−2)</text>
+<text x='174.96' y='486.01' text-anchor='middle' style='font-size: 8.25px; font-family: "Arial";'>penalizes noisy replicates</text>
+<rect x='336.96' y='446.47' width='272.16' height='54.35' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
+<text x='473.04' y='467.20' text-anchor='middle' style='font-size: 8.25px; font-family: "Arial";'>φ ≤ 1   →   χ² test</text>
+<text x='473.04' y='476.60' text-anchor='middle' style='font-size: 8.25px; font-family: "Arial";'>ordinary likelihood ratio</text>
+<text x='473.04' y='486.01' text-anchor='middle' style='font-size: 8.25px; font-family: "Arial";'>replicates consistent</text>
+<line x1='174.96' y1='500.82' x2='298.08' y2='520.24' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='292.03,522.56 298.08,520.24 293.04,516.16 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<line x1='473.04' y1='500.82' x2='349.92' y2='520.24' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='354.96,516.16 349.92,520.24 355.97,522.56 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<rect x='194.40' y='521.79' width='259.20' height='29.51' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
+<text x='324.00' y='539.80' text-anchor='middle' style='font-size: 9.10px; font-family: "Arial";'>two-sided p-value</text>
+<line x1='324.00' y1='551.29' x2='324.00' y2='580.80' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='320.76,575.19 324.00,580.80 327.24,575.19 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<text x='12.96' y='575.35' style='font-size: 10.81px; font-weight: bold; font-family: "Arial";'>4 | One-sided conversion</text>
+<rect x='77.76' y='582.35' width='492.48' height='42.71' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
+<text x='324.00' y='601.83' text-anchor='middle' style='font-size: 8.82px; font-family: "Arial";'>meth.diff &gt; 0 (WT higher)   →   p_one = p_two / 2</text>
+<text x='324.00' y='611.89' text-anchor='middle' style='font-size: 8.82px; font-family: "Arial";'>wrong direction   →   p_one = 1   (never passes)</text>
+<line x1='324.00' y1='625.06' x2='324.00' y2='654.56' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='320.76,648.95 324.00,654.56 327.24,648.95 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<text x='12.96' y='650.67' style='font-size: 10.81px; font-weight: bold; font-family: "Arial";'>5 | Decision gates — all four must hold</text>
+<rect x='77.76' y='656.12' width='492.48' height='62.12' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
+<text x='97.20' y='671.60' style='font-size: 8.54px; font-family: "Arial";'>•  mock mean depth ≥ 10  —  site well measured in mutant mock</text>
+<text x='97.20' y='685.57' style='font-size: 8.54px; font-family: "Arial";'>•  p_one &lt; 0.05  —  significant loss in mutant</text>
+<text x='97.20' y='699.55' style='font-size: 8.54px; font-family: "Arial";'>•  Δ = WT_Ratio − Mut_Ratio ≥ 0.05  —  effect-size floor</text>
+<text x='97.20' y='713.53' style='font-size: 8.54px; font-family: "Arial";'>•  both mutant lines pass all above  —  line 1 AND line 2</text>
+<line x1='324.00' y1='718.24' x2='324.00' y2='732.21' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<polyline points='320.76,726.60 324.00,732.21 327.24,726.60 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
+<rect x='194.40' y='733.76' width='259.20' height='38.82' style='stroke-width: 1.49; stroke: #E64B35; stroke-linecap: butt; stroke-linejoin: miter; fill: #E64B35; fill-opacity: 0.15;' />
+<text x='324.00' y='757.25' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";'>Dependent site</text>
+</g>
+</g>
+</svg>

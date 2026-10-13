@@ -1,0 +1,5 @@
+comparison	n_sites	mean_difference	p_value	label
+WT_Flower vs WT_Root	13	0.132687205128205	0.000943938722939312	***
+WT_Flower vs WT_Leaf	13	0.0822772820512821	0.000833377739873522	***
+mutant_Flower vs mutant_Root	13	0.0675061666666667	0.0206829014800422	*
+mutant_Flower vs mutant_Leaf	13	-0.0374047179487178	0.000741498782898017	***

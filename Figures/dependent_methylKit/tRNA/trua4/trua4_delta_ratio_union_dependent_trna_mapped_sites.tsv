@@ -1,0 +1,14 @@
+ID	chr	Rep_ID	display_Rep_ID	compartment	matrix_col_id	value	n_sites	native_positions	tissues	peak_tissues	canonical_pos
+tRNA-Mt-Asn-GTT-1	tRNA-Mt-Asn-GTT-1	Mt-Asn-GTT	Mt-Asn-GTT	Mt	Acstem_3p_2	0.291034	1	39	leaf,Flower	Flower	40
+tRNA-Nu-Cys-GCA-5	tRNA-Nu-Cys-GCA-5	Nu-Cys-GCA	Cy-Cys-GCA	Cy	Acstem_5p_2	0.0511683	1	27	leaf	leaf	28
+tRNA-Pt-Asn-GTT-1	tRNA-Pt-Asn-GTT-1	Pt-Asn-GTT	Pt-Asn-GTT	Pt	Acstem_3p_2	0.427324	1	39	leaf,Flower	leaf	40
+tRNA-Pt-Cys-GCA-1	tRNA-Pt-Cys-GCA-1	Pt-Cys-GCA	Pt-Cys-GCA	Pt	Acstem_3p_1	0.106732	1	38	leaf,Flower	leaf	39
+tRNA-Pt-His-GTG-1	tRNA-Pt-His-GTG-1	Pt-His-GTG	Pt-His-GTG	Pt	Acstem_3p_1	0.49321	1	41	Root,leaf,Flower	Root	39
+tRNA-Pt-Leu-CAA-1	tRNA-Pt-Leu-CAA-1	Pt-Leu-CAA	Pt-Leu-CAA	Pt	Acstem_3p_1	0.279858	1	39	leaf,Flower	leaf	39
+tRNA-Pt-Leu-TAA-1	tRNA-Pt-Leu-TAA-1	Pt-Leu-TAA	Pt-Leu-TAA	Pt	Acstem_3p_1	0.0717937	1	40	leaf	leaf	39
+tRNA-Pt-Lys-TTT-1	tRNA-Pt-Lys-TTT-1	Pt-Lys-TTT	Pt-Lys-TTT	Pt	Acstem_5p_2	0.0713333	1	27	leaf	leaf	28
+tRNA-Pt-Pro-TGG-1	tRNA-Pt-Pro-TGG-1	Pt-Pro-TGG	Pt-Pro-TGG	Pt	Acloop_3	0.10729	1	35	leaf,Flower	leaf	34
+tRNA-Pt-Pro-TGG-1	tRNA-Pt-Pro-TGG-1	Pt-Pro-TGG	Pt-Pro-TGG	Pt	Acloop_7	0.46517	1	39	leaf,Flower	leaf	38
+tRNA-Pt-Ser-GCT-1	tRNA-Pt-Ser-GCT-1	Pt-Ser-GCT	Pt-Ser-GCT	Pt	Acstem_3p_1	0.16513	1	40	leaf,Flower	leaf	39
+tRNA-Pt-Thr-TGT-1	tRNA-Pt-Thr-TGT-1	Pt-Thr-TGT	Pt-Thr-TGT	Pt	Acstem_3p_1	0.268722	1	39	leaf,Flower	Flower	39
+tRNA-Pt-Tyr-GTA-1	tRNA-Pt-Tyr-GTA-1	Pt-Tyr-GTA	Pt-Tyr-GTA	Pt	Acstem_3p_1	0.430011	1	40	Root,leaf,Flower	Flower	39

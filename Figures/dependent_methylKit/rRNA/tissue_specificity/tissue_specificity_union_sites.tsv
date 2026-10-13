@@ -1,0 +1,14 @@
+genotype	chr	pos	strand	context	site_id	source_tissues	n_tissues
+trua1a	18S	306	+	AATTT	18S|306|+	Flower	1
+trua1a	18S	606	+	TATTT	18S|606|+	Flower	1
+trua1a	18S	764	+	ATTAG	18S|764|+	Flower	1
+trua1a	18S	1179	+	CCTGC	18S|1179|+	Flower	1
+trua1a	18S	1185	+	GCTTA	18S|1185|+	Flower	1
+trua1a	18S	1191	+	TTTGA	18S|1191|+	Flower	1
+trua1a	25S	1060	+	TTTAA	25S|1060|+	Flower	1
+trua1a	25S	2126	+	TGTTT	25S|2126|+	Flower	1
+trua1a	25S	2304	+	AATGG	25S|2304|+	Flower	1
+trua1a	25S	2308	+	GATTA	25S|2308|+	Flower	1
+trua1a	25S	2422	+	ACTTT	25S|2422|+	Leaf	1
+trua1a	25S	2587	+	CATTG	25S|2587|+	Flower	1
+trua1a	25S	2870	+	GCTCT	25S|2870|+	Flower	1

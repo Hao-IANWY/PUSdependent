@@ -1,0 +1,1017 @@
+paths:
+  script_dir: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin
+  pseudo_callsites_r: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin/Pseudo_callsites.R
+  index_bowtie2: /home/HL/reference/Ath/TAIR/ath_rRNA.fa
+  index_star: /home/HL/reference/Ath/TAIR/cDNA_STAR_index
+
+env:
+  python: /home/HL/miniforge3/envs/analysis/bin/python
+  r: /home/HL/miniforge3/envs/analysis/bin/R
+
+pipeline:
+  ref:
+    rRNA: /home/HL/reference/Ath/TAIR/ath_rRNA.fa
+    mRNA: /home/HL/reference/Ath/TAIR/Araport11_cdna_20220914_representative_gene_model
+  t_site_windows: 2
+
+  # Optional raw expression matrices. Keys must match pipeline.ref.
+  # Emits both a Mock-group matrix and an all_samples matrix per ref type.
+  expression:
+    enabled: false
+    count_mode:
+      rRNA: all_alignments
+      mRNA: primary
+
+  # Input layout is global for one run. Accepted values: paired/PE or single/SE.
+  # In single-end mode each replicate only needs read1; read2 may be omitted.
+  read_layout: paired
+
+  # true: run the workflow-specific rmdup tool; false: pass trimmed reads directly
+  # to umi_extract without creating *.dup.fq.gz files.
+  rmdup: true
+
+  # Minimum read length passed to trim_galore --length. When omitted,
+  # polyA/adjustDeletion defaults to 82 and totalRNA defaults to 35.
+  trim_galore_length: 82
+
+  # fastp UMI-region clipping. Set both values to 0 for an end that should not
+  # be clipped. These values preserve the historical polyA workflow defaults.
+  # For totalRNA_mapping.smk, use R1/R2 trim_front: 17 and trim_tail: 0.
+  umi_extract:
+    R1:
+      trim_front: 6
+      trim_tail: 21
+    R2:
+      trim_front: 21
+      trim_tail: 6
+
+samples:
+  WT-Flower:
+    sample_id: "WT-Flower"
+    mock:
+      rep1:
+        file_index: Mock-WT-Flower.rep1
+        read1: raw_data/Mock-WT-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-WT-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-WT-Flower.rep2
+        read1: raw_data/Mock-WT-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-WT-Flower.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-WT-Flower.rep3
+        read1: raw_data/Mock-WT-Flower.rep3.R1.fq.gz
+        read2: raw_data/Mock-WT-Flower.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-WT-Flower.rep1
+        read1: raw_data/Treat-WT-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-WT-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-WT-Flower.rep2
+        read1: raw_data/Treat-WT-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-WT-Flower.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-WT-Flower.rep3
+        read1: raw_data/Treat-WT-Flower.rep3.R1.fq.gz
+        read2: raw_data/Treat-WT-Flower.rep3.R2.fq.gz
+
+  WT-Root:
+    sample_id: "WT-Root"
+    mock:
+      rep1:
+        file_index: Mock-WT-Root.rep1
+        read1: raw_data/Mock-WT-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-WT-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-WT-Root.rep2
+        read1: raw_data/Mock-WT-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-WT-Root.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-WT-Root.rep3
+        read1: raw_data/Mock-WT-Root.rep3.R1.fq.gz
+        read2: raw_data/Mock-WT-Root.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-WT-Root.rep1
+        read1: raw_data/Treat-WT-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-WT-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-WT-Root.rep2
+        read1: raw_data/Treat-WT-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-WT-Root.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-WT-Root.rep3
+        read1: raw_data/Treat-WT-Root.rep3.R1.fq.gz
+        read2: raw_data/Treat-WT-Root.rep3.R2.fq.gz
+
+  WT-leaf:
+    sample_id: "WT-leaf"
+    mock:
+      rep1:
+        file_index: Mock-WT-leaf.rep1
+        read1: raw_data/Mock-WT-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-WT-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-WT-leaf.rep2
+        read1: raw_data/Mock-WT-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-WT-leaf.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-WT-leaf.rep3
+        read1: raw_data/Mock-WT-leaf.rep3.R1.fq.gz
+        read2: raw_data/Mock-WT-leaf.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-WT-leaf.rep1
+        read1: raw_data/Treat-WT-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-WT-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-WT-leaf.rep2
+        read1: raw_data/Treat-WT-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-WT-leaf.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-WT-leaf.rep3
+        read1: raw_data/Treat-WT-leaf.rep3.R1.fq.gz
+        read2: raw_data/Treat-WT-leaf.rep3.R2.fq.gz
+
+  trua1a_1-Flower:
+    sample_id: "trua1a_1-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua1a_1-Flower.rep1
+        read1: raw_data/Mock-trua1a_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1a_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1a_1-Flower.rep2
+        read1: raw_data/Mock-trua1a_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1a_1-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1a_1-Flower.rep1
+        read1: raw_data/Treat-trua1a_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1a_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1a_1-Flower.rep2
+        read1: raw_data/Treat-trua1a_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1a_1-Flower.rep2.R2.fq.gz
+
+  trua1a_1-Root:
+    sample_id: "trua1a_1-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua1a_1-Root.rep1
+        read1: raw_data/Mock-trua1a_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1a_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1a_1-Root.rep2
+        read1: raw_data/Mock-trua1a_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1a_1-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1a_1-Root.rep1
+        read1: raw_data/Treat-trua1a_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1a_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1a_1-Root.rep2
+        read1: raw_data/Treat-trua1a_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1a_1-Root.rep2.R2.fq.gz
+
+  trua1a_1-leaf:
+    sample_id: "trua1a_1-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua1a_1-leaf.rep1
+        read1: raw_data/Mock-trua1a_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1a_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1a_1-leaf.rep2
+        read1: raw_data/Mock-trua1a_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1a_1-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1a_1-leaf.rep1
+        read1: raw_data/Treat-trua1a_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1a_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1a_1-leaf.rep2
+        read1: raw_data/Treat-trua1a_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1a_1-leaf.rep2.R2.fq.gz
+
+  trua1a_2-Flower:
+    sample_id: "trua1a_2-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua1a_2-Flower.rep1
+        read1: raw_data/Mock-trua1a_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1a_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1a_2-Flower.rep2
+        read1: raw_data/Mock-trua1a_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1a_2-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1a_2-Flower.rep1
+        read1: raw_data/Treat-trua1a_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1a_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1a_2-Flower.rep2
+        read1: raw_data/Treat-trua1a_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1a_2-Flower.rep2.R2.fq.gz
+
+  trua1a_2-Root:
+    sample_id: "trua1a_2-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua1a_2-Root.rep1
+        read1: raw_data/Mock-trua1a_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1a_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1a_2-Root.rep2
+        read1: raw_data/Mock-trua1a_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1a_2-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1a_2-Root.rep1
+        read1: raw_data/Treat-trua1a_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1a_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1a_2-Root.rep2
+        read1: raw_data/Treat-trua1a_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1a_2-Root.rep2.R2.fq.gz
+
+  trua1a_2-leaf:
+    sample_id: "trua1a_2-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua1a_2-leaf.rep1
+        read1: raw_data/Mock-trua1a_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1a_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1a_2-leaf.rep2
+        read1: raw_data/Mock-trua1a_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1a_2-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1a_2-leaf.rep1
+        read1: raw_data/Treat-trua1a_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1a_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1a_2-leaf.rep2
+        read1: raw_data/Treat-trua1a_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1a_2-leaf.rep2.R2.fq.gz
+
+  trua1b_1-Flower:
+    sample_id: "trua1b_1-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua1b_1-Flower.rep1
+        read1: raw_data/Mock-trua1b_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1b_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1b_1-Flower.rep2
+        read1: raw_data/Mock-trua1b_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1b_1-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1b_1-Flower.rep1
+        read1: raw_data/Treat-trua1b_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1b_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1b_1-Flower.rep2
+        read1: raw_data/Treat-trua1b_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1b_1-Flower.rep2.R2.fq.gz
+
+  trua1b_1-Root:
+    sample_id: "trua1b_1-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua1b_1-Root.rep1
+        read1: raw_data/Mock-trua1b_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1b_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1b_1-Root.rep2
+        read1: raw_data/Mock-trua1b_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1b_1-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1b_1-Root.rep1
+        read1: raw_data/Treat-trua1b_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1b_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1b_1-Root.rep2
+        read1: raw_data/Treat-trua1b_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1b_1-Root.rep2.R2.fq.gz
+
+  trua1b_1-leaf:
+    sample_id: "trua1b_1-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua1b_1-leaf.rep1
+        read1: raw_data/Mock-trua1b_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1b_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1b_1-leaf.rep2
+        read1: raw_data/Mock-trua1b_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1b_1-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1b_1-leaf.rep1
+        read1: raw_data/Treat-trua1b_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1b_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1b_1-leaf.rep2
+        read1: raw_data/Treat-trua1b_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1b_1-leaf.rep2.R2.fq.gz
+
+  trua1b_2-Flower:
+    sample_id: "trua1b_2-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua1b_2-Flower.rep1
+        read1: raw_data/Mock-trua1b_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1b_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1b_2-Flower.rep2
+        read1: raw_data/Mock-trua1b_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1b_2-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1b_2-Flower.rep1
+        read1: raw_data/Treat-trua1b_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1b_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1b_2-Flower.rep2
+        read1: raw_data/Treat-trua1b_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1b_2-Flower.rep2.R2.fq.gz
+
+  trua1b_2-Root:
+    sample_id: "trua1b_2-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua1b_2-Root.rep1
+        read1: raw_data/Mock-trua1b_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1b_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1b_2-Root.rep2
+        read1: raw_data/Mock-trua1b_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1b_2-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1b_2-Root.rep1
+        read1: raw_data/Treat-trua1b_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1b_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1b_2-Root.rep2
+        read1: raw_data/Treat-trua1b_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1b_2-Root.rep2.R2.fq.gz
+
+  trua1b_2-leaf:
+    sample_id: "trua1b_2-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua1b_2-leaf.rep1
+        read1: raw_data/Mock-trua1b_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua1b_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua1b_2-leaf.rep2
+        read1: raw_data/Mock-trua1b_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua1b_2-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua1b_2-leaf.rep1
+        read1: raw_data/Treat-trua1b_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua1b_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua1b_2-leaf.rep2
+        read1: raw_data/Treat-trua1b_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua1b_2-leaf.rep2.R2.fq.gz
+
+  trua2_1-Flower:
+    sample_id: "trua2_1-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua2_1-Flower.rep1
+        read1: raw_data/Mock-trua2_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua2_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua2_1-Flower.rep2
+        read1: raw_data/Mock-trua2_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua2_1-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua2_1-Flower.rep1
+        read1: raw_data/Treat-trua2_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua2_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua2_1-Flower.rep2
+        read1: raw_data/Treat-trua2_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua2_1-Flower.rep2.R2.fq.gz
+
+  trua2_1-Root:
+    sample_id: "trua2_1-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua2_1-Root.rep1
+        read1: raw_data/Mock-trua2_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua2_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua2_1-Root.rep2
+        read1: raw_data/Mock-trua2_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua2_1-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua2_1-Root.rep1
+        read1: raw_data/Treat-trua2_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua2_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua2_1-Root.rep2
+        read1: raw_data/Treat-trua2_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua2_1-Root.rep2.R2.fq.gz
+
+  trua2_1-leaf:
+    sample_id: "trua2_1-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua2_1-leaf.rep1
+        read1: raw_data/Mock-trua2_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua2_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua2_1-leaf.rep2
+        read1: raw_data/Mock-trua2_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua2_1-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua2_1-leaf.rep1
+        read1: raw_data/Treat-trua2_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua2_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua2_1-leaf.rep2
+        read1: raw_data/Treat-trua2_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua2_1-leaf.rep2.R2.fq.gz
+
+  trua2_2-Flower:
+    sample_id: "trua2_2-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua2_2-Flower.rep1
+        read1: raw_data/Mock-trua2_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua2_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua2_2-Flower.rep2
+        read1: raw_data/Mock-trua2_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua2_2-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua2_2-Flower.rep1
+        read1: raw_data/Treat-trua2_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua2_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua2_2-Flower.rep2
+        read1: raw_data/Treat-trua2_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua2_2-Flower.rep2.R2.fq.gz
+
+  trua2_2-Root:
+    sample_id: "trua2_2-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua2_2-Root.rep1
+        read1: raw_data/Mock-trua2_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua2_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua2_2-Root.rep2
+        read1: raw_data/Mock-trua2_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua2_2-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua2_2-Root.rep1
+        read1: raw_data/Treat-trua2_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua2_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua2_2-Root.rep2
+        read1: raw_data/Treat-trua2_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua2_2-Root.rep2.R2.fq.gz
+
+  trua2_2-leaf:
+    sample_id: "trua2_2-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua2_2-leaf.rep1
+        read1: raw_data/Mock-trua2_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua2_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua2_2-leaf.rep2
+        read1: raw_data/Mock-trua2_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua2_2-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua2_2-leaf.rep1
+        read1: raw_data/Treat-trua2_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua2_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua2_2-leaf.rep2
+        read1: raw_data/Treat-trua2_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua2_2-leaf.rep2.R2.fq.gz
+
+  trua3_1-Flower:
+    sample_id: "trua3_1-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua3_1-Flower.rep1
+        read1: raw_data/Mock-trua3_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua3_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua3_1-Flower.rep2
+        read1: raw_data/Mock-trua3_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua3_1-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua3_1-Flower.rep1
+        read1: raw_data/Treat-trua3_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua3_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua3_1-Flower.rep2
+        read1: raw_data/Treat-trua3_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua3_1-Flower.rep2.R2.fq.gz
+
+  trua3_1-Root:
+    sample_id: "trua3_1-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua3_1-Root.rep1
+        read1: raw_data/Mock-trua3_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua3_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua3_1-Root.rep2
+        read1: raw_data/Mock-trua3_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua3_1-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua3_1-Root.rep1
+        read1: raw_data/Treat-trua3_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua3_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua3_1-Root.rep2
+        read1: raw_data/Treat-trua3_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua3_1-Root.rep2.R2.fq.gz
+
+  trua3_1-leaf:
+    sample_id: "trua3_1-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua3_1-leaf.rep1
+        read1: raw_data/Mock-trua3_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua3_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua3_1-leaf.rep2
+        read1: raw_data/Mock-trua3_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua3_1-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua3_1-leaf.rep1
+        read1: raw_data/Treat-trua3_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua3_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua3_1-leaf.rep2
+        read1: raw_data/Treat-trua3_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua3_1-leaf.rep2.R2.fq.gz
+
+  trua3_2-Flower:
+    sample_id: "trua3_2-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua3_2-Flower.rep1
+        read1: raw_data/Mock-trua3_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua3_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua3_2-Flower.rep2
+        read1: raw_data/Mock-trua3_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua3_2-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua3_2-Flower.rep1
+        read1: raw_data/Treat-trua3_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua3_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua3_2-Flower.rep2
+        read1: raw_data/Treat-trua3_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua3_2-Flower.rep2.R2.fq.gz
+
+  trua3_2-Root:
+    sample_id: "trua3_2-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua3_2-Root.rep1
+        read1: raw_data/Mock-trua3_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua3_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua3_2-Root.rep2
+        read1: raw_data/Mock-trua3_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua3_2-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua3_2-Root.rep1
+        read1: raw_data/Treat-trua3_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua3_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua3_2-Root.rep2
+        read1: raw_data/Treat-trua3_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua3_2-Root.rep2.R2.fq.gz
+
+  trua3_2-leaf:
+    sample_id: "trua3_2-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua3_2-leaf.rep1
+        read1: raw_data/Mock-trua3_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua3_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua3_2-leaf.rep2
+        read1: raw_data/Mock-trua3_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua3_2-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua3_2-leaf.rep1
+        read1: raw_data/Treat-trua3_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua3_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua3_2-leaf.rep2
+        read1: raw_data/Treat-trua3_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua3_2-leaf.rep2.R2.fq.gz
+
+  trua4_1-Flower:
+    sample_id: "trua4_1-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua4_1-Flower.rep1
+        read1: raw_data/Mock-trua4_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua4_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua4_1-Flower.rep2
+        read1: raw_data/Mock-trua4_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua4_1-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua4_1-Flower.rep1
+        read1: raw_data/Treat-trua4_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua4_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua4_1-Flower.rep2
+        read1: raw_data/Treat-trua4_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua4_1-Flower.rep2.R2.fq.gz
+
+  trua4_1-Root:
+    sample_id: "trua4_1-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua4_1-Root.rep1
+        read1: raw_data/Mock-trua4_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua4_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua4_1-Root.rep2
+        read1: raw_data/Mock-trua4_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua4_1-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua4_1-Root.rep1
+        read1: raw_data/Treat-trua4_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua4_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua4_1-Root.rep2
+        read1: raw_data/Treat-trua4_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua4_1-Root.rep2.R2.fq.gz
+
+  trua4_1-leaf:
+    sample_id: "trua4_1-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua4_1-leaf.rep1
+        read1: raw_data/Mock-trua4_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua4_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua4_1-leaf.rep2
+        read1: raw_data/Mock-trua4_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua4_1-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua4_1-leaf.rep1
+        read1: raw_data/Treat-trua4_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua4_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua4_1-leaf.rep2
+        read1: raw_data/Treat-trua4_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua4_1-leaf.rep2.R2.fq.gz
+
+  trua4_2-Flower:
+    sample_id: "trua4_2-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua4_2-Flower.rep1
+        read1: raw_data/Mock-trua4_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua4_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua4_2-Flower.rep2
+        read1: raw_data/Mock-trua4_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua4_2-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua4_2-Flower.rep1
+        read1: raw_data/Treat-trua4_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua4_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua4_2-Flower.rep2
+        read1: raw_data/Treat-trua4_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua4_2-Flower.rep2.R2.fq.gz
+
+  trua4_2-Root:
+    sample_id: "trua4_2-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua4_2-Root.rep1
+        read1: raw_data/Mock-trua4_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua4_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua4_2-Root.rep2
+        read1: raw_data/Mock-trua4_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua4_2-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua4_2-Root.rep1
+        read1: raw_data/Treat-trua4_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua4_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua4_2-Root.rep2
+        read1: raw_data/Treat-trua4_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua4_2-Root.rep2.R2.fq.gz
+
+  trua4_2-leaf:
+    sample_id: "trua4_2-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua4_2-leaf.rep1
+        read1: raw_data/Mock-trua4_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua4_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua4_2-leaf.rep2
+        read1: raw_data/Mock-trua4_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua4_2-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua4_2-leaf.rep1
+        read1: raw_data/Treat-trua4_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua4_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua4_2-leaf.rep2
+        read1: raw_data/Treat-trua4_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua4_2-leaf.rep2.R2.fq.gz
+
+  trua5_1-Flower:
+    sample_id: "trua5_1-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua5_1-Flower.rep1
+        read1: raw_data/Mock-trua5_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua5_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua5_1-Flower.rep2
+        read1: raw_data/Mock-trua5_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua5_1-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua5_1-Flower.rep1
+        read1: raw_data/Treat-trua5_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua5_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua5_1-Flower.rep2
+        read1: raw_data/Treat-trua5_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua5_1-Flower.rep2.R2.fq.gz
+
+  trua5_1-Root:
+    sample_id: "trua5_1-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua5_1-Root.rep1
+        read1: raw_data/Mock-trua5_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua5_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua5_1-Root.rep2
+        read1: raw_data/Mock-trua5_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua5_1-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua5_1-Root.rep1
+        read1: raw_data/Treat-trua5_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua5_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua5_1-Root.rep2
+        read1: raw_data/Treat-trua5_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua5_1-Root.rep2.R2.fq.gz
+
+  trua5_1-leaf:
+    sample_id: "trua5_1-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua5_1-leaf.rep1
+        read1: raw_data/Mock-trua5_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua5_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua5_1-leaf.rep2
+        read1: raw_data/Mock-trua5_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua5_1-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua5_1-leaf.rep1
+        read1: raw_data/Treat-trua5_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua5_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua5_1-leaf.rep2
+        read1: raw_data/Treat-trua5_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua5_1-leaf.rep2.R2.fq.gz
+
+  trua5_2-Flower:
+    sample_id: "trua5_2-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua5_2-Flower.rep1
+        read1: raw_data/Mock-trua5_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua5_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua5_2-Flower.rep2
+        read1: raw_data/Mock-trua5_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua5_2-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua5_2-Flower.rep1
+        read1: raw_data/Treat-trua5_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua5_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua5_2-Flower.rep2
+        read1: raw_data/Treat-trua5_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua5_2-Flower.rep2.R2.fq.gz
+
+  trua5_2-Root:
+    sample_id: "trua5_2-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua5_2-Root.rep1
+        read1: raw_data/Mock-trua5_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua5_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua5_2-Root.rep2
+        read1: raw_data/Mock-trua5_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua5_2-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua5_2-Root.rep1
+        read1: raw_data/Treat-trua5_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua5_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua5_2-Root.rep2
+        read1: raw_data/Treat-trua5_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua5_2-Root.rep2.R2.fq.gz
+
+  trua5_2-leaf:
+    sample_id: "trua5_2-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua5_2-leaf.rep1
+        read1: raw_data/Mock-trua5_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua5_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua5_2-leaf.rep2
+        read1: raw_data/Mock-trua5_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua5_2-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua5_2-leaf.rep1
+        read1: raw_data/Treat-trua5_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua5_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua5_2-leaf.rep2
+        read1: raw_data/Treat-trua5_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua5_2-leaf.rep2.R2.fq.gz
+
+  trua6_1-Flower:
+    sample_id: "trua6_1-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua6_1-Flower.rep1
+        read1: raw_data/Mock-trua6_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua6_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua6_1-Flower.rep2
+        read1: raw_data/Mock-trua6_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua6_1-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua6_1-Flower.rep1
+        read1: raw_data/Treat-trua6_1-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua6_1-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua6_1-Flower.rep2
+        read1: raw_data/Treat-trua6_1-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua6_1-Flower.rep2.R2.fq.gz
+
+  trua6_1-Root:
+    sample_id: "trua6_1-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua6_1-Root.rep1
+        read1: raw_data/Mock-trua6_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua6_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua6_1-Root.rep2
+        read1: raw_data/Mock-trua6_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua6_1-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua6_1-Root.rep1
+        read1: raw_data/Treat-trua6_1-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua6_1-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua6_1-Root.rep2
+        read1: raw_data/Treat-trua6_1-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua6_1-Root.rep2.R2.fq.gz
+
+  trua6_1-leaf:
+    sample_id: "trua6_1-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua6_1-leaf.rep1
+        read1: raw_data/Mock-trua6_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua6_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua6_1-leaf.rep2
+        read1: raw_data/Mock-trua6_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua6_1-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua6_1-leaf.rep1
+        read1: raw_data/Treat-trua6_1-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua6_1-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua6_1-leaf.rep2
+        read1: raw_data/Treat-trua6_1-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua6_1-leaf.rep2.R2.fq.gz
+
+  trua6_2-Flower:
+    sample_id: "trua6_2-Flower"
+    mock:
+      rep1:
+        file_index: Mock-trua6_2-Flower.rep1
+        read1: raw_data/Mock-trua6_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua6_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua6_2-Flower.rep2
+        read1: raw_data/Mock-trua6_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua6_2-Flower.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua6_2-Flower.rep1
+        read1: raw_data/Treat-trua6_2-Flower.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua6_2-Flower.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua6_2-Flower.rep2
+        read1: raw_data/Treat-trua6_2-Flower.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua6_2-Flower.rep2.R2.fq.gz
+
+  trua6_2-Root:
+    sample_id: "trua6_2-Root"
+    mock:
+      rep1:
+        file_index: Mock-trua6_2-Root.rep1
+        read1: raw_data/Mock-trua6_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua6_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua6_2-Root.rep2
+        read1: raw_data/Mock-trua6_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua6_2-Root.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua6_2-Root.rep1
+        read1: raw_data/Treat-trua6_2-Root.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua6_2-Root.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua6_2-Root.rep2
+        read1: raw_data/Treat-trua6_2-Root.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua6_2-Root.rep2.R2.fq.gz
+
+  trua6_2-leaf:
+    sample_id: "trua6_2-leaf"
+    mock:
+      rep1:
+        file_index: Mock-trua6_2-leaf.rep1
+        read1: raw_data/Mock-trua6_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Mock-trua6_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-trua6_2-leaf.rep2
+        read1: raw_data/Mock-trua6_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Mock-trua6_2-leaf.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-trua6_2-leaf.rep1
+        read1: raw_data/Treat-trua6_2-leaf.rep1.R1.fq.gz
+        read2: raw_data/Treat-trua6_2-leaf.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-trua6_2-leaf.rep2
+        read1: raw_data/Treat-trua6_2-leaf.rep2.R1.fq.gz
+        read2: raw_data/Treat-trua6_2-leaf.rep2.R2.fq.gz
+

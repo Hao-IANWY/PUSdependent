@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1224.00pt' height='720.00pt' viewBox='0 0 1224.00 720.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHwxMjI0LjAwfDAuMDB8NzIwLjAw'>
+    <rect x='0.00' y='0.00' width='1224.00' height='720.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwxMjI0LjAwfDAuMDB8NzIwLjAw)'>
+<rect x='0.00000000000013' y='0.00' width='1224.00' height='720.00' style='stroke-width: 2.44; stroke: none; fill: #FFFFFF;' />
+<rect x='40.99' y='25.33' width='382.08' height='198.61' style='stroke-width: 2.44; stroke: none;' />
+<rect x='40.99' y='214.10' width='64.73' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #E64B35; fill-opacity: 0.80;' />
+<rect x='40.99' y='204.27' width='64.73' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #E64B35; fill-opacity: 0.80;' />
+<text x='42.28' y='222.21' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>tRNA aminoacylation</text>
+<text x='42.28' y='212.38' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>cytokinetic process</text>
+<rect x='40.99' y='235.45' width='382.08' height='198.61' style='stroke-width: 2.44; stroke: none;' />
+<rect x='40.99' y='404.56' width='353.78' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='40.99' y='394.73' width='72.22' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='40.99' y='384.90' width='53.66' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<text x='48.06' y='412.67' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>ribosomal subunit</text>
+<text x='48.06' y='402.84' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>perinuclear region of cytoplasm</text>
+<text x='48.06' y='393.01' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>microtubule cytoskeleton</text>
+<rect x='40.99' y='445.58' width='382.08' height='198.61' style='stroke-width: 2.44; stroke: none;' />
+<rect x='40.99' y='585.19' width='259.40' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #8491B4; fill-opacity: 0.80;' />
+<rect x='40.99' y='575.36' width='78.54' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #8491B4; fill-opacity: 0.80;' />
+<rect x='40.99' y='565.53' width='50.76' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #8491B4; fill-opacity: 0.80;' />
+<rect x='40.99' y='555.70' width='50.76' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #8491B4; fill-opacity: 0.80;' />
+<text x='46.18' y='593.30' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>structural molecule activity</text>
+<text x='46.18' y='575.07' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>catalytic activity, acting on a</text>
+<text x='46.18' y='591.87' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>tRNA</text>
+<text x='46.18' y='573.64' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>aminoacyl-tRNA ligase activity</text>
+<text x='46.18' y='555.40' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>ligase activity, forming</text>
+<text x='46.18' y='572.20' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>carbon-oxygen bonds</text>
+<rect x='437.47' y='25.33' width='382.08' height='198.61' style='stroke-width: 2.44; stroke: none;' />
+<rect x='437.47' y='235.45' width='382.08' height='198.61' style='stroke-width: 2.44; stroke: none;' />
+<rect x='437.47' y='335.74' width='353.78' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='437.47' y='325.91' width='353.78' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='437.47' y='316.08' width='353.78' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='437.47' y='306.25' width='347.51' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='437.47' y='296.41' width='310.72' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<text x='444.54' y='343.85' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>chloroplast thylakoid membrane</text>
+<text x='444.54' y='325.62' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>proton-transporting two-sector</text>
+<text x='444.54' y='342.41' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>ATPase complex, catalytic domain</text>
+<text x='444.54' y='324.18' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>oxidoreductase complex</text>
+<text x='444.54' y='314.35' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>thylakoid membrane</text>
+<text x='444.54' y='304.52' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>transmembrane transporter complex</text>
+<rect x='437.47' y='445.58' width='382.08' height='198.61' style='stroke-width: 2.44; stroke: none;' />
+<rect x='437.47' y='496.71' width='294.23' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #8491B4; fill-opacity: 0.80;' />
+<text x='443.35' y='504.81' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>ATP binding</text>
+<rect x='833.95' y='25.33' width='382.08' height='198.61' style='stroke-width: 2.44; stroke: none;' />
+<rect x='833.95' y='235.45' width='382.08' height='198.61' style='stroke-width: 2.44; stroke: none;' />
+<rect x='833.95' y='276.75' width='353.78' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='833.95' y='266.92' width='353.78' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='833.95' y='257.09' width='299.07' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='833.95' y='247.25' width='299.07' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<rect x='833.95' y='237.42' width='286.50' height='7.87' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #F39B7F; fill-opacity: 0.80;' />
+<text x='841.02' y='284.85' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>chloroplast thylakoid membrane</text>
+<text x='841.02' y='275.02' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>thylakoid membrane</text>
+<text x='841.02' y='265.19' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>outer membrane</text>
+<text x='841.02' y='255.36' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>organelle outer membrane</text>
+<text x='841.02' y='245.53' style='font-size: 11.67px; font-weight: bold; font-family: "Arial";'>plastid membrane</text>
+<rect x='833.95' y='445.58' width='382.08' height='198.61' style='stroke-width: 2.44; stroke: none;' />
+</g>
+<defs>
+  <clipPath id='cpNDAuOTl8NDIzLjA3fDcuOTd8MjUuMzM='>
+    <rect x='40.99' y='7.97' width='382.08' height='17.36' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDAuOTl8NDIzLjA3fDcuOTd8MjUuMzM=)'>
+<text x='232.03' y='18.65' text-anchor='middle' style='font-size: 13.00px; font-weight: bold; font-family: "Arial";'>Roots</text>
+</g>
+<g clip-path='url(#cpMC4wMHwxMjI0LjAwfDAuMDB8NzIwLjAw)'>
+</g>
+<defs>
+  <clipPath id='cpNDM3LjQ3fDgxOS41NXw3Ljk3fDI1LjMz'>
+    <rect x='437.47' y='7.97' width='382.08' height='17.36' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDM3LjQ3fDgxOS41NXw3Ljk3fDI1LjMz)'>
+<text x='628.51' y='18.65' text-anchor='middle' style='font-size: 13.00px; font-weight: bold; font-family: "Arial";'>Leaves</text>
+</g>
+<g clip-path='url(#cpMC4wMHwxMjI0LjAwfDAuMDB8NzIwLjAw)'>
+</g>
+<defs>
+  <clipPath id='cpODMzLjk1fDEyMTYuMDN8Ny45N3wyNS4zMw=='>
+    <rect x='833.95' y='7.97' width='382.08' height='17.36' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpODMzLjk1fDEyMTYuMDN8Ny45N3wyNS4zMw==)'>
+<text x='1024.99' y='18.65' text-anchor='middle' style='font-size: 13.00px; font-weight: bold; font-family: "Arial";'>Flowers</text>
+</g>
+<g clip-path='url(#cpMC4wMHwxMjI0LjAwfDAuMDB8NzIwLjAw)'>
+</g>
+<defs>
+  <clipPath id='cpNy45N3wzMC42M3wyNS4zM3wyMjMuOTM='>
+    <rect x='7.97' y='25.33' width='22.66' height='198.61' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNy45N3wzMC42M3wyNS4zM3wyMjMuOTM=)'>
+<text x='13.28' y='128.93' style='font-size: 12.00px; font-weight: bold; font-family: "Arial";'>BP</text>
+</g>
+<g clip-path='url(#cpMC4wMHwxMjI0LjAwfDAuMDB8NzIwLjAw)'>
+</g>
+<defs>
+  <clipPath id='cpNy45N3wzMC42M3wyMzUuNDV8NDM0LjA2'>
+    <rect x='7.97' y='235.45' width='22.66' height='198.61' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNy45N3wzMC42M3wyMzUuNDV8NDM0LjA2)'>
+<text x='13.28' y='339.06' style='font-size: 12.00px; font-weight: bold; font-family: "Arial";'>CC</text>
+</g>
+<g clip-path='url(#cpMC4wMHwxMjI0LjAwfDAuMDB8NzIwLjAw)'>
+</g>
+<defs>
+  <clipPath id='cpNy45N3wzMC42M3w0NDUuNTh8NjQ0LjE5'>
+    <rect x='7.97' y='445.58' width='22.66' height='198.61' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNy45N3wzMC42M3w0NDUuNTh8NjQ0LjE5)'>
+<text x='13.28' y='549.18' style='font-size: 12.00px; font-weight: bold; font-family: "Arial";'>MF</text>
+</g>
+<g clip-path='url(#cpMC4wMHwxMjI0LjAwfDAuMDB8NzIwLjAw)'>
+<polyline points='40.99,644.19 417.94,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='40.99,650.56 40.99,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='135.23,650.56 135.23,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='229.46,650.56 229.46,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='323.70,650.56 323.70,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='417.94,650.56 417.94,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<text x='40.99' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>0.0</text>
+<text x='135.23' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>2.5</text>
+<text x='229.46' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>5.0</text>
+<text x='323.70' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>7.5</text>
+<text x='417.94' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>10.0</text>
+<polyline points='437.47,644.19 817.11,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='437.47,650.56 437.47,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='532.38,650.56 532.38,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='627.29,650.56 627.29,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='722.20,650.56 722.20,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='817.11,650.56 817.11,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<text x='437.47' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>0.0</text>
+<text x='532.38' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>0.5</text>
+<text x='627.29' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>1.0</text>
+<text x='722.20' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>1.5</text>
+<text x='817.11' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>2.0</text>
+<polyline points='833.95,644.19 1143.66,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='833.95,650.56 833.95,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='937.19,650.56 937.19,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='1040.43,650.56 1040.43,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='1143.66,650.56 1143.66,644.19 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<text x='833.95' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>0.0</text>
+<text x='937.19' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>0.5</text>
+<text x='1040.43' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>1.0</text>
+<text x='1143.66' y='666.22' text-anchor='middle' style='font-size: 15.20px; font-weight: bold; font-family: "Arial";'>1.5</text>
+<text x='628.51' y='688.84' text-anchor='middle' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>-log10(p.adjust)</text>
+<text x='1216.03' y='709.34' text-anchor='end' style='font-size: 12.80px; font-weight: bold; font-family: "Arial";'>No significant GO terms: </text>
+</g>
+</g>
+</svg>
