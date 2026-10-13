@@ -64,6 +64,81 @@ tRNA 富集/totalRNA 文库用
 辅助程序 `adjustGap`、`realignGap`、`samFilter`、`cpup` 来自
 [y9c/pseudoU-BIDseq](https://github.com/y9c/pseudoU-BIDseq) 项目。
 
+## 位点鉴定统计方法
+
+上文第 5、6 阶段调用的三个统计脚本共享同一套数据表示：对每个候选
+T（Ψ）位点和每个重复，gap 校正后的 pileup 给出该位点的测序深度
+（跨越该位点的 reads 数）与 gap 数（在该位点出现缺失的 reads 数），二者
+之比即为该重复在此位点的 Ψ 比例估计。这与亚硫酸氢盐测序的测量形式完全
+同构——覆盖度加"甲基化"reads 计数——因此下面两个差异检验脚本可以直接
+复用 methylKit 差异甲基化分析框架
+（[Akalin et al., *Genome Biol* 2012](https://doi.org/10.1186/gb-2012-13-9-r87)）。
+
+### Ψ 位点鉴定 — [`bin/Pseudo_callsites.R`](BID-transcript.script/bin/Pseudo_callsites.R)
+
+对每对 Mock/Treat 样本，各重复的逐位点计数表按位点坐标（chr、pos、
+strand）合并（某重复中缺失的位点计零），Mock 与 Treat 任一组平均深度低于
+10 的位点先行剔除。随后在两组重复分别求和的 2×2 列联表（gap / 非 gap
+reads × Treat / Mock）上做单侧 Fisher 精确检验（备择方向为 Treat 的缺失
+频率更高），p 值经 Benjamini–Hochberg 校正后以 0.01 为阈保留。除组水平
+检验外，每个重复还须独立支持该判定：Treat gap 数 ≥ 5、Treat gap 比例
+≥ 5%、且 Treat gap 比例不低于配对 Mock 重复的两倍（重复按 Mock 第 i 个
+对 Treat 第 i 个成对比较；两组重复数不一致时，改为每个 Treat 重复与
+Mock 组均值比较）。位点在通过组水平检验、且至少 `min_pass_reps` 个重复
+通过逐重复标准时判为阳性——三重复数据集为 3/3，两重复的叶绿体数据集为
+2/2。阳性表中报告的 ratio 与 depth 仅对通过筛选的重复取平均。
+
+### PUS 依赖位点鉴定 — [`downstream/call_dependent_methylKit.R`](BID-transcript.script/downstream/call_dependent_methylKit.R)
+
+"依赖位点"的思路很直接：如果某个 Ψ 位点由某个 PUS 酶安装，那么把这个
+酶突变掉，修饰就应该随之消失——该位点在 Treat 文库中的 gap 比例会跌回
+Mock 背景水平。因此脚本对每个位点只问一个问题：*突变体的修饰比例是否
+显著低于 WT？*，并对该 writer 基因的两个独立等位基因突变体分别作答。
+
+**为什么能用 DNA 甲基化工具来做这个检验。** 每个位点、每个重复上，
+BID-seq 只产生两个数：多少条 reads 覆盖该位点、其中多少条带缺失。这
+恰好就是亚硫酸氢盐测序对一个胞嘧啶产生的数据（覆盖度 + 甲基化 reads
+数），所以把 gap 比例读作"甲基化频率"，标准的差异甲基化分析包
+methylKit 就能原样复用。
+
+**每个突变株系的判定步骤：**
+
+1. *候选池。* 只考察同一数据集 WT 中鉴定为阳性的位点——对突变体只问
+   "WT 上有修饰的位点，现在还有没有"。
+2. *深度门槛。* 每个重复（WT、突变体 Mock、突变体 Treat）在该位点的
+   depth 都必须 ≥ 10，任何一个重复不够就弃掉该位点。这是为了让"没测
+   到"无法冒充"修饰消失"（adjusted 表把未覆盖位点记为 depth = 0），
+   同时只保留完整观测。Mock 文库只见证覆盖度；参与比较的信号是 Treat
+   的 gap 比例。
+3. *检验。* WT 与突变体的 Treat 重复交给 methylKit（`methRead` →
+   `unite` → `calculateDiffMeth`）：以 coverage 加权、对 gap 比例按
+   基因型（WT = 1、突变体 = 0）拟合 logistic 回归，过离散按
+   McCullagh–Nelder 估计——φ > 1 时基因型效应参照 F 分布（否则卡方）
+   ——p 值再经 SLIM 做位点间校正。methylKit 的双侧 p 向关注方向（WT
+   修饰更高）折半成单侧，否则置 1。
+4. *效应量。* Δ = WT_Ratio − Mut_Ratio，两项分别是各重复 Treat gap
+   比例的算术平均。它直接从输入表计算、不经 methylKit，保证报告的
+   差值永远与原始 ratio 一致。
+5. *判定。* 单侧 p < 0.05 **且** Δ ≥ 0.05 → 在该株系中依赖。最终
+   writer 依赖集只保留**两个**株系都依赖的位点，单个株系的特殊背景
+   无法让位点通过；报告中突变体比例取两株系均值。
+
+输出：逐株系 `<株系>.dependent-sites.tsv`、合并的 `<基因>.dependent.tsv`
+及 summary JSON。
+
+### 温度响应位点鉴定 — [`downstream/call_temperature_response_methylKit.R`](BID-transcript.script/downstream/call_temperature_response_methylKit.R)
+
+温度响应位点用同一套 methylKit 流程鉴定，比较对象改为同一 WT 材料在
+两个生长温度（27 °C 对 21 °C）下的修饰差异。候选池取两个温度阳性位点
+的并集（仅在单一温度阳性的位点正是温度依赖修饰变化的强候选），由调用
+脚本预先合并。逐重复深度门槛同样施加于两个温度组的全部 Mock 与 Treat
+重复（均须 ≥ 10）——这同时排除了某温度下转录本不表达的情形，避免其
+伪装成修饰差异。与依赖位点不同，温度响应不预设方向，直接使用双侧
+p 值：双侧 p < 0.05 且 |Δ| ≥ 0.05 判为温度响应（组比例为各温度 Treat
+重复 gap 比例的算术均值），每个位点另行记录方向（27 °C 下升高/降低）。
+输出为 `<group2>_vs_<group1>.all-sites.tsv`、`.response.tsv` 及 summary
+JSON（含升/降计数）。
+
 ## 数据集与配置
 
 [`configs/`](configs/) 保存了本研究五套分析数据集的完整 YAML 配置（在工作
@@ -140,8 +215,9 @@ snakemake \
 ## 环境依赖
 
 流程：Snakemake、`trim_galore`、`fastp`、`seqkit`、`bowtie2`、`STAR`、
-`samtools`、`bedtools`、`csvtk`、Python 3 与 R。绘图：R + ggplot2 等
-（见 `Figures/shared/`）。
+`samtools`、`bedtools`、`csvtk`、Python 3 与 R；下游差异检验另需
+Bioconductor 的 [`methylKit`](https://bioconductor.org/packages/methylKit/)。
+绘图：R + ggplot2 等（见 `Figures/shared/`）。
 
 ## 数据可用性
 

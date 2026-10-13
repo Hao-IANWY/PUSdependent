@@ -31,7 +31,7 @@ pipeline:
   rmdup: true
 
   # Minimum read length passed to trim_galore --length. When omitted,
-  # polyA/adjustDeletion defaults to 82 and totalRNA defaults to 35.
+  # polyA defaults to 82 and totalRNA defaults to 35.
   trim_galore_length: 82
 
   # fastp UMI-region clipping. Set both values to 0 for an end that should not

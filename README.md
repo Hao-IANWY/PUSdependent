@@ -75,6 +75,104 @@ following stages:
 The helper programs `adjustGap`, `realignGap`, `samFilter` and `cpup` originate
 from the [y9c/pseudoU-BIDseq](https://github.com/y9c/pseudoU-BIDseq) project.
 
+## Site-calling methods
+
+The three statistical callers invoked at stages 5 and 6 above share one
+representation of the data: for every candidate T (Ψ) site and every
+replicate, the gap-corrected pileup provides the sequencing depth (reads
+spanning the site) and the gap count (reads carrying a deletion at the
+site), whose ratio estimates that replicate's Ψ fraction. This is formally
+identical to a bisulfite-seq measurement — coverage plus methylated-read
+counts — which is why the two differential callers below reuse the methylKit
+differential-methylation framework
+([Akalin et al., *Genome Biol* 2012](https://doi.org/10.1186/gb-2012-13-9-r87)).
+
+### Identification of Ψ sites — [`bin/Pseudo_callsites.R`](BID-transcript.script/bin/Pseudo_callsites.R)
+
+For every Mock/Treat sample pair, the per-replicate site tables are merged on
+site coordinates (chr, position, strand); sites absent from a replicate enter
+the merge with zero counts, and sites whose group-mean depth falls below 10 in
+either group are discarded. Bisulfite-induced deletion enrichment is then
+tested with a one-sided Fisher's exact test on the replicate-pooled 2×2 table
+of gap versus non-gap reads (Treat against Mock, alternative "greater"), and
+p-values are Benjamini–Hochberg-corrected across sites (retained at adjusted
+p < 0.01). In addition, each replicate must individually support the call: a
+Treat gap count ≥ 5, a Treat gap ratio ≥ 5%, and a Treat gap ratio at least
+twice that of the paired Mock replicate (replicates are compared pairwise,
+Mock replicate *i* against Treat replicate *i*; when the two groups have
+unequal replicate numbers, each Treat replicate is instead compared against
+the Mock group mean). A site is called positive when it passes the
+group-level test and at least `min_pass_reps` replicates pass the
+per-replicate criteria — 3 of 3 for the three-replicate datasets, 2 of 2 for
+the two-replicate chloroplast dataset. In the positive-site table, the
+reported ratio and depth are averaged over the passing replicates only.
+
+### Identification of PUS writer-dependent sites — [`downstream/call_dependent_methylKit.R`](BID-transcript.script/downstream/call_dependent_methylKit.R)
+
+The idea of a writer-dependent site is straightforward: if a Ψ site is
+installed by a particular PUS enzyme, mutating that enzyme should make the
+modification disappear — the Treat-library gap ratio at the site should fall
+back towards the Mock background. The script therefore asks one question per
+site — *is the modification fraction significantly lower in the mutant than
+in the WT?* — and answers it separately for each of the two independent
+mutant alleles of the writer gene.
+
+**Why a DNA-methylation tool can test this.** Per site and per replicate,
+BID-seq produces just two numbers: how many reads cover the site (depth) and
+how many of them carry a deletion (gap). That is exactly what bisulfite-seq
+produces for a cytosine (coverage and methylated reads), so the standard
+differential-methylation package methylKit can be reused as-is by reading
+the gap ratio as the "methylation frequency".
+
+**What the script does, step by step, per mutant allele:**
+
+1. *Candidates.* Only the sites called positive in the WT dataset are
+   examined — in the mutants, we only ask whether WT-modified sites are
+   still modified.
+2. *Depth gate.* Every replicate (WT, mutant Mock and mutant Treat) must
+   cover the site with depth ≥ 10; one failing replicate drops the site.
+   This stops "not sequenced" from masquerading as "not modified" (the
+   adjusted tables record uncovered sites as depth = 0) and keeps only
+   complete cases. Mock libraries witness coverage only; the signal compared
+   is the Treat gap ratio.
+3. *Test.* WT and mutant Treat replicates go through methylKit
+   (`methRead` → `unite` → `calculateDiffMeth`): a coverage-weighted
+   logistic regression of the gap ratio on genotype (WT = 1, mutant = 0),
+   with overdispersion estimated as in McCullagh and Nelder — the genotype
+   effect is referred to an F distribution when φ > 1 (chi-square otherwise)
+   — and p-values adjusted across sites with SLIM. methylKit's two-sided p
+   is halved towards the direction of interest (higher modification in WT)
+   and set to 1 otherwise.
+4. *Effect size.* Δ = WT_Ratio − Mut_Ratio, each term the arithmetic mean
+   of the replicate Treat gap ratios. It is computed from the input tables,
+   independently of methylKit, so the reported difference always matches
+   the raw ratios.
+5. *Call.* Dependent in one allele: one-sided p < 0.05 **and** Δ ≥ 0.05.
+   The final writer-dependent set keeps only sites dependent in **both**
+   alleles, so a site cannot pass on the peculiarities of a single line;
+   the mutant ratio reported there averages the two lines.
+
+Outputs: per-allele `<allele>.dependent-sites.tsv`, the combined
+`<gene>.dependent.tsv`, and a summary JSON.
+
+### Identification of temperature-responsive sites — [`downstream/call_temperature_response_methylKit.R`](BID-transcript.script/downstream/call_temperature_response_methylKit.R)
+
+Temperature-responsive sites are called with the same methylKit workflow,
+comparing the same WT material grown at the two temperatures (27 °C vs
+21 °C). Candidates are the union of the positive sites called at either
+temperature (a site positive at only one temperature is precisely a
+candidate for a temperature-dependent change in modification), merged
+upstream of the call. The same per-replicate depth gate (≥ 10 in every Mock
+and Treat replicate of both temperatures) is applied — this also excludes
+sites whose transcript is not expressed at one temperature, which would
+otherwise masquerade as a modification difference. Because a temperature
+response can go in either direction, the two-sided p-value is used directly:
+a site is temperature-responsive when p < 0.05 and |Δ| ≥ 0.05 (group ratios
+are arithmetic means of the replicate Treat gap ratios), and the direction
+(increase/decrease at 27 °C) is recorded per site. Outputs are
+`<group2>_vs_<group1>.all-sites.tsv`, `.response.tsv`, and a summary JSON
+with up/down counts.
+
 ## Datasets and configurations
 
 [`configs/`](configs/) holds the exact YAML configuration of each of the five
@@ -157,8 +255,10 @@ snakemake \
 ## Requirements
 
 Workflow: Snakemake, `trim_galore`, `fastp`, `seqkit`, `bowtie2`, `STAR`,
-`samtools`, `bedtools`, `csvtk`, Python 3 and R. Figure code: R with ggplot2
-and friends (see `Figures/shared/`).
+`samtools`, `bedtools`, `csvtk`, Python 3 and R. Downstream differential
+calls additionally require the Bioconductor package
+[`methylKit`](https://bioconductor.org/packages/methylKit/). Figure code: R
+with ggplot2 and friends (see `Figures/shared/`).
 
 ## Data availability
 

@@ -1,10 +1,9 @@
 # BID-transcript Snakemake 配置说明
 
-三个工作流（位于 `workflows/` 目录）共用以下预处理配置：
+两个工作流（位于 `workflows/` 目录）共用以下预处理配置：
 
 - `workflows/polyA_mapping.smk`
 - `workflows/totalRNA_mapping.smk`
-- `workflows/polyA_mapping-adjustDeletion.smk`
 
 ## 1. 双端数据
 
@@ -94,7 +93,7 @@ pipeline:
 
 | 工作流 | R1 front/tail | R2 front/tail |
 |---|---:|---:|
-| polyA / adjustDeletion | 6 / 21 | 21 / 6 |
+| polyA | 6 / 21 | 21 / 6 |
 | totalRNA | 17 / 0 | 17 / 0 |
 
 ## 5. trim_galore 最小长度
@@ -103,7 +102,7 @@ pipeline:
 
 | 工作流 | 默认值 |
 |---|---:|
-| polyA / adjustDeletion | 82 |
+| polyA | 82 |
 | totalRNA | 35 |
 
 ## 6. 可选表达 count
