@@ -1,99 +1,145 @@
-# PUS Writer Dependent sites Analysis
+# PUS writer-dependent pseudouridylation — analysis code and data
 
-This repository contains the analysis code used to process BID-seq transcriptome data for the PUS writer-dependent pseudouridylation study. The main mapping and candidate-site calling workflow is implemented in [`BID-transcript.script/workflows/polyA_mapping.smk`](BID-transcript.script/workflows/polyA_mapping.smk).
+<p align="center">
+  <a href="README.md">English</a> · <a href="README.zh-CN.md">中文</a>
+</p>
 
-The workflow is designed for paired Mock/Treat BID libraries. It preprocesses FASTQ files, maps reads to transcript references, corrects local gap signals, filters candidate T sites, and applies replicate-aware Fisher testing to identify positive sites.
+This repository accompanies the manuscript:
+
+> **[Title TBD]**
+> [Authors TBD]. *Journal TBD*. Article link: TBD.
+
+It contains the analysis code and processed data used in the paper:
+
+- the Snakemake workflows that map BID-seq libraries and call pseudouridylation
+  (Ψ) sites,
+- the downstream scripts that identify PUS writer-dependent sites and
+  temperature-responsive sites,
+- the exact configuration of every analysis dataset,
+- the per-figure plotting code together with its input tables.
 
 ## Repository layout
 
-- [`BID-transcript.script/`](BID-transcript.script): Snakemake workflows and helper programs for BID transcript mapping and site calling; see its own [`README.md`](BID-transcript.script/README.md) for the full layout.
-- [`BID-transcript.script/workflows/`](BID-transcript.script/workflows): Snakemake workflows — `polyA_mapping.smk` (main poly(A) RNA BID-seq workflow), `totalRNA_mapping.smk`, and `polyA_mapping-adjustDeletion.smk`.
-- [`BID-transcript.script/bin/`](BID-transcript.script/bin): helper programs invoked by the workflows (the config's `script_dir`), including `Pseudo_callsites.R` for Fisher testing and positive-site calling.
-- [`BID-transcript.script/downstream/`](BID-transcript.script/downstream): standalone downstream tools, e.g. `call_dependent.py` for PUS-dependent site calling and `fit_calibration.py` for ratio calibration.
-- [`BID-transcript.script/config.example.yaml`](BID-transcript.script/config.example.yaml): example configuration file for running the workflow.
-- `paper/`: manuscript-related notes.
+| Path | Content |
+|---|---|
+| [`BID-transcript.script/`](BID-transcript.script/) | Mapping and site-calling workflows (`workflows/`), helper programs (`bin/`), and downstream callers (`downstream/`). See its own [README](BID-transcript.script/README.md) and [CONFIG_GUIDE](BID-transcript.script/CONFIG_GUIDE.md) for full documentation. |
+| [`configs/`](configs/) | The five analysis configurations used in this study (one YAML per dataset; see **Datasets and configurations**). |
+| [`Figures/`](Figures/) | Figure-by-figure plotting code. Each leaf directory holds a `data_prep.sh`, the committed input tables (`*.tsv`/`*.bed`), a `plot.R`, and the rendered PDF/PNG/SVG, so every plot can be re-rendered from the committed tables without re-running the pipelines. Shared styling lives in `Figures/shared/`. |
 
-## Upstream code
+Raw FASTQ files and large intermediates (BAMs, mpileup tables) are not part of
+the repository; see **Data availability**.
 
-The helper programs [`adjustGap`](BID-transcript.script/bin/adjustGap), [`realignGap`](BID-transcript.script/bin/realignGap), [`samFilter`](BID-transcript.script/bin/samFilter), and [`cpup`](BID-transcript.script/bin/cpup) are from the [y9c/pseudoU-BIDseq](https://github.com/y9c/pseudoU-BIDseq) project and are used here as part of the BID-seq mapping and gap-processing workflow.
+## Analysis pipeline
 
-## Pipeline overview
+BID-seq (bisulfite-induced deletion sequencing) libraries are sequenced as
+Mock/Treat pairs: in Treat libraries, bisulfite treatment converts Ψ into a
+Ψ–bisulfite adduct that induces deletion (gap) signatures at Ψ sites during
+reverse transcription, while unmodified uridines give near-zero background;
+Mock libraries are the untreated controls
+([Li et al., *Nat Plants* 2025](https://doi.org/10.1038/s41477-024-01894-7)). Each dataset
+is processed end-to-end by one of two Snakemake workflows —
+[`polyA_mapping.smk`](BID-transcript.script/workflows/polyA_mapping.smk) for
+poly(A)+ RNA libraries and
+[`totalRNA_mapping.smk`](BID-transcript.script/workflows/totalRNA_mapping.smk)
+for tRNA-enriched / total-RNA libraries (both workflows analyze only R2) — through the
+following stages:
 
-For each replicate-level FASTQ pair, `polyA_mapping.smk` runs:
+1. **Preprocessing** — adapter, quality and length trimming with `trim_galore`;
+   PCR duplicate removal (`fastp --dedup` for poly(A) libraries, `seqkit rmdup`
+   for total-RNA libraries); fixed UMI/adapter-region clipping with `fastp`,
+   parameterized per read end (`umi_extract` in the config).
+2. **Mapping** — `bowtie2` against the first configured reference (an rRNA
+   reference for poly(A) libraries, a unique tRNA/sn/snoRNA reference for
+   tRNA-enriched libraries). When two references are configured, unmapped reads
+   are subsequently aligned with `STAR` to the Araport11 representative cDNA
+   models.
+3. **Signal extraction** — strand-aware BAM filtering (`samFilter`), local gap
+   realignment (`realignGap`), `samtools calmd`, mismatch filtering, and
+   `samtools mpileup` conversion into per-site count tables.
+4. **Gap correction** — `adjustGap` jointly re-estimates gap signals across all
+   replicates of a dataset, parallelized over reference chunks
+   (`adjust_gap.chunk_bp` / `max_sequences`).
+5. **Site calling** — candidate T (Ψ) sites are filtered by depth
+   (`filter_t_sites`), then `bin/Pseudo_callsites.R` runs replicate-aware
+   Mock-vs-Treat Fisher tests with per-replicate pass criteria (the `filter`
+   block in the config), producing `<sample>_sites.Fisher.tsv` and
+   `<sample>_sites.positive.tsv` under `STAT/fisher/<ref_type>/`.
+6. **Downstream calls** — PUS writer-dependent sites are called from the
+   positive-site tables with
+   [`downstream/call_dependent_methylKit.R`](BID-transcript.script/downstream/call_dependent_methylKit.R);
+   temperature-responsive sites with
+   [`downstream/call_temperature_response_methylKit.R`](BID-transcript.script/downstream/call_temperature_response_methylKit.R).
+   In parallel, the workflows emit raw per-gene expression matrices under
+   `count/<ref_type>/` (Mock-group and all-samples).
 
-1. adapter and length filtering with `trim_galore`;
-2. duplicate removal with `fastp --dedup`;
-3. fixed UMI/adapter-region clipping with `fastp`;
-4. primary mapping to the first configured reference with `bowtie2`;
-5. optional secondary mapping of unmapped reads with `STAR` when two reference types are configured;
-6. forward-strand BAM filtering, gap realignment, sorting, `calmd`, and mismatch filtering;
-7. `samtools mpileup` and conversion to per-site count tables;
-8. combined gap adjustment across all replicates for each reference type;
-9. T-site filtering with local sequence context extraction;
-10. Mock-vs-Treat Fisher testing with `Pseudo_callsites.R`.
+The helper programs `adjustGap`, `realignGap`, `samFilter` and `cpup` originate
+from the [y9c/pseudoU-BIDseq](https://github.com/y9c/pseudoU-BIDseq) project.
 
-The reference types are read from `pipeline.ref` in YAML order. The first reference is used for the Bowtie2 stage. If a second reference is provided, the workflow treats it as a STAR stage and requires `paths.index_star`.
+## Datasets and configurations
 
-## Requirements
+[`configs/`](configs/) holds the exact YAML configuration of each of the five
+analysis datasets in this study (in the working tree, each file is symlinked as
+`config.yaml` into its pipeline run directory):
 
-The commands called by the workflow must be available in the runtime environment:
+| Config | Workflow | Dataset |
+|---|---|---|
+| [`polyARNA.yaml`](configs/polyARNA.yaml) | polyA_mapping | poly(A)+ RNA from WT and 14 mutant lines of seven TRUA/PUS genes, each in root, leaf and flower |
+| [`tRNA.yaml`](configs/tRNA.yaml) | totalRNA_mapping | tRNA-enriched libraries, same genotypes and tissues |
+| [`Temperature.yaml`](configs/Temperature.yaml) | polyA_mapping | poly(A)+ RNA of WT and two trua1b lines grown at 21 °C and 27 °C |
+| [`Temperature_tRNA.yaml`](configs/Temperature_tRNA.yaml) | totalRNA_mapping | tRNA-enriched libraries, same temperature design |
+| [`Chloroplast.yaml`](configs/Chloroplast.yaml) | totalRNA_mapping | chloroplast RNA |
 
-- Snakemake
-- `trim_galore`
-- `fastp`
-- `bowtie2`
-- `STAR`
-- `samtools`
-- `bedtools`
-- `csvtk`
-- Python
-- R
+### Configuration parameters
 
-The helper binaries/scripts in `BID-transcript.script/bin` are also required: `samFilter`, `realignGap`, `cpup`, `adjustGap`, `combine_mpileup_tsv.py`, and `Pseudo_callsites.R`.
+All five configs share one schema:
 
-## Configure a run
+- **`paths`** — absolute locations of the helper programs (`script_dir`,
+  `pseudo_callsites_r`) and of the aligner indexes (`index_bowtie2` for the
+  first reference, `index_star` required only with two references).
+- **`env`** — the Python and R executables used by workflow scripts.
+- **`pipeline.ref`** — one or two named reference FASTAs, in mapping order: the
+  first is the bowtie2 stage, the (optional) second is the STAR stage. The same
+  names key the output directories (`STAT/<ref_type>/`, `count/<ref_type>/`).
+- **`pipeline.t_site_windows`** — bases of sequence context extracted on each
+  side of a candidate T site.
+- **`pipeline.expression`** — optional raw expression matrices per reference
+  type; `count_mode` is `all_alignments` (alignment-level, for multi-mapping
+  RNAs such as rRNA/tRNA) or `primary` (read-level, for mRNA).
+- **`pipeline.adjust_gap`** — chunking of the joint gap-correction step:
+  `chunk_bp` per chunk, batching small transcripts up to `max_sequences`.
+- **`pipeline.filter`** — site-calling thresholds: `min_depth` (per-replicate
+  depth for the candidate pool), `min_avg_depth` (group-level mean depth),
+  `max_padj` (BH-adjusted Fisher p-value), `min_gap` (Treat gap count per
+  passing replicate), `min_treat_ratio` (Treat gap ratio per passing
+  replicate), `ratio_fold` (Treat/Mock ratio fold-change), and `min_pass_reps`
+  (how many replicates must pass — 3 for all three-replicate datasets, 2 for
+  the two-replicate Chloroplast dataset).
+- **`read_layout` / `rmdup` / `trim_galore_length`** — paired vs single-end
+  input, whether to deduplicate, and the minimum read length kept after
+  trimming.
+- **`pipeline.umi_extract`** — fixed-length clipping of read termini with
+  `fastp` (`trim_front`/`trim_tail` = bases removed from the 5′/3′ end). The
+  clipping lengths follow from the library structure: every read carries a
+  fixed 8 nt UMI plus the `TATAGGG` sequence, and the first few low-quality
+  5′ bases are removed as well. Poly(A) libraries remove 6 such bases, so
+  21 nt are clipped from the 5′ end (8 + 7 + 6) and 6 nt from the 3′ end,
+  and the paired-end libraries are clipped complementarily as
+  `R1: 6/21, R2: 21/6`. tRNA-enriched/total-RNA reads are short, so only
+  the first 2 low-quality bases are removed: the 5′ end of R2 is
+  `8 bp UMI + TATAGGG + 2 bp`, hence `R2: 17/0` (mirrored as `R1: 0/17`).
+  For both library types only R2 enters mapping and downstream analysis.
+- **`samples`** — per-sample replicate definitions:
+  `samples.<sample>.{mock,treat}.<rep>.{file_index,read1,read2}`, with FASTQ
+  paths relative to the run directory's `raw_data/`. An optional per-replicate
+  **`stages`** key restricts a replicate to a branch: `stages: [count]`
+  replicates only contribute to mapping/expression matrices and never enter the
+  Fisher site-calling branch, so adding them does not invalidate the joint
+  gap-correction results (the default, `[count, fisher]`, enters both).
 
-Start from the example file:
+### Running a dataset
 
-```bash
-cp BID-transcript.script/config.example.yaml config.yaml
-```
-
-Edit `config.yaml` for your dataset:
-
-- `paths.script_dir`: absolute path to `BID-transcript.script/bin`.
-- `paths.pseudo_callsites_r`: absolute path to `BID-transcript.script/bin/Pseudo_callsites.R`.
-- `paths.index_bowtie2`: Bowtie2 index basename for the first reference type.
-- `paths.index_star`: STAR genome directory; required only when two reference types are configured.
-- `env.python`: Python executable used for `combine_mpileup_tsv.py`.
-- `env.r`: R executable used to run `Pseudo_callsites.R`.
-- `pipeline.ref`: one or two named reference FASTA paths. Reference FASTA files must have `.fai` indexes for the T-site context step.
-- `pipeline.t_site_windows`: number of bases on each side of the candidate T site to extract as context.
-- `samples`: biological sample definitions. Each sample must contain matched `mock` and `treat` replicates. Replicate names must match between groups, and every `file_index` must be unique.
-
-Relative FASTQ paths in `samples.*.*.*.read1/read2` are resolved relative to the Snakemake working directory passed by `--directory`.
-
-## Run the workflow
-
-The analysis run command follows the reference script at `/home/HL/project/shuangli/PUS/PUScaller/Mapping_pipeline/BID-mod/polyARNA/run.sh`. A portable version of that launcher is:
-
-```bash
-#!/usr/bin/env bash
-set -euo pipefail
-IFS=$'\n\t'
-
-readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-snakemake \
-  -s "/path/to/BID-transcript.script/workflows/polyA_mapping.smk" \
-  --configfile "$SCRIPT_DIR/config.yaml" \
-  --directory "$SCRIPT_DIR" \
-  --cores 200 \
-  --rerun-incomplete \
-  "$@"
-```
-
-In practice, create a run directory that contains `config.yaml` and `raw_data/`, then run:
+Each run directory holds its `config.yaml` (symlinked into `configs/`) and a
+`raw_data/` directory of FASTQ files, and is executed with:
 
 ```bash
 snakemake \
@@ -104,18 +150,24 @@ snakemake \
   --rerun-incomplete
 ```
 
-Additional Snakemake options can be appended as needed, for example `-n` for a dry run or `--printshellcmds` for command logging.
+(use `totalRNA_mapping.smk` for the total-RNA datasets). Main outputs are
+`STAT/mpileup/`, `STAT/adjustGap/`, `STAT/fisher/` (positive-site tables),
+`count/` (expression matrices) and `logs/` (per-replicate library statistics).
 
-## Main outputs
+## Requirements
 
-The workflow writes outputs under the run directory:
+Workflow: Snakemake, `trim_galore`, `fastp`, `seqkit`, `bowtie2`, `STAR`,
+`samtools`, `bedtools`, `csvtk`, Python 3 and R. Figure code: R with ggplot2
+and friends (see `Figures/shared/`).
 
-- `fix.fastq/`: trimmed and deduplicated FASTQ files.
-- `umi_extract.fastq/`: reads after fixed UMI/adapter-region clipping.
-- `BAM/`: mapped, realigned, filtered BAM files and mapping reports.
-- `STAT/mpileup/<ref_type>/`: replicate-level mpileup TSV files and `COMBINED-<ref_type>.tsv`.
-- `STAT/adjustGap/<ref_type>/`: gap-adjusted tables and filtered T-site inputs.
-- `STAT/fisher/<ref_type>/`: `<sample>_sites.Fisher.tsv` and `<sample>_sites.positive.tsv`.
-- `logs/`: per-replicate read-count and mapping summary tables.
+## Data availability
 
-The positive-site tables in `STAT/fisher/<ref_type>/` are the main candidate pseudouridylation site calls for downstream analysis.
+The raw sequencing data generated in this study have been deposited under
+accession **[TBD]** (link TBD). Processed per-site tables underlying every
+figure are committed alongside the plotting code under [`Figures/`](Figures/).
+
+## Citation
+
+If you use this code or data, please cite:
+
+> [Citation TBD]

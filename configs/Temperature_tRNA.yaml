@@ -1,0 +1,235 @@
+# BID-seq Temperature tRNA Arabidopsis — totalRNA 流程（只分析 R2）
+# 假尿苷 tRNA 文库，R2 结构：8bp UMI + TATAGGG + 插入序列 + polyA 尾巴 + 接头。
+# 2026-09-24 数据换血：弃用旧 260129 数据与 trua1b_2（line2）整线；
+# 现 6 组（{WT,trua1b_1,trua1b_3} × {21,27}）× Mock/Treat × 3 repeats = 36 文库。
+# rep1/rep2 来自 merge_260702_260716（260702+260716 合并），rep3 来自 260909-T7PE150-127G。
+# 参数沿用 tRNA/config.yaml 的 totalRNA 现行默认值；只跑 ncRNA（mRNA 两处已注释）。
+
+paths:
+  script_dir: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin
+  pseudo_callsites_r: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin/Pseudo_callsites.R
+  index_bowtie2: /home/HL/reference/Ath/TAIR/tRNA-unique_sn_snoRNA.fa
+  index_star: /home/HL/reference/Ath/TAIR/cDNA_STAR_index
+
+env:
+  python: /home/HL/miniforge3/envs/analysis/bin/python
+  r: /home/HL/miniforge3/envs/analysis/bin/R
+
+pipeline:
+  ref:
+    ncRNA: /home/HL/reference/Ath/TAIR/tRNA-unique_sn_snoRNA.fa
+    # mRNA 暂时停用（2026-09-24）：只跑 ncRNA。恢复时取消此处与 count_mode 的注释。
+    # mRNA: /home/HL/reference/Ath/TAIR/Araport11_cdna_20220914_representative_gene_model
+  t_site_windows: 2
+
+  # Optional raw expression matrices. Keys must match pipeline.ref.
+  # Emits both a Mock-group matrix and an all_samples matrix per ref type.
+  expression:
+    enabled: true
+    count_mode:
+      ncRNA: all_alignments
+      # mRNA: primary
+
+  # 沿用当前 totalRNA 流程默认阈值（移植自 polyA 流程的硬编码/R 脚本默认值）。
+  # call sites 要求至少 3 个生物学重复通过：每组 3 重复，即 3 中 3（同 tRNA 突变体组先例）。
+  filter:
+    min_depth: 10           # filter_t_sites: 单重复 depth >= 此值
+    min_avg_depth: 10       # Mock/Treat 组平均 depth >= 此值
+    max_padj: 0.01          # BH 校正 p 值 < 此值
+    min_gap: 5              # 每个通过重复的 Treat gap >= 此值
+    min_treat_ratio: 0.05   # 每个通过重复的 Treat ratio >= 此值
+    ratio_fold: 2           # Treat ratio >= ratio_fold * Mock ratio
+    min_pass_reps: 3        # 至少这么多重复通过
+
+  # totalRNA 只分析 R2：trim 单端模式处理 R2（--adapter AAAAAAAAAAA），
+  # 去重用 seqkit rmdup -s。read1 仅作配对信息保留，不进入分析。
+  read_layout: paired
+  rmdup: true
+  trim_galore_length: 35
+
+  # totalRNA 历史默认值：R2 结构为 8bp UMI + TATAGGG + 2bp = 前 17bp。
+  # R1 从片段另一端测序，该固定结构位于 R1 的 3' 端，故为 trim_tail: 17。
+  # 注意：本流程仅分析 R2（trim/rmdup/umi_extract/比对均只读 R2），
+  # R1 参数仅作文档性记录，不影响任何流程产物。
+  umi_extract:
+    R1:
+      trim_front: 0
+      trim_tail: 17
+    R2:
+      trim_front: 17
+      trim_tail: 0
+
+samples:
+  WT_21:
+    sample_id: "WT_21"
+    mock:
+      rep1:
+        file_index: Mock-21-WT.rep1
+        read1: raw_data/Mock-21-WT.rep1.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-21-WT.rep2
+        read1: raw_data/Mock-21-WT.rep2.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-21-WT.rep3
+        read1: raw_data/Mock-21-WT.rep3.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-21-WT.rep1
+        read1: raw_data/Treat-21-WT.rep1.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-21-WT.rep2
+        read1: raw_data/Treat-21-WT.rep2.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-21-WT.rep3
+        read1: raw_data/Treat-21-WT.rep3.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep3.R2.fq.gz
+
+  WT_27:
+    sample_id: "WT_27"
+    mock:
+      rep1:
+        file_index: Mock-27-WT.rep1
+        read1: raw_data/Mock-27-WT.rep1.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-27-WT.rep2
+        read1: raw_data/Mock-27-WT.rep2.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-27-WT.rep3
+        read1: raw_data/Mock-27-WT.rep3.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-27-WT.rep1
+        read1: raw_data/Treat-27-WT.rep1.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-27-WT.rep2
+        read1: raw_data/Treat-27-WT.rep2.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-27-WT.rep3
+        read1: raw_data/Treat-27-WT.rep3.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep3.R2.fq.gz
+
+  trua1b_1_21:
+    sample_id: "trua1b_1_21"
+    mock:
+      rep1:
+        file_index: Mock-21-trua1b_1.rep1
+        read1: raw_data/Mock-21-trua1b_1.rep1.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-21-trua1b_1.rep2
+        read1: raw_data/Mock-21-trua1b_1.rep2.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-21-trua1b_1.rep3
+        read1: raw_data/Mock-21-trua1b_1.rep3.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-21-trua1b_1.rep1
+        read1: raw_data/Treat-21-trua1b_1.rep1.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-21-trua1b_1.rep2
+        read1: raw_data/Treat-21-trua1b_1.rep2.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-21-trua1b_1.rep3
+        read1: raw_data/Treat-21-trua1b_1.rep3.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep3.R2.fq.gz
+
+  trua1b_1_27:
+    sample_id: "trua1b_1_27"
+    mock:
+      rep1:
+        file_index: Mock-27-trua1b_1.rep1
+        read1: raw_data/Mock-27-trua1b_1.rep1.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-27-trua1b_1.rep2
+        read1: raw_data/Mock-27-trua1b_1.rep2.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-27-trua1b_1.rep3
+        read1: raw_data/Mock-27-trua1b_1.rep3.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-27-trua1b_1.rep1
+        read1: raw_data/Treat-27-trua1b_1.rep1.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-27-trua1b_1.rep2
+        read1: raw_data/Treat-27-trua1b_1.rep2.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-27-trua1b_1.rep3
+        read1: raw_data/Treat-27-trua1b_1.rep3.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep3.R2.fq.gz
+
+  trua1b_3_21:
+    sample_id: "trua1b_3_21"
+    mock:
+      rep1:
+        file_index: Mock-21-trua1b_3.rep1
+        read1: raw_data/Mock-21-trua1b_3.rep1.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_3.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-21-trua1b_3.rep2
+        read1: raw_data/Mock-21-trua1b_3.rep2.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_3.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-21-trua1b_3.rep3
+        read1: raw_data/Mock-21-trua1b_3.rep3.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_3.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-21-trua1b_3.rep1
+        read1: raw_data/Treat-21-trua1b_3.rep1.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_3.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-21-trua1b_3.rep2
+        read1: raw_data/Treat-21-trua1b_3.rep2.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_3.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-21-trua1b_3.rep3
+        read1: raw_data/Treat-21-trua1b_3.rep3.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_3.rep3.R2.fq.gz
+
+  trua1b_3_27:
+    sample_id: "trua1b_3_27"
+    mock:
+      rep1:
+        file_index: Mock-27-trua1b_3.rep1
+        read1: raw_data/Mock-27-trua1b_3.rep1.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_3.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-27-trua1b_3.rep2
+        read1: raw_data/Mock-27-trua1b_3.rep2.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_3.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-27-trua1b_3.rep3
+        read1: raw_data/Mock-27-trua1b_3.rep3.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_3.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-27-trua1b_3.rep1
+        read1: raw_data/Treat-27-trua1b_3.rep1.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_3.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-27-trua1b_3.rep2
+        read1: raw_data/Treat-27-trua1b_3.rep2.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_3.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-27-trua1b_3.rep3
+        read1: raw_data/Treat-27-trua1b_3.rep3.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_3.rep3.R2.fq.gz

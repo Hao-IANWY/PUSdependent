@@ -1,0 +1,79 @@
+# BID-seq Chloroplast Arabidopsis — totalRNA 流程（只分析 R2）
+# Mapping route: Bowtie2/ncRNA 过滤，再 STAR/Araport11 cDNA（转录组）比对。
+# 双参考顺序不可调换：ncRNA 在前（bowtie2 阶段），mRNA 在后（STAR 阶段）。
+
+paths:
+  script_dir: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin
+  pseudo_callsites_r: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin/Pseudo_callsites.R
+  index_bowtie2: /home/HL/project/shuangli/PUS/Chloroplast/reference/ncRNA.fa
+  index_star: /home/HL/reference/Ath/TAIR/cDNA_STAR_index
+
+env:
+  python: /home/HL/miniforge3/envs/analysis/bin/python
+  r: /home/HL/miniforge3/envs/analysis/bin/R
+
+pipeline:
+  ref:
+    ncRNA: /home/HL/project/shuangli/PUS/Chloroplast/reference/ncRNA.fa
+    mRNA: /home/HL/reference/Ath/TAIR/Araport11_cdna_20220914_representative_gene_model
+  t_site_windows: 2
+
+  # Optional raw expression matrices. Keys must match pipeline.ref.
+  # Emits both a Mock-group matrix and an all_samples matrix per ref type.
+  # all_alignments is alignment-level counting; primary is read-level counting.
+  expression:
+    enabled: true
+    count_mode:
+      ncRNA: all_alignments
+      mRNA: primary
+
+  # 位点过滤阈值（移植自 polyA 流程；以下值即原硬编码/R 脚本默认值，
+  # 显式写出仅为自文档化）。每组 2 个重复，min_pass_reps 取最严值 2。
+  filter:
+    min_depth: 10           # filter_t_sites: 单重复 depth >= 此值
+    min_avg_depth: 10       # Mock/Treat 组平均 depth >= 此值
+    max_padj: 0.01          # BH 校正 p 值 < 此值
+    min_gap: 5              # 每个通过重复的 Treat gap >= 此值
+    min_treat_ratio: 0.05   # 每个通过重复的 Treat ratio >= 此值
+    ratio_fold: 2           # Treat ratio >= ratio_fold * Mock ratio
+    min_pass_reps: 2        # 至少这么多重复通过
+
+  # totalRNA 只分析 R2：trim 单端模式处理 R2（--adapter AAAAAAAAAAA），
+  # 去重用 seqkit rmdup -s。read1 仅作配对信息保留，不进入分析。
+  read_layout: paired
+  rmdup: true
+  trim_galore_length: 35
+
+  # totalRNA 历史默认值：R2 结构为 8bp UMI + TATAGGG + 2bp = 前 17bp。
+  # R1 从片段另一端测序，该固定结构位于 R1 的 3' 端，故为 trim_tail: 17。
+  # 注意：本流程仅分析 R2（trim/rmdup/umi_extract/比对均只读 R2），
+  # R1 参数仅作文档性记录，不影响任何流程产物。
+  umi_extract:
+    R1:
+      trim_front: 0
+      trim_tail: 17
+    R2:
+      trim_front: 17
+      trim_tail: 0
+
+samples:
+  Chloroplast:
+    sample_id: "Chloroplast"
+    mock:
+      rep1:
+        file_index: Mock.rep1
+        read1: raw_data/Mock.rep1.R1.fq.gz
+        read2: raw_data/Mock.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock.rep2
+        read1: raw_data/Mock.rep2.R1.fq.gz
+        read2: raw_data/Mock.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat.rep1
+        read1: raw_data/Treat.rep1.R1.fq.gz
+        read2: raw_data/Treat.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat.rep2
+        read1: raw_data/Treat.rep2.R1.fq.gz
+        read2: raw_data/Treat.rep2.R2.fq.gz

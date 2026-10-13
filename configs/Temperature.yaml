@@ -1,0 +1,243 @@
+# BID-seq Temperature Arabidopsis — paired-end, dedup, historical UMI clipping
+# Mapping route: Bowtie2/rRNA filtering, then STAR/Araport11 cDNA alignment.
+# 2026-09-24 数据换血：使用 260918-T7PE150-1369G 新版本，
+# 共 6 组（{WT,trua1b_1,trua1b_3} × {21,27}）× Mock/Treat × 3 repeats = 36 文库。
+# 参数设置同步 polyARNA/config.yaml；所有阈值一致，包括 min_pass_reps=3。
+
+paths:
+  script_dir: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin
+  pseudo_callsites_r: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin/Pseudo_callsites.R
+  index_bowtie2: /home/HL/reference/Ath/TAIR/ath_rRNA.fa
+  index_star: /home/HL/reference/Ath/TAIR/cDNA_STAR_index
+
+env:
+  python: /home/HL/miniforge3/envs/analysis/bin/python
+  r: /home/HL/miniforge3/envs/analysis/bin/R
+
+pipeline:
+  ref:
+    rRNA: /home/HL/reference/Ath/TAIR/ath_rRNA.fa
+    mRNA: /home/HL/reference/Ath/TAIR/Araport11_cdna_20220914_representative_gene_model
+  t_site_windows: 2
+
+  # Optional raw expression matrices. Keys must match pipeline.ref.
+  # Emits both a Mock-group matrix and an all_samples matrix per ref type.
+  # all_alignments is alignment-level counting; primary is read-level counting.
+  expression:
+    enabled: true
+    count_mode:
+      rRNA: all_alignments
+      mRNA: primary
+
+  # Parallel adjustGap chunks. Boundaries always fall between reference
+  # sequences/transcripts; small transcripts are batched to avoid excessive jobs.
+  adjust_gap:
+    chunk_bp: 250000
+    max_sequences: 1000
+
+  # Site-filtering thresholds. Values match polyARNA/config.yaml.
+  # Both datasets now have 3 replicates per condition, so min_pass_reps is 3.
+  filter:
+    min_depth: 10           # filter_t_sites: per-replicate depth >= this
+    min_avg_depth: 10       # group-level Mock/Treat avg depth >= this
+    max_padj: 0.01          # BH-adjusted p-value < this
+    min_gap: 5              # Treat gap >= this per passing replicate
+    min_treat_ratio: 0.05   # Treat ratio >= this per passing replicate
+    ratio_fold: 2           # Treat ratio >= ratio_fold * Mock ratio
+    min_pass_reps: 3        # at least this many replicates pass
+
+  # Input layout is global for one workflow run. Accepted values: paired/PE or single/SE.
+  # Paired mode requires read1 and read2 for every replicate.
+  read_layout: paired
+
+  # true: run the workflow-specific fastp deduplication step; false: pass trimmed
+  # reads directly to umi_extract without creating *.dup.fq.gz files.
+  rmdup: true
+
+  # Minimum read length passed to trim_galore --length. Matches polyARNA.
+  # Both datasets are 150 bp paired-end.
+  trim_galore_length: 47
+
+  # fastp UMI-region clipping. These values match the historical polyA workflow.
+  umi_extract:
+    R1:
+      trim_front: 6
+      trim_tail: 21
+    R2:
+      trim_front: 21
+      trim_tail: 6
+
+samples:
+  WT_21:
+    sample_id: "WT_21"
+    mock:
+      rep1:
+        file_index: Mock-21-WT.rep1
+        read1: raw_data/Mock-21-WT.rep1.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-21-WT.rep2
+        read1: raw_data/Mock-21-WT.rep2.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-21-WT.rep3
+        read1: raw_data/Mock-21-WT.rep3.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-21-WT.rep1
+        read1: raw_data/Treat-21-WT.rep1.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-21-WT.rep2
+        read1: raw_data/Treat-21-WT.rep2.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-21-WT.rep3
+        read1: raw_data/Treat-21-WT.rep3.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep3.R2.fq.gz
+
+  WT_27:
+    sample_id: "WT_27"
+    mock:
+      rep1:
+        file_index: Mock-27-WT.rep1
+        read1: raw_data/Mock-27-WT.rep1.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-27-WT.rep2
+        read1: raw_data/Mock-27-WT.rep2.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-27-WT.rep3
+        read1: raw_data/Mock-27-WT.rep3.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-27-WT.rep1
+        read1: raw_data/Treat-27-WT.rep1.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-27-WT.rep2
+        read1: raw_data/Treat-27-WT.rep2.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-27-WT.rep3
+        read1: raw_data/Treat-27-WT.rep3.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep3.R2.fq.gz
+
+  trua1b_1_21:
+    sample_id: "trua1b_1_21"
+    mock:
+      rep1:
+        file_index: Mock-21-trua1b_1.rep1
+        read1: raw_data/Mock-21-trua1b_1.rep1.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-21-trua1b_1.rep2
+        read1: raw_data/Mock-21-trua1b_1.rep2.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-21-trua1b_1.rep3
+        read1: raw_data/Mock-21-trua1b_1.rep3.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-21-trua1b_1.rep1
+        read1: raw_data/Treat-21-trua1b_1.rep1.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-21-trua1b_1.rep2
+        read1: raw_data/Treat-21-trua1b_1.rep2.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-21-trua1b_1.rep3
+        read1: raw_data/Treat-21-trua1b_1.rep3.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep3.R2.fq.gz
+
+  trua1b_1_27:
+    sample_id: "trua1b_1_27"
+    mock:
+      rep1:
+        file_index: Mock-27-trua1b_1.rep1
+        read1: raw_data/Mock-27-trua1b_1.rep1.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-27-trua1b_1.rep2
+        read1: raw_data/Mock-27-trua1b_1.rep2.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-27-trua1b_1.rep3
+        read1: raw_data/Mock-27-trua1b_1.rep3.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-27-trua1b_1.rep1
+        read1: raw_data/Treat-27-trua1b_1.rep1.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-27-trua1b_1.rep2
+        read1: raw_data/Treat-27-trua1b_1.rep2.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-27-trua1b_1.rep3
+        read1: raw_data/Treat-27-trua1b_1.rep3.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep3.R2.fq.gz
+
+  trua1b_3_21:
+    sample_id: "trua1b_3_21"
+    mock:
+      rep1:
+        file_index: Mock-21-trua1b_3.rep1
+        read1: raw_data/Mock-21-trua1b_3.rep1.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_3.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-21-trua1b_3.rep2
+        read1: raw_data/Mock-21-trua1b_3.rep2.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_3.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-21-trua1b_3.rep3
+        read1: raw_data/Mock-21-trua1b_3.rep3.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_3.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-21-trua1b_3.rep1
+        read1: raw_data/Treat-21-trua1b_3.rep1.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_3.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-21-trua1b_3.rep2
+        read1: raw_data/Treat-21-trua1b_3.rep2.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_3.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-21-trua1b_3.rep3
+        read1: raw_data/Treat-21-trua1b_3.rep3.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_3.rep3.R2.fq.gz
+
+  trua1b_3_27:
+    sample_id: "trua1b_3_27"
+    mock:
+      rep1:
+        file_index: Mock-27-trua1b_3.rep1
+        read1: raw_data/Mock-27-trua1b_3.rep1.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_3.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock-27-trua1b_3.rep2
+        read1: raw_data/Mock-27-trua1b_3.rep2.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_3.rep2.R2.fq.gz
+      rep3:
+        file_index: Mock-27-trua1b_3.rep3
+        read1: raw_data/Mock-27-trua1b_3.rep3.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_3.rep3.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat-27-trua1b_3.rep1
+        read1: raw_data/Treat-27-trua1b_3.rep1.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_3.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat-27-trua1b_3.rep2
+        read1: raw_data/Treat-27-trua1b_3.rep2.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_3.rep2.R2.fq.gz
+      rep3:
+        file_index: Treat-27-trua1b_3.rep3
+        read1: raw_data/Treat-27-trua1b_3.rep3.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_3.rep3.R2.fq.gz
