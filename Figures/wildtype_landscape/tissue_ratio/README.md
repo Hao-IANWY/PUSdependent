@@ -17,14 +17,17 @@ For tRNA, only records with chromosome names matching `^tRNA-` are used (nuclear
 Per site, the treatment depth/gap come from the Fisher table (`Treat_avg_depth`, `Treat_avg_gap`), falling back to the `depth`/`ratio * depth` of the positive table when the join misses.
 
 ## Plot
-- X axis: RNA type.
+- X axis: RNA type (labels only — no X axis line or tick marks).
+- Offset axes: the Y axis line is visually separated from the panel (`guide_prism_offset` + `init_theme_offset`).
+- Y axis spans 0–100%; the panel ends exactly at the top tick (data maximum is 100%).
 - Within each RNA type, Root, Leaf and Flower are shown as separate bars.
 - Bar height: mean modification ratio of all WT positive sites in that tissue and RNA type.
 - Error bar: SEM of site-level modification ratios.
 - Dots: individual WT positive sites; each dot is one site's modification ratio.
-- Colors: shared pastel tissue palette (`PAL_TISSUE`); legend labels use the plural display forms (Roots / Leaves / Flowers).
+- Significance brackets are drawn above the panel in the top margin (`clip = "off"`), since the axis ends at 100%.
+- Colors: shared pastel tissue palette (`PAL_TISSUE`); legend sits on the right with plural display forms (Roots / Leaves / Flowers).
 - The dot layer does not generate a legend; the retained legend is generated from the bar layer.
-- Y axis top tick is computed with `y_axis_cover()` so it covers the highest drawn element (including significance brackets).
+- Canvas: 8.4 x 6.4 in.
 
 ## Statistical Test
 For each RNA type, pairwise tissue comparisons are performed:

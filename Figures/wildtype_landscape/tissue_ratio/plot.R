@@ -3,6 +3,8 @@
 # 柱 = 位点均值,误差棒 = SEM,散点 = 单位点修饰率,括号 = Welch t 检验。
 # 参考 archive/20260902/paper/WT_sites_overview/tissue_ratio,
 # 数据源与样式对齐当前仓库(polyARNA + tRNA 双流程,Figures/shared 样式体系)。
+# 版式:offset axes(XY 轴与面板分离),Y 轴顶刻度 100%;显著性括号
+# 经 clip = "off" 画在面板上沿之外的页边距里,图例因此移到右侧。
 
 suppressPackageStartupMessages({
   library(dplyr)
@@ -32,7 +34,8 @@ repo_dir <- normalizePath(file.path(script_dir, "..", "..", ".."))
 source(file.path(repo_dir, "Figures/shared/plot_style.R"))
 source(file.path(repo_dir, "Figures/shared/plot_tokens.R"))
 
-init_theme(base_size = 16, border = TRUE, sizes = SIZE_TOKENS)
+# offset axes:border=FALSE + axis.line,必须与 scale 的 guide_prism_offset 成对出现
+init_theme_offset(base_size = round(8.4 * 2.67))
 
 tissue_levels <- c("Root", "Leaf", "Flower")
 rna_levels <- c("mRNA", "rRNA", "tRNA")
@@ -277,13 +280,11 @@ annotation_tbl <- ttest_tbl %>%
   ) %>%
   left_join(annotation_base, by = "rna_type") %>%
   mutate(
-    y = pmax(106, y_max + 2) + pair_index * 10,
-    y_text = y + 2.5,
+    # 括号架在面板上沿之外的页边距里(Y 轴封顶 100,面板内不设头部留白)
+    y = 102.5 + (pair_index - 1) * 6.5,
+    y_text = y + 2,
     label = significance
   )
-
-# Y 轴上限罩住最高刻度:把括号文字层也算进被画的 y 值
-y_ax <- y_axis_cover(c(plot_tbl$ratio_pct, annotation_tbl$y, annotation_tbl$y_text))
 
 tissue_colors <- setNames(PAL_TISSUE, tissue_levels)
 
@@ -328,14 +329,14 @@ ratio_plot <- ggplot() +
   ) +
   geom_segment(
     data = annotation_tbl,
-    aes(x = x_start, xend = x_start, y = y - 2.4, yend = y),
+    aes(x = x_start, xend = x_start, y = y - 1.8, yend = y),
     inherit.aes = FALSE,
     linewidth = SIZE_TOKENS$base_linewidth,
     color = "black"
   ) +
   geom_segment(
     data = annotation_tbl,
-    aes(x = x_end, xend = x_end, y = y - 2.4, yend = y),
+    aes(x = x_end, xend = x_end, y = y - 1.8, yend = y),
     inherit.aes = FALSE,
     linewidth = SIZE_TOKENS$base_linewidth,
     color = "black"
@@ -356,9 +357,9 @@ ratio_plot <- ggplot() +
     expand = expansion(mult = c(0.01, 0.01))
   ) +
   scale_y_continuous(
-    limits = c(0, y_ax$top),
-    breaks = y_ax$breaks,
-    expand = y_ax$expand
+    breaks = seq(0, 100, by = 25),
+    expand = expansion(0, 0),
+    guide = offset_guide()
   ) +
   # 显示层用复数(仓库口径),数据层 tissue 保持单数
   scale_fill_manual(
@@ -368,18 +369,20 @@ ratio_plot <- ggplot() +
     labels = c("Roots", "Leaves", "Flowers"),
     drop = FALSE
   ) +
-  labs(x = NULL, y = expression(Psi~"modification ratio (%)")) +
-  coord_cartesian(clip = "off") +
+  labs(x = NULL, y = "Ψ modification ratio (%)") +
+  coord_cartesian(ylim = c(0, 100), expand = FALSE, clip = "off") +
   theme(
-    legend.position = "top",
+    legend.position = "right",
     legend.justification = "center",
-    legend.direction = "horizontal",
-    legend.background = element_blank(),
-    legend.box.background = element_blank(),
-    legend.key.width = grid::unit(18, "pt"),
+    legend.direction = "vertical",
+    legend.text = element_text(family = "Arial", face = "bold", colour = "black"),
+    axis.line.x = element_blank(),
+    axis.ticks.x = element_blank(),
     axis.text.x = element_text(angle = 40, hjust = 1, vjust = 1, size = SIZE_TOKENS$axis_text_size),
+    axis.text.y = element_text(size = SIZE_TOKENS$axis_text_size),
     axis.title.y = element_text(size = SIZE_TOKENS$axis_title_size, margin = margin(r = 8)),
-    plot.margin = margin(8, 16, 8, 12)
+    # 顶部页边距容纳括号层(最高星号 ~117 数据单位)
+    plot.margin = margin(t = 86, r = 10, b = 8, l = 14)
   )
 
 outputs <- list(
@@ -398,7 +401,7 @@ readr::write_tsv(
 readr::write_tsv(count_tbl %>% arrange(rna_type, tissue), outputs$summary)
 readr::write_tsv(ttest_tbl %>% arrange(rna_type, comparison), outputs$ttest)
 
-save_plot(ratio_plot, outputs$plot, width = 7.2, height = 5.2)
+save_plot(ratio_plot, outputs$plot, width = 8.4, height = 6.4)
 
 message("Wrote ", outputs$sites)
 message("Wrote ", outputs$summary)
