@@ -36,13 +36,14 @@ Mock/Treat pairs: in Treat libraries, bisulfite treatment converts Ψ into a
 Ψ–bisulfite adduct that induces deletion (gap) signatures at Ψ sites during
 reverse transcription, while unmodified uridines give near-zero background;
 Mock libraries are the untreated controls
-([Li et al., *Nat Plants* 2025](https://doi.org/10.1038/s41477-024-01894-7)). Each dataset
-is processed end-to-end by one of two Snakemake workflows —
+([Li et al., *Nat Plants* 2025](https://doi.org/10.1038/s41477-024-01894-7)).
+
+Each dataset is processed end-to-end by one of two Snakemake workflows —
 [`polyA_mapping.smk`](BID-transcript.script/workflows/polyA_mapping.smk) for
 poly(A)+ RNA libraries and
 [`totalRNA_mapping.smk`](BID-transcript.script/workflows/totalRNA_mapping.smk)
-for tRNA-enriched / total-RNA libraries (both workflows analyze only R2) — through the
-following stages:
+for tRNA-enriched / total-RNA libraries (both workflows analyze only R2) —
+through the following stages:
 
 1. **Preprocessing** — adapter, quality and length trimming with `trim_galore`;
    PCR duplicate removal (`fastp --dedup` for poly(A) libraries, `seqkit rmdup`
@@ -53,9 +54,10 @@ following stages:
    tRNA-enriched libraries). When two references are configured, unmapped reads
    are subsequently aligned with `STAR` to the Araport11 representative cDNA
    models.
-3. **Signal extraction** — strand-aware BAM filtering (`samFilter`), local gap
-   realignment (`realignGap`), `samtools calmd`, mismatch filtering, and
-   `samtools mpileup` conversion into per-site count tables.
+3. **Signal extraction** — the mapped BAMs are processed into per-site count
+   tables: `samFilter` strand-aware filtering → `realignGap` local gap
+   realignment → `samtools calmd` mismatch annotation and filtering →
+   `samtools mpileup` per-site depth and gap counts.
 4. **Gap correction** — `adjustGap` jointly re-estimates gap signals across all
    replicates of a dataset, parallelized over reference chunks
    (`adjust_gap.chunk_bp` / `max_sequences`).
@@ -89,33 +91,40 @@ differential-methylation framework
 
 ### Identification of Ψ sites — [`bin/Pseudo_callsites.R`](BID-transcript.script/bin/Pseudo_callsites.R)
 
-For every Mock/Treat sample pair, the per-replicate site tables are merged on
-site coordinates (chr, position, strand); sites absent from a replicate enter
-the merge with zero counts, and sites whose group-mean depth falls below 10 in
-either group are discarded. Bisulfite-induced deletion enrichment is then
-tested with a one-sided Fisher's exact test on the replicate-pooled 2×2 table
-of gap versus non-gap reads (Treat against Mock, alternative "greater"), and
-p-values are Benjamini–Hochberg-corrected across sites (retained at adjusted
-p < 0.01). In addition, each replicate must individually support the call: a
-Treat gap count ≥ 5, a Treat gap ratio ≥ 5%, and a Treat gap ratio at least
-twice that of the paired Mock replicate (replicates are compared pairwise,
-Mock replicate *i* against Treat replicate *i*; when the two groups have
-unequal replicate numbers, each Treat replicate is instead compared against
-the Mock group mean). A site is called positive when it passes the
-group-level test and at least `min_pass_reps` replicates pass the
-per-replicate criteria — 3 of 3 for the three-replicate datasets, 2 of 2 for
-the two-replicate chloroplast dataset. In the positive-site table, the
-reported ratio and depth are averaged over the passing replicates only.
+**Merging and pre-filtering.** For every Mock/Treat sample pair, the
+per-replicate site tables are merged on site coordinates (chr, position,
+strand); sites absent from a replicate enter the merge with zero counts, and
+sites whose group-mean depth falls below 10 in either group are discarded.
+
+**Group-level test.** Bisulfite-induced deletion enrichment is tested with a
+one-sided Fisher's exact test on the replicate-pooled 2×2 table of gap versus
+non-gap reads (Treat against Mock, alternative "greater"), and p-values are
+Benjamini–Hochberg-corrected across sites (retained at adjusted p < 0.01).
+
+**Per-replicate criteria.** In addition, each replicate must individually
+support the call:
+
+- a Treat gap count ≥ 5;
+- a Treat gap ratio ≥ 5%;
+- a Treat gap ratio at least twice that of the paired Mock replicate.
+  Replicates are compared pairwise, Mock replicate *i* against Treat
+  replicate *i*; when the two groups have unequal replicate numbers, each
+  Treat replicate is instead compared against the Mock group mean.
+
+**Positive call.** A site is called positive when it passes the group-level
+test and at least `min_pass_reps` replicates pass the per-replicate criteria
+— 3 of 3 for the three-replicate datasets, 2 of 2 for the two-replicate
+chloroplast dataset. In the positive-site table, the reported ratio and depth
+are averaged over the passing replicates only.
 
 ### Identification of PUS writer-dependent sites — [`downstream/call_dependent_methylKit.R`](BID-transcript.script/downstream/call_dependent_methylKit.R)
 
-The idea of a writer-dependent site is straightforward: if a Ψ site is
-installed by a particular PUS enzyme, mutating that enzyme should make the
-modification disappear — the Treat-library gap ratio at the site should fall
-back towards the Mock background. The script therefore asks one question per
-site — *is the modification fraction significantly lower in the mutant than
-in the WT?* — and answers it separately for each of the two independent
-mutant alleles of the writer gene.
+**The idea.** If a Ψ site is installed by a particular PUS enzyme, mutating
+that enzyme should make the modification disappear — the Treat-library gap
+ratio at the site should fall back towards the Mock background. The script
+therefore asks one question per site — *is the modification fraction
+significantly lower in the mutant than in the WT?* — and answers it
+separately for each of the two independent mutant alleles of the writer gene.
 
 **Why a DNA-methylation tool can test this.** Per site and per replicate,
 BID-seq produces just two numbers: how many reads cover the site (depth) and
@@ -126,16 +135,16 @@ the gap ratio as the "methylation frequency".
 
 **What the script does, step by step, per mutant allele:**
 
-1. *Candidates.* Only the sites called positive in the WT dataset are
+1. **Candidates.** Only the sites called positive in the WT dataset are
    examined — in the mutants, we only ask whether WT-modified sites are
    still modified.
-2. *Depth gate.* Every replicate (WT, mutant Mock and mutant Treat) must
+2. **Depth gate.** Every replicate (WT, mutant Mock and mutant Treat) must
    cover the site with depth ≥ 10; one failing replicate drops the site.
    This stops "not sequenced" from masquerading as "not modified" (the
    adjusted tables record uncovered sites as depth = 0) and keeps only
    complete cases. Mock libraries witness coverage only; the signal compared
    is the Treat gap ratio.
-3. *Test.* WT and mutant Treat replicates go through methylKit
+3. **Test.** WT and mutant Treat replicates go through methylKit
    (`methRead` → `unite` → `calculateDiffMeth`): a coverage-weighted
    logistic regression of the gap ratio on genotype (WT = 1, mutant = 0),
    with overdispersion estimated as in McCullagh and Nelder — the genotype
@@ -143,11 +152,11 @@ the gap ratio as the "methylation frequency".
    — and p-values adjusted across sites with SLIM. methylKit's two-sided p
    is halved towards the direction of interest (higher modification in WT)
    and set to 1 otherwise.
-4. *Effect size.* Δ = WT_Ratio − Mut_Ratio, each term the arithmetic mean
+4. **Effect size.** Δ = WT_Ratio − Mut_Ratio, each term the arithmetic mean
    of the replicate Treat gap ratios. It is computed from the input tables,
    independently of methylKit, so the reported difference always matches
    the raw ratios.
-5. *Call.* Dependent in one allele: one-sided p < 0.05 **and** Δ ≥ 0.05.
+5. **Call.** Dependent in one allele: one-sided p < 0.05 **and** Δ ≥ 0.05.
    The final writer-dependent set keeps only sites dependent in **both**
    alleles, so a site cannot pass on the peculiarities of a single line;
    the mutant ratio reported there averages the two lines.
@@ -159,19 +168,24 @@ Outputs: per-allele `<allele>.dependent-sites.tsv`, the combined
 
 Temperature-responsive sites are called with the same methylKit workflow,
 comparing the same WT material grown at the two temperatures (27 °C vs
-21 °C). Candidates are the union of the positive sites called at either
-temperature (a site positive at only one temperature is precisely a
-candidate for a temperature-dependent change in modification), merged
-upstream of the call. The same per-replicate depth gate (≥ 10 in every Mock
-and Treat replicate of both temperatures) is applied — this also excludes
-sites whose transcript is not expressed at one temperature, which would
-otherwise masquerade as a modification difference. Because a temperature
-response can go in either direction, the two-sided p-value is used directly:
-a site is temperature-responsive when p < 0.05 and |Δ| ≥ 0.05 (group ratios
-are arithmetic means of the replicate Treat gap ratios), and the direction
-(increase/decrease at 27 °C) is recorded per site. Outputs are
-`<group2>_vs_<group1>.all-sites.tsv`, `.response.tsv`, and a summary JSON
-with up/down counts.
+21 °C).
+
+**Candidates and depth gate.** Candidates are the union of the positive
+sites called at either temperature (a site positive at only one temperature
+is precisely a candidate for a temperature-dependent change in modification),
+merged upstream of the call. The same per-replicate depth gate (≥ 10 in
+every Mock and Treat replicate of both temperatures) is applied — this also
+excludes sites whose transcript is not expressed at one temperature, which
+would otherwise masquerade as a modification difference.
+
+**Test and call.** Because a temperature response can go in either
+direction, the two-sided p-value is used directly: a site is
+temperature-responsive when p < 0.05 and |Δ| ≥ 0.05 (group ratios are
+arithmetic means of the replicate Treat gap ratios), and the direction
+(increase/decrease at 27 °C) is recorded per site.
+
+Outputs: `<group2>_vs_<group1>.all-sites.tsv`, `.response.tsv`, and a summary
+JSON with up/down counts.
 
 ## Datasets and configurations
 
@@ -205,13 +219,15 @@ All five configs share one schema:
   RNAs such as rRNA/tRNA) or `primary` (read-level, for mRNA).
 - **`pipeline.adjust_gap`** — chunking of the joint gap-correction step:
   `chunk_bp` per chunk, batching small transcripts up to `max_sequences`.
-- **`pipeline.filter`** — site-calling thresholds: `min_depth` (per-replicate
-  depth for the candidate pool), `min_avg_depth` (group-level mean depth),
-  `max_padj` (BH-adjusted Fisher p-value), `min_gap` (Treat gap count per
-  passing replicate), `min_treat_ratio` (Treat gap ratio per passing
-  replicate), `ratio_fold` (Treat/Mock ratio fold-change), and `min_pass_reps`
-  (how many replicates must pass — 3 for all three-replicate datasets, 2 for
-  the two-replicate Chloroplast dataset).
+- **`pipeline.filter`** — site-calling thresholds:
+  - `min_depth`: per-replicate depth for the candidate pool;
+  - `min_avg_depth`: group-level mean depth;
+  - `max_padj`: BH-adjusted Fisher p-value cutoff;
+  - `min_gap`: Treat gap count per passing replicate;
+  - `min_treat_ratio`: Treat gap ratio per passing replicate;
+  - `ratio_fold`: Treat/Mock ratio fold-change;
+  - `min_pass_reps`: how many replicates must pass — 3 for all
+    three-replicate datasets, 2 for the two-replicate Chloroplast dataset.
 - **`read_layout` / `rmdup` / `trim_galore_length`** — paired vs single-end
   input, whether to deduplicate, and the minimum read length kept after
   trimming.
@@ -219,13 +235,14 @@ All five configs share one schema:
   `fastp` (`trim_front`/`trim_tail` = bases removed from the 5′/3′ end). The
   clipping lengths follow from the library structure: every read carries a
   fixed 8 nt UMI plus the `TATAGGG` sequence, and the first few low-quality
-  5′ bases are removed as well. Poly(A) libraries remove 6 such bases, so
-  21 nt are clipped from the 5′ end (8 + 7 + 6) and 6 nt from the 3′ end,
-  and the paired-end libraries are clipped complementarily as
-  `R1: 6/21, R2: 21/6`. tRNA-enriched/total-RNA reads are short, so only
-  the first 2 low-quality bases are removed: the 5′ end of R2 is
-  `8 bp UMI + TATAGGG + 2 bp`, hence `R2: 17/0` (mirrored as `R1: 0/17`).
-  For both library types only R2 enters mapping and downstream analysis.
+  5′ bases are removed as well.
+  - **Poly(A) libraries**: 6 such bases are removed, so 21 nt are clipped
+    from the 5′ end (8 + 7 + 6) and 6 nt from the 3′ end, and the paired-end
+    libraries are clipped complementarily as `R1: 6/21, R2: 21/6`.
+  - **tRNA-enriched / total-RNA libraries**: reads are short, so only the
+    first 2 low-quality bases are removed; the 5′ end of R2 is
+    `8 bp UMI + TATAGGG + 2 bp`, hence `R2: 17/0` (mirrored as `R1: 0/17`).
+  - For both library types only R2 enters mapping and downstream analysis.
 - **`samples`** — per-sample replicate definitions:
   `samples.<sample>.{mock,treat}.<rep>.{file_index,read1,read2}`, with FASTQ
   paths relative to the run directory's `raw_data/`. An optional per-replicate
@@ -254,11 +271,23 @@ snakemake \
 
 ## Requirements
 
-Workflow: Snakemake, `trim_galore`, `fastp`, `seqkit`, `bowtie2`, `STAR`,
-`samtools`, `bedtools`, `csvtk`, Python 3 and R. Downstream differential
-calls additionally require the Bioconductor package
-[`methylKit`](https://bioconductor.org/packages/methylKit/). Figure code: R
-with ggplot2 and friends (see `Figures/shared/`).
+### Mapping and site-calling workflows
+
+- **Orchestration**: [Snakemake](https://snakemake.github.io).
+- **Command-line tools**: `trim_galore` (which internally calls cutadapt and
+  FastQC), `fastp`, `seqkit`, `bowtie2`, `STAR`, `samtools`, `bedtools`,
+  `csvtk`.
+- **Python 3**: [`polars`](https://pola.rs/),
+  [`pysam`](https://pysam.readthedocs.io/), PyYAML.
+- The helper programs `adjustGap`, `realignGap`, `samFilter` and `cpup` ship
+  with the repository under `BID-transcript.script/bin/` and need no separate
+  installation.
+
+### Downstream differential calls
+
+- The Bioconductor package
+  [`methylKit`](https://bioconductor.org/packages/methylKit/) (PUS
+  writer-dependent and temperature-responsive site calling).
 
 ## Data availability
 
