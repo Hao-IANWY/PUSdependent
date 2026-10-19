@@ -83,7 +83,8 @@ The three statistical callers invoked at stages 5 and 6 above share one
 representation of the data: for every candidate T (Ψ) site and every
 replicate, the gap-corrected pileup provides the sequencing depth (reads
 spanning the site) and the gap count (reads carrying a deletion at the
-site), whose ratio estimates that replicate's Ψ fraction. This is formally
+site); the ratio of gap count to depth estimates that replicate's Ψ
+fraction. This is formally
 identical to a bisulfite-seq measurement — coverage plus methylated-read
 counts — which is why the two differential callers below reuse the methylKit
 differential-methylation framework
