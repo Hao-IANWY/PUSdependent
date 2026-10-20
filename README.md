@@ -150,14 +150,16 @@ the gap ratio as the "methylation frequency".
    logistic regression of the gap ratio on genotype (WT = 1, mutant = 0),
    with overdispersion estimated as in McCullagh and Nelder — the genotype
    effect is referred to an F distribution when φ > 1 (chi-square otherwise)
-   — and p-values adjusted across sites with SLIM. methylKit's two-sided p
-   is halved towards the direction of interest (higher modification in WT)
-   and set to 1 otherwise.
+   — and p-values adjusted across sites with Benjamini–Hochberg (BH). The
+   BH q-value (two-sided FDR) is used for the call, with direction taken
+   from meth.diff: q < 0.05 and meth.diff > 0 (higher modification in WT)
+   are both required; the opposite direction never passes.
 4. **Effect size.** Δ = WT_Ratio − Mut_Ratio, each term the arithmetic mean
    of the replicate Treat gap ratios. It is computed from the input tables,
    independently of methylKit, so the reported difference always matches
    the raw ratios.
-5. **Call.** Dependent in one allele: one-sided p < 0.05 **and** Δ ≥ 0.05.
+5. **Call.** Dependent in one allele: BH q < 0.05, meth.diff > 0, **and**
+   Δ ≥ 0.05.
    The final writer-dependent set keeps only sites dependent in **both**
    alleles, so a site cannot pass on the peculiarities of a single line;
    the mutant ratio reported there averages the two lines.
@@ -180,10 +182,10 @@ excludes sites whose transcript is not expressed at one temperature, which
 would otherwise masquerade as a modification difference.
 
 **Test and call.** Because a temperature response can go in either
-direction, the two-sided p-value is used directly: a site is
-temperature-responsive when p < 0.05 and |Δ| ≥ 0.05 (group ratios are
-arithmetic means of the replicate Treat gap ratios), and the direction
-(increase/decrease at 27 °C) is recorded per site.
+direction, the two-sided test is used without a direction filter: a site is
+temperature-responsive when the BH q-value (two-sided FDR) < 0.05 and
+|Δ| ≥ 0.05 (group ratios are arithmetic means of the replicate Treat gap
+ratios), and the direction (increase/decrease at 27 °C) is recorded per site.
 
 Outputs: `<group2>_vs_<group1>.all-sites.tsv`, `.response.tsv`, and a summary
 JSON with up/down counts.

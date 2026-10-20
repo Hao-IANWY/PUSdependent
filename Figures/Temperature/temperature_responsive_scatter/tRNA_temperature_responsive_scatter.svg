@@ -52,6 +52,7 @@
 <circle cx='393.03' cy='111.85' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='362.56' cy='139.77' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='394.18' cy='122.21' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
+<circle cx='183.24' cy='298.04' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='379.86' cy='121.62' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='423.93' cy='80.32' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='414.21' cy='82.92' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
@@ -80,6 +81,7 @@
 <circle cx='384.35' cy='113.32' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='308.29' cy='187.75' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='367.05' cy='138.89' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
+<circle cx='157.36' cy='323.45' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='371.53' cy='170.84' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='341.63' cy='157.25' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='387.83' cy='119.34' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
@@ -517,6 +519,7 @@
 <circle cx='410.02' cy='92.80' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='147.25' cy='339.20' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='414.83' cy='86.31' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
+<circle cx='187.08' cy='283.54' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='409.20' cy='89.56' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='414.73' cy='88.38' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='388.14' cy='120.99' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
@@ -559,9 +562,6 @@
 <circle cx='330.50' cy='173.95' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='187.62' cy='317.47' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <circle cx='401.48' cy='101.49' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
-<circle cx='183.24' cy='298.04' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #E64B35; fill-opacity: 0.88;' />
-<circle cx='157.36' cy='323.45' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #E64B35; fill-opacity: 0.88;' />
-<circle cx='187.08' cy='283.54' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #E64B35; fill-opacity: 0.88;' />
 <text x='122.12' y='60.36' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>27°C vs. 21°C</text>
 <rect x='104.56' y='31.36' width='365.11' height='365.11' style='stroke-width: 1.28;' />
 </g>
@@ -600,7 +600,9 @@
 <rect x='293.49' y='289.50' width='168.88' height='99.66' style='stroke-width: 1.28;' />
 <rect x='305.45' y='301.46' width='43.04' height='17.28' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
 <circle cx='326.97' cy='310.10' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
+<circle cx='326.97' cy='310.10' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #B8B8B8; fill-opacity: 0.88;' />
 <rect x='305.45' y='330.69' width='43.04' height='17.28' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
+<circle cx='326.97' cy='339.33' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #3C5488; fill-opacity: 0.88;' />
 <rect x='305.45' y='359.93' width='43.04' height='17.28' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
 <circle cx='326.97' cy='368.57' r='3.56' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.88; fill: #E64B35; fill-opacity: 0.88;' />
 <text x='353.96' y='315.11' style='font-size: 14.00px; font-family: "Arial";'>non-responsive</text>

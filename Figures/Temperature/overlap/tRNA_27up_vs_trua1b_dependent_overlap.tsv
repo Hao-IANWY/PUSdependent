@@ -1,5 +1,1 @@
 chr	pos	strand	context	site_id	up_in_WT_27	trua1b_dependent_27	combination
-tRNA-Mt-Gln-TTG-1	37	+	GGTAC	tRNA-Mt-Gln-TTG-1|37|+	1	0	up_only
-tRNA-Mt-Tyr-GTA-1	41	+	AATCC	tRNA-Mt-Tyr-GTA-1|41|+	1	0	up_only
-tRNA-Pt-His-GTG-1	30	+	AGTGG	tRNA-Pt-His-GTG-1|30|+	1	0	up_only
-tRNA-Mt-Ser-GGA-1	28	+	CGTAG	tRNA-Mt-Ser-GGA-1|28|+	0	1	dependent_only

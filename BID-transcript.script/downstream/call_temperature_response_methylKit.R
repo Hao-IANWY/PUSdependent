@@ -12,7 +12,7 @@
 # 分组约定：group2 记 treatment=1、group1 记 treatment=0，因此
 #     meth.diff = (group2 加权平均修饰) - (group1 加权平均修饰)。
 # 与 dependent 版不同，这里不预设方向——温度响应可以是升高或降低，故直接
-# 使用 methylKit 的双侧 p 值，方向单独记录在 direction 列。
+# 使用 methylKit 的双侧检验（q 值），方向单独记录在 direction 列。
 #
 # 候选位点：两个温度 fisher 阳性位点的并集（仅单一温度阳性的位点正是
 # “另一温度修饰丢失”的强候选），由 run.sh 预先合并传入 --tsv。
@@ -21,7 +21,9 @@
 #   1. 每重复深度门槛：两个温度组的 Mock 与 Treat 每一个重复 depth 都
 #      >= --min-depth（默认 10；排除“某温度下转录本不表达”造成的假修饰
 #      差异，同时保证零/低覆盖的假观测不进检验）；
-#   2. 双侧 p < --alpha；
+#   2. 显著性：默认用 methylKit calculateDiffMeth(--methylkit-adjust，默认
+#      BH) 的 qvalue（双侧 FDR）< --alpha；--significance p 可退回旧的双侧
+#      p 口径；
 #   3. |Delta_Ratio(group2-group1)| >= --min-delta（fraction）。
 #   group ratio = 该温度组 Treat 重复 ratio 的简单均值。
 #
@@ -74,9 +76,13 @@ option_list <- list(
   make_option(c("--min-delta"), type = "double", default = 0.05,
               help = "Effect-size floor |ratio(group2) - ratio(group1)|, in fraction. Default: 0.05."),
   make_option(c("--alpha"), type = "double", default = 0.05,
-              help = "Significance cutoff for the two-sided p-value. Default: 0.05."),
+              help = "Significance cutoff for --significance. Default: 0.05."),
+  make_option(c("--significance"), type = "character", default = "q",
+              help = "Statistic used for response calls: q = methylKit qvalue (default), p = raw two-sided p."),
   make_option(c("--methylkit-test"), type = "character", default = "F",
               help = "methylKit test statistic for the multi-replicate logistic-regression path: F (default; overdispersion-corrected F test, degrades to Chisq when phi<=1) or Chisq. Only used when total samples > 2; with exactly 2 samples methylKit forces fast.fisher regardless."),
+  make_option(c("--methylkit-adjust"), type = "character", default = "BH",
+              help = "Multiple-testing adjustment in calculateDiffMeth: BH (default) or SLIM (legacy; its per-run pi0 estimate is unreliable on small candidate sets)."),
   make_option(c("--methylkit-context"), type = "character", default = "CpH",
               help = "methylKit context label (metadata only for generic read). Default: CpH."),
   make_option(c("--assembly"), type = "character", default = "custom",
@@ -97,8 +103,14 @@ for (r in required) {
 if (!opt[["methylkit-test"]] %in% c("F", "Chisq")) {
   stop("--methylkit-test must be 'F' or 'Chisq'")
 }
+if (!opt[["methylkit-adjust"]] %in% c("BH", "SLIM")) {
+  stop("--methylkit-adjust must be 'BH' or 'SLIM'")
+}
 if (!(opt[["min-delta"]] >= 0 && opt[["min-delta"]] <= 1)) {
   stop("--min-delta must be a fraction in [0, 1]")
+}
+if (!opt[["significance"]] %in% c("p", "q")) {
+  stop("--significance must be 'p' or 'q'")
 }
 
 split_csv <- function(x) {
@@ -178,7 +190,7 @@ run_methylkit <- function(sample_files, sample_ids, treatment, name) {
     )
     meth <- methylKit::unite(mrl, destrand = FALSE, min.per.group = NULL, mc.cores = opt[["mc-cores"]])
     diff <- methylKit::calculateDiffMeth(
-      meth, overdispersion = "MN", adjust = "SLIM",
+      meth, overdispersion = "MN", adjust = opt[["methylkit-adjust"]],
       test = opt[["methylkit-test"]], mc.cores = opt[["mc-cores"]]
     )
     getData(diff)
@@ -237,12 +249,15 @@ main <- function() {
   write_empty_outputs <- function() {
     empty_all <- as.data.table(setNames(
       rep(list(character(0)), length(c(key_cols, "context", ratio1_col, ratio2_col, delta_col,
-                                       depth1_col, depth2_col, "p.value", "status", "is_responsive", "direction"))),
+                                       depth1_col, depth2_col, "p.value", "status", "is_responsive",
+                                       "direction", "q.value"))),
       c(key_cols, "context", ratio1_col, ratio2_col, delta_col,
-        depth1_col, depth2_col, "p.value", "status", "is_responsive", "direction")
+        depth1_col, depth2_col, "p.value", "status", "is_responsive",
+        "direction", "q.value")
     ))
     fwrite(empty_all, all_out, sep = "\t", quote = FALSE)
-    empty_resp <- empty_all[, c(key_cols, "context", ratio1_col, ratio2_col, delta_col, "p.value", "direction"), with = FALSE]
+    empty_resp <- empty_all[, c(key_cols, "context", ratio1_col, ratio2_col, delta_col,
+                                "p.value", "direction", "q.value"), with = FALSE]
     fwrite(empty_resp, resp_out, sep = "\t", quote = FALSE)
   }
 
@@ -282,9 +297,11 @@ main <- function() {
   mock_depth1 <- rowMeans(fetch_cols(g1_mock, "depth"))
   mock_depth2 <- rowMeans(fetch_cols(g2_mock, "depth"))
 
-  # 双侧 p 值（温度响应不预设方向）；深度不达标的位点留 NA
+  # 双侧 p 值与 q 值（温度响应不预设方向，校正方法由 --methylkit-adjust 决定）；
+  # 深度不达标的位点留 NA
   p_two <- rep(NA_real_, length(testable))
-  names(p_two) <- testable
+  q_two <- rep(NA_real_, length(testable))
+  names(p_two) <- names(q_two) <- testable
 
   testable_pass <- testable[pass]
   if (length(testable_pass) > 0) {
@@ -322,9 +339,11 @@ main <- function() {
       hit <- match(testable_pass, res_key)
       ok <- !is.na(hit)
       p_two[testable_pass[ok]] <- test_res$pvalue[hit[ok]]
+      q_two[testable_pass[ok]] <- test_res$qvalue[hit[ok]]
     }
   }
 
+  use_q <- identical(opt[["significance"]], "q")
   results <- lapply(seq_along(testable), function(i) {
     k <- testable[i]
     status <- if (!pass[i]) {
@@ -343,13 +362,19 @@ main <- function() {
     } else {
       "unchanged"
     }
-    is_resp <- pass[i] && !is.na(p_two[[k]]) && p_two[[k]] < opt$alpha &&
-               !is.na(delta[i]) && abs(delta[i]) >= opt[["min-delta"]]
+    # q 口径：qvalue < alpha（双侧 FDR）；p 口径保留旧行为。
+    is_resp <- if (use_q) {
+      pass[i] && !is.na(q_two[[k]]) && q_two[[k]] < opt$alpha &&
+        !is.na(delta[i]) && abs(delta[i]) >= opt[["min-delta"]]
+    } else {
+      pass[i] && !is.na(p_two[[k]]) && p_two[[k]] < opt$alpha &&
+        !is.na(delta[i]) && abs(delta[i]) >= opt[["min-delta"]]
+    }
     list(
       site_id = k, context = cand$context[c_idx[i]],
       ratio1 = ratio1[i], ratio2 = ratio2[i], delta = delta[i],
       depth1 = mock_depth1[i], depth2 = mock_depth2[i],
-      p = p_two[[k]], status = status, is_responsive = is_resp,
+      p = p_two[[k]], q = q_two[[k]], status = status, is_responsive = is_resp,
       direction = if (is_resp) direction else NA_character_
     )
   })
@@ -357,17 +382,21 @@ main <- function() {
   all_dt <- rbindlist(lapply(results, function(r) data.table(
     site_id = r$site_id, context = r$context, ratio1 = r$ratio1, ratio2 = r$ratio2,
     delta = r$delta, depth1 = r$depth1, depth2 = r$depth2,
-    p = r$p, status = r$status, is_responsive = r$is_responsive, direction = r$direction
+    p = r$p, status = r$status, is_responsive = r$is_responsive,
+    direction = r$direction, q = r$q
   )))
-  setnames(all_dt, c("ratio1", "ratio2", "delta", "depth1", "depth2", "p"),
-           c(ratio1_col, ratio2_col, delta_col, depth1_col, depth2_col, "p.value"))
+  setnames(all_dt, c("ratio1", "ratio2", "delta", "depth1", "depth2", "p", "q"),
+           c(ratio1_col, ratio2_col, delta_col, depth1_col, depth2_col,
+             "p.value", "q.value"))
   keys_split <- tstrsplit(all_dt$site_id, "|", fixed = TRUE)
   for (j in seq_along(key_cols)) all_dt[[key_cols[j]]] <- keys_split[[j]]
   all_dt <- all_dt[, c(key_cols, setdiff(names(all_dt), c("site_id", key_cols))), with = FALSE]
   fwrite(all_dt, all_out, sep = "\t", quote = FALSE)
 
+  # q.value 放在 direction 之后：下游 data_prep 仍按固定列号读 direction
   resp_dt <- all_dt[is_responsive == TRUE, c(key_cols, "context", ratio1_col, ratio2_col,
-                                             delta_col, "p.value", "direction"), with = FALSE]
+                                             delta_col, "p.value", "direction", "q.value"),
+                    with = FALSE]
   fwrite(resp_dt, resp_out, sep = "\t", quote = FALSE)
 
   up_count   <- sum(resp_dt$direction == paste0("up_in_", group2))
@@ -381,6 +410,8 @@ main <- function() {
     min_depth = opt[["min-depth"]],
     min_delta = opt[["min-delta"]],
     method = paste0("methylKit_", opt[["methylkit-test"]], "_two-sided"),
+    methylkit_adjust = opt[["methylkit-adjust"]],
+    significance = opt[["significance"]],
     alpha = opt$alpha,
     methylkit_context = opt[["methylkit-context"]],
     candidate_count = nrow(cand),

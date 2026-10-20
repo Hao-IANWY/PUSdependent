@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # data_prep.sh — Fold the four window/site groups with ViennaRNA and build plotting TSVs
 # Inputs:
-#   windows/case_windows_{25,50,100}.{bed,fa}: 58 unique physical TRUA1A-dependent sites
+#   windows/case_windows_{25,50,100}.{bed,fa}: unique physical TRUA1A-dependent sites
 #   windows/{Root,Leaf,Flower}_dependent_windows_{25,50,100}.{bed,fa}: per-tissue sites
 # Outputs:
 #   <group>_structure_metrics.tsv and <group>_structure_unpaired_profile.tsv

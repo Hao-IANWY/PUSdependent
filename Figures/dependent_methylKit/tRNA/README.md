@@ -31,8 +31,9 @@ Figures/dependent_methylKit/tRNA/
 **唯一上游**：`tRNA/STAT/dependent_methylKit/ncRNA/<tissue>/<genotype>/`
 （由 `tRNA/STAT/dependent_methylKit/run.sh` 调用 `BID-transcript.script/downstream/call_dependent_methylKit.R` 生成）。
 
-dependent 的判定口径（在 `call_dependent_methylKit.R` 里）：methylKit `F` 检验、单侧 p < 0.05、
-效应量 `Delta_Ratio(WT-Mut) >= 0.05`、每株系 Mock 平均深度 >= 10，且**两个株系同时成立**（AND）。
+dependent 的判定口径（在 `call_dependent_methylKit.R` 里）：methylKit `F` 检验、
+BH q < 0.05（方向为正，meth.diff > 0）、效应量 `Delta_Ratio(WT-Mut) >= 0.05`、
+每株系 Mock 平均深度 >= 10，且**两个株系同时成立**（AND）。
 
 ### 与 archive 论文版的三处口径差异
 
@@ -108,13 +109,13 @@ Rscript plot.R                          # 只画图
 
 | 基因型 | all_tissues 行 | 并集位点 | 热图 panel 行（组织 × 代表） | 图 |
 |---|---|---|---|---|
-| trua1a | 253 | 108 | 76 | 组织拆分 + cy_27/28 + cy_66/67/68 |
-| trua1b | 24 | 19 | 10 | 组织拆分 + 并集 |
-| trua2 | 49 | 23 | 25 | 组织拆分 + mt_27/28 |
-| trua3 | 88 | 39 | 30 | 组织拆分 + cy_38/39/40 |
-| trua4 | 24 | 13 | 2 | 组织拆分 + 并集（代表 tRNA 只有 1 个，图很矮） |
-| trua5 | 61 | 31 | 19 | 组织拆分 + 并集 + cy_28 |
-| trua6 | 209 | 82 | 68 | 组织拆分 + cy_38/39/40 + mt_38/39/40 |
+| trua1a | 217 | 94 | 66 | 组织拆分 + cy_27/28 + cy_66/67/68 |
+| trua1b | 6 | 6 | 5 | 组织拆分 + 并集 |
+| trua2 | 26 | 15 | 26 | 组织拆分 + mt_27/28 |
+| trua3 | 42 | 25 | 13 | 组织拆分 + cy_38/39/40 |
+| trua4 | 11 | 7 | 11 | 组织拆分 + 并集（代表 tRNA 只有 1 个，图很矮） |
+| trua5 | 36 | 21 | 14 | 组织拆分 + 并集 + cy_28 |
+| trua6 | 130 | 66 | 41 | 组织拆分 + cy_38/39/40 + mt_38/39/40 |
 
 ## 已知无害提示
 

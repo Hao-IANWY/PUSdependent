@@ -88,19 +88,20 @@
 <line x1='473.04' y1='500.82' x2='349.92' y2='520.24' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
 <polyline points='354.96,516.16 349.92,520.24 355.97,522.56 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
 <rect x='194.40' y='521.79' width='259.20' height='29.51' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
-<text x='324.00' y='539.80' text-anchor='middle' style='font-size: 9.10px; font-family: "Arial";'>two-sided p-value</text>
+<text x='324.00' y='534.73' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>two-sided p-value</text>
+<text x='324.00' y='544.46' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";'>→  BH q-value across all candidate sites</text>
 <line x1='324.00' y1='551.29' x2='324.00' y2='580.80' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
 <polyline points='320.76,575.19 324.00,580.80 327.24,575.19 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
-<text x='12.96' y='575.35' style='font-size: 10.81px; font-weight: bold; font-family: "Arial";'>4 | One-sided conversion</text>
+<text x='12.96' y='575.35' style='font-size: 10.81px; font-weight: bold; font-family: "Arial";'>4 | Direction + FDR</text>
 <rect x='77.76' y='582.35' width='492.48' height='42.71' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
-<text x='324.00' y='601.83' text-anchor='middle' style='font-size: 8.82px; font-family: "Arial";'>meth.diff &gt; 0 (WT higher)   →   p_one = p_two / 2</text>
-<text x='324.00' y='611.89' text-anchor='middle' style='font-size: 8.82px; font-family: "Arial";'>wrong direction   →   p_one = 1   (never passes)</text>
+<text x='324.00' y='601.83' text-anchor='middle' style='font-size: 8.82px; font-family: "Arial";'>meth.diff &gt; 0 (WT higher)   AND   q &lt; 0.05   →   passes</text>
+<text x='324.00' y='611.89' text-anchor='middle' style='font-size: 8.82px; font-family: "Arial";'>wrong direction or q ≥ 0.05   →   never passes</text>
 <line x1='324.00' y1='625.06' x2='324.00' y2='654.56' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
 <polyline points='320.76,648.95 324.00,654.56 327.24,648.95 ' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />
 <text x='12.96' y='650.67' style='font-size: 10.81px; font-weight: bold; font-family: "Arial";'>5 | Decision gates — all four must hold</text>
 <rect x='77.76' y='656.12' width='492.48' height='62.12' style='stroke-width: 1.49; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
 <text x='97.20' y='671.60' style='font-size: 8.54px; font-family: "Arial";'>•  mock mean depth ≥ 10  —  site well measured in mutant mock</text>
-<text x='97.20' y='685.57' style='font-size: 8.54px; font-family: "Arial";'>•  p_one &lt; 0.05  —  significant loss in mutant</text>
+<text x='97.20' y='685.57' style='font-size: 8.54px; font-family: "Arial";'>•  BH q &lt; 0.05  —  significant loss in mutant (FDR)</text>
 <text x='97.20' y='699.55' style='font-size: 8.54px; font-family: "Arial";'>•  Δ = WT_Ratio − Mut_Ratio ≥ 0.05  —  effect-size floor</text>
 <text x='97.20' y='713.53' style='font-size: 8.54px; font-family: "Arial";'>•  both mutant lines pass all above  —  line 1 AND line 2</text>
 <line x1='324.00' y1='718.24' x2='324.00' y2='732.21' style='stroke-width: 1.49; stroke: #404040; stroke-linecap: butt;' />

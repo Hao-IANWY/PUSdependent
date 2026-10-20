@@ -128,7 +128,9 @@ for (rna_type in rna_types) {
   )
 
   if (nrow(overlap_df) == 0) {
-    stop("No rows found in overlap table: ", input_file)
+    # Both sets can be empty (tRNA after the SLIM switch): draw two empty circles
+    # with 0/0/0 rather than leaving a stale figure behind.
+    message("[plot] ", rna_type, ": empty overlap table; drawing two empty circles.")
   }
 
   combo_counts <- table(factor(overlap_df$combination,

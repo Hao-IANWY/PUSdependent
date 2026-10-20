@@ -1,2 +1,1 @@
-chr	pos	strand	context	WT_Ratio	Mut_Ratio	Delta_Ratio(WT-Mut)	trua2_1-Flower_p.value	trua2_2-Flower_p.value	annoation
-AT1G68760.1	703	+	TCTAG	0.380440666666667	0.2532895	0.127151166666667	0.00207880866890681	0.0371200176130452	three_prime_UTR
+chr	pos	strand	context	WT_Ratio	Mut_Ratio	Delta_Ratio(WT-Mut)	trua2_1-Flower_p.value	trua2_1-Flower_q.value	trua2_2-Flower_p.value	trua2_2-Flower_q.value	annoation

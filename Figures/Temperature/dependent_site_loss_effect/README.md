@@ -38,8 +38,9 @@ Figures/Temperature/dependent_site_loss_effect/
 ### 判定口径
 
 见 `Temperature/STAT/dependent_methylKit/run.sh`（tRNA 侧为 `Temperature_tRNA` 同源脚本）：
-methylKit `F` 检验**单侧** p < 0.05、效应量 `Delta_Ratio(WT-Mut) >= 0.05`、Mock 平均深度
->= 10，且**两个株系同时成立**（AND）才判为 dependent。
+methylKit `F` 检验、**BH q < 0.05**（方向为正，meth.diff > 0）、效应量
+`Delta_Ratio(WT-Mut) >= 0.05`、Mock 平均深度 >= 10，且**两个株系同时成立**（AND）
+才判为 dependent。
 
 ### 画图表口径
 
@@ -62,13 +63,13 @@ methylKit `F` 检验**单侧** p < 0.05、效应量 `Delta_Ratio(WT-Mut) >= 0.05
 
 | RNA 类型 | 21℃ WT 位点 | 21℃ dependent | 27℃ WT 位点 | 27℃ dependent |
 |---|---|---|---|---|
-| mRNA | 196 | 5 | 194 | 0 |
+| mRNA | 196 | 0 | 194 | 0 |
 | rRNA | 106 | 0 | 107 | 0 |
-| tRNA | 503 | 2 | 508 | 1 |
+| tRNA | 503 | 0 | 508 | 0 |
 
-**rRNA 两张图全灰**：rRNA 在两个温度下都没有判出 dependent 位点（methylKit 口径；
-`Temperature/STAT/dependent` 纯效应量版同样是 0/0）。按需求照出以保持三类齐全，
-`plot.R` 遇到零 dependent 会打一条日志，免得日后误判成数据没接上。
+**六张图全灰**：2026-10-20 启用 BH q 后，三类 RNA 在两个温度下都没有判出
+dependent 位点（旧版原始 p 口径下 mRNA 21℃ 有 5 个、tRNA 有 3 个）。按需求照出以
+保持三类齐全，`plot.R` 遇到零 dependent 会打一条日志，免得日后误判成数据没接上。
 
 ## 运行
 

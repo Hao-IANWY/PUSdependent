@@ -1,3 +1,1 @@
-chr	pos	strand	context	WT_Ratio	Mut_Ratio	Delta_Ratio(WT-Mut)	trua4_1-leaf_p.value	trua4_2-leaf_p.value	annoation
-AT1G03370.1	2620	+	TTTGG	0.172789666666667	0.0834036666666667	0.0893860000000004	0.0456660749254407	0.000413532779056806	CDS
-AT3G02120.1	267	+	AATCG	0.134778	0.0764888333333333	0.0582891666666667	0.00238278923438596	0.0120323323596544	CDS
+chr	pos	strand	context	WT_Ratio	Mut_Ratio	Delta_Ratio(WT-Mut)	trua4_1-leaf_p.value	trua4_1-leaf_q.value	trua4_2-leaf_p.value	trua4_2-leaf_q.value	annoation

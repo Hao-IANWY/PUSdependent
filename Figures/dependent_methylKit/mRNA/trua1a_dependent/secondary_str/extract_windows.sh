@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # extract_windows.sh — 提取 trua1a dependent 位点的 ±25/±50/±100 nt 窗口序列
 # 职责：
-#   1) case：site_info/trua1a_dependent_sites.tsv 的 58 个 unique 物理位点
+#   1) case：site_info/trua1a_dependent_sites.tsv 的 unique 物理位点
 #      （transcript/pos/strand 在第 3/4/5 列）；
 #   2) 各组织全部 dependent 位点：上游 dependent_methylKit 的 per-tissue dependent.tsv
-#      （Root 36 / leaf 17 / Flower 29；chr/pos/strand 在第 1/2/3 列）。
+#      （chr/pos/strand 在第 1/2/3 列）。
 # 窗口逻辑与 secondary_structure/data_prep.sh 逐字一致：pos 为 1-based 转录本坐标，
 # start=pos-w-1 钳 0、end=pos+w，bedtools slop -b 0 截到转录本边界，getfasta -s 取链向。
 # 校验：bed/fa 行数与位点数一致；±25 序列中心碱基（未钳位时第 w+1 个）须为 T。
@@ -89,7 +89,7 @@ require_nonempty_file "${REF_FA}"
 require_nonempty_file "${REF_FA}.fai"
 mkdir -p "${OUT_DIR}"
 
-# 1) case 58 位点
+# 1) case 位点
 case_tsv="${SCRIPT_DIR}/site_info/trua1a_dependent_sites.tsv"
 require_nonempty_file "${case_tsv}"
 extract_windows "${case_tsv}" 3 4 5 "case_windows"

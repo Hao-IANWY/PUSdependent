@@ -79,6 +79,7 @@ plot_logo <- function(seqs, tissue_label, output_stem) {
       guide = ggprism::guide_prism_offset()
     ) +
     scale_y_continuous(
+      limits = c(0, 2),
       breaks = seq(0, 2, by = 0.5),
       expand = expansion(mult = c(0.04, 0.08)),
       guide = ggprism::guide_prism_offset()

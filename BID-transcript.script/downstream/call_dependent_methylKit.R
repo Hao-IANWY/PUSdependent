@@ -19,15 +19,20 @@
 #     meth.diff = (WT 组加权平均修饰) - (突变组加权平均修饰)，单位百分点。
 # 要判定的“依赖位点”（突变株修饰丢失）即 meth.diff > 0 的方向。
 #
-# 单侧检验：methylKit 给出双侧 p 值，这里按方向折算为单侧
-#     p_one = if (meth.diff > 0) p_two / 2 else 1
-# 与 call_dependent_stats.R 的“备择 pi_WT > pi_mut”一致。
+# 显著性口径（--significance）：
+#   q（默认）  用 methylKit calculateDiffMeth(--methylkit-adjust，默认 BH) 的
+#              qvalue 判定，同时要求方向为正（meth.diff > 0）。
+#   p          旧的原始单侧 p 口径（p_two/2，方向为负时取 1），仅用于复现旧结果。
+# qvalue 是双侧 FDR；多重校正默认 BH（2026-10-20 起。此前用 SLIM，其逐线
+# pi0 估计在本项目 100~200 位点的候选宇宙上被系统性低估、q 偏松甚至可为
+# 负，--methylkit-adjust SLIM 仅保留作复现当日 SLIM 版产物用）。
+# 单侧 p 值仍会写入输出表的 p.value 列，供审计和下游参考。
 #
 # 输出口径严格对齐 call_dependent_stats.R / call_dependent.py：
 #   WT_Ratio  = --ratio-col（WT Treat 平均修饰比）
 #   Mut_Ratio = 突变株各 Treat 重复 ratio 的简单均值
 #   Delta_Ratio(WT-Mut) = WT_Ratio - Mut_Ratio（简单均值差，用于判定）
-# methylKit 的 meth.diff 仅用于单侧 p 值方向与显著性，不参与 delta 计算。
+# methylKit 的 meth.diff 仅用于方向与显著性，不参与 delta 计算。
 # 阈值：--alpha 0.05、--min-delta 0.05（fraction）；两个株系都显著才 dependent。
 #
 # 深度门槛：突变株 Mock 与 Treat 的每一个重复 depth 都必须 >= --min-depth
@@ -89,9 +94,13 @@ option_list <- list(
   make_option(c("--min-delta"), type = "double", default = 0.05,
               help = "Effect-size floor (WT_Ratio - Mut_Ratio), in fraction. Default: 0.05."),
   make_option(c("--alpha"), type = "double", default = 0.05,
-              help = "Significance cutoff for the one-sided p-value. Default: 0.05."),
+              help = "Significance cutoff for --significance. Default: 0.05."),
+  make_option(c("--significance"), type = "character", default = "q",
+              help = "Statistic used for dependent calls: q = methylKit qvalue (default), p = raw one-sided p."),
   make_option(c("--methylkit-test"), type = "character", default = "F",
               help = "methylKit test statistic for the multi-replicate logistic-regression path: F (default; overdispersion-corrected F test, degrades to Chisq when phi<=1) or Chisq. Only used when total samples > 2; with exactly 2 samples methylKit forces fast.fisher regardless."),
+  make_option(c("--methylkit-adjust"), type = "character", default = "BH",
+              help = "Multiple-testing adjustment in calculateDiffMeth: BH (default) or SLIM (legacy; its per-run pi0 estimate is unreliable on small candidate sets)."),
   make_option(c("--methylkit-context"), type = "character", default = "CpH",
               help = "methylKit context label (metadata only for generic read). Default: CpH."),
   make_option(c("--assembly"), type = "character", default = "custom",
@@ -111,6 +120,12 @@ for (r in required) {
 }
 if (!opt[["methylkit-test"]] %in% c("F", "Chisq")) {
   stop("--methylkit-test must be 'F' or 'Chisq'")
+}
+if (!opt[["methylkit-adjust"]] %in% c("BH", "SLIM")) {
+  stop("--methylkit-adjust must be 'BH' or 'SLIM'")
+}
+if (!opt[["significance"]] %in% c("p", "q")) {
+  stop("--significance must be 'p' or 'q'")
 }
 if (!(opt[["min-delta"]] >= 0 && opt[["min-delta"]] <= 1)) {
   stop("--min-delta must be a fraction in [0, 1]")
@@ -197,7 +212,7 @@ run_methylkit <- function(sample_files, sample_ids, treatment, name) {
     )
     meth <- methylKit::unite(mrl, destrand = FALSE, min.per.group = NULL, mc.cores = opt[["mc-cores"]])
     diff <- methylKit::calculateDiffMeth(
-      meth, overdispersion = "MN", adjust = "SLIM",
+      meth, overdispersion = "MN", adjust = opt[["methylkit-adjust"]],
       test = opt[["methylkit-test"]], mc.cores = opt[["mc-cores"]]
     )
     getData(diff)
@@ -246,9 +261,12 @@ call_line_methylkit <- function(name, wt_rows, wt_ratio_mat, wt_depth_mat, mock_
   pass <- depth_ok(mock_depth_mat) & depth_ok(treat_depth_mat) &
           depth_ok(wt_depth_mat[w_idx, , drop = FALSE])
 
-  # 单侧 p 值（备择 WT > mutant，即 meth.diff > 0）；深度不达标的位点留 NA
+  # 单侧 p 值与 q 值（qvalue 为双侧 FDR，校正方法由 --methylkit-adjust 决定）；
+  # 深度不达标的位点留 NA
   p_one <- rep(NA_real_, length(testable))
-  names(p_one) <- testable
+  q_two <- rep(NA_real_, length(testable))
+  mdiff_all <- rep(NA_real_, length(testable))
+  names(p_one) <- names(q_two) <- names(mdiff_all) <- testable
 
   testable_pass <- testable[pass]
   if (length(testable_pass) > 0) {
@@ -287,12 +305,17 @@ call_line_methylkit <- function(name, wt_rows, wt_ratio_mat, wt_depth_mat, mock_
       ok <- !is.na(hit)
       p_two <- rep(NA_real_, length(testable_pass))
       mdiff <- rep(NA_real_, length(testable_pass))
+      q_vec <- rep(NA_real_, length(testable_pass))
       p_two[ok]  <- test_res$pvalue[hit[ok]]
       mdiff[ok]  <- test_res$meth.diff[hit[ok]]
+      q_vec[ok]  <- test_res$qvalue[hit[ok]]
       p_one[testable_pass] <- ifelse(!is.na(mdiff) & mdiff > 0, p_two / 2, 1)
+      q_two[testable_pass] <- q_vec
+      mdiff_all[testable_pass] <- mdiff
     }
   }
 
+  use_q <- identical(opt[["significance"]], "q")
   results <- lapply(seq_along(testable), function(i) {
     k <- testable[i]
     status <- if (!pass[i]) {
@@ -302,12 +325,20 @@ call_line_methylkit <- function(name, wt_rows, wt_ratio_mat, wt_depth_mat, mock_
     } else {
       "ok"
     }
-    is_dep <- pass[i] && !is.na(p_one[[k]]) && p_one[[k]] < opt$alpha &&
-              !is.na(delta[i]) && delta[i] >= opt[["min-delta"]]
+    # q 口径：qvalue < alpha 且方向为正；p 口径保留旧行为。
+    is_dep <- if (use_q) {
+      pass[i] && !is.na(q_two[[k]]) && q_two[[k]] < opt$alpha &&
+        !is.na(mdiff_all[[k]]) && mdiff_all[[k]] > 0 &&
+        !is.na(delta[i]) && delta[i] >= opt[["min-delta"]]
+    } else {
+      pass[i] && !is.na(p_one[[k]]) && p_one[[k]] < opt$alpha &&
+        !is.na(delta[i]) && delta[i] >= opt[["min-delta"]]
+    }
     list(
       site_id = k, context = wt_rows$context[w_idx[i]], WT_Ratio = wt_ratio[i],
       Mock_Mean_Depth = mean(mock_depth_mat[i, ]), Mut_Ratio = mut_ratio[i], delta = delta[i],
-      p = p_one[[k]], status = status, is_dependent = is_dep
+      p = p_one[[k]], q = q_two[[k]], meth_diff = mdiff_all[[k]],
+      status = status, is_dependent = is_dep
     )
   })
 
@@ -398,16 +429,20 @@ main <- function() {
   }
 
   p_label <- "p.value"
+  q_label <- "q.value"
 
   # line-level 表（每个株系所有位点）
   line_to_dt <- function(res) {
     rows <- rbindlist(lapply(res$results, function(r) data.table(
       site_id = r$site_id, context = r$context, WT_Ratio = r$WT_Ratio,
       Mock_Mean_Depth = r$Mock_Mean_Depth, Mut_Ratio = r$Mut_Ratio,
-      delta = r$delta, p = r$p, status = r$status, is_dependent = r$is_dependent
+      delta = r$delta, p = r$p, q = r$q, meth_diff = r$meth_diff,
+      status = r$status, is_dependent = r$is_dependent
     )))
     if (nrow(rows) == 0) return(rows)
-    setnames(rows, c("delta", "p"), c("Delta_Ratio(WT-Mut)", p_label))
+    setnames(rows,
+             c("delta", "p", "q", "meth_diff"),
+             c("Delta_Ratio(WT-Mut)", p_label, q_label, "meth.diff"))
     keys_split <- tstrsplit(rows$site_id, "|", fixed = TRUE)
     for (j in seq_along(key_cols)) rows[[key_cols[j]]] <- keys_split[[j]]
     rows[, c(key_cols, setdiff(names(rows), c("site_id", key_cols))), with = FALSE]
@@ -432,13 +467,15 @@ main <- function() {
     data.table(
       site_id = k, context = w$context, WT_Ratio = w$wt_ratio,
       Mut_Ratio = mut_ratio, Delta = w$wt_ratio - mut_ratio,
-      line1_p = l1_res[[k]]$p, line2_p = l2_res[[k]]$p
+      line1_p = l1_res[[k]]$p, line1_q = l1_res[[k]]$q,
+      line2_p = l2_res[[k]]$p, line2_q = l2_res[[k]]$q
     )
   }))
 
   final_out <- file.path(opt$outdir, paste0(output_prefix, ".dependent.tsv"))
   final_cols <- c(key_cols, "context", "WT_Ratio", "Mut_Ratio", "Delta_Ratio(WT-Mut)",
-                  paste0(opt$genotype1, "_", p_label), paste0(opt$genotype2, "_", p_label))
+                  paste0(opt$genotype1, "_", p_label), paste0(opt$genotype1, "_", q_label),
+                  paste0(opt$genotype2, "_", p_label), paste0(opt$genotype2, "_", q_label))
   if (nrow(final) == 0) {
     empty <- as.data.table(setNames(
       rep(list(character(0)), length(final_cols)),
@@ -449,12 +486,16 @@ main <- function() {
   } else {
     setnames(final, "Delta", "Delta_Ratio(WT-Mut)")
     setnames(final, "line1_p", paste0(opt$genotype1, "_", p_label))
+    setnames(final, "line1_q", paste0(opt$genotype1, "_", q_label))
     setnames(final, "line2_p", paste0(opt$genotype2, "_", p_label))
+    setnames(final, "line2_q", paste0(opt$genotype2, "_", q_label))
     keys_split <- tstrsplit(final$site_id, "|", fixed = TRUE)
     for (j in seq_along(key_cols)) final[[key_cols[j]]] <- keys_split[[j]]
     final <- final[, c(key_cols, "context", "WT_Ratio", "Mut_Ratio",
-                       "Delta_Ratio(WT-Mut)", paste0(opt$genotype1, "_", p_label),
-                       paste0(opt$genotype2, "_", p_label)), with = FALSE]
+                       "Delta_Ratio(WT-Mut)",
+                       paste0(opt$genotype1, "_", p_label), paste0(opt$genotype1, "_", q_label),
+                       paste0(opt$genotype2, "_", p_label), paste0(opt$genotype2, "_", q_label)),
+                   with = FALSE]
     fwrite(final, final_out, sep = "\t", quote = FALSE)
     final_count <- nrow(final)
   }
@@ -469,6 +510,8 @@ main <- function() {
     min_depth = opt[["min-depth"]],
     min_delta = opt[["min-delta"]],
     method = paste0("methylKit_", opt[["methylkit-test"]]),
+    methylkit_adjust = opt[["methylkit-adjust"]],
+    significance = opt[["significance"]],
     alpha = opt$alpha,
     methylkit_context = opt[["methylkit-context"]],
     wt_candidate_count = nrow(wt_rows),

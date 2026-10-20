@@ -35,14 +35,17 @@ controlPsi	leaf,Flower	AT1G25400.1	1357	+	CATTG	CDS	2
 controlPsi	Root,Flower	AT1G28060.1	1092	+	CATTG	CDS	2
 controlPsi	Root,leaf,Flower	AT1G30120.1	652	+	CATTG	CDS	3
 controlPsi	leaf	AT1G30600.1	2455	+	GATCA	CDS	1
+controlPsi	Root	AT1G30640.1	1021	+	GATTA	CDS	1
 controlPsi	Root,leaf,Flower	AT1G30690.1	1458	+	AGTAG	CDS	3
 controlPsi	Root	AT1G48240.1	623	+	GTTGG	CDS	1
 controlPsi	Root,leaf,Flower	AT1G48520.1	1429	+	TTTCT	CDS	3
+controlPsi	Flower	AT1G49290.1	324	+	TGTGT	CDS	1
 controlPsi	leaf	AT1G49340.1	2764	+	TTTGG	CDS	1
 controlPsi	Root	AT1G49340.1	3367	+	AATTG	CDS	1
 controlPsi	Root,leaf	AT1G49340.1	5561	+	TTTAA	CDS	2
 controlPsi	Root,leaf,Flower	AT1G50480.1	1963	+	CATTG	CDS	3
 controlPsi	Root,leaf,Flower	AT1G50500.2	1144	+	CTTGA	CDS	3
+controlPsi	Root	AT1G53990.1	973	+	ATTAT	CDS	1
 controlPsi	Root,leaf,Flower	AT1G54830.1	280	+	GTTCA	CDS	3
 controlPsi	Flower	AT1G56460.3	171	+	GTTCG	five_prime_UTR	1
 controlPsi	Root,leaf	AT1G56610.1	801	+	TTTCG	CDS	2
@@ -65,6 +68,7 @@ controlPsi	Root	AT1G70950.1	1131	+	CTTCT	CDS	1
 controlPsi	Root	AT1G71220.3	3128	+	TTTGC	CDS	1
 controlPsi	Root	AT1G71440.1	668	+	AGTCT	CDS	1
 controlPsi	Root,leaf,Flower	AT1G71697.1	1834	+	TCTAG	three_prime_UTR	3
+controlPsi	Root,leaf,Flower	AT1G71697.1	1874	+	GTTCA	three_prime_UTR	3
 controlPsi	Root,leaf,Flower	AT1G74470.1	709	+	CATTG	CDS	3
 controlPsi	Root,leaf,Flower	AT1G75420.1	832	+	CTTTG	CDS	3
 controlPsi	leaf	AT1G76030.1	1858	+	TTTGG	three_prime_UTR	1
@@ -112,6 +116,7 @@ controlPsi	Root	AT2G43150.1	561	+	CCTCC	CDS	1
 controlPsi	Root,leaf,Flower	AT2G44350.2	1135	+	AGTTG	CDS	3
 controlPsi	Flower	AT2G45403.1	193	+	GGTGG	five_prime_UTR	1
 controlPsi	leaf	AT2G45640.1	684	+	TTTGT	three_prime_UTR	1
+controlPsi	Root,leaf,Flower	AT2G45810.1	1642	+	GTTCA	CDS	3
 controlPsi	Root	AT2G46620.1	1966	+	TTTGA	three_prime_UTR	1
 controlPsi	Root	AT2G47510.1	1135	+	CTTGC	CDS	1
 controlPsi	Root,leaf	AT3G01050.1	83	+	ACTTT	five_prime_UTR	2
@@ -155,11 +160,13 @@ controlPsi	leaf	AT3G51720.1	405	+	TTTGA	CDS	1
 controlPsi	Root	AT3G51720.1	1135	+	GGTGA	CDS	1
 controlPsi	Root,leaf	AT3G51720.1	1250	+	TTTCG	CDS	2
 controlPsi	Flower	AT3G51740.1	1236	+	GTTCT	CDS	1
+controlPsi	Root,leaf,Flower	AT3G51930.1	1200	+	GTTTG	CDS	3
 controlPsi	Root	AT3G51930.1	1524	+	CTTAG	CDS	1
 controlPsi	Root,leaf,Flower	AT3G52110.1	575	+	AATCA	CDS	3
 controlPsi	Root,leaf	AT3G53750.1	231	+	TTTGC	CDS	2
 controlPsi	leaf	AT3G54280.2	4346	+	TCTAT	CDS	1
 controlPsi	leaf	AT3G54440.3	851	+	TTTGT	CDS	1
+controlPsi	Root,leaf	AT3G54710.1	520	+	CTTAG	CDS	2
 controlPsi	Root,leaf	AT3G54710.1	753	+	TTTGT	CDS	2
 controlPsi	leaf	AT3G55030.1	563	+	TTTGG	CDS	1
 controlPsi	Root	AT3G55400.1	615	+	CATTA	CDS	1
@@ -169,6 +176,7 @@ controlPsi	Root	AT3G59820.2	422	+	GGTTA	CDS	1
 controlPsi	Root	AT3G60770.1	347	+	TTTGA	CDS	1
 controlPsi	leaf	AT3G61080.2	779	+	ACTAT	CDS	1
 controlPsi	leaf,Flower	AT3G62060.2	1317	+	TCTCA	CDS	2
+controlPsi	Root	AT3G63430.1	1658	+	TTTCA	CDS	1
 controlPsi	leaf,Flower	AT3G63490.1	1187	+	TCTAG	three_prime_UTR	2
 controlPsi	leaf	AT3G63520.1	914	+	AATTA	CDS	1
 controlPsi	Root,leaf,Flower	AT4G00090.1	373	+	TTTAG	CDS	3
@@ -180,6 +188,7 @@ controlPsi	Root	AT4G05190.1	1543	+	CTTGA	CDS	1
 controlPsi	Root,leaf	AT4G06744.1	1318	+	GCTCC	CDS	2
 controlPsi	Root	AT4G11330.1	479	+	CATTG	CDS	1
 controlPsi	leaf,Flower	AT4G11380.2	617	+	GCTAT	CDS	2
+controlPsi	Flower	AT4G11543.1	239	+	GGTGG	five_prime_UTR	1
 controlPsi	Root	AT4G14320.2	252	+	GGTTA	CDS	1
 controlPsi	leaf	AT4G14890.1	570	+	TTTGG	three_prime_UTR	1
 controlPsi	Root,leaf	AT4G17000.1	848	+	TTTGA	CDS	2
@@ -211,6 +220,7 @@ controlPsi	Root	AT4G38890.1	664	+	AATTC	CDS	1
 controlPsi	leaf	AT4G39120.2	1142	+	GGTAT	three_prime_UTR	1
 controlPsi	Root	AT4G39330.1	1029	+	AATTG	CDS	1
 controlPsi	leaf	AT4G39540.3	771	+	GTTCA	CDS	1
+controlPsi	Root,leaf,Flower	AT5G01890.1	1273	+	GTTCT	CDS	3
 controlPsi	leaf	AT5G01920.1	487	+	CGTCT	CDS	1
 controlPsi	Flower	AT5G02110.1	1029	+	TGTTG	CDS	1
 controlPsi	Root,leaf,Flower	AT5G02530.1	273	+	GTTCT	CDS	3
@@ -261,6 +271,7 @@ controlPsi	Root	AT5G44040.1	766	+	ATTGC	CDS	1
 controlPsi	Root,leaf,Flower	AT5G44040.1	1055	+	TGTGA	CDS	3
 controlPsi	leaf	AT5G44560.1	872	+	TTTGT	three_prime_UTR	1
 controlPsi	Root	AT5G45090.1	335	+	ACTGA	CDS	1
+controlPsi	Root	AT5G45760.1	881	+	TTTGT	CDS	1
 controlPsi	leaf	AT5G46470.1	1831	+	TTTCT	CDS	1
 controlPsi	leaf	AT5G46490.2	2068	+	TTTGT	three_prime_UTR	1
 controlPsi	leaf	AT5G47840.1	979	+	AATTG	CDS	1
@@ -296,6 +307,7 @@ controlPsi	leaf,Flower	ATCG00040.1	561	+	GTTCA	CDS	2
 controlPsi	leaf,Flower	ATCG00150.1	228	+	TTTGT	CDS	2
 controlPsi	leaf,Flower	ATCG00150.1	684	+	ATTCA	CDS	2
 controlPsi	leaf,Flower	ATCG00270.1	238	+	TTTCT	CDS	2
+controlPsi	leaf,Flower	ATCG00350.1	1751	+	AGTAT	CDS	2
 controlPsi	leaf,Flower	ATCG00490.1	380	+	GTTCA	CDS	2
 controlPsi	leaf,Flower	ATCG00540.1	236	+	TGTAT	CDS	2
 controlPsi	Root,leaf,Flower	ATCG00670.1	315	+	TTTAT	CDS	3
@@ -313,3 +325,4 @@ controlPsi	Root	ATMG00220.1	486	+	TGTAG	CDS	1
 controlPsi	Root,Flower	ATMG00520.1	1601	+	GGTAT	CDS	2
 controlPsi	Root,leaf,Flower	ATMG00640.1	497	+	TGTAT	CDS	3
 controlPsi	Root,Flower	ATMG00990.1	166	+	TTTCG	CDS	2
+controlPsi	Root	ATMG01360.1	970	+	TTTAG	CDS	1

@@ -225,6 +225,7 @@
 <circle cx='418.39' cy='104.40' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='403.29' cy='135.55' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='439.59' cy='76.78' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
+<circle cx='312.86' cy='169.96' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='432.53' cy='88.94' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='384.34' cy='155.62' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='437.04' cy='94.65' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
@@ -432,6 +433,7 @@
 <circle cx='341.14' cy='149.16' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='290.37' cy='201.60' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='413.77' cy='100.18' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
+<circle cx='416.13' cy='77.88' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='232.71' cy='277.78' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='406.73' cy='149.11' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='431.24' cy='107.36' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
@@ -460,10 +462,6 @@
 <circle cx='412.27' cy='121.76' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='421.84' cy='79.41' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='411.33' cy='136.98' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<circle cx='312.86' cy='169.96' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<circle cx='416.13' cy='77.88' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<circle cx='312.86' cy='169.96' r='3.59' style='stroke-width: 0.78; fill: #E64B35; fill-opacity: 0.80;' />
-<circle cx='416.13' cy='77.88' r='3.59' style='stroke-width: 0.78; fill: #E64B35; fill-opacity: 0.80;' />
 </g>
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzQuODg=)'>
 <polyline points='161.89,350.57 161.89,16.64 ' style='stroke-width: 1.28; stroke-linecap: square;' />
@@ -496,14 +494,12 @@
 <text x='264.21' y='419.86' style='font-size: 24.00px; font-weight: bold; font-family: "Arial";'>Modification</text>
 <text x='412.21' y='419.86' style='font-size: 24.00px; font-weight: bold; font-family: "Arial";'>Ratio</text>
 <text transform='translate(76.04,183.61) rotate(-90)' text-anchor='middle' style='font-size: 24.00px; font-weight: bold; font-family: "Arial";'>WT Modification Ratio</text>
-<rect x='328.66' y='279.88' width='173.57' height='70.43' style='stroke-width: 1.28;' />
-<rect x='328.66' y='279.88' width='173.57' height='70.43' style='stroke-width: 1.28;' />
-<rect x='340.61' y='291.83' width='43.04' height='17.28' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
-<circle cx='362.13' cy='300.47' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<rect x='340.61' y='321.07' width='43.04' height='17.28' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
-<circle cx='362.13' cy='329.71' r='3.59' style='stroke-width: 0.78; fill: #E64B35; fill-opacity: 0.80;' />
-<text x='389.13' y='305.49' style='font-size: 14.00px; font-family: "Arial";'>WT sites</text>
-<text x='389.13' y='334.72' style='font-size: 14.00px; font-family: "Arial";'>Dependent sites</text>
+<rect x='375.61' y='309.11' width='126.62' height='41.19' style='stroke-width: 1.28;' />
+<rect x='375.61' y='309.11' width='126.62' height='41.19' style='stroke-width: 1.28;' />
+<rect x='387.57' y='321.07' width='43.04' height='17.28' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
+<circle cx='409.09' cy='329.71' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
+<circle cx='409.09' cy='329.71' r='3.59' style='stroke-width: 0.78; fill: #B8B8B8; fill-opacity: 0.80;' />
+<text x='436.09' y='334.72' style='font-size: 14.00px; font-family: "Arial";'>WT sites</text>
 </g>
 </g>
 </svg>

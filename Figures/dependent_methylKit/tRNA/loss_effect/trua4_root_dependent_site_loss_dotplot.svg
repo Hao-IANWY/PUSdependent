@@ -210,6 +210,7 @@
 <circle cx='420.21' cy='108.00' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='415.88' cy='94.51' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='424.20' cy='96.60' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
+<circle cx='408.57' cy='86.31' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='414.62' cy='113.64' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='403.67' cy='115.43' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='381.91' cy='147.97' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
@@ -224,6 +225,7 @@
 <circle cx='422.27' cy='104.40' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='399.97' cy='135.55' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='444.01' cy='76.78' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
+<circle cx='308.41' cy='169.96' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='436.19' cy='88.94' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='379.27' cy='155.62' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='443.07' cy='94.65' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
@@ -442,6 +444,7 @@
 <circle cx='439.84' cy='83.53' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='455.64' cy='73.01' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='258.92' cy='241.84' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
+<circle cx='254.87' cy='99.56' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='416.76' cy='131.71' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='384.35' cy='139.21' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='409.11' cy='79.94' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
@@ -457,15 +460,8 @@
 <circle cx='365.56' cy='145.18' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='364.42' cy='158.76' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='401.89' cy='121.76' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<circle cx='408.94' cy='136.98' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<circle cx='408.57' cy='86.31' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<circle cx='308.41' cy='169.96' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<circle cx='254.87' cy='99.56' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 <circle cx='303.40' cy='79.41' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<circle cx='408.57' cy='86.31' r='3.59' style='stroke-width: 0.78; fill: #E64B35; fill-opacity: 0.80;' />
-<circle cx='308.41' cy='169.96' r='3.59' style='stroke-width: 0.78; fill: #E64B35; fill-opacity: 0.80;' />
-<circle cx='254.87' cy='99.56' r='3.59' style='stroke-width: 0.78; fill: #E64B35; fill-opacity: 0.80;' />
-<circle cx='303.40' cy='79.41' r='3.59' style='stroke-width: 0.78; fill: #E64B35; fill-opacity: 0.80;' />
+<circle cx='408.94' cy='136.98' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
 </g>
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzQuODg=)'>
 <polyline points='161.89,350.57 161.89,16.64 ' style='stroke-width: 1.28; stroke-linecap: square;' />
@@ -498,14 +494,12 @@
 <text x='264.21' y='419.86' style='font-size: 24.00px; font-weight: bold; font-family: "Arial";'>Modification</text>
 <text x='412.21' y='419.86' style='font-size: 24.00px; font-weight: bold; font-family: "Arial";'>Ratio</text>
 <text transform='translate(76.04,183.61) rotate(-90)' text-anchor='middle' style='font-size: 24.00px; font-weight: bold; font-family: "Arial";'>WT Modification Ratio</text>
-<rect x='328.66' y='279.88' width='173.57' height='70.43' style='stroke-width: 1.28;' />
-<rect x='328.66' y='279.88' width='173.57' height='70.43' style='stroke-width: 1.28;' />
-<rect x='340.61' y='291.83' width='43.04' height='17.28' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
-<circle cx='362.13' cy='300.47' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
-<rect x='340.61' y='321.07' width='43.04' height='17.28' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
-<circle cx='362.13' cy='329.71' r='3.59' style='stroke-width: 0.78; fill: #E64B35; fill-opacity: 0.80;' />
-<text x='389.13' y='305.49' style='font-size: 14.00px; font-family: "Arial";'>WT sites</text>
-<text x='389.13' y='334.72' style='font-size: 14.00px; font-family: "Arial";'>Dependent sites</text>
+<rect x='375.61' y='309.11' width='126.62' height='41.19' style='stroke-width: 1.28;' />
+<rect x='375.61' y='309.11' width='126.62' height='41.19' style='stroke-width: 1.28;' />
+<rect x='387.57' y='321.07' width='43.04' height='17.28' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
+<circle cx='409.09' cy='329.71' r='3.31' style='stroke-width: 0.64; fill: #B8B8B8; fill-opacity: 0.80;' />
+<circle cx='409.09' cy='329.71' r='3.59' style='stroke-width: 0.78; fill: #B8B8B8; fill-opacity: 0.80;' />
+<text x='436.09' y='334.72' style='font-size: 14.00px; font-family: "Arial";'>WT sites</text>
 </g>
 </g>
 </svg>

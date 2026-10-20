@@ -6,8 +6,9 @@
 #   1 输入：一个候选位点的 6 个文库 (depth, ratio) → 计数
 #   2 模型：加权二项 logistic 回归 logit(π) = β0 + β1·x
 #   3 检验：过离散 φ 校正（φ>1 走 F，φ≤1 走卡方）→ 双侧 p
-#   4 单侧折算：方向对 p/2，方向反 p=1
-#   5 判定：mock depth ≥ 10 且 p_one < 0.05 且 Δ ≥ 0.05，两株系取交集
+#   4 多重校正：在所有候选位点上做 BH 校正 → q 值
+#   5 判定：方向为正（meth.diff > 0）、mock depth ≥ 10、q < 0.05 且 Δ ≥ 0.05，
+#     两株系取交集
 #
 # 输出：dependent_methylKit_test_schematic.pdf / .png / .svg
 # 原理文档：同目录 README.md
@@ -123,14 +124,16 @@ p <- ggplot() +
       size = 2.9) +
   arrow_to(27, 37.5, 46, 35) +
   arrow_to(73, 37.5, 54, 35) +
-  box(30, 70, 31, 34.8, "two-sided p-value", size = 3.2) +
+  box(30, 70, 31, 34.8,
+      "two-sided p-value\n→  BH q-value across all candidate sites",
+      size = 3.0) +
   arrow_down(50, 31, 27.2) +
 
-  # ---- 4 单侧折算 ----
-  tbox(2, 28.4, "4 | One-sided conversion",
+  # ---- 4 方向 + FDR ----
+  tbox(2, 28.4, "4 | Direction + FDR",
        size = 3.8, fontface = "bold", hjust = 0) +
   box(12, 88, 21.5, 27,
-      "meth.diff > 0 (WT higher)   →   p_one = p_two / 2\nwrong direction   →   p_one = 1   (never passes)",
+      "meth.diff > 0 (WT higher)   AND   q < 0.05   →   passes\nwrong direction or q ≥ 0.05   →   never passes",
       size = 3.1) +
   arrow_down(50, 21.5, 17.7) +
 
@@ -142,7 +145,7 @@ p <- ggplot() +
              fill = "white", colour = "black", linewidth = 0.7),
     tbox(15, 15.9, "•  mock mean depth ≥ 10  —  site well measured in mutant mock",
          size = 3.0, hjust = 0),
-    tbox(15, 14.1, "•  p_one < 0.05  —  significant loss in mutant",
+    tbox(15, 14.1, "•  BH q < 0.05  —  significant loss in mutant (FDR)",
          size = 3.0, hjust = 0),
     tbox(15, 12.3, "•  Δ = WT_Ratio − Mut_Ratio ≥ 0.05  —  effect-size floor",
          size = 3.0, hjust = 0),

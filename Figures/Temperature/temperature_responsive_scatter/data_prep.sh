@@ -28,11 +28,11 @@ require_file() {
 
 # 取 all-sites.tsv -> 画图表。
 # 保留列：chr pos strand context WT_21_Ratio WT_27_Ratio Delta_Ratio_27_minus_21
-#         Mock_Mean_Depth_WT_21 Mock_Mean_Depth_WT_27 p_value regulation
+#         Mock_Mean_Depth_WT_21 Mock_Mean_Depth_WT_27 p_value q_value regulation
 # regulation 由上游 direction 列改写而来：空值 -> non-responsive，
 # up_in_WT_27 -> up-regulated（27 度修饰升高），down_in_WT_27 -> down-regulated。
-# 判定口径见各 STAT/Temperature_response/run.sh：methylKit F 检验双侧 p < 0.05、
-# |Delta| >= 0.05、两个温度 Mock 平均深度均 >= 10。
+# 判定口径见各 STAT/Temperature_response/run.sh：methylKit F 检验、
+# SLIM q < 0.05（双侧 FDR）、|Delta| >= 0.05、两个温度组每个重复 depth >= 10。
 write_plot_table() {
   local input_tsv="$1"
   local output_tsv="$2"
@@ -42,14 +42,14 @@ write_plot_table() {
   awk -F'\t' -v OFS='\t' -v trna_only="$trna_only" '
     BEGIN { print "chr", "pos", "strand", "context", "WT_21_Ratio", "WT_27_Ratio",
                   "Delta_Ratio_27_minus_21", "Mock_Mean_Depth_WT_21", "Mock_Mean_Depth_WT_27",
-                  "p_value", "regulation" }
+                  "p_value", "q_value", "regulation" }
     NR == 1 { next }
     {
       if (trna_only == 1 && $1 !~ /^tRNA-/) { next }
       regulation = "non-responsive"
       if ($13 == "up_in_WT_27") { regulation = "up-regulated" }
       else if ($13 == "down_in_WT_27") { regulation = "down-regulated" }
-      print $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, regulation
+      print $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $14, regulation
       n++
       if (regulation != "non-responsive") { n_responsive++ }
     }

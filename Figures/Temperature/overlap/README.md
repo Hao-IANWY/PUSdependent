@@ -27,9 +27,12 @@ dependent 走 methylKit 口径，与同目录姊妹图 `dependent_site_loss_effe
 
 | RNA 类型 | 27℃ 上调 | 27℃ dependent | **交集** |
 |---|---|---|---|
-| mRNA | 10 | 0 | **0** |
+| mRNA | 6 | 0 | **0** |
 | rRNA | 13 | 0 | **0** |
-| tRNA | 3 | 1 | **0** |
+| tRNA | 0 | 0 | **0** |
+
+2026-10-20 启用 BH q 后，mRNA 的 27℃ 上调位点从 10 降到 6，tRNA 从 3 降到 0
+（Temperature_tRNA 的温度响应也为 0）；三类的右圈全为空，tRNA 左圈也为空。
 
 **注意这是个阴性结果**，且与论文版不同：论文版同一分析（mRNA、2 重复、Fisher 口径）
 是 26 / 8 / 1，交集有 8 个位点。新版 3 重复数据里 mRNA 在 27℃ 一个 dependent 位点都
@@ -39,7 +42,8 @@ dependent 走 methylKit 口径，与同目录姊妹图 `dependent_site_loss_effe
 tRNA 有 4 个 dependent 位点，但**与上调集合仍然零重合**；放宽到 `pos ± 5bp` 容差同样
 零重合。即：在本套数据里，「27℃ 修饰升高」和「TRUA1B 依赖」是两批互不相交的位点。
 
-rRNA 在 27℃ 两种口径都没有 dependent 位点，右圈为空；按老板要求照出保持三类齐全。
+三类 RNA 在 BH 口径下 27℃ 都没有 dependent 位点，右圈全为空；按需求照出保持
+三类齐全。
 
 ## 为什么手绘圆
 

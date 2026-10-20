@@ -63,29 +63,30 @@ fast.fisher——本项目 3v3 用不到。）
 
 检验输出的是**双侧 p 值**（"两组有差异"）。
 
-## 第五步：双侧 p 折算成单侧
+## 第五步：BH 多重校正
 
-我们只关心一个方向——**突变株修饰丢失**（备择 π_WT > π_mut）：
+methylKit 的 `calculateDiffMeth(adjust = "BH")` 会对同一比较的全部候选位点做
+Benjamini–Hochberg 校正，把双侧 p 折算成 q 值：
 
 ```
-p_one = p_two / 2   若 meth.diff > 0（方向对，WT > 突变）
-p_one = 1           若方向反了（绝不放行）
+q = m · p / rank
 ```
 
-与 `call_dependent_stats.R` 的"备择 π_WT > π_mut"一致。
+q 的含义是"在我叫出的这批位点里，假阳性的预期比例"（FDR）。BH 不估计真
+null 比例（等价于假设 π0 = 1），因此在候选位点少、真信号多时会比 SLIM 保守。
 
-## 第六步：判定——一个位点要"通关"需同时满足 4 个条件
+## 第六步：方向 + 判定——一个位点要"通关"需同时满足 4 个条件
 
 | # | 条件 | 含义 |
 |---|------|------|
 | 1 | Mock 平均 depth ≥ 10 | 突变株 mock 样本里这个位点测得够深，"丢失"才可信 |
-| 2 | 单侧 p < 0.05 | WT 显著高于突变株 |
+| 2 | BH q < 0.05 且 meth.diff > 0 | WT 显著高于突变株（FDR 校正后，方向必须为正） |
 | 3 | Δ = WT_Ratio − Mut_Ratio ≥ 0.05 | 效应量门槛，挡住"显著但只差 1%"的位点 |
 | 4 | **两个株系各自都满足 1–3** | AND 合并取交集（如 trua1a_1 ∩ trua1a_2） |
 
-注意口径分工：p 值用 methylKit 的加权模型算，但 Δ 用的是
-**未筛选的简单均值差**（WT_Ratio 与突变株 3 个 Treat 重复 ratio 的简单均值），
-methylKit 的 meth.diff 只用于判断 p 值方向，不参与 Δ 计算。
+注意口径分工：q 值用 methylKit 的加权模型算（双侧 FDR），方向由 meth.diff 判断；
+Δ 用的是**未筛选的简单均值差**（WT_Ratio 与突变株 3 个 Treat 重复 ratio 的简单均值），
+meth.diff 不参与 Δ 计算。
 
 ## 流程总览
 
@@ -95,8 +96,9 @@ methylKit 的 meth.diff 只用于判断 p 值方向，不参与 Δ 计算。
   → depth=0 重复按缺失剔除（3v3 可退化为 3v2）
   → 加权 logistic 回归：logit(π) = β0 + β1·x
   → φ 校正：φ>1 走 F 检验，φ≤1 走卡方
-  → 双侧 p → 单侧 p（方向不对直接 p=1）
-  → mock depth ≥ 10 且 p_one < 0.05 且 Δ ≥ 0.05
+  → 双侧 p
+  → BH q（同一比较全部候选位点，双侧 FDR）
+  → mock depth ≥ 10 且 q < 0.05 且 meth.diff > 0 且 Δ ≥ 0.05
   → 两个株系取交集
   = dependent 位点
 ```

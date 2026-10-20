@@ -1,7 +1,6 @@
 genotype	tissue	transcript	pos	strand	context	set
 trua1a	Flower	AT1G04210.1	2188	+	TGTCT	Flower
 trua1a	Flower	AT1G13320.1	264	+	CGTAG	Flower
-trua1a	Flower	AT1G49290.1	324	+	TGTGT	Flower
 trua1a	Flower	AT2G15340.1	442	+	ATTTG	Flower
 trua1a	Flower	AT2G26850.1	1321	+	TGTTG	Flower
 trua1a	Flower	AT2G45405.1	134	+	CGTGG	Flower
@@ -16,7 +15,6 @@ trua1a	Flower	AT3G48870.1	2162	+	TGTTG	Flower
 trua1a	Flower	AT3G50310.1	368	+	GGTGA	Flower
 trua1a	Flower	AT3G51470.1	257	+	GTTGG	Flower
 trua1a	Flower	AT3G62230.1	586	+	GGTAT	Flower
-trua1a	Flower	AT4G11543.1	239	+	GGTGG	Flower
 trua1a	Flower	AT4G21610.1	467	+	TGTCA	Flower
 trua1a	Flower	AT4G33210.1	2317	+	AGTGC	Flower
 trua1a	Flower	AT4G35700.1	194	+	CGTAA	Flower
@@ -27,4 +25,3 @@ trua1a	Flower	AT5G26360.1	335	+	CGTGA	Flower
 trua1a	Flower	AT5G28690.1	889	+	CGTTG	Flower
 trua1a	Flower	AT5G47910.1	496	+	TGTGG	Flower
 trua1a	Flower	AT5G55930.1	1153	+	CGTTG	Flower
-trua1a	Flower	ATCG00350.1	1751	+	AGTAT	Flower
