@@ -1,0 +1,4 @@
+rna_type	n_sites	label
+rRNA	4	n = 4
+tRNA	64	n = 64
+mRNA	18	n = 18

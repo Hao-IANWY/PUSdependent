@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='576.00pt' height='475.20pt' viewBox='0 0 576.00 475.20'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHw0NzUuMjA='>
+    <rect x='0.00' y='0.00' width='576.00' height='475.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0NzUuMjA=)'>
+<rect x='-0.000000000000064' y='0.00' width='576.00' height='475.20' style='stroke-width: 3.66; stroke: none; fill: #FFFFFF;' />
+<rect x='75.64' y='34.62' width='488.40' height='395.75' style='stroke-width: 3.66; stroke: none;' />
+<rect x='115.33' y='409.99' width='103.79' height='14.62' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #8DD3C7;' />
+<rect x='267.95' y='136.99' width='103.79' height='287.62' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3DE69;' />
+<rect x='420.58' y='351.49' width='103.79' height='73.12' style='stroke-width: 1.28; stroke-linecap: butt; stroke-linejoin: miter; fill: #FDB462;' />
+<text x='167.22' y='404.84' text-anchor='middle' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>3</text>
+<text x='319.84' y='131.84' text-anchor='middle' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>59</text>
+<text x='472.47' y='346.34' text-anchor='middle' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>15</text>
+<rect x='75.64' y='34.62' width='488.40' height='395.75' style='stroke-width: 1.28;' />
+<text x='63.09' y='431.77' text-anchor='end' style='font-size: 20.00px; font-weight: bold; font-family: "Arial";'>0</text>
+<text x='63.09' y='334.27' text-anchor='end' style='font-size: 20.00px; font-weight: bold; font-family: "Arial";'>20</text>
+<text x='63.09' y='236.77' text-anchor='end' style='font-size: 20.00px; font-weight: bold; font-family: "Arial";'>40</text>
+<text x='63.09' y='139.28' text-anchor='end' style='font-size: 20.00px; font-weight: bold; font-family: "Arial";'>60</text>
+<text x='63.09' y='41.78' text-anchor='end' style='font-size: 20.00px; font-weight: bold; font-family: "Arial";'>80</text>
+<polyline points='66.08,424.61 75.64,424.61 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='66.08,327.11 75.64,327.11 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='66.08,229.61 75.64,229.61 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='66.08,132.11 75.64,132.11 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='66.08,34.62 75.64,34.62 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='167.22,439.93 167.22,430.37 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='319.84,439.93 319.84,430.37 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<polyline points='472.47,439.93 472.47,430.37 ' style='stroke-width: 1.28; stroke-linecap: square;' />
+<text x='167.22' y='461.14' text-anchor='middle' style='font-size: 20.00px; font-weight: bold; font-family: "Arial";'>rRNA</text>
+<text x='319.84' y='461.14' text-anchor='middle' style='font-size: 20.00px; font-weight: bold; font-family: "Arial";'>tRNA</text>
+<text x='472.47' y='461.14' text-anchor='middle' style='font-size: 20.00px; font-weight: bold; font-family: "Arial";'>mRNA</text>
+<text transform='translate(27.98,322.26) rotate(-90)' style='font-size: 22.00px; font-family: "Arial";'>Number of </text>
+<text transform='translate(27.98,213.44) rotate(-90)' style='font-size: 22.00px; font-weight: 500; font-family: "WenQuanYi Zen Hei";'>Ψ</text>
+<text transform='translate(27.98,194.07) rotate(-90)' style='font-size: 22.00px; font-family: "Arial";'> sites</text>
+<text x='319.84' y='24.84' text-anchor='middle' style='font-size: 18.00px; font-weight: bold; font-family: "Arial";'>Chloroplast RNA</text>
+</g>
+</g>
+</svg>

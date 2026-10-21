@@ -185,13 +185,24 @@ y_axis_cover <- function(values, n = 4, lower_mult = 0.02) {
   }
 
   breaks <- pretty(c(lo, hi), n = n)
+  # pretty() 只保证"好看",不保证覆盖数据:小量级数据上可能出现
+  # max(breaks) < hi(例如 0.0208 的峰值只取到 0.020)。此时补一个刻度,
+  # 否则面板会因负向 expand 反而裁掉数据顶部。
+  if (max(breaks) < hi) {
+    breaks <- c(breaks, max(breaks) + diff(breaks)[length(breaks) - 1L])
+  }
   top    <- max(breaks)
+
+  # 面板上界按"最高刻度 - 最高柱"留白,正好收到最高刻度。加一个极小 epsilon:
+  # 浮点误差可能让面板上限比 top 低 1e-18,ggplot 会把边界上的刻度整根丢掉
+  # (表现为最高刻度不显示)。
+  upper_mult <- (top - hi) / (hi - lo)
+  if (!is.finite(upper_mult) || upper_mult <= 0) upper_mult <- 0.05
 
   list(
     breaks = breaks,
     top    = top,
-    # 上侧留白由"最高刻度 - 最高柱"决定,面板正好收到最高刻度
-    expand = ggplot2::expansion(mult = c(lower_mult, (top - hi) / (hi - lo)))
+    expand = ggplot2::expansion(mult = c(lower_mult, upper_mult * (1 + 1e-4) + 1e-9))
   )
 }
 
