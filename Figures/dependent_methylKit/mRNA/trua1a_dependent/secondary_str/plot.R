@@ -1,8 +1,9 @@
 #!/usr/bin/env Rscript
 # plot.R — Mean RNAfold paired-probability profiles for four TRUA1A-dependent site groups
 # Input: trua1a_groups_structure_unpaired_profile.tsv and trua1a_groups_structure_metrics.tsv
-# Output: PDF/PNG/SVG profiles for the ±100-nt window and the Carlile-style
-#         3′ (0–15 nt) region in downstream_15 at the default 21 °C, plus a structure summary.
+# Output: PDF/PNG/SVG profiles for the ±100-nt window, the Carlile-style
+#         3′ (0–15 nt) region in downstream_15 and the extended −20 to +60 nt
+#         window in window_-20_to_60 at the default 21 °C, plus a structure summary.
 suppressPackageStartupMessages(library(ggplot2))
 
 # Cairo replaces UTF-8 Greek letters and primes with ".." when R starts in the
@@ -99,9 +100,15 @@ base_profile_plot <- function(df, title = NULL) {
   p
 }
 
-# Keep the focused downstream (0-15 nt) deliverables in their own subfolder.
-downstream_dir <- file.path(script_dir, "downstream_15")
-dir.create(downstream_dir, recursive = TRUE, showWarnings = FALSE)
+# Keep the focused-region deliverables in their own subfolders.
+region_plots <- list(
+  list(dir = "downstream_15", suffix = "3prime", lo = 0, hi = 15,
+       breaks = seq(0, 15, 5), width = 7.2, points = TRUE,
+       title = "Paired 3′ of Ψ"),
+  list(dir = "window_-20_to_60", suffix = "-20_to_60", lo = -20, hi = 60,
+       breaks = seq(-20, 60, 10), width = 9.5, points = FALSE,
+       title = "Paired around Ψ (−20 to +60 nt)")
+)
 
 {
   # Temperature is fixed at 21 °C and is intentionally not shown in figure filenames or labels.
@@ -114,14 +121,18 @@ dir.create(downstream_dir, recursive = TRUE, showWarnings = FALSE)
   save_plot(p_100, file.path(script_dir, "trua1a_groups_paired_profile_100nt"),
             width = 8, height = 4.8)
 
-  p_3p_data <- sub[sub$window == "±100 nt" & sub$rel_pos >= 0 & sub$rel_pos <= 15, ]
-  p_3p <- base_profile_plot(p_3p_data, title = "Paired 3′ of Ψ") +
-    geom_point(size = 1.7) +
-    scale_x_continuous(breaks = seq(0, 15, 5)) +
-    guides(colour = group_guide, fill = group_guide) +
-    theme(plot.title = element_text(size = 13))
-  save_plot(p_3p, file.path(downstream_dir, "trua1a_groups_3prime_paired"),
-            width = 7.2, height = 5.0)
+  for (reg in region_plots) {
+    reg_dir <- file.path(script_dir, reg$dir)
+    dir.create(reg_dir, recursive = TRUE, showWarnings = FALSE)
+    reg_data <- sub[sub$window == "±100 nt" & sub$rel_pos >= reg$lo & sub$rel_pos <= reg$hi, ]
+    p_reg <- base_profile_plot(reg_data, title = reg$title) +
+      scale_x_continuous(breaks = reg$breaks) +
+      guides(colour = group_guide, fill = group_guide) +
+      theme(plot.title = element_text(size = 13))
+    if (reg$points) p_reg <- p_reg + geom_point(size = 1.7)
+    save_plot(p_reg, file.path(reg_dir, paste0("trua1a_groups_", reg$suffix, "_paired")),
+              width = reg$width, height = 5.0)
+  }
 }
 
 # Compact center-site and folding summary.

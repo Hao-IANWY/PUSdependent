@@ -1,7 +1,8 @@
 #!/usr/bin/env Rscript
 # plot_union_paired_profile.R — Mean paired-probability profile of the Union
-# TRUA1A-dependent Ψ sites across the ±100-nt window and the downstream 0–15 nt
-# region at the default 21 °C. Site count is read from the profile table.
+# TRUA1A-dependent Ψ sites across the ±100-nt window, the downstream 0–15 nt
+# region (downstream_15) and the extended −20 to +60 nt window
+# (window_-20_to_60) at the default 21 °C. Site count is read from the profile table.
 # Input: trua1a_groups_structure_unpaired_profile.tsv (run data_prep.sh first)
 suppressPackageStartupMessages(library(ggplot2))
 
@@ -54,22 +55,30 @@ col_red <- "#E64B35"  # NPG red, project-wide "dependent" color
   save_plot(p, file.path(script_dir, "trua1a_union_paired_profile_100nt"),
             width = 8, height = 4.6)
 
-  # Focused Carlile-style downstream region, using the same single-group styling
-  # as the ±100-nt Union profile above.
-  downstream_dir <- file.path(script_dir, "downstream_15")
-  dir.create(downstream_dir, recursive = TRUE, showWarnings = FALSE)
-  p_downstream <- ggplot(prof[prof$rel_pos >= 0 & prof$rel_pos <= 15, ],
-                         aes(x = rel_pos, y = mean)) +
-    geom_ribbon(aes(ymin = mean - sem, ymax = mean + sem), alpha = 0.18, fill = col_red) +
-    geom_line(linewidth = 0.75, color = col_red) +
-    geom_vline(xintercept = 0, linetype = "dashed", linewidth = 0.4) +
-    coord_cartesian(ylim = c(0, 1), xlim = c(0, 15)) +
-    scale_x_continuous(breaks = seq(0, 15, 5)) +
-    labs(x = "Position relative to Ψ site (nt)", y = "Mean paired probability",
-         title = sprintf("Union TRUA1A-dependent Ψ sites (n=%d)", n_sites)) +
-    theme(plot.title = element_text(size = 12))
-  save_plot(p_downstream, file.path(downstream_dir, "trua1a_union_3prime_paired"),
-            width = 7.2, height = 5.0)
+  # Focused regions, using the same single-group styling as the ±100-nt Union
+  # profile above: the Carlile-style 3′ window and the extended −20 to +60 nt window.
+  region_plots <- list(
+    list(dir = "downstream_15", suffix = "3prime", lo = 0, hi = 15,
+         breaks = seq(0, 15, 5), width = 7.2),
+    list(dir = "window_-20_to_60", suffix = "-20_to_60", lo = -20, hi = 60,
+         breaks = seq(-20, 60, 10), width = 9.5)
+  )
+  for (reg in region_plots) {
+    reg_dir <- file.path(script_dir, reg$dir)
+    dir.create(reg_dir, recursive = TRUE, showWarnings = FALSE)
+    p_reg <- ggplot(prof[prof$rel_pos >= reg$lo & prof$rel_pos <= reg$hi, ],
+                    aes(x = rel_pos, y = mean)) +
+      geom_ribbon(aes(ymin = mean - sem, ymax = mean + sem), alpha = 0.18, fill = col_red) +
+      geom_line(linewidth = 0.75, color = col_red) +
+      geom_vline(xintercept = 0, linetype = "dashed", linewidth = 0.4) +
+      coord_cartesian(ylim = c(0, 1), xlim = c(reg$lo, reg$hi)) +
+      scale_x_continuous(breaks = reg$breaks) +
+      labs(x = "Position relative to Ψ site (nt)", y = "Mean paired probability",
+           title = sprintf("Union TRUA1A-dependent Ψ sites (n=%d)", n_sites)) +
+      theme(plot.title = element_text(size = 12))
+    save_plot(p_reg, file.path(reg_dir, paste0("trua1a_union_", reg$suffix, "_paired")),
+              width = reg$width, height = 5.0)
+  }
 }
 
 message(sprintf("[plot] Done: Union %d-site paired-probability profiles (21 °C; not annotated in figures)", n_sites))
