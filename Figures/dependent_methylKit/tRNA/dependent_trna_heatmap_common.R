@@ -468,10 +468,10 @@ build_tissue_panel_heatmap <- function(final_matrix, row_info) {
 # ============================================================================
 # 绘制：热图铺满主视口，右侧独立视口放带边框的竖直色标
 # ============================================================================
-build_value_legend <- function() {
+build_value_legend <- function(title = default_value_title) {
   ComplexHeatmap::Legend(
     col_fun = value_color_fun(),
-    title = default_value_title,
+    title = title,
     at = c(0, 0.25, 0.5, 0.75, 1),
     labels = c("0.00", "0.25", "0.50", "0.75", "1.00"),
     direction = "vertical",
@@ -486,8 +486,8 @@ build_value_legend <- function() {
   )
 }
 
-draw_heatmap_with_legend <- function(ht) {
-  legend_obj <- build_value_legend()
+draw_heatmap_with_legend <- function(ht, legend_title = default_value_title) {
+  legend_obj <- build_value_legend(legend_title)
 
   legend_width <- ComplexHeatmap:::width(legend_obj) + grid::unit(6, "mm")
   legend_height <- ComplexHeatmap:::height(legend_obj) + grid::unit(6, "mm")
@@ -522,14 +522,15 @@ draw_heatmap_with_legend <- function(ht) {
   grid::popViewport()
 }
 
-save_heatmap <- function(ht, output_prefix, out_dir, width_in, height_in) {
+save_heatmap <- function(ht, output_prefix, out_dir, width_in, height_in,
+                         legend_title = default_value_title) {
   stem <- file.path(out_dir, paste0(output_prefix, "_heatmap"))
 
   muffle_arial_postscript_warnings(
     save_plot(
       plot = function() {
         grid::grid.newpage()
-        draw_heatmap_with_legend(ht)
+        draw_heatmap_with_legend(ht, legend_title)
       },
       filename = stem,
       width = width_in,

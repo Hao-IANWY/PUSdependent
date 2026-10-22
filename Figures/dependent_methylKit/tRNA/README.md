@@ -20,6 +20,8 @@ Figures/dependent_methylKit/tRNA/
 ├── dependent_trna_distribution_common.R  Ψ 位点分布箱线图公共实现
 ├── sites_count/                          跨基因型：dependent 位点数堆叠柱状图
 ├── loss_effect/                          跨基因型：WT vs 突变体修饰比例散点
+├── motif/                                跨基因型：各 基因型×组织 dependent 位点 5-nt 上下文 seqlogo（0 位点组合跳过）
+├── merge_heatmap/                        跨基因型：每组织 dependent 位点并集 × (WT+7 突变体) 修饰比例热图
 └── trua1a/ trua1b/ trua2/ trua3/ trua4/ trua5/ trua6/
     ├── data_prep.sh                      三行转发到 build_genotype_dependent_tables.sh
     ├── plot.R                            声明基因型 + 勾选本基因型要出的图
