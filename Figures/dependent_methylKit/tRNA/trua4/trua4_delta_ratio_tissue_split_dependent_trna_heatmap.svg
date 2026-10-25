@@ -311,8 +311,8 @@
 <rect x='538.98' y='11.34' width='86.45' height='346.18' style='stroke-width: 0.75;' />
 <rect x='625.43' y='11.34' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #FCFCFC;' />
 <rect x='625.43' y='60.79' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #FCFCFC;' />
-<rect x='625.43' y='110.25' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #E7B5A6;' />
-<rect x='625.43' y='159.70' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #F7DCD2;' />
+<rect x='625.43' y='110.25' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #F7DCD2;' />
+<rect x='625.43' y='159.70' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #E7B5A6;' />
 <rect x='625.43' y='209.15' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #FCFCFC;' />
 <rect x='625.43' y='258.61' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #EBBEB0;' />
 <rect x='625.43' y='308.06' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #DA9A88;' />
@@ -748,8 +748,8 @@
 <rect x='613.08' y='462.09' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #D48D7A;' />
 <rect x='613.08' y='511.55' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #FCFCFC;' />
 <rect x='538.98' y='363.18' width='86.45' height='197.82' style='stroke-width: 0.75;' />
-<rect x='625.43' y='363.18' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #E9B9AA;' />
-<rect x='625.43' y='412.64' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #F8DFD5;' />
+<rect x='625.43' y='363.18' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #F8DFD5;' />
+<rect x='625.43' y='412.64' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #E9B9AA;' />
 <rect x='625.43' y='462.09' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #FCFCFC;' />
 <rect x='625.43' y='511.55' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #E8B8A8;' />
 <rect x='637.79' y='363.18' width='12.35' height='49.45' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #FCFCFC;' />
@@ -910,13 +910,13 @@
 <rect x='1057.69' y='363.18' width='37.05' height='197.82' style='stroke-width: 0.75;' />
 <text x='128.19' y='41.79' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Mt-Asn-GTT</text>
 <text x='128.19' y='91.25' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Asn-GTT</text>
-<text x='128.19' y='140.70' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Leu-CAA</text>
-<text x='128.19' y='190.15' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Cys-GCA</text>
+<text x='128.19' y='140.70' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Cys-GCA</text>
+<text x='128.19' y='190.15' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Leu-CAA</text>
 <text x='128.19' y='239.61' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Pro-TGG</text>
 <text x='128.19' y='289.06' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Thr-TGT</text>
 <text x='128.19' y='338.52' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Tyr-GTA</text>
-<text x='128.19' y='393.64' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Leu-CAA</text>
-<text x='128.19' y='443.09' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Cys-GCA</text>
+<text x='128.19' y='393.64' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Cys-GCA</text>
+<text x='128.19' y='443.09' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Leu-CAA</text>
 <text x='128.19' y='492.55' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Pro-TGG</text>
 <text x='128.19' y='542.00' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Thr-TGT</text>
 <rect x='143.78' y='563.83' width='12.35' height='8.50' style='stroke-width: 0.45; fill: #FFFFFF;' />

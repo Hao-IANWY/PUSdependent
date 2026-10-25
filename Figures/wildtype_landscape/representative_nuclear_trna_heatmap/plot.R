@@ -1,10 +1,13 @@
 #!/usr/bin/env Rscript
 # plot.R — 代表性核 tRNA 的 positive-site ratio 沿 canonical tRNA 结构布局的热图。
 #
-# 行 = 46 个核 tRNA 代表(取材 tRNA/count/ncRNA/family_top 的 Nu 家族,行序沿用
-#      Nu-tRNA_rep-structure.csv),列 = canonical 0-76 位(按区段分块),
-# 颜色 = 该代表在该结构位上所有拷贝位点的 depth 加权平均 ratio。
-# 输入由 data.sh 生成(representative_nuclear_trna_mapped_sites_<tissue>.tsv)。
+# 行 = 46 个核 tRNA 家族，代表成员取自 tRNA/count/ncRNA/family_top/family_top_tRNA.tsv
+#      （每个 anticodon 家族里 mean_CPM 最高的 tRNA），行序按 family 字典序。
+# 列 = canonical 0–76 位（按 17 个区段分块）。
+# 颜色 = 该家族在该 canonical 位上所有拷贝位点的 depth 加权平均 ratio。
+# Sprinzl 坐标由 data.sh 直接取自 WT_*_sites.positive.Sprinzl.tsv，本脚本只做
+# canonical 位号 -> 展示列的布局查表。
+# 输入由 data.sh 生成（representative_nuclear_trna_mapped_sites_<tissue>.tsv）。
 #
 # 实现照搬 archive/20260902/paper/WT_sites_overview/representative_nuclear_trna_heatmap/
 # plot_representative_nuclear_trna_heatmap.R,样式改走 Figures/shared。
@@ -75,6 +78,7 @@ column_metadata <- layout_config |>
   )
 
 matrix_col_ids <- column_metadata$matrix_col_id
+max_canonical_pos <- max(column_metadata$display_number)
 region_color_map <- setNames(layout_config$color_hex, as.character(layout_config$region))
 
 # ============================================================================
@@ -83,10 +87,28 @@ region_color_map <- setNames(layout_config$color_hex, as.character(layout_config
 read_tissue_matrix <- function(mapped_sites_path, ordered_rep_ids) {
   sites <- readr::read_tsv(mapped_sites_path, show_col_types = FALSE)
 
+  required_cols <- c("Rep_ID", "canonical_pos", "ratio", "depth")
+  missing_cols <- setdiff(required_cols, names(sites))
+  if (length(missing_cols) > 0) {
+    stop(basename(mapped_sites_path), " is missing required columns: ",
+         paste(missing_cols, collapse = ", "))
+  }
+
   unknown_reps <- setdiff(unique(sites$Rep_ID), ordered_rep_ids)
   if (length(unknown_reps) > 0) {
-    stop("映射结果里出现了结构表之外的代表: ", paste(unknown_reps, collapse = ", "))
+    stop("映射结果里出现了 family_top 之外的家族: ", paste(unknown_reps, collapse = ", "))
   }
+
+  # canonical 位号 -> 展示列：纯布局查表（display_number 为 0..76）
+  col_id_by_canonical <- column_metadata$matrix_col_id
+  sites <- sites |>
+    mutate(canonical_pos = as.integer(canonical_pos)) |>
+    filter(
+      !is.na(canonical_pos),
+      canonical_pos >= 0L,
+      canonical_pos <= max_canonical_pos
+    ) |>
+    mutate(matrix_col_id = col_id_by_canonical[canonical_pos + 1L])
 
   collapsed <- sites |>
     group_by(Rep_ID, matrix_col_id) |>
@@ -235,11 +257,21 @@ draw_tissue_heatmap <- function(ht) {
 # ============================================================================
 # 主流程
 # ============================================================================
-structure_table <- readr::read_csv(
-  file.path(script_dir, "Nu-tRNA_rep-structure.csv"),
-  show_col_types = FALSE
-)
-ordered_rep_ids <- structure_table$Rep_ID
+repo_root <- normalizePath(file.path(script_dir, "..", "..", ".."))
+family_top_path <- file.path(repo_root, "tRNA/count/ncRNA/family_top/family_top_tRNA.tsv")
+if (!file.exists(family_top_path)) {
+  stop("Missing family_top table: ", family_top_path)
+}
+family_top <- readr::read_tsv(family_top_path, show_col_types = FALSE)
+
+# 行 = 核 tRNA 家族；代表成员（mean_CPM 最高）记录在 Representative_ID 列
+ordered_rep_ids <- family_top |>
+  filter(str_starts(feature_id, "^tRNA-Nu-")) |>
+  arrange(family) |>
+  pull(family)
+if (length(ordered_rep_ids) == 0) {
+  stop("family_top 表里没有核 tRNA 家族: ", family_top_path)
+}
 
 tissues <- tibble::tribble(
   ~Tissue, ~prefix,

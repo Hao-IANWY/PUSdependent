@@ -5,13 +5,17 @@
 # 样式改走 Figures/shared（plot_style.R + plot_tokens.R），导出改走 save_plot()。
 #
 # 两张图，共用同一套 canonical 列布局：
-#   run_tissue_split_heatmap()   行 = 组织 × 代表 tRNA，高度随行数自适应（宽固定 18 in）
-#   run_union_dependent_heatmap() 行 = 代表 tRNA，值 = 跨组织最大 Delta Ration
+#   run_tissue_split_heatmap()   行 = 组织 × tRNA 家族，高度随行数自适应（宽固定 18 in）
+#   run_union_dependent_heatmap() 行 = tRNA 家族，值 = 跨组织最大 Delta Ratio
 #
-# 列布局 = canonical 0-76 位（p1 ... CCA 共 17 个区段、77 列）：每个区段按固定长度
-# 重标定，底部有区段色带、canonical 位号、区段名。组织拆分图与 union 图均 Cy/Mt/Pt
-# 三分室进图（2026-10-12 老板拍板；Pt tRNA 环长分布与核/线粒体不同，投影到同一布局
-# 有扭曲，按既定口径接受）。
+# 与旧版的两处差异：
+#   1. 行 = 家族（分室 + 氨基酸 + 反密码子），代表成员取自
+#      tRNA/count/ncRNA/family_top/family_top_tRNA.tsv（每个家族 mean_CPM 最高的 tRNA）。
+#   2. 不再丢弃非代表拷贝：位点按 chr 归到家族，同一 (家族, canonical 位) 内取最大 Delta。
+#
+# 列布局 = canonical 0-76 位（p1 ... CCA 共 17 个区段、77 列），位号直接来自上游
+# dependent 表的 Sprinzl_pos 列；底部有区段色带、canonical 位号、区段名。
+# 组织拆分图与 union 图均 Cy/Mt/Pt 三分室进图（2026-10-12 老板拍板）。
 
 suppressPackageStartupMessages({
   library(readr)
@@ -93,29 +97,37 @@ setup_heatmap_style <- function() {
   register_font()
 }
 
-read_structure_table <- function(rep_structure_path) {
-  rep_structure <- readr::read_csv(rep_structure_path, show_col_types = FALSE)
+# tRNA-Nu-Arg-TCG-2 -> Nu-Arg-TCG
+family_from_chr <- function(chr) {
+  stringr::str_remove(chr, "^tRNA-") |> stringr::str_remove("-[0-9]+$")
+}
 
-  expected_cols <- c("ID", "Rep_ID", region_levels)
-  missing_cols <- setdiff(expected_cols, names(rep_structure))
+# 家族代表表（表达量口径）：feature_id 为 family 内 mean_CPM 最高的成员
+read_family_top <- function(family_top_path) {
+  family_top <- readr::read_tsv(family_top_path, show_col_types = FALSE)
+
+  expected_cols <- c("feature_id", "family")
+  missing_cols <- setdiff(expected_cols, names(family_top))
   if (length(missing_cols) > 0) {
     stop(
-      "Representative tRNA structure CSV is missing columns: ",
+      "family_top table is missing columns: ",
       paste(missing_cols, collapse = ", ")
     )
   }
 
-  rep_structure |>
-    select(all_of(expected_cols)) |>
-    mutate(
-      display_Rep_ID = str_replace(Rep_ID, "^Nu-", "Cy-"),
+  family_top |>
+    transmute(
+      Representative_ID = feature_id,
+      Rep_ID = family,
+      display_Rep_ID = str_replace(family, "^Nu-", "Cy-"),
       compartment = case_when(
-        str_starts(Rep_ID, "Nu-") ~ "Cy",
-        str_starts(Rep_ID, "Mt-") ~ "Mt",
-        str_starts(Rep_ID, "Pt-") ~ "Pt",
+        str_starts(family, "Nu-") ~ "Cy",
+        str_starts(family, "Mt-") ~ "Mt",
+        str_starts(family, "Pt-") ~ "Pt",
         TRUE ~ NA_character_
       ),
-      compartment = factor(compartment, levels = compartment_levels)
+      compartment = factor(compartment, levels = compartment_levels),
+      family_rank = dplyr::row_number()
     )
 }
 
@@ -139,6 +151,7 @@ read_union_sites <- function(file_path, value_col = default_value_col) {
     transmute(
       chr,
       ID = chr,
+      Rep_ID = family_from_chr(chr),
       pos = as.integer(pos),
       canonical_pos = as.integer(fix_pos),
       value = as.numeric(.data[[value_col]]),
@@ -154,43 +167,44 @@ read_union_sites <- function(file_path, value_col = default_value_col) {
     )
 }
 
-report_non_representative <- function(site_df, structure_info) {
+report_unknown_families <- function(site_df, family_info) {
   dropped <- site_df |>
-    anti_join(structure_info |> select(ID), by = "ID") |>
-    distinct(ID) |>
-    arrange(ID)
+    anti_join(family_info |> select(Rep_ID), by = "Rep_ID") |>
+    distinct(Rep_ID) |>
+    arrange(Rep_ID)
 
   if (nrow(dropped) > 0) {
     message(
       "Dropped ", nrow(dropped),
-      " non-representative tRNA copies not present in All-tRNA_rep-structure.csv: ",
-      paste(dropped$ID, collapse = ", ")
+      " tRNA families not present in family_top: ",
+      paste(dropped$Rep_ID, collapse = ", ")
     )
   }
 
   invisible(dropped)
 }
 
-collapse_union_sites <- function(site_df, structure_info) {
-  report_non_representative(site_df, structure_info)
+collapse_union_sites <- function(site_df, family_info) {
+  report_unknown_families(site_df, family_info)
 
   representative_df <- site_df |>
     inner_join(
-      structure_info |> select(ID, Rep_ID, display_Rep_ID, compartment),
-      by = "ID"
+      family_info |> select(Rep_ID, Representative_ID, display_Rep_ID, compartment, family_rank),
+      by = "Rep_ID"
     )
 
   if (nrow(representative_df) == 0) {
-    stop("No representative tRNA IDs remained after matching union `chr` values to the `ID` column.")
+    stop("No tRNA families remained after matching union `chr` values to family_top.")
   }
 
   collapsed_df <- representative_df |>
     mutate(matrix_col_id = matrix_col_ids[canonical_pos + 1L]) |>
-    group_by(ID, chr, Rep_ID, display_Rep_ID, compartment, matrix_col_id) |>
+    group_by(Rep_ID, Representative_ID, display_Rep_ID, compartment, family_rank, matrix_col_id) |>
     summarise(
       value = max(value, na.rm = TRUE),
       n_sites = dplyr::n(),
       native_positions = paste(sort(unique(pos)), collapse = ","),
+      native_chrs = paste(sort(unique(chr)), collapse = ","),
       tissues = paste(sort(unique(na.omit(tissues))), collapse = ";"),
       peak_tissues = paste(sort(unique(na.omit(peak_tissue))), collapse = ";"),
       canonical_pos = first(match(matrix_col_id, matrix_col_ids) - 1L),
@@ -208,11 +222,11 @@ collapse_union_sites <- function(site_df, structure_info) {
   collapsed_df
 }
 
-build_row_info <- function(structure_info, collapsed_df) {
-  structure_info |>
-    filter(ID %in% collapsed_df$ID) |>
+build_row_info <- function(family_info, collapsed_df) {
+  family_info |>
+    filter(Rep_ID %in% collapsed_df$Rep_ID) |>
     mutate(compartment = factor(compartment, levels = compartment_levels)) |>
-    arrange(compartment, match(ID, structure_info$ID))
+    arrange(compartment, family_rank)
 }
 
 build_union_matrix <- function(collapsed_df, row_info) {
@@ -224,7 +238,7 @@ build_union_matrix <- function(collapsed_df, row_info) {
   )
 
   if (nrow(collapsed_df) > 0) {
-    row_idx <- match(collapsed_df$ID, row_info$ID)
+    row_idx <- match(collapsed_df$Rep_ID, row_info$Rep_ID)
     col_idx <- match(collapsed_df$matrix_col_id, matrix_col_ids)
     final_matrix[cbind(row_idx, col_idx)] <- collapsed_df$value
   }
@@ -250,6 +264,7 @@ read_all_tissue_sites <- function(file_path, value_col = default_value_col) {
       Tissue = factor(Tissue, levels = tissue_levels, labels = tissue_display_map[tissue_levels]),
       chr,
       ID = chr,
+      Rep_ID = family_from_chr(chr),
       pos = as.integer(pos),
       canonical_pos = as.integer(fix_pos),
       value = as.numeric(.data[[value_col]])
@@ -264,33 +279,34 @@ read_all_tissue_sites <- function(file_path, value_col = default_value_col) {
     )
 }
 
-collapse_all_tissue_sites <- function(site_df, structure_info) {
-  report_non_representative(site_df, structure_info)
+collapse_all_tissue_sites <- function(site_df, family_info) {
+  report_unknown_families(site_df, family_info)
 
   site_df |>
     inner_join(
-      structure_info |> select(ID, Rep_ID, display_Rep_ID, compartment),
-      by = "ID"
+      family_info |> select(Rep_ID, Representative_ID, display_Rep_ID, compartment, family_rank),
+      by = "Rep_ID"
     ) |>
     mutate(matrix_col_id = matrix_col_ids[canonical_pos + 1L]) |>
-    group_by(Tissue, ID, chr, Rep_ID, display_Rep_ID, compartment, matrix_col_id) |>
+    group_by(Tissue, Rep_ID, Representative_ID, display_Rep_ID, compartment, family_rank, matrix_col_id) |>
     summarise(
       value = max(value, na.rm = TRUE),
       n_sites = dplyr::n(),
       native_positions = paste(sort(unique(pos)), collapse = ","),
+      native_chrs = paste(sort(unique(chr)), collapse = ","),
       canonical_pos = first(match(matrix_col_id, matrix_col_ids) - 1L),
       .groups = "drop"
     )
 }
 
-build_tissue_panel_row_info <- function(structure_info, collapsed_df) {
+build_tissue_panel_row_info <- function(family_info, collapsed_df) {
   collapsed_df |>
-    distinct(Tissue, ID, Rep_ID, display_Rep_ID, compartment) |>
+    distinct(Tissue, Rep_ID, Representative_ID, display_Rep_ID, compartment, family_rank) |>
     mutate(
       Tissue = factor(Tissue, levels = unname(tissue_display_map[tissue_levels])),
       compartment = factor(compartment, levels = compartment_levels)
     ) |>
-    arrange(Tissue, compartment, match(ID, structure_info$ID))
+    arrange(Tissue, compartment, family_rank)
 }
 
 build_tissue_panel_matrix <- function(collapsed_df, row_info) {
@@ -302,8 +318,8 @@ build_tissue_panel_matrix <- function(collapsed_df, row_info) {
   )
 
   if (nrow(collapsed_df) > 0) {
-    row_keys <- paste(row_info$Tissue, row_info$ID, sep = "||")
-    value_keys <- paste(collapsed_df$Tissue, collapsed_df$ID, sep = "||")
+    row_keys <- paste(row_info$Tissue, row_info$Rep_ID, sep = "||")
+    value_keys <- paste(collapsed_df$Tissue, collapsed_df$Rep_ID, sep = "||")
     row_idx <- match(value_keys, row_keys)
     col_idx <- match(collapsed_df$matrix_col_id, matrix_col_ids)
     final_matrix[cbind(row_idx, col_idx)] <- collapsed_df$value
@@ -571,9 +587,10 @@ run_tissue_split_heatmap <- function(
 ) {
   setup_heatmap_style()
 
-  rep_structure_path <- file.path(base_dir, "All-tRNA_rep-structure.csv")
-  if (!file.exists(rep_structure_path)) {
-    stop("Missing representative structure CSV: ", rep_structure_path)
+  family_top_path <- file.path(base_dir, "..", "..", "..",
+                               "tRNA", "count", "ncRNA", "family_top", "family_top_tRNA.tsv")
+  if (!file.exists(family_top_path)) {
+    stop("Missing family_top table: ", family_top_path)
   }
 
   if (is.null(input_path)) {
@@ -581,18 +598,18 @@ run_tissue_split_heatmap <- function(
   }
   require_input(input_path, file.path(out_dir, "data_prep.sh"))
 
-  structure_info <- read_structure_table(rep_structure_path)
+  family_info <- read_family_top(family_top_path)
   all_tissue_sites <- read_all_tissue_sites(input_path)
   if (nrow(all_tissue_sites) == 0) {
     stop("No tissue-resolved dependent sites found in ", input_path)
   }
 
-  collapsed_sites <- collapse_all_tissue_sites(all_tissue_sites, structure_info)
+  collapsed_sites <- collapse_all_tissue_sites(all_tissue_sites, family_info)
   if (nrow(collapsed_sites) == 0) {
-    stop("No representative Cy/Mt/Pt rows remained after tissue-specific mapping.")
+    stop("No Cy/Mt/Pt tRNA families remained after tissue-specific mapping.")
   }
 
-  row_info <- build_tissue_panel_row_info(structure_info, collapsed_sites)
+  row_info <- build_tissue_panel_row_info(family_info, collapsed_sites)
   final_matrix <- build_tissue_panel_matrix(collapsed_sites, row_info)
   heatmap_obj <- muffle_arial_postscript_warnings(
     build_tissue_panel_heatmap(final_matrix, row_info)
@@ -647,9 +664,10 @@ run_union_dependent_heatmap <- function(
 ) {
   setup_heatmap_style()
 
-  rep_structure_path <- file.path(base_dir, "All-tRNA_rep-structure.csv")
-  if (!file.exists(rep_structure_path)) {
-    stop("Missing representative structure CSV: ", rep_structure_path)
+  family_top_path <- file.path(base_dir, "..", "..", "..",
+                               "tRNA", "count", "ncRNA", "family_top", "family_top_tRNA.tsv")
+  if (!file.exists(family_top_path)) {
+    stop("Missing family_top table: ", family_top_path)
   }
 
   if (is.null(input_path)) {
@@ -657,19 +675,19 @@ run_union_dependent_heatmap <- function(
   }
   require_input(input_path, file.path(out_dir, "data_prep.sh"))
 
-  structure_info <- read_structure_table(rep_structure_path)
+  family_info <- read_family_top(family_top_path)
   union_sites <- read_union_sites(input_path)
   if (nrow(union_sites) == 0) {
     stop("No union dependent sites found in ", input_path)
   }
 
-  collapsed_sites <- collapse_union_sites(union_sites, structure_info)
+  collapsed_sites <- collapse_union_sites(union_sites, family_info)
 
   if (nrow(collapsed_sites) == 0) {
-    stop("No representative Cy/Mt/Pt tRNAs remained after filtering.")
+    stop("No Cy/Mt/Pt tRNA families remained after filtering.")
   }
 
-  row_info <- build_row_info(structure_info, collapsed_sites)
+  row_info <- build_row_info(family_info, collapsed_sites)
   final_matrix <- build_union_matrix(collapsed_sites, row_info)
   heatmap_obj <- muffle_arial_postscript_warnings(
     build_union_heatmap(final_matrix, row_info)

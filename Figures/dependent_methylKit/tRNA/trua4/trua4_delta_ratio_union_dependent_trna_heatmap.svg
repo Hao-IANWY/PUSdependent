@@ -365,8 +365,8 @@
 <rect x='636.87' y='279.23' width='12.98' height='44.18' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #FCFCFC;' />
 <rect x='559.01' y='58.35' width='90.83' height='265.05' style='stroke-width: 0.75;' />
 <rect x='649.84' y='58.35' width='12.98' height='44.18' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #FCFCFC;' />
-<rect x='649.84' y='102.52' width='12.98' height='44.18' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #E7B5A6;' />
-<rect x='649.84' y='146.70' width='12.98' height='44.18' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #F7DCD2;' />
+<rect x='649.84' y='102.52' width='12.98' height='44.18' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #F7DCD2;' />
+<rect x='649.84' y='146.70' width='12.98' height='44.18' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #E7B5A6;' />
 <rect x='649.84' y='190.87' width='12.98' height='44.18' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #FCFCFC;' />
 <rect x='649.84' y='235.05' width='12.98' height='44.18' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #E8B8A8;' />
 <rect x='649.84' y='279.23' width='12.98' height='44.18' style='stroke-width: 0.45; stroke: #FFFFFF; fill: #DA9A88;' />
@@ -602,8 +602,8 @@
 <rect x='1104.00' y='58.35' width='38.93' height='265.05' style='stroke-width: 0.75;' />
 <text x='128.19' y='39.15' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Mt-Asn-GTT</text>
 <text x='128.19' y='86.16' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Asn-GTT</text>
-<text x='128.19' y='130.34' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Leu-CAA</text>
-<text x='128.19' y='174.51' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Cys-GCA</text>
+<text x='128.19' y='130.34' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Cys-GCA</text>
+<text x='128.19' y='174.51' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Leu-CAA</text>
 <text x='128.19' y='218.69' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Pro-TGG</text>
 <text x='128.19' y='262.86' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Thr-TGT</text>
 <text x='128.19' y='307.04' text-anchor='end' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";'>Pt-Tyr-GTA</text>

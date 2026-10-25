@@ -1,4 +1,4 @@
-tissue	sites_in	excluded_len_mismatch	unmapped	sites_mapped	reps_covered	cells
-Root	439	5	0	350	46	125
-Leaf	567	5	0	395	46	133
-Flower	550	5	0	391	46	131
+tissue	sites_in	excluded_nonNu	unmapped	sites_mapped	reps_covered	cells
+Root	439	84	0	355	46	126
+Leaf	567	167	0	400	46	134
+Flower	550	154	0	396	46	132

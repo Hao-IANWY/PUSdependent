@@ -3,12 +3,14 @@
 #
 # 移植自 archive/20260902/paper/tRNA_dependent/merge_heatmap/plot.R，样式改走 Figures/shared。
 # 与 archive 的三处差异：
-#   1. 位点来源换成本目录各基因型的 <genotype>_all_tissues.dependent.tsv（methylKit 口径，自带 fix_pos）
+#   1. 位点来源换成本目录各基因型的 <genotype>_all_tissues.dependent.tsv（methylKit 口径，fix_pos = Sprinzl_pos）
 #   2. WT/突变体修饰比例全部回填自 tRNA/STAT/adjustGap/ncRNA 的 adjusted.tsv（data_prep.sh 聚合）；
 #      archive 的 WT 用 Fisher.tsv，但 tRNA 流程的 Fisher.tsv 是过滤子集，不能全位点回填
 #   3. 分室 Cy/Mt/Pt 全进图（2026-10-12 老板拍板；archive 只 Cy/Mt）
+#   4. 行 = tRNA 家族（代表成员取自 tRNA/count/ncRNA/family_top，mean_CPM 最高），
+#      同家族所有拷贝的位点都并入该行，不再丢弃非代表拷贝
 #
-# 图形：行 = 代表 tRNA（按分室分组），列 = fix_pos × 样本（WT + 7 突变体），
+# 图形：行 = tRNA 家族（按分室分组），列 = fix_pos × 样本（WT + 7 突变体），
 #       格值 = 修饰比例（0-1，缺失浅灰），dependent 格标 "*"。
 #
 # 输入：
@@ -73,6 +75,7 @@ read_genotype_tissue_sources <- function(genotype) {
       Tissue = as.character(Tissue),
       chr,
       ID = chr,
+      Rep_ID = family_from_chr(chr),
       pos = as.integer(pos),
       fix_pos = as.integer(fix_pos),
       strand = as.character(strand),
@@ -85,7 +88,7 @@ read_genotype_tissue_sources <- function(genotype) {
 
 build_union_site_list <- function(tissue_sources) {
   tissue_sources |>
-    group_by(Tissue, ID, chr, pos, fix_pos, strand) |>
+    group_by(Tissue, Rep_ID, ID, chr, pos, fix_pos, strand) |>
     summarise(
       source_genotypes = paste(sort(unique(source_genotype)), collapse = ","),
       contexts = paste(sort(unique(na.omit(context))), collapse = ";"),
@@ -93,24 +96,24 @@ build_union_site_list <- function(tissue_sources) {
     )
 }
 
-attach_structure_info <- function(collapsed_df, structure_info) {
-  non_representative <- collapsed_df |>
-    anti_join(structure_info |> select(ID), by = "ID") |>
-    distinct(ID) |>
-    arrange(ID)
+attach_family_info <- function(collapsed_df, family_info) {
+  unknown <- collapsed_df |>
+    anti_join(family_info |> select(Rep_ID), by = "Rep_ID") |>
+    distinct(Rep_ID) |>
+    arrange(Rep_ID)
 
-  if (nrow(non_representative) > 0) {
+  if (nrow(unknown) > 0) {
     message(
-      "Dropped ", nrow(non_representative),
-      " non-representative tRNA IDs not present in All-tRNA_rep-structure.csv: ",
-      paste(non_representative$ID, collapse = ", ")
+      "Dropped ", nrow(unknown),
+      " tRNA families not present in family_top: ",
+      paste(unknown$Rep_ID, collapse = ", ")
     )
   }
 
   collapsed_df |>
     inner_join(
-      structure_info |> select(ID, Rep_ID, display_Rep_ID, compartment),
-      by = "ID"
+      family_info |> select(Rep_ID, Representative_ID, display_Rep_ID, compartment, family_rank),
+      by = "Rep_ID"
     ) |>
     mutate(compartment = factor(compartment, levels = compartment_levels))
 }
@@ -142,50 +145,55 @@ read_sample_ratios <- function(path) {
 # ============================================================================
 # 位点 × 样本 网格与矩阵
 # ============================================================================
-build_mapped_ratio_table <- function(union_sites, tissue_ratios, structure_info, sample_levels) {
+build_mapped_ratio_table <- function(union_sites, tissue_ratios, family_info, sample_levels) {
   union_sites |>
-    select(Tissue, ID, chr, pos, fix_pos, strand, source_genotypes, contexts) |>
+    select(Tissue, Rep_ID, chr, pos, fix_pos, strand, source_genotypes, contexts) |>
     tidyr::crossing(sample = sample_levels) |>
     left_join(tissue_ratios, by = c("chr", "pos", "strand", "sample")) |>
     inner_join(
-      structure_info |> select(ID, Rep_ID, display_Rep_ID, compartment),
-      by = "ID"
+      family_info |> select(Rep_ID, display_Rep_ID, compartment),
+      by = "Rep_ID"
     ) |>
     mutate(compartment = factor(compartment, levels = compartment_levels)) |>
-    group_by(Tissue, ID, chr, fix_pos, sample, Rep_ID, display_Rep_ID, compartment) |>
+    group_by(Tissue, Rep_ID, fix_pos, sample, display_Rep_ID, compartment) |>
     summarise(
       ratio = if (all(is.na(ratio))) NA_real_ else max(ratio, na.rm = TRUE),
       native_positions = paste(sort(unique(pos)), collapse = ","),
+      native_chrs = paste(sort(unique(chr)), collapse = ","),
       source_genotypes = paste(sort(unique(source_genotypes)), collapse = ","),
       contexts = paste(sort(unique(na.omit(contexts))), collapse = ";"),
       .groups = "drop"
     )
 }
 
-build_merged_long <- function(mapped_df, structure_info, sample_levels, tissue) {
-  row_info <- structure_info |>
-    filter(ID %in% mapped_df$ID) |>
+build_merged_long <- function(mapped_df, family_info, sample_levels, tissue) {
+  row_info <- family_info |>
+    filter(Rep_ID %in% mapped_df$Rep_ID) |>
     mutate(compartment = factor(compartment, levels = compartment_levels)) |>
-    arrange(compartment, match(ID, structure_info$ID)) |>
-    select(ID, Rep_ID, display_Rep_ID, compartment)
+    arrange(compartment, family_rank) |>
+    select(Rep_ID, Representative_ID, display_Rep_ID, compartment, family_rank)
 
   fix_pos_levels <- sort(unique(mapped_df$fix_pos))
 
   complete_grid <- tidyr::expand_grid(
-    ID = row_info$ID,
+    Rep_ID = row_info$Rep_ID,
     fix_pos = fix_pos_levels,
     sample = sample_levels
   )
 
   complete_grid |>
-    left_join(row_info, by = "ID") |>
-    left_join(mapped_df, by = c("ID", "fix_pos", "sample", "Rep_ID", "display_Rep_ID", "compartment")) |>
+    left_join(row_info, by = "Rep_ID") |>
+    left_join(
+      mapped_df |> select(Rep_ID, fix_pos, sample, ratio, native_positions, native_chrs,
+                          source_genotypes, contexts),
+      by = c("Rep_ID", "fix_pos", "sample")
+    ) |>
     mutate(
       Tissue = tissue,
       sample = factor(sample, levels = sample_levels),
       column_id = paste0("fix", fix_pos, "__", sample)
     ) |>
-    arrange(compartment, match(ID, row_info$ID), fix_pos, sample)
+    arrange(compartment, family_rank, fix_pos, sample)
 }
 
 build_ratio_matrix <- function(merged_long, row_info, column_info) {
@@ -200,7 +208,7 @@ build_ratio_matrix <- function(merged_long, row_info, column_info) {
     filter(!is.na(ratio))
 
   if (nrow(value_rows) > 0) {
-    row_idx <- match(value_rows$ID, row_info$ID)
+    row_idx <- match(value_rows$Rep_ID, row_info$Rep_ID)
     col_idx <- match(value_rows$column_id, column_info$column_id)
     ratio_matrix[cbind(row_idx, col_idx)] <- value_rows$ratio
   }
@@ -227,7 +235,7 @@ build_dependent_marker_matrix <- function(merged_long, row_info, column_info) {
     )
 
   if (nrow(marker_rows) > 0) {
-    row_idx <- match(marker_rows$ID, row_info$ID)
+    row_idx <- match(marker_rows$Rep_ID, row_info$Rep_ID)
     col_idx <- match(marker_rows$column_id, column_info$column_id)
     marker_matrix[cbind(row_idx, col_idx)] <- TRUE
   }
@@ -293,13 +301,19 @@ build_merged_heatmap <- function(ratio_matrix, marker_matrix, row_info, column_i
 # ============================================================================
 invisible(setup_heatmap_style())
 
-structure_info <- read_structure_table(file.path(tRNA_dir, "All-tRNA_rep-structure.csv"))
+family_top_path <- file.path(tRNA_dir, "..", "..", "..",
+                             "tRNA", "count", "ncRNA", "family_top", "family_top_tRNA.tsv")
+if (!file.exists(family_top_path)) {
+  stop("Missing family_top table: ", family_top_path)
+}
+family_info <- read_family_top(family_top_path)
+
 tissue_sources <- purrr::map_dfr(genotypes, read_genotype_tissue_sources)
 union_sites <- build_union_site_list(tissue_sources)
-mapped_union_sites <- attach_structure_info(union_sites, structure_info)
+mapped_union_sites <- attach_family_info(union_sites, family_info)
 
 if (nrow(mapped_union_sites) == 0) {
-  stop("No representative tRNA rows remained after merging dependent-site inputs.")
+  stop("No tRNA families remained after merging dependent-site inputs.")
 }
 
 all_ratios <- read_sample_ratios(ratio_input)
@@ -323,14 +337,14 @@ metadata <- purrr::map_dfr(tissues, function(tissue) {
     filter(Tissue == tissue) |>
     select(-Tissue)
 
-  tissue_df <- build_mapped_ratio_table(tissue_union_sites, tissue_ratios, structure_info, sample_levels)
-  merged_long <- build_merged_long(tissue_df, structure_info, sample_levels, tissue)
+  tissue_df <- build_mapped_ratio_table(tissue_union_sites, tissue_ratios, family_info, sample_levels)
+  merged_long <- build_merged_long(tissue_df, family_info, sample_levels, tissue)
 
-  row_info <- structure_info |>
-    filter(ID %in% tissue_df$ID) |>
+  row_info <- family_info |>
+    filter(Rep_ID %in% tissue_df$Rep_ID) |>
     mutate(compartment = factor(compartment, levels = compartment_levels)) |>
-    arrange(compartment, match(ID, structure_info$ID)) |>
-    select(ID, Rep_ID, display_Rep_ID, compartment)
+    arrange(compartment, family_rank) |>
+    select(Rep_ID, Representative_ID, display_Rep_ID, compartment)
 
   column_info <- merged_long |>
     distinct(fix_pos, sample, column_id) |>
@@ -344,13 +358,13 @@ metadata <- purrr::map_dfr(tissues, function(tissue) {
   )
 
   output_prefix <- paste0(tolower(tissue), "_merged_dependent_site_ratio")
-  n_union_tRNA_sites <- nrow(dplyr::distinct(tissue_union_sites, ID, fix_pos))
+  n_union_tRNA_sites <- nrow(dplyr::distinct(tissue_union_sites, Rep_ID, fix_pos))
 
   readr::write_tsv(
     merged_long |>
       select(
-        Tissue, ID, Rep_ID, display_Rep_ID, compartment, fix_pos, sample, ratio,
-        native_positions, source_genotypes, contexts
+        Tissue, Rep_ID, Representative_ID, display_Rep_ID, compartment, fix_pos, sample, ratio,
+        native_positions, native_chrs, source_genotypes, contexts
       ),
     file.path(script_dir, paste0(output_prefix, "_long.tsv"))
   )

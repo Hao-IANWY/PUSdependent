@@ -31,7 +31,7 @@ Figures/chloroplast_RNA/
 | WT leaf tRNA | `tRNA/STAT/fisher/ncRNA/WT_Leaf_sites.positive.tsv` |
 | 叶绿体纯化 RNA | `Chloroplast/STAT/fisher/{ncRNA,mRNA}/Chloroplast_sites.positive.tsv` |
 | trua4 突变体 | `polyARNA/STAT/fisher/{rRNA,mRNA}/trua4_{1,2}-leaf_sites.Fisher.tsv`、`tRNA/STAT/fisher/ncRNA/trua4_{1,2}_Leaf_sites.Fisher.tsv` |
-| trua4 dependent | `polyARNA/STAT/dependent_methylKit/{rRNA,mRNA}/leaf/trua4/`、`tRNA/STAT/dependent_methylKit/ncRNA/leaf/trua4/` |
+| trua4 dependent | `polyARNA/STAT/dependent_methylKit/{rRNA,mRNA}/leaf/trua4/`、`tRNA/STAT/dependent_methylKit/ncRNA/leaf/trua4/`（tRNA 热图用带 `Sprinzl_pos` 的 `*.Sprinzl.tsv` + `tRNA/count/ncRNA/family_top/family_top_tRNA.tsv`） |
 | 叶绿体注释 | `Araport11_fixed.gtf`（`ChrC`） |
 
 叶绿体位点的识别口径：
@@ -49,9 +49,9 @@ Figures/chloroplast_RNA/
 2. **dependent 口径**：论文版用旧 Fisher/Welch dependent 表；这里统一用
    `STAT/dependent_methylKit`（methylKit 口径）。当前 per-line 表包含全部候选位点，
    绘图前按 `is_dependent == TRUE` 过滤。
-3. **fix_pos 现算**：当前 dependent-sites 表不再带 `fix_pos`，热图脚本按
-   `All-tRNA_rep-structure.csv` 的区段顺序与固定长度，把 native pos 重标定到
-   canonical 0–76（与 `Figures/dependent_methylKit/tRNA/build_genotype_dependent_tables.sh` 一致）。
+3. **fix_pos 来自上游**：tRNA 热图直接取 per-line 表里已注释的 `Sprinzl_pos`
+   （`add_sprinzl_pos.py` 生成），本目录不做坐标转换、不再依赖结构表；
+   行 = `family_top` 的 Pt 家族（表达量代表，Pt 为 1 家族 : 1 拷贝）。
 
 ## 当前数据规模
 

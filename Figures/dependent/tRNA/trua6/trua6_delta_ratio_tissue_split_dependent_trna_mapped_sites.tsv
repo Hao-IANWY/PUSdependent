@@ -1,88 +1,95 @@
-Tissue	ID	chr	Rep_ID	display_Rep_ID	compartment	matrix_col_id	value	n_sites	native_positions	canonical_pos
-Roots	tRNA-Mt-Asn-GTT-1	tRNA-Mt-Asn-GTT-1	Mt-Asn-GTT	Mt-Asn-GTT	Mt	Acstem_3p_2	0.5847243333	1	39	40
-Roots	tRNA-Mt-Cys-GCA-1	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	Acstem_3p_1	0.553713	1	38	39
-Roots	tRNA-Mt-Gln-TTG-1	tRNA-Mt-Gln-TTG-1	Mt-Gln-TTG	Mt-Gln-TTG	Mt	Tloop_2	0.1017901667	1	54	55
-Roots	tRNA-Mt-Glu-TTC-1	tRNA-Mt-Glu-TTC-1	Mt-Glu-TTC	Mt-Glu-TTC	Mt	Acstem_3p_2	0.5181503333	1	40	40
-Roots	tRNA-Mt-His-GTG-1	tRNA-Mt-His-GTG-1	Mt-His-GTG	Mt-His-GTG	Mt	Acstem_3p_1	0.3912445	1	41	39
-Roots	tRNA-Mt-Ser-GCT-1	tRNA-Mt-Ser-GCT-1	Mt-Ser-GCT	Mt-Ser-GCT	Mt	Acstem_3p_2	0.4480638333	1	41	40
-Roots	tRNA-Mt-Ser-TGA-1	tRNA-Mt-Ser-TGA-1	Mt-Ser-TGA	Mt-Ser-TGA	Mt	Dstem_5p_4	0.0713615	1	12	13
-Roots	tRNA-Mt-Trp-CCA-1	tRNA-Mt-Trp-CCA-1	Mt-Trp-CCA	Mt-Trp-CCA	Mt	Tloop_2	0.0862445	1	56	55
-Roots	tRNA-Mt-Tyr-GTA-2	tRNA-Mt-Tyr-GTA-2	Mt-Tyr-GTA	Mt-Tyr-GTA	Mt	Acstem_3p_1	0.4888433333	1	40	39
-Roots	tRNA-Nu-Arg-TCG-1	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	Acstem_3p_1	0.5452525	1	40	39
-Roots	tRNA-Nu-Arg-TCT-1	tRNA-Nu-Arg-TCT-1	Nu-Arg-TCT	Cy-Arg-TCT	Cy	Acstem_3p_1	0.6435423333	1	39	39
-Roots	tRNA-Nu-Cys-GCA-5	tRNA-Nu-Cys-GCA-5	Nu-Cys-GCA	Cy-Cys-GCA	Cy	Acstem_3p_1	0.59261	1	38	39
-Roots	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	Acstem_3p_1	0.5542706667	1	39	39
-Roots	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-1	Nu-Gln-TTG	Cy-Gln-TTG	Cy	Acstem_3p_1	0.4039345	1	39	39
-Roots	tRNA-Nu-Leu-AAG-1	tRNA-Nu-Leu-AAG-1	Nu-Leu-AAG	Cy-Leu-AAG	Cy	Acstem_3p_1	0.141675	1	41	39
-Roots	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-1	Nu-Leu-CAA	Cy-Leu-CAA	Cy	Acstem_3p_1	0.1097641667	1	40	39
-Roots	tRNA-Nu-Leu-TAA-1	tRNA-Nu-Leu-TAA-1	Nu-Leu-TAA	Cy-Leu-TAA	Cy	Acstem_3p_1	0.0842975	1	39	39
-Roots	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-1	Nu-Leu-TAG	Cy-Leu-TAG	Cy	Acstem_3p_1	0.3671228333	1	40	39
-Roots	tRNA-Nu-Phe-GAA-1	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	Acstem_3p_1	0.394095	1	39	39
-Roots	tRNA-Nu-Ser-AGA-6	tRNA-Nu-Ser-AGA-6	Nu-Ser-AGA	Cy-Ser-AGA	Cy	Acstem_3p_1	0.5095625	1	39	39
-Roots	tRNA-Nu-Ser-CGA-3	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	Acstem_3p_1	0.431813	1	39	39
-Roots	tRNA-Nu-Ser-GCT-2	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	Acstem_3p_2	0.5213243333	1	40	40
-Roots	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	Acstem_3p_1	0.497596	1	39	39
-Roots	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	Acstem_3p_1	0.1831416667	1	38	39
-Roots	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-2	Nu-Tyr-GTA	Cy-Tyr-GTA	Cy	Acstem_3p_1	0.5051533333	1	39	39
-Roots	tRNA-Pt-Ile-GAT-1	tRNA-Pt-Ile-GAT-1	Pt-Ile-GAT	Pt-Ile-GAT	Pt	Tloop_2	0.1088698333	1	54	55
-Roots	tRNA-Pt-Thr-GGT-1	tRNA-Pt-Thr-GGT-1	Pt-Thr-GGT	Pt-Thr-GGT	Pt	Tloop_2	0.08436483333	1	54	55
-Roots	tRNA-Pt-Trp-CCA-1	tRNA-Pt-Trp-CCA-1	Pt-Trp-CCA	Pt-Trp-CCA	Pt	Tloop_2	0.086761	1	56	55
-Roots	tRNA-Pt-iMet-CAT-1	tRNA-Pt-iMet-CAT-1	Pt-iMet-CAT	Pt-iMet-CAT	Pt	Tloop_2	0.1061133333	1	56	55
-Leaves	tRNA-Mt-Asn-GTT-1	tRNA-Mt-Asn-GTT-1	Mt-Asn-GTT	Mt-Asn-GTT	Mt	Acstem_3p_2	0.1445716667	1	39	40
-Leaves	tRNA-Mt-Cys-GCA-1	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	Acstem_3p_1	0.4054911667	1	38	39
-Leaves	tRNA-Mt-Gln-TTG-1	tRNA-Mt-Gln-TTG-1	Mt-Gln-TTG	Mt-Gln-TTG	Mt	Acloop_7	0.1076685	1	37	38
-Leaves	tRNA-Mt-Glu-TTC-1	tRNA-Mt-Glu-TTC-1	Mt-Glu-TTC	Mt-Glu-TTC	Mt	Acstem_3p_2	0.5059038333	1	40	40
-Leaves	tRNA-Mt-His-GTG-1	tRNA-Mt-His-GTG-1	Mt-His-GTG	Mt-His-GTG	Mt	Acstem_3p_1	0.261216	1	41	39
-Leaves	tRNA-Mt-Ser-GCT-1	tRNA-Mt-Ser-GCT-1	Mt-Ser-GCT	Mt-Ser-GCT	Mt	Acstem_3p_2	0.3916896667	1	41	40
-Leaves	tRNA-Mt-Ser-GGA-1	tRNA-Mt-Ser-GGA-1	Mt-Ser-GGA	Mt-Ser-GGA	Mt	Acstem_3p_1	0.2500758333	1	40	39
-Leaves	tRNA-Mt-Trp-CCA-1	tRNA-Mt-Trp-CCA-1	Mt-Trp-CCA	Mt-Trp-CCA	Mt	Tloop_2	0.1000136667	1	56	55
-Leaves	tRNA-Mt-Tyr-GTA-2	tRNA-Mt-Tyr-GTA-2	Mt-Tyr-GTA	Mt-Tyr-GTA	Mt	Acstem_3p_1	0.4452735	1	40	39
-Leaves	tRNA-Nu-Arg-TCG-1	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	Acstem_3p_1	0.4514441667	1	40	39
-Leaves	tRNA-Nu-Arg-TCT-1	tRNA-Nu-Arg-TCT-1	Nu-Arg-TCT	Cy-Arg-TCT	Cy	Acstem_3p_1	0.4971086667	1	39	39
-Leaves	tRNA-Nu-Asn-GTT-2	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	Tloop_2	0.0602425	1	56	55
-Leaves	tRNA-Nu-Cys-GCA-5	tRNA-Nu-Cys-GCA-5	Nu-Cys-GCA	Cy-Cys-GCA	Cy	Acstem_3p_1	0.4549821667	1	38	39
-Leaves	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	Acstem_3p_1	0.4413106667	1	39	39
-Leaves	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-1	Nu-Gln-TTG	Cy-Gln-TTG	Cy	Acstem_3p_1	0.3826298333	1	39	39
-Leaves	tRNA-Nu-Ile-AAT-2	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	Tloop_2	0.07734733333	1	56	55
-Leaves	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-1	Nu-Leu-TAG	Cy-Leu-TAG	Cy	Acstem_3p_1	0.3959716667	1	40	39
-Leaves	tRNA-Nu-Phe-GAA-1	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	Acstem_3p_1	0.3525933333	1	39	39
-Leaves	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-2	Nu-Pro-TGG	Cy-Pro-TGG	Cy	Acloop_7	0.0730135	1	37	38
-Leaves	tRNA-Nu-Ser-AGA-6	tRNA-Nu-Ser-AGA-6	Nu-Ser-AGA	Cy-Ser-AGA	Cy	Acstem_3p_1	0.4703296667	1	39	39
-Leaves	tRNA-Nu-Ser-CGA-3	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	Acstem_3p_1	0.4213188333	1	39	39
-Leaves	tRNA-Nu-Ser-GCT-2	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	Acstem_3p_2	0.4959986667	1	40	40
-Leaves	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	Acstem_3p_1	0.415229	1	39	39
-Leaves	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	Acstem_3p_1	0.1507506667	1	38	39
-Leaves	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-2	Nu-Tyr-GTA	Cy-Tyr-GTA	Cy	Acstem_3p_1	0.3670366667	1	39	39
-Leaves	tRNA-Nu-eMet-CAT-1	tRNA-Nu-eMet-CAT-1	Nu-eMet-CAT	Cy-eMet-CAT	Cy	Acstem_3p_1	0.3972211667	1	40	39
-Leaves	tRNA-Pt-Arg-TCT-1	tRNA-Pt-Arg-TCT-1	Pt-Arg-TCT	Pt-Arg-TCT	Pt	Tloop_2	0.1047038333	1	54	55
-Leaves	tRNA-Pt-Asn-GTT-1	tRNA-Pt-Asn-GTT-1	Pt-Asn-GTT	Pt-Asn-GTT	Pt	Tloop_2	0.07826283333	1	54	55
-Leaves	tRNA-Pt-Glu-TTC-1	tRNA-Pt-Glu-TTC-1	Pt-Glu-TTC	Pt-Glu-TTC	Pt	Acloop_4	0.07053616667	1	36	35
-Leaves	tRNA-Pt-Ile-CAT-1	tRNA-Pt-Ile-CAT-1	Pt-Ile-CAT	Pt-Ile-CAT	Pt	Tloop_2	0.05963716667	1	56	55
-Leaves	tRNA-Pt-Ile-GAT-1	tRNA-Pt-Ile-GAT-1	Pt-Ile-GAT	Pt-Ile-GAT	Pt	Tloop_2	0.08160916667	1	54	55
-Leaves	tRNA-Pt-Lys-TTT-1	tRNA-Pt-Lys-TTT-1	Pt-Lys-TTT	Pt-Lys-TTT	Pt	Acstem_5p_2	0.0603695	1	27	28
-Leaves	tRNA-Pt-Thr-GGT-1	tRNA-Pt-Thr-GGT-1	Pt-Thr-GGT	Pt-Thr-GGT	Pt	Tloop_2	0.1171506667	1	54	55
-Leaves	tRNA-Pt-Trp-CCA-1	tRNA-Pt-Trp-CCA-1	Pt-Trp-CCA	Pt-Trp-CCA	Pt	Tloop_2	0.099958	1	56	55
-Leaves	tRNA-Pt-Val-TAC-1	tRNA-Pt-Val-TAC-1	Pt-Val-TAC	Pt-Val-TAC	Pt	Tloop_2	0.1286743333	1	56	55
-Flowers	tRNA-Mt-Asn-GTT-1	tRNA-Mt-Asn-GTT-1	Mt-Asn-GTT	Mt-Asn-GTT	Mt	Acstem_3p_2	0.3518888333	1	39	40
-Flowers	tRNA-Mt-Cys-GCA-1	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	Acstem_3p_1	0.4716733333	1	38	39
-Flowers	tRNA-Mt-Gln-TTG-1	tRNA-Mt-Gln-TTG-1	Mt-Gln-TTG	Mt-Gln-TTG	Mt	Acloop_7	0.0793755	1	37	38
-Flowers	tRNA-Mt-Glu-TTC-1	tRNA-Mt-Glu-TTC-1	Mt-Glu-TTC	Mt-Glu-TTC	Mt	Acstem_3p_2	0.608248	1	40	40
-Flowers	tRNA-Mt-His-GTG-1	tRNA-Mt-His-GTG-1	Mt-His-GTG	Mt-His-GTG	Mt	Acstem_3p_1	0.3384188333	1	41	39
-Flowers	tRNA-Mt-Ser-GCT-1	tRNA-Mt-Ser-GCT-1	Mt-Ser-GCT	Mt-Ser-GCT	Mt	Acstem_3p_2	0.4465138333	1	41	40
-Flowers	tRNA-Mt-Ser-GGA-1	tRNA-Mt-Ser-GGA-1	Mt-Ser-GGA	Mt-Ser-GGA	Mt	Acstem_3p_1	0.317496	1	40	39
-Flowers	tRNA-Mt-Tyr-GTA-2	tRNA-Mt-Tyr-GTA-2	Mt-Tyr-GTA	Mt-Tyr-GTA	Mt	Acstem_3p_1	0.460052	1	40	39
-Flowers	tRNA-Nu-Arg-TCG-1	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	Acstem_3p_1	0.509498	1	40	39
-Flowers	tRNA-Nu-Arg-TCT-1	tRNA-Nu-Arg-TCT-1	Nu-Arg-TCT	Cy-Arg-TCT	Cy	Acstem_3p_1	0.5382851667	1	39	39
-Flowers	tRNA-Nu-Cys-GCA-5	tRNA-Nu-Cys-GCA-5	Nu-Cys-GCA	Cy-Cys-GCA	Cy	Acstem_3p_1	0.4788005	1	38	39
-Flowers	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	Acstem_3p_1	0.4942953333	1	39	39
-Flowers	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-1	Nu-Gln-TTG	Cy-Gln-TTG	Cy	Acstem_3p_1	0.4144826667	1	39	39
-Flowers	tRNA-Nu-Leu-TAA-1	tRNA-Nu-Leu-TAA-1	Nu-Leu-TAA	Cy-Leu-TAA	Cy	Acstem_3p_1	0.07930716667	1	39	39
-Flowers	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-1	Nu-Leu-TAG	Cy-Leu-TAG	Cy	Acstem_3p_1	0.4154805	1	40	39
-Flowers	tRNA-Nu-Phe-GAA-1	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	Acstem_3p_1	0.3713881667	1	39	39
-Flowers	tRNA-Nu-Ser-AGA-6	tRNA-Nu-Ser-AGA-6	Nu-Ser-AGA	Cy-Ser-AGA	Cy	Acstem_3p_1	0.538379	1	39	39
-Flowers	tRNA-Nu-Ser-CGA-3	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	Acstem_3p_1	0.4743828333	1	39	39
-Flowers	tRNA-Nu-Ser-GCT-2	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	Acstem_3p_2	0.5812128333	1	40	40
-Flowers	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	Acstem_3p_1	0.4681868333	1	39	39
-Flowers	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	Acstem_3p_1	0.1538095	1	38	39
-Flowers	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-2	Nu-Tyr-GTA	Cy-Tyr-GTA	Cy	Acstem_3p_1	0.4428263333	1	39	39
-Flowers	tRNA-Nu-eMet-CAT-1	tRNA-Nu-eMet-CAT-1	Nu-eMet-CAT	Cy-eMet-CAT	Cy	Acstem_3p_1	0.4084541667	1	40	39
+Tissue	Rep_ID	Representative_ID	display_Rep_ID	compartment	family_rank	matrix_col_id	value	n_sites	native_positions	native_chrs	canonical_pos
+Roots	Mt-Asn-GTT	tRNA-Mt-Asn-GTT-1	Mt-Asn-GTT	Mt	1	Acstem_3p_2	0.5847243333	1	39	tRNA-Mt-Asn-GTT-1	40
+Roots	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	3	Acstem_3p_1	0.553713	1	38	tRNA-Mt-Cys-GCA-1	39
+Roots	Mt-Gln-TTG	tRNA-Mt-Gln-TTG-1	Mt-Gln-TTG	Mt	4	Tloop_2	0.1017901667	1	54	tRNA-Mt-Gln-TTG-1	55
+Roots	Mt-Glu-TTC	tRNA-Mt-Glu-TTC-1	Mt-Glu-TTC	Mt	5	Acstem_3p_2	0.5181503333	1	40	tRNA-Mt-Glu-TTC-1	40
+Roots	Mt-His-GTG	tRNA-Mt-His-GTG-1	Mt-His-GTG	Mt	7	Acstem_3p_1	0.3912445	1	41	tRNA-Mt-His-GTG-1	39
+Roots	Mt-Ser-GCT	tRNA-Mt-Ser-GCT-1	Mt-Ser-GCT	Mt	11	Acstem_3p_2	0.4480638333	1	41	tRNA-Mt-Ser-GCT-1	40
+Roots	Mt-Ser-TGA	tRNA-Mt-Ser-TGA-1	Mt-Ser-TGA	Mt	13	Dstem_5p_4	0.0713615	1	12	tRNA-Mt-Ser-TGA-1	13
+Roots	Mt-Trp-CCA	tRNA-Mt-Trp-CCA-1	Mt-Trp-CCA	Mt	14	Tloop_2	0.0862445	1	56	tRNA-Mt-Trp-CCA-1	55
+Roots	Mt-Tyr-GTA	tRNA-Mt-Tyr-GTA-2	Mt-Tyr-GTA	Mt	15	Acstem_3p_1	0.4888433333	1	40	tRNA-Mt-Tyr-GTA-2	39
+Roots	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	24	Acstem_3p_1	0.6046506667	2	40	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	39
+Roots	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	Acstem_3p_1	0.6770691667	6	39	tRNA-Nu-Arg-TCT-1,tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-3,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	39
+Roots	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_3p_1	0.6068938333	10	38	tRNA-Nu-Cys-GCA-1,tRNA-Nu-Cys-GCA-10,tRNA-Nu-Cys-GCA-2,tRNA-Nu-Cys-GCA-3,tRNA-Nu-Cys-GCA-4,tRNA-Nu-Cys-GCA-5,tRNA-Nu-Cys-GCA-6,tRNA-Nu-Cys-GCA-7,tRNA-Nu-Cys-GCA-8,tRNA-Nu-Cys-GCA-9	39
+Roots	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	Acstem_3p_1	0.6220753333	5	39	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-2,tRNA-Nu-Gln-CTG-3,tRNA-Nu-Gln-CTG-4,tRNA-Nu-Gln-CTG-5	39
+Roots	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	Cy-Gln-TTG	Cy	30	Acstem_3p_1	0.4039345	2	39	tRNA-Nu-Gln-TTG-1,tRNA-Nu-Gln-TTG-2	39
+Roots	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	Cy-Leu-AAG	Cy	39	Acstem_3p_1	0.141675	1	41	tRNA-Nu-Leu-AAG-1	39
+Roots	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	Cy-Leu-CAA	Cy	40	Acstem_3p_1	0.1097641667	3	40	tRNA-Nu-Leu-CAA-1,tRNA-Nu-Leu-CAA-2,tRNA-Nu-Leu-CAA-5	39
+Roots	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	Cy-Leu-TAA	Cy	42	Acstem_3p_1	0.08815116667	2	39	tRNA-Nu-Leu-TAA-1,tRNA-Nu-Leu-TAA-2	39
+Roots	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	43	Acstem_3p_1	0.3671228333	3	40	tRNA-Nu-Leu-TAG-1,tRNA-Nu-Leu-TAG-2,tRNA-Nu-Leu-TAG-3	39
+Roots	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	46	Acstem_3p_1	0.394095	1	39	tRNA-Nu-Phe-GAA-1	39
+Roots	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	Cy-Ser-AGA	Cy	50	Acstem_3p_1	0.6738275	8	39,41	tRNA-Nu-Ser-AGA-1,tRNA-Nu-Ser-AGA-3,tRNA-Nu-Ser-AGA-4,tRNA-Nu-Ser-AGA-5,tRNA-Nu-Ser-AGA-6,tRNA-Nu-Ser-AGA-7,tRNA-Nu-Ser-AGA-8,tRNA-Nu-Ser-AGA-9	39
+Roots	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	51	Acstem_3p_1	0.4765075	3	39	tRNA-Nu-Ser-CGA-1,tRNA-Nu-Ser-CGA-2,tRNA-Nu-Ser-CGA-3	39
+Roots	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	52	Acstem_3p_2	0.5302523333	6	40	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-3,tRNA-Nu-Ser-GCT-4,tRNA-Nu-Ser-GCT-5,tRNA-Nu-Ser-GCT-6	40
+Roots	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	52	Acstem_5p_3	0.08371666667	1	29	tRNA-Nu-Ser-GCT-5	29
+Roots	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	53	Acstem_3p_1	0.5138046667	4	39	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2,tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	39
+Roots	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	57	Acstem_3p_1	0.1831416667	3	38	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	39
+Roots	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	Cy-Tyr-GTA	Cy	58	Acstem_3p_1	0.5051533333	1	39	tRNA-Nu-Tyr-GTA-2	39
+Roots	Pt-Ile-GAT	tRNA-Pt-Ile-GAT-1	Pt-Ile-GAT	Pt	76	Tloop_2	0.1088698333	1	54	tRNA-Pt-Ile-GAT-1	55
+Roots	Pt-Thr-GGT	tRNA-Pt-Thr-GGT-1	Pt-Thr-GGT	Pt	86	Tloop_2	0.08436483333	1	54	tRNA-Pt-Thr-GGT-1	55
+Roots	Pt-Trp-CCA	tRNA-Pt-Trp-CCA-1	Pt-Trp-CCA	Pt	88	Tloop_2	0.086761	1	56	tRNA-Pt-Trp-CCA-1	55
+Roots	Pt-iMet-CAT	tRNA-Pt-iMet-CAT-1	Pt-iMet-CAT	Pt	93	Tloop_2	0.1061133333	1	56	tRNA-Pt-iMet-CAT-1	55
+Leaves	Mt-Asn-GTT	tRNA-Mt-Asn-GTT-1	Mt-Asn-GTT	Mt	1	Acstem_3p_2	0.1445716667	1	39	tRNA-Mt-Asn-GTT-1	40
+Leaves	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	3	Acstem_3p_1	0.4054911667	1	38	tRNA-Mt-Cys-GCA-1	39
+Leaves	Mt-Gln-TTG	tRNA-Mt-Gln-TTG-1	Mt-Gln-TTG	Mt	4	Acloop_7	0.1076685	1	37	tRNA-Mt-Gln-TTG-1	38
+Leaves	Mt-Glu-TTC	tRNA-Mt-Glu-TTC-1	Mt-Glu-TTC	Mt	5	Acstem_3p_2	0.5059038333	1	40	tRNA-Mt-Glu-TTC-1	40
+Leaves	Mt-His-GTG	tRNA-Mt-His-GTG-1	Mt-His-GTG	Mt	7	Acstem_3p_1	0.261216	1	41	tRNA-Mt-His-GTG-1	39
+Leaves	Mt-Ser-GCT	tRNA-Mt-Ser-GCT-1	Mt-Ser-GCT	Mt	11	Acstem_3p_2	0.3916896667	1	41	tRNA-Mt-Ser-GCT-1	40
+Leaves	Mt-Ser-GGA	tRNA-Mt-Ser-GGA-1	Mt-Ser-GGA	Mt	12	Acstem_3p_1	0.2500758333	1	40	tRNA-Mt-Ser-GGA-1	39
+Leaves	Mt-Trp-CCA	tRNA-Mt-Trp-CCA-1	Mt-Trp-CCA	Mt	14	Tloop_2	0.1000136667	1	56	tRNA-Mt-Trp-CCA-1	55
+Leaves	Mt-Tyr-GTA	tRNA-Mt-Tyr-GTA-2	Mt-Tyr-GTA	Mt	15	Acstem_3p_1	0.4452735	1	40	tRNA-Mt-Tyr-GTA-2	39
+Leaves	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	22	Acstem_3p_1	0.2543773333	1	39	tRNA-Nu-Arg-CCG-2	39
+Leaves	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	24	Acstem_3p_1	0.4514441667	2	40	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	39
+Leaves	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	Acstem_3p_1	0.5153321667	7	39	tRNA-Nu-Arg-TCT-1,tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-3,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6,tRNA-Nu-Arg-TCT-7	39
+Leaves	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	26	Tloop_2	0.07920066667	2	56	tRNA-Nu-Asn-GTT-2,tRNA-Nu-Asn-GTT-7	55
+Leaves	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_3p_1	0.4825058333	10	38	tRNA-Nu-Cys-GCA-1,tRNA-Nu-Cys-GCA-10,tRNA-Nu-Cys-GCA-2,tRNA-Nu-Cys-GCA-3,tRNA-Nu-Cys-GCA-4,tRNA-Nu-Cys-GCA-5,tRNA-Nu-Cys-GCA-6,tRNA-Nu-Cys-GCA-7,tRNA-Nu-Cys-GCA-8,tRNA-Nu-Cys-GCA-9	39
+Leaves	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_5p_1	0.06939166667	2	26	tRNA-Nu-Cys-GCA-10,tRNA-Nu-Cys-GCA-4	27
+Leaves	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	Acstem_3p_1	0.460539	5	39	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-2,tRNA-Nu-Gln-CTG-3,tRNA-Nu-Gln-CTG-4,tRNA-Nu-Gln-CTG-5	39
+Leaves	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	Cy-Gln-TTG	Cy	30	Acstem_3p_1	0.3826298333	2	39	tRNA-Nu-Gln-TTG-1,tRNA-Nu-Gln-TTG-2	39
+Leaves	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	37	Tloop_2	0.07734733333	1	56	tRNA-Nu-Ile-AAT-2	55
+Leaves	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	43	Acstem_3p_1	0.3966865	3	40	tRNA-Nu-Leu-TAG-1,tRNA-Nu-Leu-TAG-2,tRNA-Nu-Leu-TAG-3	39
+Leaves	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	46	Acstem_3p_1	0.3525933333	1	39	tRNA-Nu-Phe-GAA-1	39
+Leaves	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	Cy-Pro-TGG	Cy	49	Acloop_7	0.07956316667	2	37	tRNA-Nu-Pro-TGG-1,tRNA-Nu-Pro-TGG-2	38
+Leaves	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	Cy-Ser-AGA	Cy	50	Acstem_3p_1	0.6185076667	8	39,41	tRNA-Nu-Ser-AGA-1,tRNA-Nu-Ser-AGA-3,tRNA-Nu-Ser-AGA-4,tRNA-Nu-Ser-AGA-5,tRNA-Nu-Ser-AGA-6,tRNA-Nu-Ser-AGA-7,tRNA-Nu-Ser-AGA-8,tRNA-Nu-Ser-AGA-9	39
+Leaves	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	51	Acstem_3p_1	0.4225938333	3	39	tRNA-Nu-Ser-CGA-1,tRNA-Nu-Ser-CGA-2,tRNA-Nu-Ser-CGA-3	39
+Leaves	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	52	Acstem_3p_2	0.5063528333	7	40	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-3,tRNA-Nu-Ser-GCT-4,tRNA-Nu-Ser-GCT-5,tRNA-Nu-Ser-GCT-6,tRNA-Nu-Ser-GCT-7	40
+Leaves	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	52	Acstem_5p_3	0.08523666667	1	29	tRNA-Nu-Ser-GCT-3	29
+Leaves	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	53	Acstem_3p_1	0.4683796667	4	39	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2,tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	39
+Leaves	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	57	Acstem_3p_1	0.1507506667	3	38	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	39
+Leaves	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	Cy-Tyr-GTA	Cy	58	Acstem_3p_1	0.4355621667	4	39	tRNA-Nu-Tyr-GTA-1,tRNA-Nu-Tyr-GTA-10,tRNA-Nu-Tyr-GTA-11,tRNA-Nu-Tyr-GTA-2	39
+Leaves	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	59	Dloop_1	0.0824245	1	13	tRNA-Nu-Val-AAC-2	14
+Leaves	Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	Cy-eMet-CAT	Cy	62	Acstem_3p_1	0.3972211667	1	40	tRNA-Nu-eMet-CAT-1	39
+Leaves	Pt-Arg-TCT	tRNA-Pt-Arg-TCT-1	Pt-Arg-TCT	Pt	66	Tloop_2	0.1047038333	1	54	tRNA-Pt-Arg-TCT-1	55
+Leaves	Pt-Asn-GTT	tRNA-Pt-Asn-GTT-1	Pt-Asn-GTT	Pt	67	Tloop_2	0.07826283333	1	54	tRNA-Pt-Asn-GTT-1	55
+Leaves	Pt-Glu-TTC	tRNA-Pt-Glu-TTC-1	Pt-Glu-TTC	Pt	71	Acloop_4	0.07053616667	1	36	tRNA-Pt-Glu-TTC-1	35
+Leaves	Pt-Ile-CAT	tRNA-Pt-Ile-CAT-1	Pt-Ile-CAT	Pt	75	Tloop_2	0.05963716667	1	56	tRNA-Pt-Ile-CAT-1	55
+Leaves	Pt-Ile-GAT	tRNA-Pt-Ile-GAT-1	Pt-Ile-GAT	Pt	76	Tloop_2	0.08160916667	1	54	tRNA-Pt-Ile-GAT-1	55
+Leaves	Pt-Lys-TTT	tRNA-Pt-Lys-TTT-1	Pt-Lys-TTT	Pt	80	Acstem_5p_2	0.0603695	1	27	tRNA-Pt-Lys-TTT-1	28
+Leaves	Pt-Thr-GGT	tRNA-Pt-Thr-GGT-1	Pt-Thr-GGT	Pt	86	Tloop_2	0.1171506667	1	54	tRNA-Pt-Thr-GGT-1	55
+Leaves	Pt-Trp-CCA	tRNA-Pt-Trp-CCA-1	Pt-Trp-CCA	Pt	88	Tloop_2	0.099958	1	56	tRNA-Pt-Trp-CCA-1	55
+Leaves	Pt-Val-TAC	tRNA-Pt-Val-TAC-1	Pt-Val-TAC	Pt	91	Tloop_2	0.1286743333	1	56	tRNA-Pt-Val-TAC-1	55
+Flowers	Mt-Asn-GTT	tRNA-Mt-Asn-GTT-1	Mt-Asn-GTT	Mt	1	Acstem_3p_2	0.3518888333	1	39	tRNA-Mt-Asn-GTT-1	40
+Flowers	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	3	Acstem_3p_1	0.4716733333	1	38	tRNA-Mt-Cys-GCA-1	39
+Flowers	Mt-Gln-TTG	tRNA-Mt-Gln-TTG-1	Mt-Gln-TTG	Mt	4	Acloop_7	0.0793755	1	37	tRNA-Mt-Gln-TTG-1	38
+Flowers	Mt-Glu-TTC	tRNA-Mt-Glu-TTC-1	Mt-Glu-TTC	Mt	5	Acstem_3p_2	0.608248	1	40	tRNA-Mt-Glu-TTC-1	40
+Flowers	Mt-His-GTG	tRNA-Mt-His-GTG-1	Mt-His-GTG	Mt	7	Acstem_3p_1	0.3384188333	1	41	tRNA-Mt-His-GTG-1	39
+Flowers	Mt-Ser-GCT	tRNA-Mt-Ser-GCT-1	Mt-Ser-GCT	Mt	11	Acstem_3p_2	0.4465138333	1	41	tRNA-Mt-Ser-GCT-1	40
+Flowers	Mt-Ser-GGA	tRNA-Mt-Ser-GGA-1	Mt-Ser-GGA	Mt	12	Acstem_3p_1	0.317496	1	40	tRNA-Mt-Ser-GGA-1	39
+Flowers	Mt-Tyr-GTA	tRNA-Mt-Tyr-GTA-2	Mt-Tyr-GTA	Mt	15	Acstem_3p_1	0.460052	1	40	tRNA-Mt-Tyr-GTA-2	39
+Flowers	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	24	Acstem_3p_1	0.509498	2	40	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	39
+Flowers	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	Acstem_3p_1	0.5648263333	6	39	tRNA-Nu-Arg-TCT-1,tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-3,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	39
+Flowers	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_3p_1	0.5385138333	10	38	tRNA-Nu-Cys-GCA-1,tRNA-Nu-Cys-GCA-10,tRNA-Nu-Cys-GCA-2,tRNA-Nu-Cys-GCA-3,tRNA-Nu-Cys-GCA-4,tRNA-Nu-Cys-GCA-5,tRNA-Nu-Cys-GCA-6,tRNA-Nu-Cys-GCA-7,tRNA-Nu-Cys-GCA-8,tRNA-Nu-Cys-GCA-9	39
+Flowers	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	Acstem_3p_1	0.508401	5	39	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-2,tRNA-Nu-Gln-CTG-3,tRNA-Nu-Gln-CTG-4,tRNA-Nu-Gln-CTG-5	39
+Flowers	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	Cy-Gln-TTG	Cy	30	Acstem_3p_1	0.4469586667	2	39	tRNA-Nu-Gln-TTG-1,tRNA-Nu-Gln-TTG-2	39
+Flowers	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	Cy-Leu-TAA	Cy	42	Acstem_3p_1	0.07930716667	2	39	tRNA-Nu-Leu-TAA-1,tRNA-Nu-Leu-TAA-2	39
+Flowers	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	43	Acstem_3p_1	0.4178035	3	40	tRNA-Nu-Leu-TAG-1,tRNA-Nu-Leu-TAG-2,tRNA-Nu-Leu-TAG-3	39
+Flowers	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	46	Acstem_3p_1	0.3713881667	1	39	tRNA-Nu-Phe-GAA-1	39
+Flowers	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	Cy-Ser-AGA	Cy	50	Acstem_3p_1	0.6734383333	8	39,41	tRNA-Nu-Ser-AGA-1,tRNA-Nu-Ser-AGA-3,tRNA-Nu-Ser-AGA-4,tRNA-Nu-Ser-AGA-5,tRNA-Nu-Ser-AGA-6,tRNA-Nu-Ser-AGA-7,tRNA-Nu-Ser-AGA-8,tRNA-Nu-Ser-AGA-9	39
+Flowers	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	51	Acstem_3p_1	0.4743828333	3	39	tRNA-Nu-Ser-CGA-1,tRNA-Nu-Ser-CGA-2,tRNA-Nu-Ser-CGA-3	39
+Flowers	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	52	Acstem_3p_2	0.5812128333	7	40	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-3,tRNA-Nu-Ser-GCT-4,tRNA-Nu-Ser-GCT-5,tRNA-Nu-Ser-GCT-6,tRNA-Nu-Ser-GCT-7	40
+Flowers	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	52	Acstem_5p_1	0.08496383333	1	27	tRNA-Nu-Ser-GCT-7	27
+Flowers	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	52	Acstem_5p_3	0.1189185	1	29	tRNA-Nu-Ser-GCT-3	29
+Flowers	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	53	Acstem_3p_1	0.5276873333	4	39	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2,tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	39
+Flowers	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	57	Acstem_3p_1	0.1575901667	3	38	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	39
+Flowers	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	Cy-Tyr-GTA	Cy	58	Acstem_3p_1	0.4428263333	3	39	tRNA-Nu-Tyr-GTA-10,tRNA-Nu-Tyr-GTA-11,tRNA-Nu-Tyr-GTA-2	39
+Flowers	Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	Cy-eMet-CAT	Cy	62	Acstem_3p_1	0.4084541667	1	40	tRNA-Nu-eMet-CAT-1	39

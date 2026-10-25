@@ -9,7 +9,9 @@
 
 ## 图形设计
 
-- Y 轴：不同 tRNA，使用 `../All-tRNA_rep-structure.csv` 中的代表性 tRNA 注释，按 Cy/Mt/Pt 分室分组。
+- Y 轴：tRNA 家族（分室 + 氨基酸 + 反密码子），代表成员取自
+  `tRNA/count/ncRNA/family_top/family_top_tRNA.tsv`（每个家族 mean_CPM 最高的 tRNA），按 Cy/Mt/Pt 分室分组；
+  同家族所有拷贝的位点并入同一行，不再丢弃非代表拷贝。
 - X 轴：校正后的 canonical 位号 `fix_pos`；每个位号下依次展示 WT、trua1a、trua1b、trua2、trua3、
   trua4、trua5、trua6 的修饰比例；位号标签格式 `tRNA_<fix_pos>`。
 - 位点集合：该组织内所有突变体 `../<genotype>/<genotype>_all_tissues.dependent.tsv` 的并集；
@@ -35,7 +37,7 @@
 
 - `../trua*/trua*_all_tissues.dependent.tsv`（先跑各基因型目录的 `data_prep.sh`）
 - `tRNA/STAT/adjustGap/ncRNA/Treat-{WT,<genotype>_<line>}-<tissue>.rep{1..3}.adjusted.tsv`
-- `../All-tRNA_rep-structure.csv`
+- `tRNA/count/ncRNA/family_top/family_top_tRNA.tsv`（家族代表，表达量口径）
 
 ## 输出
 
@@ -50,5 +52,5 @@ bash data_prep.sh   # 聚合 adjusted.tsv → merged_sample_ratios.tsv（约 150
 Rscript plot.R      # 画三张热图
 ```
 
-规模参考（2026-10-22 跑）：Root 19 并集位点（17 tRNA × 5 位号）、leaf 86（60 × 16）、
-Flower 72（57 × 13）；79 个非代表 tRNA 拷贝按口径丢弃。
+规模参考（2026-10-25 重跑）：Root 27 并集位点（20 家族 × 7 位号）、leaf 102（64 × 18）、
+Flower 84（59 × 15）；按家族合并后**不再丢弃任何拷贝**。

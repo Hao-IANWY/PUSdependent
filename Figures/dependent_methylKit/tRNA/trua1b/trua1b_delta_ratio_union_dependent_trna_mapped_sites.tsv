@@ -1,6 +1,7 @@
-ID	chr	Rep_ID	display_Rep_ID	compartment	matrix_col_id	value	n_sites	native_positions	tissues	peak_tissues	canonical_pos
-tRNA-Mt-Cys-GCA-1	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	Dstem_3p_4	0.0577658	1	24	leaf	leaf	25
-tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-2	Nu-Pro-TGG	Cy-Pro-TGG	Cy	Acloop_7	0.0850673	1	37	leaf	leaf	38
-tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-2	Nu-Tyr-GTA	Cy-Tyr-GTA	Cy	Acloop_4	0.12448	1	35	leaf	leaf	35
-tRNA-Nu-eMet-CAT-1	tRNA-Nu-eMet-CAT-1	Nu-eMet-CAT	Cy-eMet-CAT	Cy	Acstem_5p_5	0.11111	1	32	leaf	leaf	31
-tRNA-Pt-Arg-TCT-1	tRNA-Pt-Arg-TCT-1	Pt-Arg-TCT	Pt-Arg-TCT	Pt	Acstem_5p_5	0.0579887	1	31	leaf	leaf	31
+Rep_ID	Representative_ID	display_Rep_ID	compartment	family_rank	matrix_col_id	value	n_sites	native_positions	native_chrs	tissues	peak_tissues	canonical_pos
+Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	3	Dstem_3p_4	0.0577658	1	24	tRNA-Mt-Cys-GCA-1	leaf	leaf	25
+Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_5p_2	0.227119	1	27	tRNA-Nu-Cys-GCA-1	leaf	leaf	28
+Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	Cy-Pro-TGG	Cy	49	Acloop_7	0.0850673	1	37	tRNA-Nu-Pro-TGG-2	leaf	leaf	38
+Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	Cy-Tyr-GTA	Cy	58	Acloop_4	0.12448	1	35	tRNA-Nu-Tyr-GTA-2	leaf	leaf	35
+Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	Cy-eMet-CAT	Cy	62	Acstem_5p_5	0.11111	1	32	tRNA-Nu-eMet-CAT-1	leaf	leaf	31
+Pt-Arg-TCT	tRNA-Pt-Arg-TCT-1	Pt-Arg-TCT	Pt	66	Acstem_5p_5	0.0579887	1	31	tRNA-Pt-Arg-TCT-1	leaf	leaf	31

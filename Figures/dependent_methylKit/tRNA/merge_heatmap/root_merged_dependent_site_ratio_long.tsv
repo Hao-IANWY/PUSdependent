@@ -1,681 +1,1121 @@
-Tissue	ID	Rep_ID	display_Rep_ID	compartment	fix_pos	sample	ratio	native_positions	source_genotypes	contexts
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	27	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	27	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	27	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	27	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	27	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	27	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	27	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	27	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	68	WT	0.87628	68	trua1a	GGTGG
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	68	trua1a	0.02546033333	68	trua1a	GGTGG
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	68	trua1b	0.877793	68	trua1a	GGTGG
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	68	trua2	0.8789798333	68	trua1a	GGTGG
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	68	trua3	0.8845868333	68	trua1a	GGTGG
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	68	trua4	0.8808676666	68	trua1a	GGTGG
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	68	trua5	0.8837293334	68	trua1a	GGTGG
-Root	tRNA-Nu-Lys-CTT-1	Nu-Lys-CTT	Cy-Lys-CTT	Cy	68	trua6	0.8908991667	68	trua1a	GGTGG
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	27	WT	0.525	27	trua1a	CGTCA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	27	trua1a	0.03616366666	27	trua1a	CGTCA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	27	trua1b	0.426115	27	trua1a	CGTCA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	27	trua2	0.4382495	27	trua1a	CGTCA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	27	trua3	0.452418	27	trua1a	CGTCA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	27	trua4	0.4425573333	27	trua1a	CGTCA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	27	trua5	0.4389411666	27	trua1a	CGTCA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	27	trua6	0.4825828333	27	trua1a	CGTCA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	27	WT	0.254663	28	trua1a	CGTCA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	27	trua1a	0.009900666665	28	trua1a	CGTCA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	27	trua1b	0.276363	28	trua1a	CGTCA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	27	trua2	0.255698	28	trua1a	CGTCA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	27	trua3	0.2797608334	28	trua1a	CGTCA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	27	trua4	0.2401651666	28	trua1a	CGTCA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	27	trua5	0.272246	28	trua1a	CGTCA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	27	trua6	0.2814816666	28	trua1a	CGTCA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Val-AAC-1	Nu-Val-AAC	Cy-Val-AAC	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	27	WT	0.3454916667	26	trua1a	CGTCT
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	27	trua1a	0.02155333334	26	trua1a	CGTCT
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	27	trua1b	0.3459675	26	trua1a	CGTCT
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	27	trua2	0.3472513334	26	trua1a	CGTCT
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	27	trua3	0.3633381666	26	trua1a	CGTCT
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	27	trua4	0.3552068334	26	trua1a	CGTCT
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	27	trua5	0.3458241667	26	trua1a	CGTCT
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	27	trua6	0.3436416667	26	trua1a	CGTCT
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Trp-CCA-1	Nu-Trp-CCA	Cy-Trp-CCA	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	27	WT	0.4791443333	28	trua1a	CGTCG
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	27	trua1a	0.087069	28	trua1a	CGTCG
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	27	trua1b	0.534006	28	trua1a	CGTCG
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	27	trua2	0.4742583334	28	trua1a	CGTCG
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	27	trua3	0.4778106667	28	trua1a	CGTCG
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	27	trua4	0.4769726667	28	trua1a	CGTCG
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	27	trua5	0.4796133333	28	trua1a	CGTCG
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	27	trua6	0.4949105	28	trua1a	CGTCG
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ile-AAT-2	Nu-Ile-AAT	Cy-Ile-AAT	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	27	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	27	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	27	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	27	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	27	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	27	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	27	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	27	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	67	WT	0.4990856667	67	trua1a	CCTGG
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	67	trua1a	0.01311933334	67	trua1a	CCTGG
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	67	trua1b	0.459331	67	trua1a	CCTGG
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	67	trua2	0.4717468334	67	trua1a	CCTGG
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	67	trua3	0.4944368333	67	trua1a	CCTGG
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	67	trua4	0.474591	67	trua1a	CCTGG
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	67	trua5	0.4842905	67	trua1a	CCTGG
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	67	trua6	0.5092958333	67	trua1a	CCTGG
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCT-1	Nu-Arg-CCT	Cy-Arg-CCT	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	27	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	27	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	27	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	27	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	27	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	27	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	27	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	27	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	29	WT	0.400384	29	trua1a	TTTGC
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	29	trua1a	0.0257335	29	trua1a	TTTGC
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	29	trua1b	0.357405	29	trua1a	TTTGC
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	29	trua2	0.3499525	29	trua1a	TTTGC
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	29	trua3	0.38022	29	trua1a	TTTGC
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	29	trua4	0.358806	29	trua1a	TTTGC
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	29	trua5	0.3600626666	29	trua1a	TTTGC
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	29	trua6	0.4297316666	29	trua1a	TTTGC
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	27	WT	0.6359886667	28	trua1a	CGTGT
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	27	trua1a	0.04089016667	28	trua1a	CGTGT
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	27	trua1b	0.6299908333	28	trua1a	CGTGT
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	27	trua2	0.5928585	28	trua1a	CGTGT
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	27	trua3	0.5779761667	28	trua1a	CGTGT
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	27	trua4	0.5824633334	28	trua1a	CGTGT
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	27	trua5	0.606402	28	trua1a	CGTGT
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	27	trua6	0.6299751666	28	trua1a	CGTGT
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Asn-GTT-2	Nu-Asn-GTT	Cy-Asn-GTT	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	27	WT	0.7744033333	27	trua1a	CATTG
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	27	trua1a	0.2190866666	27	trua1a	CATTG
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	27	trua1b	0.7879015	27	trua1a	CATTG
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	27	trua2	0.7944648333	27	trua1a	CATTG
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	27	trua3	0.7997238333	27	trua1a	CATTG
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	27	trua4	0.799892	27	trua1a	CATTG
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	27	trua5	0.8004263333	27	trua1a	CATTG
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	27	trua6	0.8230281667	27	trua1a	CATTG
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Gln-CTG-1	Nu-Gln-CTG	Cy-Gln-CTG	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	27	WT	0.6492876667	26	trua1a	CGTCA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	27	trua1a	0.01651716666	26	trua1a	CGTCA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	27	trua1b	0.6776593334	26	trua1a	CGTCA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	27	trua2	0.6838165	26	trua1a	CGTCA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	27	trua3	0.6935065	26	trua1a	CGTCA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	27	trua4	0.6793921667	26	trua1a	CGTCA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	27	trua5	0.6744863333	26	trua1a	CGTCA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	27	trua6	0.668761	26	trua1a	CGTCA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	68	WT	0.2994873333	67	trua1a	TGTGG
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	68	trua1a	0.02118016666	67	trua1a	TGTGG
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	68	trua1b	0.2673066667	67	trua1a	TGTGG
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	68	trua2	0.288199	67	trua1a	TGTGG
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	68	trua3	0.3219333333	67	trua1a	TGTGG
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	68	trua4	0.3017131667	67	trua1a	TGTGG
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	68	trua5	0.2933141666	67	trua1a	TGTGG
-Root	tRNA-Nu-Thr-TGT-1	Nu-Thr-TGT	Cy-Thr-TGT	Cy	68	trua6	0.2974278334	67	trua1a	TGTGG
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	27	WT	0.4284173333	28	trua1a	CGTCT
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	27	trua1a	0.02854783333	28	trua1a	CGTCT
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	27	trua1b	0.5097628333	28	trua1a	CGTCT
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	27	trua2	0.5086116667	28	trua1a	CGTCT
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	27	trua3	0.5023388333	28	trua1a	CGTCT
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	27	trua4	0.4970023333	28	trua1a	CGTCT
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	27	trua5	0.5083378333	28	trua1a	CGTCT
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	27	trua6	0.5108991667	28	trua1a	CGTCT
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	68	WT	0.721932	69	trua1a	TGTGG
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	68	trua1a	0.01198566667	69	trua1a	TGTGG
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	68	trua1b	0.664402	69	trua1a	TGTGG
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	68	trua2	0.6734848333	69	trua1a	TGTGG
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	68	trua3	0.7194401666	69	trua1a	TGTGG
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	68	trua4	0.6846043333	69	trua1a	TGTGG
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	68	trua5	0.6859366666	69	trua1a	TGTGG
-Root	tRNA-Nu-Arg-TCG-1	Nu-Arg-TCG	Cy-Arg-TCG	Cy	68	trua6	0.7143513333	69	trua1a	TGTGG
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	27	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	27	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	27	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	27	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	27	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	27	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	27	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	27	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	68	WT	0.4831523333	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	68	trua1a	0.009884333335	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	68	trua1b	0.4595331666	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	68	trua2	0.5050835	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	68	trua3	0.5078763334	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	68	trua4	0.4925003333	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	68	trua5	0.4928468334	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-TGA-1	Nu-Ser-TGA	Cy-Ser-TGA	Cy	68	trua6	0.505764	77	trua1a	TGTCG
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	27	WT	0.5349793333	26	trua1a	CGTTC
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	27	trua1a	0.02635533334	26	trua1a	CGTTC
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	27	trua1b	0.5409055	26	trua1a	CGTTC
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	27	trua2	0.5671295	26	trua1a	CGTTC
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	27	trua3	0.5665061666	26	trua1a	CGTTC
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	27	trua4	0.5487456667	26	trua1a	CGTTC
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	27	trua5	0.5549531667	26	trua1a	CGTTC
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	27	trua6	0.5248085	26	trua1a	CGTTC
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Thr-CGT-1	Nu-Thr-CGT	Cy-Thr-CGT	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	27	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	27	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	27	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	27	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	27	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	27	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	27	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	27	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	68	WT	0.1390356667	68	trua1a	CGTGG
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	68	trua1a	0.01743983333	68	trua1a	CGTGG
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	68	trua1b	0.111706	68	trua1a	CGTGG
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	68	trua2	0.1501581667	68	trua1a	CGTGG
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	68	trua3	0.167152	68	trua1a	CGTGG
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	68	trua4	0.1435036667	68	trua1a	CGTGG
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	68	trua5	0.133878	68	trua1a	CGTGG
-Root	tRNA-Nu-Arg-CCG-1	Nu-Arg-CCG	Cy-Arg-CCG	Cy	68	trua6	0.1544833334	68	trua1a	CGTGG
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	27	WT	0.245246	27	trua1a	CGTGT
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	27	trua1a	0.01062616666	27	trua1a	CGTGT
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	27	trua1b	0.1837721667	27	trua1a	CGTGT
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	27	trua2	0.2033348333	27	trua1a	CGTGT
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	27	trua3	0.2213131667	27	trua1a	CGTGT
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	27	trua4	0.2142921667	27	trua1a	CGTGT
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	27	trua5	0.1992405	27	trua1a	CGTGT
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	27	trua6	0.3018538334	27	trua1a	CGTGT
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	68	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	68	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	68	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	68	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	68	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-GCT-2	Nu-Ser-GCT	Cy-Ser-GCT	Cy	68	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	25	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	25	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	25	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	25	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	25	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	25	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	25	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	25	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	27	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	27	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	27	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	27	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	27	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	27	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	27	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	27	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	29	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	29	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	29	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	29	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	29	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	29	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	67	WT	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	67	trua2	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	67	trua3	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	67	trua4	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	67	trua5	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	67	trua6	NA	NA	NA	NA
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	68	WT	0.157031	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	68	trua1a	0.01002983333	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	68	trua1b	0.1324658334	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	68	trua2	0.1826373333	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	68	trua3	0.1793433333	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	68	trua4	0.167518	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	68	trua5	0.157552	77	trua1a	TGTCG
-Root	tRNA-Nu-Ser-CGA-3	Nu-Ser-CGA	Cy-Ser-CGA	Cy	68	trua6	0.1920576667	77	trua1a	TGTCG
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	25	WT	0.06201833333	24	trua1a	TGTAT
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	25	trua1a	0.003964333333	24	trua1a	TGTAT
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	25	trua1b	0.03184933334	24	trua1a	TGTAT
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	25	trua2	0.4319618333	24	trua1a	TGTAT
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	25	trua3	0.1273331666	24	trua1a	TGTAT
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	25	trua4	0.083931500010000007	24	trua1a	TGTAT
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	25	trua5	0.08310816665	24	trua1a	TGTAT
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	25	trua6	0.0338265	24	trua1a	TGTAT
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	27	WT	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	27	trua1a	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	27	trua1b	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	27	trua2	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	27	trua3	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	27	trua4	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	27	trua5	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	27	trua6	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	29	WT	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	29	trua1a	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	29	trua1b	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	29	trua2	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	29	trua3	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	29	trua4	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	29	trua5	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	29	trua6	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	67	WT	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	67	trua1a	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	67	trua1b	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	67	trua2	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	67	trua3	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	67	trua4	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	67	trua5	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	67	trua6	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	68	WT	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	68	trua1a	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	68	trua1b	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	68	trua2	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	68	trua3	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	68	trua4	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	68	trua5	NA	NA	NA	NA
-Root	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt-Cys-GCA	Mt	68	trua6	NA	NA	NA	NA
+Tissue	Rep_ID	Representative_ID	display_Rep_ID	compartment	fix_pos	sample	ratio	native_positions	native_chrs	source_genotypes	contexts
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	27	WT	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	27	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	27	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	27	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	27	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	27	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	27	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	27	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	38	WT	0.1879433333	38	tRNA-Nu-Ala-AGC-2	trua1a	CATGC
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	38	trua1a	0.13544	38	tRNA-Nu-Ala-AGC-2	trua1a	CATGC
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	38	trua1b	0.1884763334	38	tRNA-Nu-Ala-AGC-2	trua1a	CATGC
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	38	trua2	0.1716556667	38	tRNA-Nu-Ala-AGC-2	trua1a	CATGC
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	38	trua3	0.04676483334	38	tRNA-Nu-Ala-AGC-2	trua1a	CATGC
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	38	trua4	0.196496	38	tRNA-Nu-Ala-AGC-2	trua1a	CATGC
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	38	trua5	0.1781968334	38	tRNA-Nu-Ala-AGC-2	trua1a	CATGC
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	38	trua6	0.1734951667	38	tRNA-Nu-Ala-AGC-2	trua1a	CATGC
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	Cy-Ala-AGC	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	27	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	27	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	27	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	27	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	27	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	27	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	27	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	27	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	68	WT	0.1390356667	68	tRNA-Nu-Arg-CCG-1	trua1a	CGTGG
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	68	trua1a	0.01743983333	68	tRNA-Nu-Arg-CCG-1	trua1a	CGTGG
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	68	trua1b	0.111706	68	tRNA-Nu-Arg-CCG-1	trua1a	CGTGG
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	68	trua2	0.1501581667	68	tRNA-Nu-Arg-CCG-1	trua1a	CGTGG
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	68	trua3	0.167152	68	tRNA-Nu-Arg-CCG-1	trua1a	CGTGG
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	68	trua4	0.1435036667	68	tRNA-Nu-Arg-CCG-1	trua1a	CGTGG
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	68	trua5	0.133878	68	tRNA-Nu-Arg-CCG-1	trua1a	CGTGG
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	68	trua6	0.1544833334	68	tRNA-Nu-Arg-CCG-1	trua1a	CGTGG
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	Cy-Arg-CCG	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	27	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	27	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	27	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	27	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	27	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	27	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	27	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	27	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	67	WT	0.676936	67	tRNA-Nu-Arg-CCT-1,tRNA-Nu-Arg-CCT-2,tRNA-Nu-Arg-CCT-3	trua1a	CCTGA;CCTGG
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	67	trua1a	0.01699033333	67	tRNA-Nu-Arg-CCT-1,tRNA-Nu-Arg-CCT-2,tRNA-Nu-Arg-CCT-3	trua1a	CCTGA;CCTGG
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	67	trua1b	0.6918008333	67	tRNA-Nu-Arg-CCT-1,tRNA-Nu-Arg-CCT-2,tRNA-Nu-Arg-CCT-3	trua1a	CCTGA;CCTGG
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	67	trua2	0.6781605	67	tRNA-Nu-Arg-CCT-1,tRNA-Nu-Arg-CCT-2,tRNA-Nu-Arg-CCT-3	trua1a	CCTGA;CCTGG
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	67	trua3	0.6888793333	67	tRNA-Nu-Arg-CCT-1,tRNA-Nu-Arg-CCT-2,tRNA-Nu-Arg-CCT-3	trua1a	CCTGA;CCTGG
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	67	trua4	0.6700123333	67	tRNA-Nu-Arg-CCT-1,tRNA-Nu-Arg-CCT-2,tRNA-Nu-Arg-CCT-3	trua1a	CCTGA;CCTGG
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	67	trua5	0.6854115	67	tRNA-Nu-Arg-CCT-1,tRNA-Nu-Arg-CCT-2,tRNA-Nu-Arg-CCT-3	trua1a	CCTGA;CCTGG
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	67	trua6	0.7399985	67	tRNA-Nu-Arg-CCT-1,tRNA-Nu-Arg-CCT-2,tRNA-Nu-Arg-CCT-3	trua1a	CCTGA;CCTGG
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	Cy-Arg-CCT	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	27	WT	0.4284173333	28	tRNA-Nu-Arg-TCG-1	trua1a	CGTCT
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	27	trua1a	0.02854783333	28	tRNA-Nu-Arg-TCG-1	trua1a	CGTCT
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	27	trua1b	0.5097628333	28	tRNA-Nu-Arg-TCG-1	trua1a	CGTCT
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	27	trua2	0.5086116667	28	tRNA-Nu-Arg-TCG-1	trua1a	CGTCT
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	27	trua3	0.5023388333	28	tRNA-Nu-Arg-TCG-1	trua1a	CGTCT
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	27	trua4	0.4970023333	28	tRNA-Nu-Arg-TCG-1	trua1a	CGTCT
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	27	trua5	0.5083378333	28	tRNA-Nu-Arg-TCG-1	trua1a	CGTCT
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	27	trua6	0.5108991667	28	tRNA-Nu-Arg-TCG-1	trua1a	CGTCT
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	68	WT	0.721932	69	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	trua1a	TGTGG
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	68	trua1a	0.01242816667	69	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	trua1a	TGTGG
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	68	trua1b	0.6739696666	69	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	trua1a	TGTGG
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	68	trua2	0.6734848333	69	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	trua1a	TGTGG
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	68	trua3	0.724371	69	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	trua1a	TGTGG
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	68	trua4	0.6876488333	69	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	trua1a	TGTGG
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	68	trua5	0.686661	69	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	trua1a	TGTGG
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	68	trua6	0.719768	69	tRNA-Nu-Arg-TCG-1,tRNA-Nu-Arg-TCG-2	trua1a	TGTGG
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	Cy-Arg-TCG	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	27	WT	0.5817056667	27	tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	trua1a	CGTCT;CGTTT
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	27	trua1a	0.1043558333	27	tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	trua1a	CGTCT;CGTTT
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	27	trua1b	0.5486946666	27	tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	trua1a	CGTCT;CGTTT
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	27	trua2	0.5653556667	27	tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	trua1a	CGTCT;CGTTT
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	27	trua3	0.5818893333	27	tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	trua1a	CGTCT;CGTTT
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	27	trua4	0.5917256667	27	tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	trua1a	CGTCT;CGTTT
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	27	trua5	0.5726405	27	tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	trua1a	CGTCT;CGTTT
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	27	trua6	0.636532	27	tRNA-Nu-Arg-TCT-2,tRNA-Nu-Arg-TCT-4,tRNA-Nu-Arg-TCT-5,tRNA-Nu-Arg-TCT-6	trua1a	CGTCT;CGTTT
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	Cy-Arg-TCT	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	27	WT	0.6727216667	28	tRNA-Nu-Asn-GTT-1,tRNA-Nu-Asn-GTT-2,tRNA-Nu-Asn-GTT-3,tRNA-Nu-Asn-GTT-4,tRNA-Nu-Asn-GTT-6,tRNA-Nu-Asn-GTT-7	trua1a	CGTGT
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	27	trua1a	0.05242566667	28	tRNA-Nu-Asn-GTT-1,tRNA-Nu-Asn-GTT-2,tRNA-Nu-Asn-GTT-3,tRNA-Nu-Asn-GTT-4,tRNA-Nu-Asn-GTT-6,tRNA-Nu-Asn-GTT-7	trua1a	CGTGT
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	27	trua1b	0.665383	28	tRNA-Nu-Asn-GTT-1,tRNA-Nu-Asn-GTT-2,tRNA-Nu-Asn-GTT-3,tRNA-Nu-Asn-GTT-4,tRNA-Nu-Asn-GTT-6,tRNA-Nu-Asn-GTT-7	trua1a	CGTGT
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	27	trua2	0.639111	28	tRNA-Nu-Asn-GTT-1,tRNA-Nu-Asn-GTT-2,tRNA-Nu-Asn-GTT-3,tRNA-Nu-Asn-GTT-4,tRNA-Nu-Asn-GTT-6,tRNA-Nu-Asn-GTT-7	trua1a	CGTGT
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	27	trua3	0.63094	28	tRNA-Nu-Asn-GTT-1,tRNA-Nu-Asn-GTT-2,tRNA-Nu-Asn-GTT-3,tRNA-Nu-Asn-GTT-4,tRNA-Nu-Asn-GTT-6,tRNA-Nu-Asn-GTT-7	trua1a	CGTGT
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	27	trua4	0.6332471667	28	tRNA-Nu-Asn-GTT-1,tRNA-Nu-Asn-GTT-2,tRNA-Nu-Asn-GTT-3,tRNA-Nu-Asn-GTT-4,tRNA-Nu-Asn-GTT-6,tRNA-Nu-Asn-GTT-7	trua1a	CGTGT
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	27	trua5	0.6572566667	28	tRNA-Nu-Asn-GTT-1,tRNA-Nu-Asn-GTT-2,tRNA-Nu-Asn-GTT-3,tRNA-Nu-Asn-GTT-4,tRNA-Nu-Asn-GTT-6,tRNA-Nu-Asn-GTT-7	trua1a	CGTGT
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	27	trua6	0.6631725	28	tRNA-Nu-Asn-GTT-1,tRNA-Nu-Asn-GTT-2,tRNA-Nu-Asn-GTT-3,tRNA-Nu-Asn-GTT-4,tRNA-Nu-Asn-GTT-6,tRNA-Nu-Asn-GTT-7	trua1a	CGTGT
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	Cy-Asn-GTT	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	27	WT	0.7744033333	27	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-3	trua1a	CATTG
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	27	trua1a	0.2250751667	27	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-3	trua1a	CATTG
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	27	trua1b	0.8299721666	27	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-3	trua1a	CATTG
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	27	trua2	0.7944648333	27	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-3	trua1a	CATTG
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	27	trua3	0.7997238333	27	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-3	trua1a	CATTG
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	27	trua4	0.799892	27	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-3	trua1a	CATTG
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	27	trua5	0.8004263333	27	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-3	trua1a	CATTG
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	27	trua6	0.8230281667	27	tRNA-Nu-Gln-CTG-1,tRNA-Nu-Gln-CTG-3	trua1a	CATTG
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	Cy-Gln-CTG	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	27	WT	0.5022393333	28	tRNA-Nu-Ile-AAT-1,tRNA-Nu-Ile-AAT-2	trua1a	CGTCG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	27	trua1a	0.087069	28	tRNA-Nu-Ile-AAT-1,tRNA-Nu-Ile-AAT-2	trua1a	CGTCG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	27	trua1b	0.5694193333	28	tRNA-Nu-Ile-AAT-1,tRNA-Nu-Ile-AAT-2	trua1a	CGTCG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	27	trua2	0.5035623334	28	tRNA-Nu-Ile-AAT-1,tRNA-Nu-Ile-AAT-2	trua1a	CGTCG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	27	trua3	0.5196816666	28	tRNA-Nu-Ile-AAT-1,tRNA-Nu-Ile-AAT-2	trua1a	CGTCG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	27	trua4	0.5127816667	28	tRNA-Nu-Ile-AAT-1,tRNA-Nu-Ile-AAT-2	trua1a	CGTCG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	27	trua5	0.5122688333	28	tRNA-Nu-Ile-AAT-1,tRNA-Nu-Ile-AAT-2	trua1a	CGTCG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	27	trua6	0.5178415	28	tRNA-Nu-Ile-AAT-1,tRNA-Nu-Ile-AAT-2	trua1a	CGTCG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	67	WT	0.07451666667	68	tRNA-Nu-Ile-AAT-1	trua1a	CATGG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	67	trua1a	0.0011525	68	tRNA-Nu-Ile-AAT-1	trua1a	CATGG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	67	trua1b	0.04560033333	68	tRNA-Nu-Ile-AAT-1	trua1a	CATGG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	67	trua2	0.05939616667	68	tRNA-Nu-Ile-AAT-1	trua1a	CATGG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	67	trua3	0.09244516667	68	tRNA-Nu-Ile-AAT-1	trua1a	CATGG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	67	trua4	0.0709215	68	tRNA-Nu-Ile-AAT-1	trua1a	CATGG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	67	trua5	0.06072766666	68	tRNA-Nu-Ile-AAT-1	trua1a	CATGG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	67	trua6	0.0761645	68	tRNA-Nu-Ile-AAT-1	trua1a	CATGG
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	Cy-Ile-AAT	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	27	WT	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	27	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	27	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	27	trua2	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	27	trua3	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	27	trua4	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	27	trua5	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	27	trua6	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	69	WT	0.1797403333	76	tRNA-Nu-Leu-TAG-2	trua1a	GTTGT
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	69	trua1a	0.0058895	76	tRNA-Nu-Leu-TAG-2	trua1a	GTTGT
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	69	trua1b	0.1542673334	76	tRNA-Nu-Leu-TAG-2	trua1a	GTTGT
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	69	trua2	0.2576373333	76	tRNA-Nu-Leu-TAG-2	trua1a	GTTGT
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	69	trua3	0.2618838333	76	tRNA-Nu-Leu-TAG-2	trua1a	GTTGT
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	69	trua4	0.2511976667	76	tRNA-Nu-Leu-TAG-2	trua1a	GTTGT
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	69	trua5	0.2063925	76	tRNA-Nu-Leu-TAG-2	trua1a	GTTGT
+Root	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	Cy-Leu-TAG	Cy	69	trua6	0.1770831667	76	tRNA-Nu-Leu-TAG-2	trua1a	GTTGT
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	27	WT	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	27	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	27	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	27	trua2	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	27	trua3	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	27	trua4	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	27	trua5	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	27	trua6	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	68	WT	0.87628	68	tRNA-Nu-Lys-CTT-1,tRNA-Nu-Lys-CTT-2,tRNA-Nu-Lys-CTT-3	trua1a	GGTGG
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	68	trua1a	0.03259416667	68	tRNA-Nu-Lys-CTT-1,tRNA-Nu-Lys-CTT-2,tRNA-Nu-Lys-CTT-3	trua1a	GGTGG
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	68	trua1b	0.877793	68	tRNA-Nu-Lys-CTT-1,tRNA-Nu-Lys-CTT-2,tRNA-Nu-Lys-CTT-3	trua1a	GGTGG
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	68	trua2	0.8789798333	68	tRNA-Nu-Lys-CTT-1,tRNA-Nu-Lys-CTT-2,tRNA-Nu-Lys-CTT-3	trua1a	GGTGG
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	68	trua3	0.8845868333	68	tRNA-Nu-Lys-CTT-1,tRNA-Nu-Lys-CTT-2,tRNA-Nu-Lys-CTT-3	trua1a	GGTGG
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	68	trua4	0.8808676666	68	tRNA-Nu-Lys-CTT-1,tRNA-Nu-Lys-CTT-2,tRNA-Nu-Lys-CTT-3	trua1a	GGTGG
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	68	trua5	0.8837293334	68	tRNA-Nu-Lys-CTT-1,tRNA-Nu-Lys-CTT-2,tRNA-Nu-Lys-CTT-3	trua1a	GGTGG
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	68	trua6	0.8908991667	68	tRNA-Nu-Lys-CTT-1,tRNA-Nu-Lys-CTT-2,tRNA-Nu-Lys-CTT-3	trua1a	GGTGG
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	Cy-Lys-CTT	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	27	WT	0.525	27	tRNA-Nu-Phe-GAA-1	trua1a	CGTCA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	27	trua1a	0.03616366666	27	tRNA-Nu-Phe-GAA-1	trua1a	CGTCA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	27	trua1b	0.426115	27	tRNA-Nu-Phe-GAA-1	trua1a	CGTCA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	27	trua2	0.4382495	27	tRNA-Nu-Phe-GAA-1	trua1a	CGTCA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	27	trua3	0.452418	27	tRNA-Nu-Phe-GAA-1	trua1a	CGTCA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	27	trua4	0.4425573333	27	tRNA-Nu-Phe-GAA-1	trua1a	CGTCA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	27	trua5	0.4389411666	27	tRNA-Nu-Phe-GAA-1	trua1a	CGTCA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	27	trua6	0.4825828333	27	tRNA-Nu-Phe-GAA-1	trua1a	CGTCA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	27	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	27	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	27	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	27	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	27	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	27	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	27	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	27	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	68	WT	0.157031	77	tRNA-Nu-Ser-CGA-3	trua1a	TGTCG
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	68	trua1a	0.01002983333	77	tRNA-Nu-Ser-CGA-3	trua1a	TGTCG
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	68	trua1b	0.1324658334	77	tRNA-Nu-Ser-CGA-3	trua1a	TGTCG
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	68	trua2	0.1826373333	77	tRNA-Nu-Ser-CGA-3	trua1a	TGTCG
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	68	trua3	0.1793433333	77	tRNA-Nu-Ser-CGA-3	trua1a	TGTCG
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	68	trua4	0.167518	77	tRNA-Nu-Ser-CGA-3	trua1a	TGTCG
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	68	trua5	0.157552	77	tRNA-Nu-Ser-CGA-3	trua1a	TGTCG
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	68	trua6	0.1920576667	77	tRNA-Nu-Ser-CGA-3	trua1a	TGTCG
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	69	WT	0.1630026667	78	tRNA-Nu-Ser-CGA-2	trua1a	GTTGA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	69	trua1a	0.007054666667	78	tRNA-Nu-Ser-CGA-2	trua1a	GTTGA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	69	trua1b	0.1691406667	78	tRNA-Nu-Ser-CGA-2	trua1a	GTTGA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	69	trua2	0.2561158333	78	tRNA-Nu-Ser-CGA-2	trua1a	GTTGA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	69	trua3	0.2633183333	78	tRNA-Nu-Ser-CGA-2	trua1a	GTTGA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	69	trua4	0.2582035	78	tRNA-Nu-Ser-CGA-2	trua1a	GTTGA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	69	trua5	0.2302885	78	tRNA-Nu-Ser-CGA-2	trua1a	GTTGA
+Root	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	Cy-Ser-CGA	Cy	69	trua6	0.2215523334	78	tRNA-Nu-Ser-CGA-2	trua1a	GTTGA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	27	WT	0.277976	27	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-4	trua1a	CGTGT
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	27	trua1a	0.0122145	27	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-4	trua1a	CGTGT
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	27	trua1b	0.2009445	27	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-4	trua1a	CGTGT
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	27	trua2	0.2337066667	27	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-4	trua1a	CGTGT
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	27	trua3	0.2504398333	27	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-4	trua1a	CGTGT
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	27	trua4	0.242639	27	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-4	trua1a	CGTGT
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	27	trua5	0.2240288334	27	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-4	trua1a	CGTGT
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	27	trua6	0.3315931667	27	tRNA-Nu-Ser-GCT-1,tRNA-Nu-Ser-GCT-2,tRNA-Nu-Ser-GCT-4	trua1a	CGTGT
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	29	WT	0.2663346667	29	tRNA-Nu-Ser-GCT-5	trua1a	TTTGC
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	29	trua1a	0.05136283333	29	tRNA-Nu-Ser-GCT-5	trua1a	TTTGC
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	29	trua1b	0.156465	29	tRNA-Nu-Ser-GCT-5	trua1a	TTTGC
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	29	trua2	0.1775086666	29	tRNA-Nu-Ser-GCT-5	trua1a	TTTGC
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	29	trua3	0.1796425	29	tRNA-Nu-Ser-GCT-5	trua1a	TTTGC
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	29	trua4	0.1613625	29	tRNA-Nu-Ser-GCT-5	trua1a	TTTGC
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	29	trua5	0.2020218334	29	tRNA-Nu-Ser-GCT-5	trua1a	TTTGC
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	29	trua6	0.182618	29	tRNA-Nu-Ser-GCT-5	trua1a	TTTGC
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	27	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	27	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	27	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	27	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	27	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	27	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	27	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	27	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	68	WT	0.4831523333	77	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2	trua1a	TGTCG
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	68	trua1a	0.009884333335	77	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2	trua1a	TGTCG
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	68	trua1b	0.4605828333	77	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2	trua1a	TGTCG
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	68	trua2	0.5050835	77	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2	trua1a	TGTCG
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	68	trua3	0.5078763334	77	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2	trua1a	TGTCG
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	68	trua4	0.4925003333	77	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2	trua1a	TGTCG
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	68	trua5	0.4928468334	77	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2	trua1a	TGTCG
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	68	trua6	0.505764	77	tRNA-Nu-Ser-TGA-1,tRNA-Nu-Ser-TGA-2	trua1a	TGTCG
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	69	WT	0.4237676667	78	tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	trua1a	GTTGA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	69	trua1a	0.01284366666	78	tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	trua1a	GTTGA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	69	trua1b	0.4088355	78	tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	trua1a	GTTGA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	69	trua2	0.5397631667	78	tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	trua1a	GTTGA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	69	trua3	0.555742	78	tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	trua1a	GTTGA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	69	trua4	0.554954	78	tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	trua1a	GTTGA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	69	trua5	0.4864925	78	tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	trua1a	GTTGA
+Root	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	Cy-Ser-TGA	Cy	69	trua6	0.4929363333	78	tRNA-Nu-Ser-TGA-3,tRNA-Nu-Ser-TGA-4	trua1a	GTTGA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	27	WT	0.5349793333	26	tRNA-Nu-Thr-CGT-1	trua1a	CGTTC
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	27	trua1a	0.02635533334	26	tRNA-Nu-Thr-CGT-1	trua1a	CGTTC
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	27	trua1b	0.5409055	26	tRNA-Nu-Thr-CGT-1	trua1a	CGTTC
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	27	trua2	0.5671295	26	tRNA-Nu-Thr-CGT-1	trua1a	CGTTC
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	27	trua3	0.5665061666	26	tRNA-Nu-Thr-CGT-1	trua1a	CGTTC
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	27	trua4	0.5487456667	26	tRNA-Nu-Thr-CGT-1	trua1a	CGTTC
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	27	trua5	0.5549531667	26	tRNA-Nu-Thr-CGT-1	trua1a	CGTTC
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	27	trua6	0.5248085	26	tRNA-Nu-Thr-CGT-1	trua1a	CGTTC
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	68	WT	0.390142	67	tRNA-Nu-Thr-CGT-2	trua1a	CGTAG
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	68	trua1a	0.007144666667	67	tRNA-Nu-Thr-CGT-2	trua1a	CGTAG
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	68	trua1b	0.3462811666	67	tRNA-Nu-Thr-CGT-2	trua1a	CGTAG
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	68	trua2	0.4066203333	67	tRNA-Nu-Thr-CGT-2	trua1a	CGTAG
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	68	trua3	0.447394	67	tRNA-Nu-Thr-CGT-2	trua1a	CGTAG
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	68	trua4	0.4031573334	67	tRNA-Nu-Thr-CGT-2	trua1a	CGTAG
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	68	trua5	0.3708251666	67	tRNA-Nu-Thr-CGT-2	trua1a	CGTAG
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	68	trua6	0.4119495	67	tRNA-Nu-Thr-CGT-2	trua1a	CGTAG
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	27	WT	0.6492876667	26	tRNA-Nu-Thr-TGT-1,tRNA-Nu-Thr-TGT-2,tRNA-Nu-Thr-TGT-3	trua1a	CGTCA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	27	trua1a	0.029302	26	tRNA-Nu-Thr-TGT-1,tRNA-Nu-Thr-TGT-2,tRNA-Nu-Thr-TGT-3	trua1a	CGTCA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	27	trua1b	0.6776593334	26	tRNA-Nu-Thr-TGT-1,tRNA-Nu-Thr-TGT-2,tRNA-Nu-Thr-TGT-3	trua1a	CGTCA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	27	trua2	0.6838165	26	tRNA-Nu-Thr-TGT-1,tRNA-Nu-Thr-TGT-2,tRNA-Nu-Thr-TGT-3	trua1a	CGTCA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	27	trua3	0.6935065	26	tRNA-Nu-Thr-TGT-1,tRNA-Nu-Thr-TGT-2,tRNA-Nu-Thr-TGT-3	trua1a	CGTCA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	27	trua4	0.6793921667	26	tRNA-Nu-Thr-TGT-1,tRNA-Nu-Thr-TGT-2,tRNA-Nu-Thr-TGT-3	trua1a	CGTCA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	27	trua5	0.6744863333	26	tRNA-Nu-Thr-TGT-1,tRNA-Nu-Thr-TGT-2,tRNA-Nu-Thr-TGT-3	trua1a	CGTCA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	27	trua6	0.668761	26	tRNA-Nu-Thr-TGT-1,tRNA-Nu-Thr-TGT-2,tRNA-Nu-Thr-TGT-3	trua1a	CGTCA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	68	WT	0.2994873333	67	tRNA-Nu-Thr-TGT-1	trua1a	TGTGG
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	68	trua1a	0.02118016666	67	tRNA-Nu-Thr-TGT-1	trua1a	TGTGG
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	68	trua1b	0.2673066667	67	tRNA-Nu-Thr-TGT-1	trua1a	TGTGG
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	68	trua2	0.288199	67	tRNA-Nu-Thr-TGT-1	trua1a	TGTGG
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	68	trua3	0.3219333333	67	tRNA-Nu-Thr-TGT-1	trua1a	TGTGG
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	68	trua4	0.3017131667	67	tRNA-Nu-Thr-TGT-1	trua1a	TGTGG
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	68	trua5	0.2933141666	67	tRNA-Nu-Thr-TGT-1	trua1a	TGTGG
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	68	trua6	0.2974278334	67	tRNA-Nu-Thr-TGT-1	trua1a	TGTGG
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	Cy-Thr-TGT	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	27	WT	0.3454916667	26	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	trua1a	CGTCT
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	27	trua1a	0.0394995	26	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	trua1a	CGTCT
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	27	trua1b	0.3459675	26	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	trua1a	CGTCT
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	27	trua2	0.348556	26	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	trua1a	CGTCT
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	27	trua3	0.3660553333	26	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	trua1a	CGTCT
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	27	trua4	0.3561855	26	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	trua1a	CGTCT
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	27	trua5	0.3458241667	26	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	trua1a	CGTCT
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	27	trua6	0.3473661666	26	tRNA-Nu-Trp-CCA-1,tRNA-Nu-Trp-CCA-2,tRNA-Nu-Trp-CCA-3	trua1a	CGTCT
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	Cy-Trp-CCA	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	27	WT	0.254663	28	tRNA-Nu-Val-AAC-1	trua1a	CGTCA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	27	trua1a	0.009900666665	28	tRNA-Nu-Val-AAC-1	trua1a	CGTCA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	27	trua1b	0.276363	28	tRNA-Nu-Val-AAC-1	trua1a	CGTCA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	27	trua2	0.255698	28	tRNA-Nu-Val-AAC-1	trua1a	CGTCA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	27	trua3	0.2797608334	28	tRNA-Nu-Val-AAC-1	trua1a	CGTCA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	27	trua4	0.2401651666	28	tRNA-Nu-Val-AAC-1	trua1a	CGTCA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	27	trua5	0.272246	28	tRNA-Nu-Val-AAC-1	trua1a	CGTCA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	27	trua6	0.2814816666	28	tRNA-Nu-Val-AAC-1	trua1a	CGTCA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	29	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	29	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	29	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	29	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	29	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	29	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	29	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	29	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	Cy-Val-AAC	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	25	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	25	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	25	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	25	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	25	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	25	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	25	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	25	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	27	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	27	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	27	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	27	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	27	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	27	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	27	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	27	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	29	WT	0.4461163333	29	tRNA-Nu-Val-TAC-1,tRNA-Nu-Val-TAC-3	trua1a	TTTGC
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	29	trua1a	0.03200466667	29	tRNA-Nu-Val-TAC-1,tRNA-Nu-Val-TAC-3	trua1a	TTTGC
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	29	trua1b	0.357405	29	tRNA-Nu-Val-TAC-1,tRNA-Nu-Val-TAC-3	trua1a	TTTGC
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	29	trua2	0.3647696666	29	tRNA-Nu-Val-TAC-1,tRNA-Nu-Val-TAC-3	trua1a	TTTGC
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	29	trua3	0.383051	29	tRNA-Nu-Val-TAC-1,tRNA-Nu-Val-TAC-3	trua1a	TTTGC
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	29	trua4	0.358806	29	tRNA-Nu-Val-TAC-1,tRNA-Nu-Val-TAC-3	trua1a	TTTGC
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	29	trua5	0.397095	29	tRNA-Nu-Val-TAC-1,tRNA-Nu-Val-TAC-3	trua1a	TTTGC
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	29	trua6	0.461039	29	tRNA-Nu-Val-TAC-1,tRNA-Nu-Val-TAC-3	trua1a	TTTGC
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	38	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	38	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	38	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	38	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	38	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	38	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	38	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	38	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	67	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	67	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	67	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	67	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	67	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	67	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	67	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	67	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	68	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	68	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	68	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	68	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	68	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	68	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	68	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	68	trua6	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	69	WT	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	69	trua1a	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	69	trua1b	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	69	trua2	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	69	trua3	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	69	trua4	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	69	trua5	NA	NA	NA	NA	NA
+Root	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	69	trua6	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	25	WT	0.06201833333	24	tRNA-Mt-Cys-GCA-1	trua1a	TGTAT
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	25	trua1a	0.003964333333	24	tRNA-Mt-Cys-GCA-1	trua1a	TGTAT
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	25	trua1b	0.03184933334	24	tRNA-Mt-Cys-GCA-1	trua1a	TGTAT
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	25	trua2	0.4319618333	24	tRNA-Mt-Cys-GCA-1	trua1a	TGTAT
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	25	trua3	0.1273331666	24	tRNA-Mt-Cys-GCA-1	trua1a	TGTAT
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	25	trua4	0.083931500010000007	24	tRNA-Mt-Cys-GCA-1	trua1a	TGTAT
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	25	trua5	0.08310816665	24	tRNA-Mt-Cys-GCA-1	trua1a	TGTAT
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	25	trua6	0.0338265	24	tRNA-Mt-Cys-GCA-1	trua1a	TGTAT
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	27	WT	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	27	trua1a	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	27	trua1b	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	27	trua2	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	27	trua3	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	27	trua4	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	27	trua5	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	27	trua6	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	29	WT	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	29	trua1a	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	29	trua1b	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	29	trua2	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	29	trua3	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	29	trua4	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	29	trua5	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	29	trua6	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	38	WT	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	38	trua1a	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	38	trua1b	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	38	trua2	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	38	trua3	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	38	trua4	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	38	trua5	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	38	trua6	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	67	WT	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	67	trua1a	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	67	trua1b	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	67	trua2	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	67	trua3	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	67	trua4	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	67	trua5	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	67	trua6	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	68	WT	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	68	trua1a	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	68	trua1b	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	68	trua2	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	68	trua3	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	68	trua4	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	68	trua5	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	68	trua6	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	69	WT	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	69	trua1a	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	69	trua1b	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	69	trua2	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	69	trua3	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	69	trua4	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	69	trua5	NA	NA	NA	NA	NA
+Root	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	69	trua6	NA	NA	NA	NA	NA

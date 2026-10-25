@@ -14,8 +14,7 @@
 
 ```
 Figures/dependent_methylKit/tRNA/
-├── All-tRNA_rep-structure.csv            93 个 tRNA 代表的结构区段序列（46 Nu / 17 Mt / 30 Pt）
-├── build_genotype_dependent_tables.sh    7 个基因型共用的数据构建逻辑
+├── build_genotype_dependent_tables.sh    7 个基因型共用的数据构建逻辑（fix_pos 直接取上游 Sprinzl_pos）
 ├── dependent_trna_heatmap_common.R       热图公共实现（组织拆分 + 跨组织并集）
 ├── dependent_trna_distribution_common.R  Ψ 位点分布箱线图公共实现
 ├── sites_count/                          跨基因型：dependent 位点数堆叠柱状图
@@ -27,6 +26,9 @@ Figures/dependent_methylKit/tRNA/
     ├── plot.R                            声明基因型 + 勾选本基因型要出的图
     └── <genotype>_*.{pdf,png,svg,tsv}    产物
 ```
+
+代表 tRNA（每个 family 里 mean_CPM 最高的成员）来自
+`tRNA/count/ncRNA/family_top/family_top_tRNA.tsv`；本目录不再保存结构注释表。
 
 ## 数据来源与口径
 
@@ -41,14 +43,14 @@ BH q < 0.05（方向为正，meth.diff > 0）、效应量 `Delta_Ratio(WT-Mut) >
 
 | | archive（Fisher 版） | 本目录（methylKit 版） |
 |---|---|---|
-| dependent 表 | `dependent_site_overview/dependent/<g>-<tissue>.ncRNA.dependent.tsv` | `tRNA/STAT/dependent_methylKit/ncRNA/<tissue>/<g>/<g>-<tissue>.dependent.tsv` |
-| canonical 位号 `fix_pos` | 表里自带 | **表里没有**，由 `data_prep.sh` 用 `All-tRNA_rep-structure.csv` 现算 |
+| dependent 表 | `dependent_site_overview/dependent/<g>-<tissue>.ncRNA.dependent.tsv` | `tRNA/STAT/dependent_methylKit/ncRNA/<tissue>/<g>/<g>-<tissue>.dependent.Sprinzl.tsv` |
+| canonical 位号 `fix_pos` | 表里自带 | **直接取表里的 `Sprinzl_pos`**（由 `BID-transcript.script/downstream/tRNA_Sprinzl_annoation/add_sprinzl_pos.py` 基于 220 条完整注释生成），本目录不做任何坐标转换 |
+| 代表 tRNA | 未定义 | `tRNA/count/ncRNA/family_top/family_top_tRNA.tsv`（每个 family mean_CPM 最高的成员） |
 | 每株系修饰比 `<g>_1`/`<g>_2` | 表里自带 | **表里没有**，从 `<g>_<line>-<tissue>.dependent-sites.tsv` 的 `Mut_Ratio` 取（该株系 3 个 Treat 重复的均值） |
 | sn/snoRNA | 上游已按 `^tRNA` 过滤 | 参考 `tRNA-unique_sn_snoRNA.fa` 混有 287 snoRNA + 82 snRNA，**必须按 `^tRNA-` 筛掉** |
 
-`fix_pos` = canonical 0–76 位号：按 `All-tRNA_rep-structure.csv` 的 17 个区段顺序与固定长度，
-把 native pos 重标定为 `round((region_pos-1) * (fixed_len-1) / (region_len-1)) + 1`（半值取上）。
-该结构表坐标 == 参考 fasta 的 1-based 坐标（含 CCA 尾），已在 `Figures/wildtype_landscape/representative_nuclear_trna_heatmap/README.md` 实测确认。
+`fix_pos` 就是上游的 `Sprinzl_pos`（canonical 0–76，Sprinzl 编号）；上游按每个拷贝**自己的**区段注释计算，
+因此长度/区段划分与家族代表不同的拷贝也正确（旧版会把这些拷贝的位点算偏或剔除）。
 
 ## 运行
 
@@ -73,18 +75,19 @@ Rscript plot.R                          # 只画图
 
 **组织拆分热图**（7 个基因型都有，`<g>_delta_ratio_tissue_split_dependent_trna_heatmap`）
 
-- 行 = 组织 × tRNA 代表，按 Root / Leaf / Flower 分三块（右侧色块标注组织）
+- 行 = 组织 × tRNA 家族，按 Root / Leaf / Flower 分三块（右侧色块标注组织）；
+  家族 = 分室 + 氨基酸 + 反密码子，代表成员来自 `family_top`（mean_CPM 最高）
 - 列 = canonical 0–76 位，按 p1 / Acceptor stem / D stem-loop / Anticodon stem-loop / Variable /
   T stem-loop / Acceptor stem / CCA 分块（底部有色带、位号、区段名）
 - 值 = `Delta Ratio(WT - Mut)`，`#FFF5EE → #8B0000`；无位点的格子是浅灰
-- 左侧窄色条 = 分室（Cy 橙 `#D55E00` / Mt 蓝 `#0072B2`）
-- 只画核与线粒体 tRNA。非代表拷贝（同一家族里与代表序列不一致的那些）不进图，
-  运行时会打印 `Dropped N non-representative tRNA copies…` 列出被丢的 ID
+- 左侧窄色条 = 分室（Cy 橙 `#D55E00` / Mt 蓝 `#0072B2` / Pt 绿 `#009E73`）
+- **同家族所有拷贝的位点都进图**：位点按 `chr` 归到家族，同一 (组织, 家族, canonical 位)
+  收到多个拷贝时取 Delta 最大；不再丢弃非代表拷贝
 
 **跨组织并集热图**（`trua1b` / `trua4` / `trua5`；`<g>_delta_ratio_union_dependent_trna_heatmap`）
 
-- 行 = tRNA 代表，值 = 该位点跨三个组织**最大**的 Delta Ratio，便于看"最坏情况"
-- 质体（Pt）tRNA 只进数据表、不进图：Pt 的环长分布与核/线粒体不同，投影到同一 canonical 布局有扭曲风险
+- 行 = tRNA 家族，值 = 该位点跨三个组织**最大**的 Delta Ratio，便于看"最坏情况"
+- Cy / Mt / Pt 三分室都进图（2026-10-12 老板拍板）
 
 **Ψ 位点分布箱线图**（`trua1a` / `trua2` / `trua3` / `trua5` / `trua6`）
 
@@ -109,15 +112,18 @@ Rscript plot.R                          # 只画图
 
 `all_tissues` 行数 = 该基因型三组织的 tRNA dependent 位点合计，与 `sites_count/dependent_site_count.tsv` 逐值一致。
 
-| 基因型 | all_tissues 行 | 并集位点 | 热图 panel 行（组织 × 代表） | 图 |
-|---|---|---|---|---|
-| trua1a | 217 | 94 | 66 | 组织拆分 + cy_27/28 + cy_66/67/68 |
-| trua1b | 6 | 6 | 5 | 组织拆分 + 并集 |
-| trua2 | 26 | 15 | 26 | 组织拆分 + mt_27/28 |
-| trua3 | 42 | 25 | 13 | 组织拆分 + cy_38/39/40 |
-| trua4 | 11 | 7 | 11 | 组织拆分 + 并集（代表 tRNA 只有 1 个，图很矮） |
-| trua5 | 36 | 21 | 14 | 组织拆分 + 并集 + cy_28 |
-| trua6 | 130 | 66 | 41 | 组织拆分 + cy_38/39/40 + mt_38/39/40 |
+| 基因型 | all_tissues 行 | 并集位点 | 热图 panel 行（组织 × 家族） | 并集家族数 | 图 |
+|---|---|---|---|---|---|
+| trua1a | 217 | 94 | 76 | — | 组织拆分 + cy_27/28 + cy_66/67/68 |
+| trua1b | 6 | 6 | 6 | 6 | 组织拆分 + 并集 |
+| trua2 | 26 | 15 | 26 | — | 组织拆分 + mt_27/28 |
+| trua3 | 42 | 25 | 21 | — | 组织拆分 + cy_38/39/40 |
+| trua4 | 11 | 7 | 11 | 7 | 组织拆分 + 并集 |
+| trua5 | 36 | 21 | 15 | 10 | 组织拆分 + 并集 + cy_28 |
+| trua6 | 130 | 66 | 41 | — | 组织拆分 + cy_38/39/40 + mt_38/39/40 |
+
+旧版按“代表拷贝”过滤，这些 panel 行数分别是 66 / 5 / 26 / 13 / 11 / 14 / 41；新版把所有拷贝并回家族后，
+trua1a、trua1b、trua3、trua5 分别多出 10 / 1 / 8 / 1 行，trua2、trua4、trua6 不变。
 
 ## 已知无害提示
 
@@ -126,13 +132,17 @@ Rscript plot.R                          # 只画图
   且"构造一次、三种格式共用"保证 pdf/png/svg 布局完全一致。两个 common.R 里已定向屏蔽这一条，其余警告照常抛出。
 - **`Using ragg device as default. Ignoring type and antialias`**：来自共享的 `save_plot()`，
   仓库所有图都有，PNG 实际走 ragg，Arial 经 fontconfig 正常解析（已验证 PDF 内嵌 Arial-BoldMT、SVG 全 `font-family: "Arial"`、无 DejaVu）。
-- **`Dropped N non-representative tRNA copies…`**：见上「组织拆分热图」，属预期行为。
 
 ## 验证记录
 
 - 数据侧：7 个基因型的 `all_tissues` 行数与 `sites_count/dependent_site_count.tsv` 完全一致；
   并集行数 == 该表 distinct 位点数。
+- `fix_pos` 来源：21 个「基因型×组织」注释文件共 471 行，其中 468 个 tRNA 行
+  **100% 带 `Sprinzl_pos`**（3 个 sn/snoRNA 行留空且被 `^tRNA-` 过滤）。
+- 与旧版（家族代表布局）逐行对拍：464 行一致；4 行被修正——
+  `trua3` 的 `Nu-Leu-TAA-3` pos 40 由 40 → 39（leaf、Flower），
+  `trua6` 的 `Nu-Ser-AGA-5` pos 41 由 41 → 39（leaf、Flower）。
+  后者因此新进入 trua6 的 Ψ38/39/40 面板（+2 位点，n_values 342 → 348）。
 - 单点溯源：`trua1a` / `tRNA-Nu-Arg-CCG-1` / pos 68 逐值对上管线原表与两个株系的
   `dependent-sites.tsv`（`Mut_Ratio = (line1 + line2) / 2`）。
-- `fix_pos` 映射：对全部 21 个「基因型×组织」文件的**每一个** tRNA 位点零 miss（7274 条映射）。
-- 字体：新产 PDF 只含 Arial（Bold / Italic 子集），SVG 无 DejaVu；热图布局与 archive 版逐像素级一致。
+- 字体：新产 PDF 只含 Arial（Bold / Italic 子集），SVG 无 DejaVu。

@@ -2,14 +2,16 @@
 # trua4_dependent_trna_heatmap — trua4 dependent 叶绿体 tRNA Ψ 位点的结构热图
 #
 # 移植自 archive/20260902/paper/chloroplast_RNA/trua4_dependent_trna_heatmap/plot.R。
-# 输入换成当前 methylKit 口径：
-#   tRNA/STAT/dependent_methylKit/ncRNA/leaf/trua4/trua4_{1,2}-leaf.dependent-sites.tsv
+# 输入换成当前 methylKit 口径，且已由
+#   BID-transcript.script/downstream/tRNA_Sprinzl_annoation/add_sprinzl_pos.py
+#   加上 Sprinzl 位号：
+#   tRNA/STAT/dependent_methylKit/ncRNA/leaf/trua4/trua4_{1,2}-leaf.dependent-sites.Sprinzl.tsv
 #   （只取 is_dependent == TRUE 且 chr 以 tRNA-Pt- 开头的位点）
-# 结构布局沿用 All-tRNA_rep-structure.csv（46 Nu / 17 Mt / 30 Pt）。
 #
-# 与 archive 版的两处差异：
-#   1. 当前 dependent-sites 表没有 fix_pos，按结构表区段长度现算 native pos -> canonical 0-76。
-#   2. 色标上限按数据自适应（至少 0.3），避免高 Delta 位点全部饱和在同一个颜色。
+# 与旧版的两处差异：
+#   1. fix_pos 直接取上游的 Sprinzl_pos —— 本目录不做任何坐标转换，也不再依赖结构表。
+#   2. 行 = Pt tRNA 家族（代表成员取自 tRNA/count/ncRNA/family_top，mean_CPM 最高；Pt 为 1:1）。
+#   色标上限仍按数据自适应（至少 0.3），避免高 Delta 位点全部饱和在同一个颜色。
 
 suppressPackageStartupMessages({
   library(readr)
@@ -53,7 +55,6 @@ column_metadata <- layout_config %>%
 
 matrix_col_ids <- column_metadata$matrix_col_id
 max_canonical_pos <- max(column_metadata$display_number)
-region_offset <- setNames(cumsum(c(0L, head(layout_config$fixed_length, -1L))), region_levels)
 region_color_map <- setNames(layout_config$color_hex, as.character(layout_config$region))
 
 get_script_dir <- function() {
@@ -79,44 +80,14 @@ text_gp <- function(size) {
   grid::gpar(fontsize = size, fontface = "bold", fontfamily = "Arial", col = "black")
 }
 
-# native pos -> canonical 0-76：按结构表区段顺序，把每个区段的实际长度
-# 重标定到固定长度（与 build_genotype_dependent_tables.sh / archive 的 awk 一致，
-# 半值向上取整）。
-build_canonical_map <- function(rep_structure) {
-  rows <- vector("list", nrow(rep_structure))
-  for (i in seq_len(nrow(rep_structure))) {
-    rep_id <- rep_structure$Rep_ID[[i]]
-    native_start <- 1L
-    pieces <- list()
-    for (region in region_levels) {
-      seq <- rep_structure[[region]][[i]]
-      region_len <- nchar(seq)
-      if (is.na(region_len) || region_len == 0) next
-      fixed_len <- layout_config$fixed_length[[match(region, region_levels)]]
-      native_pos <- native_start:(native_start + region_len - 1L)
-      if (fixed_len == 1L || region_len == 1L) {
-        canonical_region_pos <- rep(1L, region_len)
-      } else {
-        canonical_region_pos <- as.integer(
-          floor((seq_len(region_len) - 1L) * (fixed_len - 1L) / (region_len - 1L) + 0.5)
-        ) + 1L
-      }
-      pieces[[length(pieces) + 1L]] <- tibble(
-        Rep_ID = rep_id,
-        native_pos = native_pos,
-        canonical_pos = region_offset[[region]] + canonical_region_pos - 1L
-      )
-      native_start <- native_start + region_len
-    }
-    rows[[i]] <- bind_rows(pieces)
-  }
-  bind_rows(rows) %>% distinct(Rep_ID, native_pos, .keep_all = TRUE)
+family_from_chr <- function(chr) {
+  stringr::str_remove(chr, "^tRNA-") %>% stringr::str_remove("-[0-9]+$")
 }
 
 read_dependent_line <- function(file_path, line_name) {
   dat <- readr::read_tsv(file_path, show_col_types = FALSE)
   delta_col <- "Delta_Ratio(WT-Mut)"
-  required_cols <- c("chr", "pos", "strand", "context", "WT_Ratio", "Mut_Ratio", delta_col, "is_dependent")
+  required_cols <- c("chr", "pos", "Sprinzl_pos", "strand", "context", "WT_Ratio", "Mut_Ratio", delta_col, "is_dependent")
   missing_cols <- setdiff(required_cols, names(dat))
   if (length(missing_cols) > 0) {
     stop("Missing required columns in ", file_path, ": ", paste(missing_cols, collapse = ", "))
@@ -126,6 +97,7 @@ read_dependent_line <- function(file_path, line_name) {
     mutate(
       chr = as.character(chr),
       pos = as.integer(pos),
+      fix_pos = as.integer(Sprinzl_pos),
       strand = as.character(strand),
       context = as.character(context),
       WT_Ratio = as.numeric(WT_Ratio),
@@ -134,9 +106,11 @@ read_dependent_line <- function(file_path, line_name) {
       is_dependent = as.logical(is_dependent)
     ) %>%
     filter(grepl("^tRNA-Pt-", chr), !is.na(is_dependent), is_dependent) %>%
+    filter(!is.na(fix_pos), fix_pos >= 0L, fix_pos <= max_canonical_pos) %>%
     transmute(
       chr,
       pos,
+      fix_pos,
       strand,
       context,
       WT_Ratio,
@@ -237,22 +211,24 @@ run_analysis <- function() {
   source(file.path(repo_root, "Figures/shared/plot_tokens.R"))
   register_font()
 
-  line1_path <- file.path(repo_root, "tRNA/STAT/dependent_methylKit/ncRNA/leaf/trua4/trua4_1-leaf.dependent-sites.tsv")
-  line2_path <- file.path(repo_root, "tRNA/STAT/dependent_methylKit/ncRNA/leaf/trua4/trua4_2-leaf.dependent-sites.tsv")
-  structure_path <- file.path(script_dir, "All-tRNA_rep-structure.csv")
+  line1_path <- file.path(repo_root, "tRNA/STAT/dependent_methylKit/ncRNA/leaf/trua4/trua4_1-leaf.dependent-sites.Sprinzl.tsv")
+  line2_path <- file.path(repo_root, "tRNA/STAT/dependent_methylKit/ncRNA/leaf/trua4/trua4_2-leaf.dependent-sites.Sprinzl.tsv")
+  family_top_path <- file.path(repo_root, "tRNA/count/ncRNA/family_top/family_top_tRNA.tsv")
 
-  required_paths <- c(line1_path, line2_path, structure_path)
+  required_paths <- c(line1_path, line2_path, family_top_path)
   missing_paths <- required_paths[!file.exists(required_paths)]
   if (length(missing_paths) > 0) {
     stop("Missing required inputs:\n", paste(missing_paths, collapse = "\n"))
   }
 
-  structure_info <- readr::read_csv(structure_path, show_col_types = FALSE) %>%
-    select(ID, Rep_ID, all_of(region_levels)) %>%
-    filter(stringr::str_starts(Rep_ID, "Pt-")) %>%
-    mutate(display_label = stringr::str_replace(ID, "^tRNA-", ""))
-
-  canonical_map <- build_canonical_map(structure_info)
+  family_info <- readr::read_tsv(family_top_path, show_col_types = FALSE) %>%
+    dplyr::filter(stringr::str_starts(family, "^Pt-")) %>%
+    dplyr::transmute(
+      Rep_ID = family,
+      Representative_ID = feature_id,
+      display_label = stringr::str_replace(family, "^Nu-", "Cy-"),
+      family_rank = dplyr::row_number()
+    )
 
   line1_tbl <- read_dependent_line(line1_path, "trua4_1")
   line2_tbl <- read_dependent_line(line2_path, "trua4_2")
@@ -264,6 +240,7 @@ run_analysis <- function() {
     suffix = c("_x", "_y")
   ) %>%
     mutate(
+      fix_pos = coalesce(fix_pos_x, fix_pos_y),
       context = coalesce(context_x, context_y),
       WT_Ratio = coalesce(WT_Ratio_x, WT_Ratio_y),
       trua4_1 = as.numeric(trua4_1),
@@ -282,16 +259,16 @@ run_analysis <- function() {
       ),
       `Delta_Ratio(WT-Mut)` = WT_Ratio - Mut_Ratio
     ) %>%
-    filter(!is.na(Mut_Ratio)) %>%
-    mutate(rep_id = str_remove(chr, "^tRNA-") %>% str_remove("-[0-9]+$")) %>%
-    left_join(canonical_map, by = c("rep_id" = "Rep_ID", "pos" = "native_pos")) %>%
-    group_by(chr, pos, strand) %>%
-    slice_min(canonical_pos, n = 1, with_ties = FALSE) %>%
-    ungroup() %>%
+    filter(!is.na(Mut_Ratio), !is.na(fix_pos)) %>%
+    distinct(chr, pos, strand, .keep_all = TRUE) %>%
+    mutate(Rep_ID = family_from_chr(chr)) %>%
+    left_join(family_info %>% select(Rep_ID, display_label), by = "Rep_ID") %>%
     transmute(
+      Rep_ID,
+      display_label,
       chr,
       pos,
-      fix_pos = canonical_pos,
+      fix_pos,
       strand,
       context,
       WT_Ratio,
@@ -301,7 +278,7 @@ run_analysis <- function() {
       trua4_2,
       dependency_support
     ) %>%
-    arrange(chr, fix_pos, pos)
+    arrange(Rep_ID, fix_pos, pos)
 
   if (nrow(union_tbl) == 0) {
     stop("No chloroplast trua4-dependent tRNA sites remained after union.")
@@ -317,10 +294,7 @@ run_analysis <- function() {
   readr::write_tsv(union_tbl, file.path(script_dir, "trua4_pt_trna_dependent_union.tsv"))
 
   mapped_tbl <- union_tbl %>%
-    inner_join(
-      structure_info %>% select(ID, Rep_ID, display_label),
-      by = c("chr" = "ID")
-    ) %>%
+    filter(!is.na(display_label)) %>%
     mutate(
       canonical_pos = fix_pos,
       matrix_col_id = matrix_col_ids[canonical_pos + 1L],
@@ -329,15 +303,15 @@ run_analysis <- function() {
     filter(!is.na(matrix_col_id), canonical_pos >= 0L, canonical_pos <= max_canonical_pos)
 
   if (nrow(mapped_tbl) == 0) {
-    stop("No chloroplast tRNA rows matched representative Pt-tRNA structures.")
+    stop("No chloroplast tRNA rows matched Pt families in family_top.")
   }
 
   readr::write_tsv(mapped_tbl, file.path(script_dir, "trua4_pt_trna_dependent_mapped_sites.tsv"))
 
-  row_info <- mapped_tbl %>%
-    distinct(chr, display_label) %>%
-    mutate(order_id = match(chr, structure_info$ID)) %>%
-    arrange(order_id, chr)
+  row_info <- family_info %>%
+    filter(Rep_ID %in% mapped_tbl$Rep_ID) %>%
+    arrange(family_rank) %>%
+    select(Rep_ID, display_label)
 
   heatmap_matrix <- matrix(
     NA_real_,
@@ -347,7 +321,7 @@ run_analysis <- function() {
   )
 
   for (i in seq_len(nrow(mapped_tbl))) {
-    row_idx <- match(mapped_tbl$chr[[i]], row_info$chr)
+    row_idx <- match(mapped_tbl$Rep_ID[[i]], row_info$Rep_ID)
     col_idx <- match(mapped_tbl$matrix_col_id[[i]], matrix_col_ids)
     current_value <- heatmap_matrix[row_idx, col_idx]
     new_value <- mapped_tbl$`Delta_Ratio(WT-Mut)`[[i]]

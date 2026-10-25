@@ -1,392 +1,397 @@
-tissue	Rep_ID	chr	pos	strand	ratio	depth	region	region_pos	fixed_pos	matrix_col_id	canonical_pos
-Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	38	+	0.188519	11062.66667	Acloop	7	7	Acloop_7	38
-Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-2	38	+	0.1287243333	5479.666667	Acloop	7	7	Acloop_7	38
-Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-3	38	+	0.1912396667	2511.333333	Acloop	7	7	Acloop_7	38
-Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	55	+	0.4684353333	16644.66667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-2	55	+	0.5205333333	11697.66667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-3	55	+	0.5143443333	13680	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-1	38	+	0.2690846667	5796.333333	Acloop	7	7	Acloop_7	38
-Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-2	38	+	0.2689033333	3002.333333	Acloop	7	7	Acloop_7	38
-Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-3	38	+	0.2492753333	2711.333333	Acloop	7	7	Acloop_7	38
-Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-1	55	+	0.6218073333	5724.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-2	55	+	0.6581386667	2757	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-3	55	+	0.6063636667	4157.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ala-TGC	tRNA-Nu-Ala-TGC-1	38	+	0.25069	16664.66667	Acloop	7	7	Acloop_7	38
-Flower	Nu-Ala-TGC	tRNA-Nu-Ala-TGC-2	38	+	0.200447	1604	Acloop	7	7	Acloop_7	38
-Flower	Nu-Ala-TGC	tRNA-Nu-Ala-TGC-1	55	+	0.632168	14869	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ala-TGC	tRNA-Nu-Ala-TGC-2	55	+	0.688183	1634.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-1	55	+	0.70969	11884.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-2	55	+	0.7235226667	10553.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-3	55	+	0.718156	8851	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-4	55	+	0.545484	4777	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-5	55	+	0.692311	4294	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-6	55	+	0.7574733333	3038.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	55	+	0.720146	11787.66667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-2	55	+	0.250395	147.6666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-3	55	+	0.6012993333	167.3333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	68	+	0.189093	11971	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	27	+	0.2958733333	95.66666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-2	27	+	0.2988816667	45.66666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-3	27	+	0.2462053333	35.66666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	33	+	0.3326466667	52	Acloop	2	2	Acloop_2	33
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	55	+	0.4864633333	2141.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-2	55	+	0.5027466667	129.6666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-3	55	+	0.4819066667	559.3333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	67	+	0.5175863333	2289	Accstem_3p	2	2	Accstem_3p_2	67
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-2	67	+	0.6614036667	140.6666667	Accstem_3p	2	2	Accstem_3p_2	67
-Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-3	67	+	0.637116	589.3333333	Accstem_3p	2	2	Accstem_3p_2	67
-Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-1	28	+	0.477973	1048.666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	28	+	0.2250766667	536.6666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-1	40	+	0.647341	1115.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	40	+	0.7040206667	807.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-1	56	+	0.6571226667	5398.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	56	+	0.6484603333	5132.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-1	69	+	0.7582056667	5621	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	69	+	0.7585503333	5394.666667	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	27	+	0.2657633333	1612.333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-4	27	+	0.2563296667	1412	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-5	27	+	0.217661	492.6666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-6	27	+	0.5408133333	1223.666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-7	27	+	0.094751	177	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-1	39	+	0.7357696667	4108.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	39	+	0.725972	2069	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-3	39	+	0.7455776667	1619	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-4	39	+	0.738439	1774.333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-5	39	+	0.7355473333	498.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-6	39	+	0.6684886667	1395.333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-1	55	+	0.704741	8985	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	55	+	0.6252713333	8482	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-3	55	+	0.703221	3285.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-4	55	+	0.599505	8400.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-5	55	+	0.544839	7016.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-6	55	+	0.689476	3510.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-7	55	+	0.5160383333	6450	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	28	+	0.6350353333	3544.666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-2	28	+	0.5999323333	2737.333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-3	28	+	0.6079856667	774	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-4	28	+	0.523527	329.3333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-6	28	+	0.5921726667	2021	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-7	28	+	0.556389	1519	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	56	+	0.679597	8822	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-2	56	+	0.5194683333	5556	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-3	56	+	0.575574	2148.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-4	56	+	0.6509236667	1951	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-6	56	+	0.735912	2566	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-7	56	+	0.417253	2009	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	13	+	0.05348	12351	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-2	13	+	0.1531986667	44	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-4	13	+	0.06042533333	2546.333333	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-5	13	+	0.065691	981	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	54	+	0.6034813333	70038	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-2	54	+	0.31492	74	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-3	54	+	0.3877283333	1192.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-4	54	+	0.5707943333	7620	Tloop	2	2	Tloop_2	55
-Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-5	54	+	0.3451836667	21618.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	26	+	0.476835	451	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-4	26	+	0.5048303333	358.6666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-6	26	+	0.09101266667	89.33333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-7	26	+	0.1066663333	80	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-1	27	+	0.6555776667	339.3333333	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	27	+	0.1446463333	424.3333333	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-2	27	+	0.7808446667	1020	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-3	27	+	0.688354	67.33333333	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-4	27	+	0.1660133333	343.3333333	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-5	27	+	0.7486726667	687.6666667	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-8	27	+	0.701326	263	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-9	27	+	0.484847	120.6666667	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-6	28	+	0.5036856667	52.66666667	Acstem_5p	3	3	Acstem_5p_3	29
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-7	28	+	0.6245273333	49	Acstem_5p	3	3	Acstem_5p_3	29
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-1	38	+	0.6100656667	395	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	38	+	0.63134	399.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-2	38	+	0.660109	1078.333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-3	38	+	0.56079	154.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-4	38	+	0.6597066667	349.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-5	38	+	0.628816	726	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-6	38	+	0.6402273333	145	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-7	38	+	0.6204016667	147.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-8	38	+	0.6305183333	330	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-9	38	+	0.5340166667	82.33333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-1	54	+	0.5305776667	1727.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	54	+	0.4339303333	3377.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-2	54	+	0.6288296667	2398.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-3	54	+	0.385354	2995	Tloop	2	2	Tloop_2	55
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-4	54	+	0.4728413333	1300.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-5	54	+	0.4526623333	3537.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-6	54	+	0.4062346667	3140	Tloop	2	2	Tloop_2	55
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-7	54	+	0.483951	1136	Tloop	2	2	Tloop_2	55
-Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-8	54	+	0.4074286667	3162	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	13	+	0.8216246667	3420.666667	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-2	13	+	0.7995116667	461.6666667	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-3	13	+	0.8041116667	266.6666667	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-4	13	+	0.817581	2133.666667	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-5	13	+	0.794188	294.6666667	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	27	+	0.796188	4692.666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-2	27	+	0.777853	822.3333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-3	27	+	0.7725396667	392	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-5	27	+	0.758891	469.6666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	39	+	0.6940603333	6544.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-2	39	+	0.6648403333	1309.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-3	39	+	0.6553833333	580	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-4	39	+	0.6990163333	2399.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-5	39	+	0.6564233333	697.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	54	+	0.878002	7621	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-2	54	+	0.8317283333	1369.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-3	54	+	0.8168963333	555.3333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-4	54	+	0.890026	2858	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-5	54	+	0.839004	1097.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-2	65	+	0.3777556667	1273.333333	Accstem_3p	1	1	Accstem_3p_1	66
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-3	65	+	0.08481566667	529	Accstem_3p	1	1	Accstem_3p_1	66
-Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-5	65	+	0.08201466667	1051.666667	Accstem_3p	1	1	Accstem_3p_1	66
-Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	13	+	0.8444046667	3672	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-2	13	+	0.828788	1195	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	28	+	0.5586413333	3826.666667	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	39	+	0.5524383333	4398.333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-2	39	+	0.531917	1113	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	54	+	0.58686	10072.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-2	54	+	0.598472	3211	Tloop	2	2	Tloop_2	55
-Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	13	+	0.7169836667	3295	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-2	13	+	0.7467356667	778	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-3	13	+	0.7199676667	799.3333333	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-4	13	+	0.709718	462.6666667	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	55	+	0.531577	32353.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-2	55	+	0.5325806667	8105.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-3	55	+	0.4999953333	26944.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-4	55	+	0.3132993333	11762.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Glu-TTC	tRNA-Nu-Glu-TTC-1	54	+	0.631064	20358.66667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Glu-TTC	tRNA-Nu-Glu-TTC-2	54	+	0.6078386667	7027	Tloop	2	2	Tloop_2	55
-Flower	Nu-Glu-TTC	tRNA-Nu-Glu-TTC-3	54	+	0.539149	3979.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Glu-TTC	tRNA-Nu-Glu-TTC-4	54	+	0.581567	3378	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gly-CCC	tRNA-Nu-Gly-CCC-1	13	+	0.8489653333	4285	Dloop	1	1	Dloop_1	14
-Flower	Nu-Gly-CCC	tRNA-Nu-Gly-CCC-1	53	+	0.7911256667	11533.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	13	+	0.8164263333	33730.33333	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-2	13	+	0.7287493333	1365.666667	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-3	13	+	0.8110146667	10738	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-4	13	+	0.790711	1758	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-5	13	+	0.6903236667	233	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-3	52	+	0.6310486667	7140.666667	Tloop	1	1	Tloop_1	54
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	53	+	0.723541	61687	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-2	53	+	0.7227413333	4447.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-4	53	+	0.6011506667	23932.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-5	53	+	0.507851	1375.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Gly-TCC	tRNA-Nu-Gly-TCC-1	54	+	0.6989753333	53236	Tloop	2	2	Tloop_2	55
-Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	14	+	1	3537.333333	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-His-GTG	tRNA-Nu-His-GTG-2	14	+	0.962503	1298	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-His-GTG	tRNA-Nu-His-GTG-3	14	+	0.9371803333	666.3333333	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-His-GTG	tRNA-Nu-His-GTG-4	14	+	0.071537	445.6666667	Dstem_5p	4	4	Dstem_5p_4	13
-Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	33	+	0.8896136667	6924.333333	Acloop	1	1	Acloop_1	32
-Flower	Nu-His-GTG	tRNA-Nu-His-GTG-2	33	+	0.808229	2134	Acloop	1	1	Acloop_1	32
-Flower	Nu-His-GTG	tRNA-Nu-His-GTG-3	33	+	0.8950433333	2230	Acloop	1	1	Acloop_1	32
-Flower	Nu-His-GTG	tRNA-Nu-His-GTG-4	33	+	0.8418116667	708	Acloop	1	1	Acloop_1	32
-Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-1	28	+	0.5792733333	2128	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	28	+	0.5617756667	2640.666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-1	56	+	0.291422	2659	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	56	+	0.3560746667	4586	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-1	68	+	0.05528566667	2676	Accstem_3p	2	2	Accstem_3p_2	67
-Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-1	29	+	0.5189026667	615.3333333	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-2	29	+	0.5406946667	566.3333333	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-1	35	+	0.3902453333	240.3333333	Acloop	3	3	Acloop_3	34
-Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-1	56	+	0.2222046667	1390.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-2	56	+	0.2700656667	889.3333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-1	41	+	0.6839626667	1241.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	41	+	0.701083	1165	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-1	63	+	0.7939016667	6967	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	63	+	0.79357	6945.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-1	76	+	0.053978	6803.333333	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	76	+	0.053809	6784.666667	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	40	+	0.7477456667	786.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-2	40	+	0.778703	486.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-3	40	+	0.7776053333	527.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-4	40	+	0.7868736667	232	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-5	40	+	0.7189823333	259.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	66	+	0.6907383333	6241.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-2	66	+	0.6723996667	3445.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-3	66	+	0.713458	2594	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-4	66	+	0.63007	2762.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-5	66	+	0.646041	4917.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-CAG	tRNA-Nu-Leu-CAG-1	40	+	0.8604513333	1452.666667	Acloop	7	7	Acloop_7	38
-Flower	Nu-Leu-CAG	tRNA-Nu-Leu-CAG-1	63	+	0.6817346667	3852.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	39	+	0.7239916667	776.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-2	39	+	0.723687	763.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	65	+	0.291509	7339.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-2	65	+	0.290995	7328.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	40	+	0.5483206667	2059.333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-2	40	+	0.3876326667	945.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-3	40	+	0.550677	2046.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	62	+	0.7703916667	11821.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-2	62	+	0.6346356667	1669	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-3	62	+	0.7704916667	11815.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-2	76	+	0.101225	1426.666667	Accstem_3p	4	4	Accstem_3p_4	69
-Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	55	+	0.5608746667	16392.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-2	55	+	0.4039646667	2371.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-3	55	+	0.3770676667	7589.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	68	+	0.7920623333	16146.66667	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-2	68	+	0.6401216667	1895	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-3	68	+	0.753641	7956.666667	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Lys-TTT	tRNA-Nu-Lys-TTT-1	54	+	0.5837546667	16734.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Lys-TTT	tRNA-Nu-Lys-TTT-2	54	+	0.5288003333	13661	Tloop	2	2	Tloop_2	55
-Flower	Nu-Lys-TTT	tRNA-Nu-Lys-TTT-3	54	+	0.5803486667	16529.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Lys-TTT	tRNA-Nu-Lys-TTT-4	54	+	0.5532856667	14788.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	27	+	0.4685653333	1046.333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	39	+	0.466071	972	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	55	+	0.8235386667	5661.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	13	+	0.8389576667	11315	Dloop	1	1	Dloop_1	14
-Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-2	13	+	0.8319216667	11595.66667	Dloop	1	1	Dloop_1	14
-Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-3	13	+	0.830418	6714	Dloop	1	1	Dloop_1	14
-Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	32	+	0.222802	12442	Acloop	2	2	Acloop_2	33
-Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-2	32	+	0.218545	12160	Acloop	2	2	Acloop_2	33
-Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-3	32	+	0.1903296667	6167	Acloop	2	2	Acloop_2	33
-Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	54	+	0.8825706667	11585.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-2	54	+	0.8776713333	11617.66667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-3	54	+	0.8939666667	3461.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-1	13	+	0.8181326667	3565	Dloop	1	1	Dloop_1	14
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	13	+	0.829821	4844	Dloop	1	1	Dloop_1	14
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-3	13	+	0.836865	1541.333333	Dloop	1	1	Dloop_1	14
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-1	32	+	0.4718556667	4137.333333	Acloop	2	2	Acloop_2	33
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	32	+	0.1787823333	3832.333333	Acloop	2	2	Acloop_2	33
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-3	32	+	0.4499696667	1518.666667	Acloop	2	2	Acloop_2	33
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-1	37	+	0.342536	3917.666667	Acloop	7	7	Acloop_7	38
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-3	37	+	0.654648	1413	Acloop	7	7	Acloop_7	38
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-1	54	+	0.822371	3981.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	54	+	0.824106	744.6666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-3	54	+	0.840996	2717.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-1	13	+	0.8220466667	7039.333333	Dloop	1	1	Dloop_1	14
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	13	+	0.818348	11495.33333	Dloop	1	1	Dloop_1	14
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-3	13	+	0.8247136667	6046.666667	Dloop	1	1	Dloop_1	14
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-1	33	+	0.362126	6536.666667	Acloop	3	3	Acloop_3	34
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	33	+	0.3853556667	11982.66667	Acloop	3	3	Acloop_3	34
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-3	33	+	0.3453583333	5023	Acloop	3	3	Acloop_3	34
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-1	37	+	0.2573206667	6181.666667	Acloop	7	7	Acloop_7	38
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	37	+	0.4507706667	11852.33333	Acloop	7	7	Acloop_7	38
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-3	37	+	0.10171	4505	Acloop	7	7	Acloop_7	38
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-1	54	+	0.8163103333	3256.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	54	+	0.8459853333	12410.66667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-3	54	+	0.437258	361.3333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	39	+	0.714472	9676.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-3	39	+	0.652477	326	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-4	39	+	0.7427126667	7913.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-6	39	+	0.6551183333	1661	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-7	39	+	0.667538	1106	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-8	39	+	0.6919216667	2053.333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-9	39	+	0.8151566667	5337.333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	64	+	0.5577966667	22892.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-3	64	+	0.2259506667	9295	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-4	64	+	0.5403383333	21558	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-6	64	+	0.2876356667	10379.33333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-7	64	+	0.436331	1075.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-8	64	+	0.5182063333	3370.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-9	64	+	0.5140143333	19281.66667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	39	+	0.604007	776.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-2	39	+	0.5810943333	186.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-3	39	+	0.6081866667	679.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	64	+	0.6185593333	2205.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-2	64	+	0.4645973333	825.6666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-3	64	+	0.6118156667	1886.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-3	77	+	0.2063906667	1729.666667	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	78	+	0.197081	2063.333333	Accstem_3p	4	4	Accstem_3p_4	69
-Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-2	78	+	0.1499096667	903	Accstem_3p	4	4	Accstem_3p_4	69
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	27	+	0.3885363333	1719.666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-2	27	+	0.3621193333	1454	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-4	27	+	0.3625226667	867.6666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-7	27	+	0.2817933333	240.6666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-3	29	+	0.4568773333	171	Acstem_5p	3	3	Acstem_5p_3	29
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-5	29	+	0.2816593333	226.6666667	Acstem_5p	3	3	Acstem_5p_3	29
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-7	30	+	0.8182586667	93.66666667	Acstem_5p	4	4	Acstem_5p_4	30
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	40	+	0.739071	1643	Acstem_3p	2	2	Acstem_3p_2	40
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-2	40	+	0.732551	1282.333333	Acstem_3p	2	2	Acstem_3p_2	40
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-3	40	+	0.3654033333	188	Acstem_3p	2	2	Acstem_3p_2	40
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-4	40	+	0.7250126667	367	Acstem_3p	2	2	Acstem_3p_2	40
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-5	40	+	0.3954796667	237.6666667	Acstem_3p	2	2	Acstem_3p_2	40
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-6	40	+	0.7012706667	229	Acstem_3p	2	2	Acstem_3p_2	40
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-7	40	+	0.6713943333	76.66666667	Acstem_3p	2	2	Acstem_3p_2	40
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	64	+	0.868442	7677	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-2	64	+	0.8639913333	5592.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-3	64	+	0.8670356667	6360.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-4	64	+	0.8560293333	4273.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-5	64	+	0.8694476667	2552.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-6	64	+	0.854257	4148.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-7	64	+	0.6822786667	261	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	39	+	0.5712646667	746.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-2	39	+	0.6038773333	434.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-3	39	+	0.552659	411.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-4	39	+	0.6416446667	285.3333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	64	+	0.3029496667	1958	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-2	64	+	0.3062413333	1687	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-3	64	+	0.2826116667	1029	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-4	64	+	0.308037	928.6666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	77	+	0.4535883333	1736	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-2	77	+	0.449544	1534.333333	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-3	78	+	0.3662406667	726.6666667	Accstem_3p	4	4	Accstem_3p_4	69
-Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-4	78	+	0.3645066667	698	Accstem_3p	4	4	Accstem_3p_4	69
-Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-1	34	+	0.3832526667	267.3333333	Acloop	2	2	Acloop_2	33
-Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-2	34	+	0.425651	178.3333333	Acloop	2	2	Acloop_2	33
-Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-3	34	+	0.419082	198.3333333	Acloop	2	2	Acloop_2	33
-Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-1	56	+	0.7532843333	1849.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-2	56	+	0.727407	686.3333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-3	56	+	0.7659663333	724.3333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	26	+	0.5198986667	477.3333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-3	26	+	0.5295196667	97	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-2	27	+	0.4838926667	78.66666667	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	32	+	0.6251813333	472.3333333	Acloop	2	2	Acloop_2	33
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-2	32	+	0.5055023333	45.66666667	Acloop	2	2	Acloop_2	33
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-3	32	+	0.58485	94.66666667	Acloop	2	2	Acloop_2	33
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	54	+	0.8702113333	2934.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-2	54	+	0.8224213333	315.3333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-3	54	+	0.8100993333	366.6666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-2	67	+	0.556262	321.3333333	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	26	+	0.6522363333	1608	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-2	26	+	0.635314	1137	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-3	26	+	0.5495423333	517.3333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	54	+	0.8001023333	2462.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-2	54	+	0.7978606667	1708.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-3	54	+	0.5392156667	42	Tloop	2	2	Tloop_2	55
-Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	67	+	0.3830036667	2337.666667	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-3	67	+	0.1920076667	41	Accstem_3p	3	3	Accstem_3p_3	68
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	26	+	0.2911116667	7127	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-2	26	+	0.3213553333	2318.666667	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-3	26	+	0.2718056667	3521.333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	38	+	0.226503	5674.666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-2	38	+	0.22809	2021	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-3	38	+	0.09352233333	1873.333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	54	+	0.817173	3646.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-2	54	+	0.8188113333	1905.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-3	54	+	0.506606	143.6666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	64	+	0.1411803333	3075.666667	Tstem_3p	5	5	Tstem_3p_5	65
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-2	64	+	0.1291896667	1746.333333	Tstem_3p	5	5	Tstem_3p_5	65
-Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-3	64	+	0.1622853333	146	Tstem_3p	5	5	Tstem_3p_5	65
-Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	35	+	0.586288	1424.333333	Acloop	4	4	Acloop_4	35
-Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-10	39	+	0.33178	85.66666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-11	39	+	0.4301586667	28.33333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	39	+	0.5156973333	1427.333333	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-10	55	+	0.231918	13796	Tloop	2	2	Tloop_2	55
-Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-11	55	+	0.2875303333	2245.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	55	+	0.285429	15047.66667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	13	+	0.6508193333	1131.333333	Dloop	1	1	Dloop_1	14
-Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-2	13	+	0.4400453333	118.6666667	Dloop	1	1	Dloop_1	14
-Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	28	+	0.3117806667	1863	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-2	28	+	0.1786006667	113	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	56	+	0.313813	9986.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-2	56	+	0.1970833333	5505.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-2	11	+	0.1030003333	712.3333333	Dstem_5p	2	3	Dstem_5p_3	12
-Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-1	13	+	0.7869506667	2002	Dloop	1	1	Dloop_1	14
-Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-2	13	+	0.6919693333	850.6666667	Dloop	1	1	Dloop_1	14
-Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-1	56	+	0.5182913333	5835.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-2	56	+	0.4944576667	5140.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	13	+	0.571226	626.3333333	Dloop	1	1	Dloop_1	14
-Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-2	13	+	0.7284916667	117	Dloop	1	1	Dloop_1	14
-Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-3	13	+	0.5277476667	403.3333333	Dloop	1	1	Dloop_1	14
-Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-2	27	+	0.464641	186.3333333	Acstem_5p	1	1	Acstem_5p_1	27
-Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	29	+	0.433809	931	Acstem_5p	3	3	Acstem_5p_3	29
-Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-3	29	+	0.5222916667	428.3333333	Acstem_5p	3	3	Acstem_5p_3	29
-Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	55	+	0.7060473333	2381.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-2	55	+	0.6848076667	288.3333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-3	55	+	0.6877926667	193	Tloop	2	2	Tloop_2	55
-Flower	Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	32	+	0.527531	190.6666667	Acstem_5p	5	5	Acstem_5p_5	31
-Flower	Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	40	+	0.4607916667	499.6666667	Acstem_3p	1	1	Acstem_3p_1	39
-Flower	Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	56	+	0.8302326667	6362.666667	Tloop	2	2	Tloop_2	55
-Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	27	+	0.292773	1762.333333	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-2	27	+	0.2830483333	1305.666667	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-3	27	+	0.2777213333	1687.666667	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-4	27	+	0.3202996667	28.66666667	Acstem_5p	2	2	Acstem_5p_2	28
-Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	54	+	0.4755973333	1008.333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-2	54	+	0.6514323333	56.33333333	Tloop	2	2	Tloop_2	55
-Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-3	54	+	0.437079	945.6666667	Tloop	2	2	Tloop_2	55
+tissue	Rep_ID	Representative_ID	chr	pos	strand	ratio	depth	canonical_pos
+Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	tRNA-Nu-Ala-AGC-1	38	+	0.188519	11062.66667	38
+Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	tRNA-Nu-Ala-AGC-2	38	+	0.1287243333	5479.666667	38
+Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	tRNA-Nu-Ala-AGC-3	38	+	0.1912396667	2511.333333	38
+Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	tRNA-Nu-Ala-AGC-1	55	+	0.4684353333	16644.66667	55
+Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	tRNA-Nu-Ala-AGC-2	55	+	0.5205333333	11697.66667	55
+Flower	Nu-Ala-AGC	tRNA-Nu-Ala-AGC-1	tRNA-Nu-Ala-AGC-3	55	+	0.5143443333	13680	55
+Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-1	tRNA-Nu-Ala-CGC-1	38	+	0.2690846667	5796.333333	38
+Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-1	tRNA-Nu-Ala-CGC-2	38	+	0.2689033333	3002.333333	38
+Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-1	tRNA-Nu-Ala-CGC-3	38	+	0.2492753333	2711.333333	38
+Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-1	tRNA-Nu-Ala-CGC-1	55	+	0.6218073333	5724.333333	55
+Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-1	tRNA-Nu-Ala-CGC-2	55	+	0.6581386667	2757	55
+Flower	Nu-Ala-CGC	tRNA-Nu-Ala-CGC-1	tRNA-Nu-Ala-CGC-3	55	+	0.6063636667	4157.666667	55
+Flower	Nu-Ala-TGC	tRNA-Nu-Ala-TGC-1	tRNA-Nu-Ala-TGC-1	38	+	0.25069	16664.66667	38
+Flower	Nu-Ala-TGC	tRNA-Nu-Ala-TGC-1	tRNA-Nu-Ala-TGC-2	38	+	0.200447	1604	38
+Flower	Nu-Ala-TGC	tRNA-Nu-Ala-TGC-1	tRNA-Nu-Ala-TGC-1	55	+	0.632168	14869	55
+Flower	Nu-Ala-TGC	tRNA-Nu-Ala-TGC-1	tRNA-Nu-Ala-TGC-2	55	+	0.688183	1634.666667	55
+Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-1	tRNA-Nu-Arg-ACG-1	55	+	0.70969	11884.33333	55
+Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-1	tRNA-Nu-Arg-ACG-2	55	+	0.7235226667	10553.33333	55
+Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-1	tRNA-Nu-Arg-ACG-3	55	+	0.718156	8851	55
+Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-1	tRNA-Nu-Arg-ACG-4	55	+	0.545484	4777	55
+Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-1	tRNA-Nu-Arg-ACG-5	55	+	0.692311	4294	55
+Flower	Nu-Arg-ACG	tRNA-Nu-Arg-ACG-1	tRNA-Nu-Arg-ACG-6	55	+	0.7574733333	3038.333333	55
+Flower	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	tRNA-Nu-Arg-CCG-1	55	+	0.720146	11787.66667	55
+Flower	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	tRNA-Nu-Arg-CCG-2	55	+	0.250395	147.6666667	55
+Flower	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	tRNA-Nu-Arg-CCG-3	55	+	0.6012993333	167.3333333	55
+Flower	Nu-Arg-CCG	tRNA-Nu-Arg-CCG-1	tRNA-Nu-Arg-CCG-1	68	+	0.189093	11971	68
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-1	27	+	0.2958733333	95.66666667	27
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-2	27	+	0.2988816667	45.66666667	27
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-3	27	+	0.2462053333	35.66666667	27
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-1	33	+	0.3326466667	52	33
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-1	55	+	0.4864633333	2141.333333	55
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-2	55	+	0.5027466667	129.6666667	55
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-3	55	+	0.4819066667	559.3333333	55
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-1	67	+	0.5175863333	2289	67
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-2	67	+	0.6614036667	140.6666667	67
+Flower	Nu-Arg-CCT	tRNA-Nu-Arg-CCT-1	tRNA-Nu-Arg-CCT-3	67	+	0.637116	589.3333333	67
+Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	tRNA-Nu-Arg-TCG-1	28	+	0.477973	1048.666667	27
+Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	tRNA-Nu-Arg-TCG-2	28	+	0.2250766667	536.6666667	27
+Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	tRNA-Nu-Arg-TCG-1	40	+	0.647341	1115.666667	39
+Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	tRNA-Nu-Arg-TCG-2	40	+	0.7040206667	807.6666667	39
+Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	tRNA-Nu-Arg-TCG-1	56	+	0.6571226667	5398.333333	55
+Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	tRNA-Nu-Arg-TCG-2	56	+	0.6484603333	5132.666667	55
+Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	tRNA-Nu-Arg-TCG-1	69	+	0.7582056667	5621	68
+Flower	Nu-Arg-TCG	tRNA-Nu-Arg-TCG-2	tRNA-Nu-Arg-TCG-2	69	+	0.7585503333	5394.666667	68
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-2	27	+	0.2657633333	1612.333333	27
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-4	27	+	0.2563296667	1412	27
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-5	27	+	0.217661	492.6666667	27
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-6	27	+	0.5408133333	1223.666667	27
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-7	27	+	0.094751	177	27
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-1	39	+	0.7357696667	4108.666667	39
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-2	39	+	0.725972	2069	39
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-3	39	+	0.7455776667	1619	39
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-4	39	+	0.738439	1774.333333	39
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-5	39	+	0.7355473333	498.3333333	39
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-6	39	+	0.6684886667	1395.333333	39
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-1	55	+	0.704741	8985	55
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-2	55	+	0.6252713333	8482	55
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-3	55	+	0.703221	3285.333333	55
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-4	55	+	0.599505	8400.333333	55
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-5	55	+	0.544839	7016.666667	55
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-6	55	+	0.689476	3510.666667	55
+Flower	Nu-Arg-TCT	tRNA-Nu-Arg-TCT-2	tRNA-Nu-Arg-TCT-7	55	+	0.5160383333	6450	55
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-1	28	+	0.6350353333	3544.666667	27
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-2	28	+	0.5999323333	2737.333333	27
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-3	28	+	0.6079856667	774	27
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-4	28	+	0.523527	329.3333333	27
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-6	28	+	0.5921726667	2021	27
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-7	28	+	0.556389	1519	27
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-1	56	+	0.679597	8822	55
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-2	56	+	0.5194683333	5556	55
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-3	56	+	0.575574	2148.333333	55
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-4	56	+	0.6509236667	1951	55
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-6	56	+	0.735912	2566	55
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-7	56	+	0.417253	2009	55
+Flower	Nu-Asn-GTT	tRNA-Nu-Asn-GTT-1	tRNA-Nu-Asn-GTT-5	57	+	0.4382643333	191.3333333	55
+Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	tRNA-Nu-Asp-GTC-1	13	+	0.05348	12351	13
+Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	tRNA-Nu-Asp-GTC-2	13	+	0.1531986667	44	13
+Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	tRNA-Nu-Asp-GTC-4	13	+	0.06042533333	2546.333333	13
+Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	tRNA-Nu-Asp-GTC-5	13	+	0.065691	981	13
+Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	tRNA-Nu-Asp-GTC-1	54	+	0.6034813333	70038	55
+Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	tRNA-Nu-Asp-GTC-2	54	+	0.31492	74	55
+Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	tRNA-Nu-Asp-GTC-3	54	+	0.3877283333	1192.666667	55
+Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	tRNA-Nu-Asp-GTC-4	54	+	0.5707943333	7620	55
+Flower	Nu-Asp-GTC	tRNA-Nu-Asp-GTC-1	tRNA-Nu-Asp-GTC-5	54	+	0.3451836667	21618.33333	55
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-10	26	+	0.476835	451	27
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-4	26	+	0.5048303333	358.6666667	27
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-6	26	+	0.09101266667	89.33333333	27
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-7	26	+	0.1066663333	80	27
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-1	27	+	0.6555776667	339.3333333	28
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-10	27	+	0.1446463333	424.3333333	28
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-2	27	+	0.7808446667	1020	28
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-3	27	+	0.688354	67.33333333	28
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-4	27	+	0.1660133333	343.3333333	28
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-5	27	+	0.7486726667	687.6666667	28
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-8	27	+	0.701326	263	28
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-9	27	+	0.484847	120.6666667	28
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-6	28	+	0.5036856667	52.66666667	29
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-7	28	+	0.6245273333	49	29
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-1	38	+	0.6100656667	395	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-10	38	+	0.63134	399.3333333	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-2	38	+	0.660109	1078.333333	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-3	38	+	0.56079	154.3333333	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-4	38	+	0.6597066667	349.6666667	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-5	38	+	0.628816	726	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-6	38	+	0.6402273333	145	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-7	38	+	0.6204016667	147.3333333	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-8	38	+	0.6305183333	330	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-9	38	+	0.5340166667	82.33333333	39
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-1	54	+	0.5305776667	1727.666667	55
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-10	54	+	0.4339303333	3377.333333	55
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-2	54	+	0.6288296667	2398.333333	55
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-3	54	+	0.385354	2995	55
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-4	54	+	0.4728413333	1300.333333	55
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-5	54	+	0.4526623333	3537.333333	55
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-6	54	+	0.4062346667	3140	55
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-7	54	+	0.483951	1136	55
+Flower	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	tRNA-Nu-Cys-GCA-8	54	+	0.4074286667	3162	55
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-1	13	+	0.8216246667	3420.666667	13
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-2	13	+	0.7995116667	461.6666667	13
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-3	13	+	0.8041116667	266.6666667	13
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-4	13	+	0.817581	2133.666667	13
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-5	13	+	0.794188	294.6666667	13
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-1	27	+	0.796188	4692.666667	27
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-2	27	+	0.777853	822.3333333	27
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-3	27	+	0.7725396667	392	27
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-5	27	+	0.758891	469.6666667	27
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-1	39	+	0.6940603333	6544.666667	39
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-2	39	+	0.6648403333	1309.666667	39
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-3	39	+	0.6553833333	580	39
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-4	39	+	0.6990163333	2399.666667	39
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-5	39	+	0.6564233333	697.6666667	39
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-1	54	+	0.878002	7621	55
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-2	54	+	0.8317283333	1369.333333	55
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-3	54	+	0.8168963333	555.3333333	55
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-4	54	+	0.890026	2858	55
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-5	54	+	0.839004	1097.333333	55
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-2	65	+	0.3777556667	1273.333333	66
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-3	65	+	0.08481566667	529	66
+Flower	Nu-Gln-CTG	tRNA-Nu-Gln-CTG-1	tRNA-Nu-Gln-CTG-5	65	+	0.08201466667	1051.666667	66
+Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-1	13	+	0.8444046667	3672	13
+Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-2	13	+	0.828788	1195	13
+Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-1	28	+	0.5586413333	3826.666667	28
+Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-1	39	+	0.5524383333	4398.333333	39
+Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-2	39	+	0.531917	1113	39
+Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-1	54	+	0.58686	10072.33333	55
+Flower	Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	tRNA-Nu-Gln-TTG-2	54	+	0.598472	3211	55
+Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	tRNA-Nu-Glu-CTC-1	13	+	0.7169836667	3295	13
+Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	tRNA-Nu-Glu-CTC-2	13	+	0.7467356667	778	13
+Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	tRNA-Nu-Glu-CTC-3	13	+	0.7199676667	799.3333333	13
+Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	tRNA-Nu-Glu-CTC-4	13	+	0.709718	462.6666667	13
+Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	tRNA-Nu-Glu-CTC-1	55	+	0.531577	32353.33333	55
+Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	tRNA-Nu-Glu-CTC-2	55	+	0.5325806667	8105.333333	55
+Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	tRNA-Nu-Glu-CTC-3	55	+	0.4999953333	26944.33333	55
+Flower	Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	tRNA-Nu-Glu-CTC-4	55	+	0.3132993333	11762.33333	55
+Flower	Nu-Glu-TTC	tRNA-Nu-Glu-TTC-1	tRNA-Nu-Glu-TTC-1	54	+	0.631064	20358.66667	55
+Flower	Nu-Glu-TTC	tRNA-Nu-Glu-TTC-1	tRNA-Nu-Glu-TTC-2	54	+	0.6078386667	7027	55
+Flower	Nu-Glu-TTC	tRNA-Nu-Glu-TTC-1	tRNA-Nu-Glu-TTC-3	54	+	0.539149	3979.666667	55
+Flower	Nu-Glu-TTC	tRNA-Nu-Glu-TTC-1	tRNA-Nu-Glu-TTC-4	54	+	0.581567	3378	55
+Flower	Nu-Gly-CCC	tRNA-Nu-Gly-CCC-1	tRNA-Nu-Gly-CCC-1	13	+	0.8489653333	4285	14
+Flower	Nu-Gly-CCC	tRNA-Nu-Gly-CCC-1	tRNA-Nu-Gly-CCC-1	53	+	0.7911256667	11533.33333	55
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-1	13	+	0.8164263333	33730.33333	13
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-3	13	+	0.8110146667	10738	13
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-4	13	+	0.790711	1758	13
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-2	13	+	0.7287493333	1365.666667	14
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-5	13	+	0.6903236667	233	14
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-3	52	+	0.6310486667	7140.666667	54
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-1	53	+	0.723541	61687	55
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-2	53	+	0.7227413333	4447.666667	55
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-4	53	+	0.6011506667	23932.33333	55
+Flower	Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	tRNA-Nu-Gly-GCC-5	53	+	0.507851	1375.666667	55
+Flower	Nu-Gly-TCC	tRNA-Nu-Gly-TCC-1	tRNA-Nu-Gly-TCC-1	54	+	0.6989753333	53236	55
+Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	tRNA-Nu-His-GTG-1	14	+	1	3537.333333	13
+Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	tRNA-Nu-His-GTG-2	14	+	0.962503	1298	13
+Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	tRNA-Nu-His-GTG-3	14	+	0.9371803333	666.3333333	13
+Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	tRNA-Nu-His-GTG-4	14	+	0.071537	445.6666667	13
+Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	tRNA-Nu-His-GTG-1	33	+	0.8896136667	6924.333333	32
+Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	tRNA-Nu-His-GTG-2	33	+	0.808229	2134	32
+Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	tRNA-Nu-His-GTG-3	33	+	0.8950433333	2230	32
+Flower	Nu-His-GTG	tRNA-Nu-His-GTG-1	tRNA-Nu-His-GTG-4	33	+	0.8418116667	708	32
+Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	tRNA-Nu-Ile-AAT-1	28	+	0.5792733333	2128	27
+Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	tRNA-Nu-Ile-AAT-2	28	+	0.5617756667	2640.666667	27
+Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	tRNA-Nu-Ile-AAT-1	56	+	0.291422	2659	55
+Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	tRNA-Nu-Ile-AAT-2	56	+	0.3560746667	4586	55
+Flower	Nu-Ile-AAT	tRNA-Nu-Ile-AAT-2	tRNA-Nu-Ile-AAT-1	68	+	0.05528566667	2676	67
+Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-1	tRNA-Nu-Ile-TAT-1	29	+	0.5189026667	615.3333333	28
+Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-1	tRNA-Nu-Ile-TAT-2	29	+	0.5406946667	566.3333333	28
+Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-1	tRNA-Nu-Ile-TAT-1	35	+	0.3902453333	240.3333333	34
+Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-1	tRNA-Nu-Ile-TAT-1	56	+	0.2222046667	1390.666667	55
+Flower	Nu-Ile-TAT	tRNA-Nu-Ile-TAT-1	tRNA-Nu-Ile-TAT-2	56	+	0.2700656667	889.3333333	55
+Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	tRNA-Nu-Leu-AAG-1	41	+	0.6839626667	1241.666667	39
+Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	tRNA-Nu-Leu-AAG-2	41	+	0.701083	1165	39
+Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	tRNA-Nu-Leu-AAG-1	63	+	0.7939016667	6967	55
+Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	tRNA-Nu-Leu-AAG-2	63	+	0.79357	6945.333333	55
+Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	tRNA-Nu-Leu-AAG-1	76	+	0.053978	6803.333333	68
+Flower	Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	tRNA-Nu-Leu-AAG-2	76	+	0.053809	6784.666667	68
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-1	40	+	0.7477456667	786.3333333	39
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-2	40	+	0.778703	486.6666667	39
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-3	40	+	0.7776053333	527.6666667	39
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-4	40	+	0.7868736667	232	39
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-5	40	+	0.7189823333	259.3333333	39
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-1	66	+	0.6907383333	6241.333333	55
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-2	66	+	0.6723996667	3445.666667	55
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-3	66	+	0.713458	2594	55
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-4	66	+	0.63007	2762.333333	55
+Flower	Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-5	66	+	0.646041	4917.333333	55
+Flower	Nu-Leu-CAG	tRNA-Nu-Leu-CAG-1	tRNA-Nu-Leu-CAG-1	40	+	0.8604513333	1452.666667	38
+Flower	Nu-Leu-CAG	tRNA-Nu-Leu-CAG-1	tRNA-Nu-Leu-CAG-1	63	+	0.6817346667	3852.666667	55
+Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	tRNA-Nu-Leu-TAA-1	39	+	0.7239916667	776.3333333	39
+Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	tRNA-Nu-Leu-TAA-2	39	+	0.723687	763.6666667	39
+Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	tRNA-Nu-Leu-TAA-3	40	+	0.8368503333	280.3333333	39
+Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	tRNA-Nu-Leu-TAA-1	65	+	0.291509	7339.666667	55
+Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	tRNA-Nu-Leu-TAA-2	65	+	0.290995	7328.666667	55
+Flower	Nu-Leu-TAA	tRNA-Nu-Leu-TAA-1	tRNA-Nu-Leu-TAA-3	66	+	0.7399843333	1997	55
+Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-1	40	+	0.5483206667	2059.333333	39
+Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-2	40	+	0.3876326667	945.6666667	39
+Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-3	40	+	0.550677	2046.666667	39
+Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-1	62	+	0.7703916667	11821.33333	55
+Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-2	62	+	0.6346356667	1669	55
+Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-3	62	+	0.7704916667	11815.33333	55
+Flower	Nu-Leu-TAG	tRNA-Nu-Leu-TAG-1	tRNA-Nu-Leu-TAG-2	76	+	0.101225	1426.666667	69
+Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	tRNA-Nu-Lys-CTT-1	55	+	0.5608746667	16392.33333	55
+Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	tRNA-Nu-Lys-CTT-2	55	+	0.4039646667	2371.666667	55
+Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	tRNA-Nu-Lys-CTT-3	55	+	0.3770676667	7589.333333	55
+Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	tRNA-Nu-Lys-CTT-1	68	+	0.7920623333	16146.66667	68
+Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	tRNA-Nu-Lys-CTT-2	68	+	0.6401216667	1895	68
+Flower	Nu-Lys-CTT	tRNA-Nu-Lys-CTT-1	tRNA-Nu-Lys-CTT-3	68	+	0.753641	7956.666667	68
+Flower	Nu-Lys-TTT	tRNA-Nu-Lys-TTT-1	tRNA-Nu-Lys-TTT-1	54	+	0.5837546667	16734.33333	55
+Flower	Nu-Lys-TTT	tRNA-Nu-Lys-TTT-1	tRNA-Nu-Lys-TTT-2	54	+	0.5288003333	13661	55
+Flower	Nu-Lys-TTT	tRNA-Nu-Lys-TTT-1	tRNA-Nu-Lys-TTT-3	54	+	0.5803486667	16529.33333	55
+Flower	Nu-Lys-TTT	tRNA-Nu-Lys-TTT-1	tRNA-Nu-Lys-TTT-4	54	+	0.5532856667	14788.33333	55
+Flower	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	tRNA-Nu-Phe-GAA-1	27	+	0.4685653333	1046.333333	27
+Flower	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	tRNA-Nu-Phe-GAA-1	39	+	0.466071	972	39
+Flower	Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	tRNA-Nu-Phe-GAA-1	55	+	0.8235386667	5661.666667	55
+Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	tRNA-Nu-Pro-AGG-1	13	+	0.8389576667	11315	14
+Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	tRNA-Nu-Pro-AGG-2	13	+	0.8319216667	11595.66667	14
+Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	tRNA-Nu-Pro-AGG-3	13	+	0.830418	6714	14
+Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	tRNA-Nu-Pro-AGG-1	32	+	0.222802	12442	33
+Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	tRNA-Nu-Pro-AGG-2	32	+	0.218545	12160	33
+Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	tRNA-Nu-Pro-AGG-3	32	+	0.1903296667	6167	33
+Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	tRNA-Nu-Pro-AGG-1	54	+	0.8825706667	11585.33333	55
+Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	tRNA-Nu-Pro-AGG-2	54	+	0.8776713333	11617.66667	55
+Flower	Nu-Pro-AGG	tRNA-Nu-Pro-AGG-1	tRNA-Nu-Pro-AGG-3	54	+	0.8939666667	3461.333333	55
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-1	13	+	0.8181326667	3565	14
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-2	13	+	0.829821	4844	14
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-3	13	+	0.836865	1541.333333	14
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-1	32	+	0.4718556667	4137.333333	33
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-2	32	+	0.1787823333	3832.333333	33
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-3	32	+	0.4499696667	1518.666667	33
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-1	37	+	0.342536	3917.666667	38
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-3	37	+	0.654648	1413	38
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-1	54	+	0.822371	3981.333333	55
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-2	54	+	0.824106	744.6666667	55
+Flower	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	tRNA-Nu-Pro-CGG-3	54	+	0.840996	2717.333333	55
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-1	13	+	0.8220466667	7039.333333	14
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-2	13	+	0.818348	11495.33333	14
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-3	13	+	0.8247136667	6046.666667	14
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-1	33	+	0.362126	6536.666667	34
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-2	33	+	0.3853556667	11982.66667	34
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-3	33	+	0.3453583333	5023	34
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-1	37	+	0.2573206667	6181.666667	38
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-2	37	+	0.4507706667	11852.33333	38
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-3	37	+	0.10171	4505	38
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-1	54	+	0.8163103333	3256.333333	55
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-2	54	+	0.8459853333	12410.66667	55
+Flower	Nu-Pro-TGG	tRNA-Nu-Pro-TGG-2	tRNA-Nu-Pro-TGG-3	54	+	0.437258	361.3333333	55
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-1	39	+	0.714472	9676.666667	39
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-3	39	+	0.652477	326	39
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-4	39	+	0.7427126667	7913.666667	39
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-6	39	+	0.6551183333	1661	39
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-7	39	+	0.667538	1106	39
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-8	39	+	0.6919216667	2053.333333	39
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-9	39	+	0.8151566667	5337.333333	39
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-5	41	+	0.8131	352.3333333	39
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-1	64	+	0.5577966667	22892.33333	55
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-3	64	+	0.2259506667	9295	55
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-4	64	+	0.5403383333	21558	55
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-6	64	+	0.2876356667	10379.33333	55
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-7	64	+	0.436331	1075.333333	55
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-8	64	+	0.5182063333	3370.666667	55
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-9	64	+	0.5140143333	19281.66667	55
+Flower	Nu-Ser-AGA	tRNA-Nu-Ser-AGA-1	tRNA-Nu-Ser-AGA-5	66	+	0.2866666667	446.3333333	55
+Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	tRNA-Nu-Ser-CGA-1	39	+	0.604007	776.3333333	39
+Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	tRNA-Nu-Ser-CGA-2	39	+	0.5810943333	186.6666667	39
+Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	tRNA-Nu-Ser-CGA-3	39	+	0.6081866667	679.6666667	39
+Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	tRNA-Nu-Ser-CGA-1	64	+	0.6185593333	2205.666667	55
+Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	tRNA-Nu-Ser-CGA-2	64	+	0.4645973333	825.6666667	55
+Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	tRNA-Nu-Ser-CGA-3	64	+	0.6118156667	1886.333333	55
+Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	tRNA-Nu-Ser-CGA-3	77	+	0.2063906667	1729.666667	68
+Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	tRNA-Nu-Ser-CGA-1	78	+	0.197081	2063.333333	69
+Flower	Nu-Ser-CGA	tRNA-Nu-Ser-CGA-1	tRNA-Nu-Ser-CGA-2	78	+	0.1499096667	903	69
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-1	27	+	0.3885363333	1719.666667	27
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-2	27	+	0.3621193333	1454	27
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-4	27	+	0.3625226667	867.6666667	27
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-7	27	+	0.2817933333	240.6666667	27
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-3	29	+	0.4568773333	171	29
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-5	29	+	0.2816593333	226.6666667	29
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-7	30	+	0.8182586667	93.66666667	30
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-1	40	+	0.739071	1643	40
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-2	40	+	0.732551	1282.333333	40
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-3	40	+	0.3654033333	188	40
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-4	40	+	0.7250126667	367	40
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-5	40	+	0.3954796667	237.6666667	40
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-6	40	+	0.7012706667	229	40
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-7	40	+	0.6713943333	76.66666667	40
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-1	64	+	0.868442	7677	55
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-2	64	+	0.8639913333	5592.666667	55
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-3	64	+	0.8670356667	6360.666667	55
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-4	64	+	0.8560293333	4273.333333	55
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-5	64	+	0.8694476667	2552.333333	55
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-6	64	+	0.854257	4148.666667	55
+Flower	Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	tRNA-Nu-Ser-GCT-7	64	+	0.6822786667	261	55
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-1	39	+	0.5712646667	746.3333333	39
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-2	39	+	0.6038773333	434.3333333	39
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-3	39	+	0.552659	411.3333333	39
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-4	39	+	0.6416446667	285.3333333	39
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-1	64	+	0.3029496667	1958	55
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-2	64	+	0.3062413333	1687	55
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-3	64	+	0.2826116667	1029	55
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-4	64	+	0.308037	928.6666667	55
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-1	77	+	0.4535883333	1736	68
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-2	77	+	0.449544	1534.333333	68
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-3	78	+	0.3662406667	726.6666667	69
+Flower	Nu-Ser-TGA	tRNA-Nu-Ser-TGA-1	tRNA-Nu-Ser-TGA-4	78	+	0.3645066667	698	69
+Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-1	tRNA-Nu-Thr-AGT-1	34	+	0.3832526667	267.3333333	33
+Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-1	tRNA-Nu-Thr-AGT-2	34	+	0.425651	178.3333333	33
+Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-1	tRNA-Nu-Thr-AGT-3	34	+	0.419082	198.3333333	33
+Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-1	tRNA-Nu-Thr-AGT-1	56	+	0.7532843333	1849.666667	55
+Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-1	tRNA-Nu-Thr-AGT-2	56	+	0.727407	686.3333333	55
+Flower	Nu-Thr-AGT	tRNA-Nu-Thr-AGT-1	tRNA-Nu-Thr-AGT-3	56	+	0.7659663333	724.3333333	55
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-1	26	+	0.5198986667	477.3333333	27
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-3	26	+	0.5295196667	97	27
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-2	27	+	0.4838926667	78.66666667	28
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-1	32	+	0.6251813333	472.3333333	33
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-2	32	+	0.5055023333	45.66666667	33
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-3	32	+	0.58485	94.66666667	33
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-1	54	+	0.8702113333	2934.333333	55
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-2	54	+	0.8224213333	315.3333333	55
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-3	54	+	0.8100993333	366.6666667	55
+Flower	Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	tRNA-Nu-Thr-CGT-2	67	+	0.556262	321.3333333	68
+Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	tRNA-Nu-Thr-TGT-1	26	+	0.6522363333	1608	27
+Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	tRNA-Nu-Thr-TGT-2	26	+	0.635314	1137	27
+Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	tRNA-Nu-Thr-TGT-3	26	+	0.5495423333	517.3333333	27
+Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	tRNA-Nu-Thr-TGT-1	54	+	0.8001023333	2462.666667	55
+Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	tRNA-Nu-Thr-TGT-2	54	+	0.7978606667	1708.666667	55
+Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	tRNA-Nu-Thr-TGT-3	54	+	0.5392156667	42	55
+Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	tRNA-Nu-Thr-TGT-1	67	+	0.3830036667	2337.666667	68
+Flower	Nu-Thr-TGT	tRNA-Nu-Thr-TGT-1	tRNA-Nu-Thr-TGT-3	67	+	0.1920076667	41	68
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-1	26	+	0.2911116667	7127	27
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-2	26	+	0.3213553333	2318.666667	27
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-3	26	+	0.2718056667	3521.333333	27
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-1	38	+	0.226503	5674.666667	39
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-2	38	+	0.22809	2021	39
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-3	38	+	0.09352233333	1873.333333	39
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-1	54	+	0.817173	3646.333333	55
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-2	54	+	0.8188113333	1905.666667	55
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-3	54	+	0.506606	143.6666667	55
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-1	64	+	0.1411803333	3075.666667	65
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-2	64	+	0.1291896667	1746.333333	65
+Flower	Nu-Trp-CCA	tRNA-Nu-Trp-CCA-1	tRNA-Nu-Trp-CCA-3	64	+	0.1622853333	146	65
+Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-2	35	+	0.586288	1424.333333	35
+Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-10	39	+	0.33178	85.66666667	39
+Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-11	39	+	0.4301586667	28.33333333	39
+Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-2	39	+	0.5156973333	1427.333333	39
+Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-10	55	+	0.231918	13796	55
+Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-11	55	+	0.2875303333	2245.666667	55
+Flower	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	tRNA-Nu-Tyr-GTA-2	55	+	0.285429	15047.66667	55
+Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	tRNA-Nu-Val-AAC-1	13	+	0.6508193333	1131.333333	14
+Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	tRNA-Nu-Val-AAC-2	13	+	0.4400453333	118.6666667	14
+Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	tRNA-Nu-Val-AAC-1	28	+	0.3117806667	1863	27
+Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	tRNA-Nu-Val-AAC-2	28	+	0.1786006667	113	27
+Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	tRNA-Nu-Val-AAC-1	56	+	0.313813	9986.333333	55
+Flower	Nu-Val-AAC	tRNA-Nu-Val-AAC-1	tRNA-Nu-Val-AAC-2	56	+	0.1970833333	5505.666667	55
+Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-1	tRNA-Nu-Val-CAC-2	11	+	0.1030003333	712.3333333	12
+Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-1	tRNA-Nu-Val-CAC-1	13	+	0.7869506667	2002	14
+Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-1	tRNA-Nu-Val-CAC-2	13	+	0.6919693333	850.6666667	14
+Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-1	tRNA-Nu-Val-CAC-1	56	+	0.5182913333	5835.333333	55
+Flower	Nu-Val-CAC	tRNA-Nu-Val-CAC-1	tRNA-Nu-Val-CAC-2	56	+	0.4944576667	5140.666667	55
+Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-1	13	+	0.571226	626.3333333	14
+Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-2	13	+	0.7284916667	117	14
+Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-3	13	+	0.5277476667	403.3333333	14
+Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-2	27	+	0.464641	186.3333333	27
+Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-1	29	+	0.433809	931	29
+Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-3	29	+	0.5222916667	428.3333333	29
+Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-1	55	+	0.7060473333	2381.666667	55
+Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-2	55	+	0.6848076667	288.3333333	55
+Flower	Nu-Val-TAC	tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-3	55	+	0.6877926667	193	55
+Flower	Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	tRNA-Nu-eMet-CAT-1	32	+	0.527531	190.6666667	31
+Flower	Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	tRNA-Nu-eMet-CAT-1	40	+	0.4607916667	499.6666667	39
+Flower	Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	tRNA-Nu-eMet-CAT-1	56	+	0.8302326667	6362.666667	55
+Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	tRNA-Nu-iMet-CAT-1	27	+	0.292773	1762.333333	28
+Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	tRNA-Nu-iMet-CAT-2	27	+	0.2830483333	1305.666667	28
+Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	tRNA-Nu-iMet-CAT-3	27	+	0.2777213333	1687.666667	28
+Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	tRNA-Nu-iMet-CAT-4	27	+	0.3202996667	28.66666667	28
+Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	tRNA-Nu-iMet-CAT-1	54	+	0.4755973333	1008.333333	55
+Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	tRNA-Nu-iMet-CAT-2	54	+	0.6514323333	56.33333333	55
+Flower	Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	tRNA-Nu-iMet-CAT-3	54	+	0.437079	945.6666667	55

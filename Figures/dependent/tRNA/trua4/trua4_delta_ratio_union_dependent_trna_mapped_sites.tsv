@@ -1,28 +1,39 @@
-ID	chr	Rep_ID	display_Rep_ID	compartment	matrix_col_id	value	n_sites	native_positions	tissues	peak_tissues	canonical_pos
-tRNA-Mt-Asn-GTT-1	tRNA-Mt-Asn-GTT-1	Mt-Asn-GTT	Mt-Asn-GTT	Mt	Acstem_3p_2	0.291034	1	39	leaf,Flower	Flower	40
-tRNA-Mt-Ile-CAT-1	tRNA-Mt-Ile-CAT-1	Mt-Ile-CAT	Mt-Ile-CAT	Mt	Tloop_2	0.0639248	1	56	leaf	leaf	55
-tRNA-Mt-Pro-TGG-1	tRNA-Mt-Pro-TGG-1	Mt-Pro-TGG	Mt-Pro-TGG	Mt	Acstem_5p_1	0.082142	1	29	Root	Root	27
-tRNA-Mt-Trp-CCA-1	tRNA-Mt-Trp-CCA-1	Mt-Trp-CCA	Mt-Trp-CCA	Mt	Tloop_2	0.0597327	1	56	leaf	leaf	55
-tRNA-Nu-Cys-GCA-5	tRNA-Nu-Cys-GCA-5	Nu-Cys-GCA	Cy-Cys-GCA	Cy	Acstem_5p_2	0.0511683	1	27	leaf	leaf	28
-tRNA-Nu-Leu-AAG-1	tRNA-Nu-Leu-AAG-1	Nu-Leu-AAG	Cy-Leu-AAG	Cy	Acstem_3p_1	0.101641	1	41	Root	Root	39
-tRNA-Nu-Leu-CAA-1	tRNA-Nu-Leu-CAA-1	Nu-Leu-CAA	Cy-Leu-CAA	Cy	Acstem_3p_1	0.0996468	1	40	Root	Root	39
-tRNA-Nu-Leu-CAG-1	tRNA-Nu-Leu-CAG-1	Nu-Leu-CAG	Cy-Leu-CAG	Cy	Acloop_7	0.143042	1	40	Root	Root	38
-tRNA-Nu-Phe-GAA-1	tRNA-Nu-Phe-GAA-1	Nu-Phe-GAA	Cy-Phe-GAA	Cy	Acstem_5p_1	0.0824427	1	27	Root	Root	27
-tRNA-Nu-Val-TAC-1	tRNA-Nu-Val-TAC-1	Nu-Val-TAC	Cy-Val-TAC	Cy	Dloop_1	0.0626835	1	13	Root	Root	14
-tRNA-Nu-eMet-CAT-1	tRNA-Nu-eMet-CAT-1	Nu-eMet-CAT	Cy-eMet-CAT	Cy	Acstem_3p_1	0.0842575	1	40	leaf	leaf	39
-tRNA-Pt-Arg-TCT-1	tRNA-Pt-Arg-TCT-1	Pt-Arg-TCT	Pt-Arg-TCT	Pt	Tloop_2	0.0633158	1	54	leaf	leaf	55
-tRNA-Pt-Asn-GTT-1	tRNA-Pt-Asn-GTT-1	Pt-Asn-GTT	Pt-Asn-GTT	Pt	Acstem_3p_2	0.427324	1	39	leaf,Flower	leaf	40
-tRNA-Pt-Cys-GCA-1	tRNA-Pt-Cys-GCA-1	Pt-Cys-GCA	Pt-Cys-GCA	Pt	Acstem_3p_1	0.106732	1	38	leaf,Flower	leaf	39
-tRNA-Pt-Glu-TTC-1	tRNA-Pt-Glu-TTC-1	Pt-Glu-TTC	Pt-Glu-TTC	Pt	Acloop_4	0.0517472	1	36	leaf	leaf	35
-tRNA-Pt-His-GTG-1	tRNA-Pt-His-GTG-1	Pt-His-GTG	Pt-His-GTG	Pt	Acstem_3p_1	0.49321	1	41	Root,leaf,Flower	Root	39
-tRNA-Pt-Leu-CAA-1	tRNA-Pt-Leu-CAA-1	Pt-Leu-CAA	Pt-Leu-CAA	Pt	Acstem_3p_1	0.279858	1	39	leaf,Flower	leaf	39
-tRNA-Pt-Leu-TAA-1	tRNA-Pt-Leu-TAA-1	Pt-Leu-TAA	Pt-Leu-TAA	Pt	Acstem_3p_1	0.0717937	1	40	leaf	leaf	39
-tRNA-Pt-Lys-TTT-1	tRNA-Pt-Lys-TTT-1	Pt-Lys-TTT	Pt-Lys-TTT	Pt	Acstem_5p_2	0.0713333	1	27	leaf	leaf	28
-tRNA-Pt-Pro-TGG-1	tRNA-Pt-Pro-TGG-1	Pt-Pro-TGG	Pt-Pro-TGG	Pt	Acloop_3	0.10729	1	35	leaf,Flower	leaf	34
-tRNA-Pt-Pro-TGG-1	tRNA-Pt-Pro-TGG-1	Pt-Pro-TGG	Pt-Pro-TGG	Pt	Acloop_7	0.46517	1	39	leaf,Flower	leaf	38
-tRNA-Pt-Ser-GCT-1	tRNA-Pt-Ser-GCT-1	Pt-Ser-GCT	Pt-Ser-GCT	Pt	Acstem_3p_1	0.16513	1	40	leaf,Flower	leaf	39
-tRNA-Pt-Thr-GGT-1	tRNA-Pt-Thr-GGT-1	Pt-Thr-GGT	Pt-Thr-GGT	Pt	Tloop_2	0.0792112	1	54	leaf	leaf	55
-tRNA-Pt-Thr-TGT-1	tRNA-Pt-Thr-TGT-1	Pt-Thr-TGT	Pt-Thr-TGT	Pt	Acstem_3p_1	0.268722	1	39	leaf,Flower	Flower	39
-tRNA-Pt-Trp-CCA-1	tRNA-Pt-Trp-CCA-1	Pt-Trp-CCA	Pt-Trp-CCA	Pt	Tloop_2	0.0596995	1	56	leaf	leaf	55
-tRNA-Pt-Tyr-GTA-1	tRNA-Pt-Tyr-GTA-1	Pt-Tyr-GTA	Pt-Tyr-GTA	Pt	Acstem_3p_1	0.430011	1	40	Root,leaf,Flower	Flower	39
-tRNA-Pt-iMet-CAT-1	tRNA-Pt-iMet-CAT-1	Pt-iMet-CAT	Pt-iMet-CAT	Pt	Tloop_2	0.090109	1	56	Root	Root	55
+Rep_ID	Representative_ID	display_Rep_ID	compartment	family_rank	matrix_col_id	value	n_sites	native_positions	native_chrs	tissues	peak_tissues	canonical_pos
+Mt-Asn-GTT	tRNA-Mt-Asn-GTT-1	Mt-Asn-GTT	Mt	1	Acstem_3p_2	0.291034	1	39	tRNA-Mt-Asn-GTT-1	leaf,Flower	Flower	40
+Mt-Ile-CAT	tRNA-Mt-Ile-CAT-1	Mt-Ile-CAT	Mt	8	Tloop_2	0.0639248	1	56	tRNA-Mt-Ile-CAT-1	leaf	leaf	55
+Mt-Pro-TGG	tRNA-Mt-Pro-TGG-1	Mt-Pro-TGG	Mt	10	Acstem_5p_1	0.082142	1	29	tRNA-Mt-Pro-TGG-1	Root	Root	27
+Mt-Trp-CCA	tRNA-Mt-Trp-CCA-1	Mt-Trp-CCA	Mt	14	Tloop_2	0.0597327	1	56	tRNA-Mt-Trp-CCA-1	leaf	leaf	55
+Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_5p_2	0.130015	3	27	tRNA-Nu-Cys-GCA-1,tRNA-Nu-Cys-GCA-5,tRNA-Nu-Cys-GCA-9	leaf	leaf	28
+Nu-Glu-CTC	tRNA-Nu-Glu-CTC-1	Cy-Glu-CTC	Cy	31	Dstem_5p_4	0.0726242	1	13	tRNA-Nu-Glu-CTC-3	Root	Root	13
+Nu-Gly-GCC	tRNA-Nu-Gly-GCC-1	Cy-Gly-GCC	Cy	34	Tloop_1	0.122081	1	52	tRNA-Nu-Gly-GCC-3	Root	Root	54
+Nu-Leu-AAG	tRNA-Nu-Leu-AAG-2	Cy-Leu-AAG	Cy	39	Acstem_3p_1	0.101641	2	41	tRNA-Nu-Leu-AAG-1,tRNA-Nu-Leu-AAG-2	Root	Root	39
+Nu-Leu-CAA	tRNA-Nu-Leu-CAA-1	Cy-Leu-CAA	Cy	40	Acstem_3p_1	0.124467	5	40	tRNA-Nu-Leu-CAA-1,tRNA-Nu-Leu-CAA-2,tRNA-Nu-Leu-CAA-3,tRNA-Nu-Leu-CAA-4,tRNA-Nu-Leu-CAA-5	Root	Root	39
+Nu-Leu-CAG	tRNA-Nu-Leu-CAG-1	Cy-Leu-CAG	Cy	41	Acloop_7	0.143042	1	40	tRNA-Nu-Leu-CAG-1	Root	Root	38
+Nu-Phe-GAA	tRNA-Nu-Phe-GAA-1	Cy-Phe-GAA	Cy	46	Acstem_5p_1	0.0824427	1	27	tRNA-Nu-Phe-GAA-1	Root	Root	27
+Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	Cy-Pro-CGG	Cy	48	Acloop_7	0.100413	1	37	tRNA-Nu-Pro-CGG-3	Root	Root	38
+Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	52	Acstem_5p_1	0.055898	1	27	tRNA-Nu-Ser-GCT-7	Flower	Flower	27
+Nu-Ser-GCT	tRNA-Nu-Ser-GCT-1	Cy-Ser-GCT	Cy	52	Acstem_5p_3	0.104972	1	29	tRNA-Nu-Ser-GCT-5	Root	Root	29
+Nu-Thr-AGT	tRNA-Nu-Thr-AGT-1	Cy-Thr-AGT	Cy	54	Acloop_2	0.0684077	2	34	tRNA-Nu-Thr-AGT-2,tRNA-Nu-Thr-AGT-3	leaf;leaf,Flower	leaf	33
+Nu-Thr-CGT	tRNA-Nu-Thr-CGT-1	Cy-Thr-CGT	Cy	55	Acstem_5p_1	0.079061	1	26	tRNA-Nu-Thr-CGT-3	leaf	leaf	27
+Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	Cy-Tyr-GTA	Cy	58	Acloop_4	0.125779	1	35	tRNA-Nu-Tyr-GTA-1	leaf	leaf	35
+Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	Cy-Tyr-GTA	Cy	58	Acstem_3p_1	0.137765	1	39	tRNA-Nu-Tyr-GTA-11	leaf	leaf	39
+Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	61	Acstem_5p_3	0.087849	1	29	tRNA-Nu-Val-TAC-3	Root	Root	29
+Nu-Val-TAC	tRNA-Nu-Val-TAC-1	Cy-Val-TAC	Cy	61	Dloop_1	0.0898265	2	13	tRNA-Nu-Val-TAC-1,tRNA-Nu-Val-TAC-3	Root	Root	14
+Nu-eMet-CAT	tRNA-Nu-eMet-CAT-1	Cy-eMet-CAT	Cy	62	Acstem_3p_1	0.0842575	1	40	tRNA-Nu-eMet-CAT-1	leaf	leaf	39
+Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	Cy-iMet-CAT	Cy	63	Tloop_2	0.0757652	1	54	tRNA-Nu-iMet-CAT-2	Flower	Flower	55
+Pt-Arg-TCT	tRNA-Pt-Arg-TCT-1	Pt-Arg-TCT	Pt	66	Tloop_2	0.0633158	1	54	tRNA-Pt-Arg-TCT-1	leaf	leaf	55
+Pt-Asn-GTT	tRNA-Pt-Asn-GTT-1	Pt-Asn-GTT	Pt	67	Acstem_3p_2	0.427324	1	39	tRNA-Pt-Asn-GTT-1	leaf,Flower	leaf	40
+Pt-Cys-GCA	tRNA-Pt-Cys-GCA-1	Pt-Cys-GCA	Pt	69	Acstem_3p_1	0.106732	1	38	tRNA-Pt-Cys-GCA-1	leaf,Flower	leaf	39
+Pt-Glu-TTC	tRNA-Pt-Glu-TTC-1	Pt-Glu-TTC	Pt	71	Acloop_4	0.0517472	1	36	tRNA-Pt-Glu-TTC-1	leaf	leaf	35
+Pt-His-GTG	tRNA-Pt-His-GTG-1	Pt-His-GTG	Pt	74	Acstem_3p_1	0.49321	1	41	tRNA-Pt-His-GTG-1	Root,leaf,Flower	Root	39
+Pt-Leu-CAA	tRNA-Pt-Leu-CAA-1	Pt-Leu-CAA	Pt	77	Acstem_3p_1	0.279858	1	39	tRNA-Pt-Leu-CAA-1	leaf,Flower	leaf	39
+Pt-Leu-TAA	tRNA-Pt-Leu-TAA-1	Pt-Leu-TAA	Pt	78	Acstem_3p_1	0.0717937	1	40	tRNA-Pt-Leu-TAA-1	leaf	leaf	39
+Pt-Lys-TTT	tRNA-Pt-Lys-TTT-1	Pt-Lys-TTT	Pt	80	Acstem_5p_2	0.0713333	1	27	tRNA-Pt-Lys-TTT-1	leaf	leaf	28
+Pt-Pro-TGG	tRNA-Pt-Pro-TGG-1	Pt-Pro-TGG	Pt	82	Acloop_3	0.10729	1	35	tRNA-Pt-Pro-TGG-1	leaf,Flower	leaf	34
+Pt-Pro-TGG	tRNA-Pt-Pro-TGG-1	Pt-Pro-TGG	Pt	82	Acloop_7	0.46517	1	39	tRNA-Pt-Pro-TGG-1	leaf,Flower	leaf	38
+Pt-Ser-GCT	tRNA-Pt-Ser-GCT-1	Pt-Ser-GCT	Pt	83	Acstem_3p_1	0.16513	1	40	tRNA-Pt-Ser-GCT-1	leaf,Flower	leaf	39
+Pt-Thr-GGT	tRNA-Pt-Thr-GGT-1	Pt-Thr-GGT	Pt	86	Tloop_2	0.0792112	1	54	tRNA-Pt-Thr-GGT-1	leaf	leaf	55
+Pt-Thr-TGT	tRNA-Pt-Thr-TGT-1	Pt-Thr-TGT	Pt	87	Acstem_3p_1	0.268722	1	39	tRNA-Pt-Thr-TGT-1	leaf,Flower	Flower	39
+Pt-Trp-CCA	tRNA-Pt-Trp-CCA-1	Pt-Trp-CCA	Pt	88	Tloop_2	0.0596995	1	56	tRNA-Pt-Trp-CCA-1	leaf	leaf	55
+Pt-Tyr-GTA	tRNA-Pt-Tyr-GTA-1	Pt-Tyr-GTA	Pt	89	Acstem_3p_1	0.430011	1	40	tRNA-Pt-Tyr-GTA-1	Root,leaf,Flower	Flower	39
+Pt-iMet-CAT	tRNA-Pt-iMet-CAT-1	Pt-iMet-CAT	Pt	93	Tloop_2	0.090109	1	56	tRNA-Pt-iMet-CAT-1	Root	Root	55
