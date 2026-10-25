@@ -60,9 +60,9 @@ tRNA 富集/totalRNA 文库用
    结果写入 `STAT/fisher/<ref_type>/` 下的 `<sample>_sites.Fisher.tsv`
    （全部检验）与 `<sample>_sites.positive.tsv`（阳性位点）。
 6. **下游调用** —— 由 positive 位点表鉴定 PUS 依赖位点
-   （[`downstream/call_dependent_methylKit.R`](BID-transcript.script/downstream/call_dependent_methylKit.R)）
+   （[`downstream/call_dependent_betabinomial.R`](BID-transcript.script/downstream/call_dependent_betabinomial.R)）
    与温度响应位点
-   （[`downstream/call_temperature_response_methylKit.R`](BID-transcript.script/downstream/call_temperature_response_methylKit.R)）。
+   （[`downstream/call_temperature_response_betabinomial.R`](BID-transcript.script/downstream/call_temperature_response_betabinomial.R)）。
    同时，流程还在 `count/<ref_type>/` 下输出逐基因原始表达矩阵（Mock 组
    与全部样本各一份）。
 
@@ -73,10 +73,9 @@ tRNA 富集/totalRNA 文库用
 
 对每个候选 T（Ψ）位点和每个重复，gap 校正后的 pileup 给出该位点的测序深度（跨越该位点的 reads
 数）与 gap 数（在该位点出现缺失的 reads 数），gap 数占测序深度的比例即
-为该重复在此位点的 Ψ 比例。这与亚硫酸氢盐测序（BS-seq）对一个胞嘧啶的记录（覆盖度 +
-甲基化 reads 数）在形式上完全一致——下文两个差异检验正是因此得以复用
-methylKit 的差异甲基化分析框架
-（[Akalin et al., *Genome Biol* 2012](https://doi.org/10.1186/gb-2012-13-9-r87)）。
+为该重复在此位点的 Ψ 比例。下游 PUS 依赖与温度响应检验均直接基于这些
+计数建立 beta-binomial 模型，以同时考虑测序深度和重复之间超出二项预期的
+额外波动（过离散）。
 
 ### Ψ 位点鉴定 — [`bin/Pseudo_callsites.R`](BID-transcript.script/bin/Pseudo_callsites.R)
 
@@ -100,18 +99,16 @@ Treat / Mock）上做单侧 Fisher 精确检验（备择方向为 Treat 的缺�
 逐重复标准时判为阳性——三重复数据集为 3/3，两重复的叶绿体数据集为
 2/2。阳性表中报告的 ratio 与 depth 仅对通过筛选的重复取平均。
 
-### PUS 依赖位点鉴定 — [`downstream/call_dependent_methylKit.R`](BID-transcript.script/downstream/call_dependent_methylKit.R)
+### PUS 依赖位点鉴定 — [`downstream/call_dependent_betabinomial.R`](BID-transcript.script/downstream/call_dependent_betabinomial.R)
 
 **基本思路。** 若某 Ψ 位点由特定 PUS 酶写入，突变该酶应使修饰消失——
 该位点 Treat 文库的 gap 比例应回落至 Mock 背景。脚本因此对每个位点只问
 一个问题：*突变体的修饰比例是否显著低于 WT？* 并对该基因的两个独立突
 变株系分别作答。
 
-**为什么能用 DNA 甲基化工具来做这个检验。** 每个位点、每个重复上，
-BID-seq 只产生两个数：多少条 reads 覆盖该位点、其中多少条带缺失。这与
-BS-seq 对一个胞嘧啶位点的记录完全对应：覆盖深度对应测序覆盖度，gap 数
-对应甲基化 reads 数。因此把 gap 比例当作“甲基化频率”，这个检验就成了
-标准的差异甲基化分析问题，可直接交给 methylKit 完成。
+**统计模型。** 检验直接使用每个重复的 gap 与非 gap reads 数，以
+beta-binomial 分布描述 read 抽样及重复间的过离散，由 `glmmTMB` 拟合。
+这不仅利用了测序深度，也避免把重复间的正常额外波动误判为基因型效应。
 
 **每个突变株系的判定步骤：**
 
@@ -120,40 +117,44 @@ BS-seq 对一个胞嘧啶位点的记录完全对应：覆盖深度对应测序�
 2. **深度门槛。** WT 的各 Treat 重复、突变体的各 Mock 与 Treat 重复在该
    位点的 depth 都必须 ≥ 10，任何一个重复不够就弃掉该位点。这是为了让
    「没测到」无法冒充「修饰消失」（校正表中未覆盖位点记为 depth = 0），
-   只保留完整可比的位点。Mock 文库只用于见证覆盖度，真正比较的信号是
-   Treat 的 gap 比例。
-3. **检验。** 把 WT 与突变体各重复在该位点的覆盖度与 gap 计数交给
-   methylKit（`methRead` → `unite` → `calculateDiffMeth`）做组间比较：
-   以覆盖度加权，检验 gap 比例是否随基因型（WT 对突变体）改变；模型还
-   计入重复之间超出二项预期的额外波动（过离散），避免把正常涨落误判为
-   显著。一次要检验成百上千个位点，双侧 p 值经 Benjamini–Hochberg 校正
-   折算成 q 值（双侧 FDR）以控制跨位点假阳性；判定直接使用该 q 值。由于只
-   关心「突变体修饰变少」这一个方向，还要求方向相符
-   （meth.diff > 0，WT 修饰更高），方向相反则一律不通过。
-4. **效应量。** Δ = WT_Ratio − Mut_Ratio，两项分别是各重复 Treat gap 比
-   例的算术平均。该值由输入表直接算得、独立于 methylKit，因此报告的差
-   值始终与原始比例一致。
-5. **判定。** BH q < 0.05、方向为正（meth.diff > 0）**且** Δ ≥ 0.05 →
-   在该株系中依赖。最终只保留**两个**株系都依赖的位点，单个株系的特殊
-   背景无法让位点通过；报告中突变体比例取两株系均值。
+   只保留完整可比的位点。Mock 文库只用于见证覆盖度，真正进入模型比较的
+   是 Treat 的 gap/depth 计数。
+3. **全局离散度。** 在该株系全部通过深度门槛的位点上，拟合含位点随机截
+   距的 beta-binomial 模型 `cbind(gap, depth-gap) ~ genotype + (1|site)`，
+   估计共享离散参数 theta。位点随机截距允许不同位点具有各自的基础修饰水
+   平；随后逐位点检验固定该 theta，避免单个位点独立估计离散度而不稳定。
+4. **逐位点检验与多重校正。** 固定 theta，分别拟合含基因型效应的完整模
+   型 `cbind(gap, depth-gap) ~ genotype` 与不含基因型效应的空模型
+   `cbind(gap, depth-gap) ~ 1`。似然比检验（LRT）以
+   `D = 2 × (ll_full − ll_null)` 比较两模型，并用 χ²(1) 得到双侧 p 值；
+   再按突变体系数方向折成下降侧 p 值：β < 0 时取双侧 p/2，否则取
+   1 − 双侧 p/2。该单侧 p 值在株系候选池内做 Benjamini–Hochberg 校正得到
+   q 值；未产生 p 值的候选位点不参与排序，但仍计入候选池大小。
+5. **效应量。** Δ = WT_Ratio − Mut_Ratio，两项分别是各重复 Treat gap 比
+   例的算术平均。效应量直接由输入比例计算，与模型检验分开报告。
+6. **判定。** 下降侧 BH q < 0.05 **且** Δ ≥ 0.05 → 在该株系中依赖；方向
+   要求已包含在下降侧 p 值中。最终只保留**两个**株系都依赖的位点，单个株
+   系的特殊背景无法让位点通过；报告中突变体比例取两株系均值。
 
 输出：逐株系的 `<allele>.dependent-sites.tsv`、合并的
 `<gene>.dependent.tsv`，以及一个汇总 JSON。
 
-### 温度响应位点鉴定 — [`downstream/call_temperature_response_methylKit.R`](BID-transcript.script/downstream/call_temperature_response_methylKit.R)
+### 温度响应位点鉴定 — [`downstream/call_temperature_response_betabinomial.R`](BID-transcript.script/downstream/call_temperature_response_betabinomial.R)
 
-温度响应位点用同一套 methylKit 流程鉴定，比较对象改为同一 WT 材料在两
-个生长温度（27 °C 对 21 °C）下的修饰差异。
+温度响应位点采用同一套 beta-binomial + LRT 框架，比较对象改为同一 WT
+材料在两个生长温度（27 °C 对 21 °C）下的修饰差异。
 
 **候选池与门槛。** 候选池取两个温度阳性位点的并集（仅在单一温度阳性的
 位点正是温度依赖修饰变化的强候选），由调用脚本预先合并。逐重复深度门
 槛同样施加于两个温度组的全部 Mock 与 Treat 重复（均须 ≥ 10）——这同
 时排除了某温度下转录本不表达的情形，避免其伪装成修饰差异。
 
-**检验与判定。** 与依赖位点不同，温度响应不预设方向，使用双侧检验：
-methylKit 的 BH q 值（双侧 FDR）< 0.05 且 |Δ| ≥ 0.05 判为温度响应
-（组比例为各温度 Treat 重复 gap 比例的算术均值），每个位点另行记录方向
-（27 °C 下升高或降低）。
+**检验与判定。** 先在全部通过深度门槛的位点上估计并固定全局 theta，再
+逐位点用 LRT 比较含温度分组效应的完整模型 `cbind(gap, depth-gap) ~ group`
+与空模型 `cbind(gap, depth-gap) ~ 1`。温度响应不预设方向，直接对 LRT 的
+双侧 p 值做 BH 校正：q < 0.05 且 |Δ| ≥ 0.05 判为温度响应（Δ 为 27 °C 组
+减 21 °C 组，组比例为各温度 Treat 重复 gap 比例的算术均值），每个位点另
+行记录方向（27 °C 下升高或降低）。
 
 输出：`<group2>_vs_<group1>.all-sites.tsv`、`.response.tsv`，以及一个含
 上调/下调计数的汇总 JSON。
@@ -250,9 +251,8 @@ snakemake \
 
 ### 下游差异检验
 
-- Bioconductor 包
-  [`methylKit`](https://bioconductor.org/packages/methylKit/)（PUS 依赖位点
-  与温度响应位点鉴定）。
+- R 包 [`glmmTMB`](https://glmmtmb.github.io/glmmTMB/)（PUS 依赖位点与
+  温度响应位点的 beta-binomial 模型及似然比检验）。
 
 ## 数据可用性
 
