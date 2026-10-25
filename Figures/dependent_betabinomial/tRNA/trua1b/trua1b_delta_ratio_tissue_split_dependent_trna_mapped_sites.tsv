@@ -1,0 +1,8 @@
+Tissue	Rep_ID	Representative_ID	display_Rep_ID	compartment	family_rank	matrix_col_id	value	n_sites	native_positions	native_chrs	canonical_pos
+Leaves	Mt-Cys-GCA	tRNA-Mt-Cys-GCA-1	Mt-Cys-GCA	Mt	3	Dstem_3p_4	0.0577658333333333	1	24	tRNA-Mt-Cys-GCA-1	25
+Leaves	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_5p_2	0.265640833333333	5	27	tRNA-Nu-Cys-GCA-1,tRNA-Nu-Cys-GCA-2,tRNA-Nu-Cys-GCA-5,tRNA-Nu-Cys-GCA-8,tRNA-Nu-Cys-GCA-9	28
+Leaves	Nu-Tyr-GTA	tRNA-Nu-Tyr-GTA-2	Cy-Tyr-GTA	Cy	58	Acloop_4	0.1244795	1	35	tRNA-Nu-Tyr-GTA-2	35
+Leaves	Pt-Lys-TTT	tRNA-Pt-Lys-TTT-1	Pt-Lys-TTT	Pt	80	Acstem_5p_2	0.172734333333333	1	27	tRNA-Pt-Lys-TTT-1	28
+Flowers	Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_5p_2	0.234701166666667	4	27	tRNA-Nu-Cys-GCA-1,tRNA-Nu-Cys-GCA-2,tRNA-Nu-Cys-GCA-5,tRNA-Nu-Cys-GCA-8	28
+Flowers	Nu-Leu-CAG	tRNA-Nu-Leu-CAG-1	Cy-Leu-CAG	Cy	41	Acloop_7	0.1188875	1	40	tRNA-Nu-Leu-CAG-1	38
+Flowers	Nu-Pro-CGG	tRNA-Nu-Pro-CGG-2	Cy-Pro-CGG	Cy	48	Acloop_7	0.110948166666667	1	37	tRNA-Nu-Pro-CGG-3	38

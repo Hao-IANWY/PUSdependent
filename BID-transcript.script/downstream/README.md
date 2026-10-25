@@ -2,6 +2,46 @@
 
 本目录的工具**不被任何 smk 调用**，均手动运行。
 
+## call_dependent_betabinomial.R — PUS 依赖位点判定（beta-binomial 版）
+
+与下方 methylKit 版并列的另一个统计实现：CLI 接口、深度门槛、效应量口径、
+两株系 AND 判定与输出表结构（`<株系>.dependent-sites.tsv` / `<前缀>.dependent.tsv` /
+`<前缀>.dependent.summary.json`）与 methylKit 版完全同构，可直接用同一套
+run.sh 组织方式批量调用，只把检验换成 Jie Huang（Beacon）
+`dependency_stats_standalone.R`（见仓库 `dependent_jiehuang/`）的方法：
+
+1. 在全部过深度门的位点上拟合含 site 随机截距的 beta-binomial GLMM，估全局
+   离散度 theta；
+2. 固定 theta 逐位点拟合 `cbind(gap, depth-gap) ~ genotype`，取
+   `genotypemutant` 系数的单侧 Wald P（β<0 取 P/2）；
+3. 单侧 P 在该株系全部候选位点内做 BH 校正，`q < --alpha` 且
+   `Delta_Ratio(WT-Mut) >= --min-delta` 判 dependent。
+
+与原作者脚本的两处有意差异（保持本流程判定框架，保证与 methylKit 版逐位点
+可比）：深度门槛沿用本流程严格口径（突变株每个 Mock/Treat 重复、WT 每个重复
+都须 depth≥10；原方法只要求每基因型 ≥2 个文库达标）；delta 用重复比例均值差
+（原方法用 pooled 差）。逐位点 p/β 已对拍与原版 bit 级一致（tRNA leaf trua1a
+567 候选、400 位点抽检，theta 10 位小数相同）。
+
+```bash
+Rscript downstream/call_dependent_betabinomial.R \
+    --tsv WT-Leaf_sites.Treat_avg_ratio.tsv \
+    --key-cols chr,pos,strand --ratio-col Treat_avg_ratio \
+    --genotype1 trua1a_1 --genotype2 trua1a_2 \
+    --genotype1-treat-files Treat-trua1a_1.rep1.adjusted.tsv,...（rep1~rep3） \
+    --genotype1-mock-files  Mock-trua1a_1.rep1.adjusted.tsv,...（同上） \
+    --genotype2-treat-files Treat-trua1a_2.rep1.adjusted.tsv,...（同上） \
+    --genotype2-mock-files  Mock-trua1a_2.rep1.adjusted.tsv,...（同上） \
+    --outdir STAT/dependent_betabinomial/ncRNA/Leaf/trua1a \
+    --output-prefix trua1a-Leaf
+```
+
+- `--tsv` 需含逐重复 Treat ratio/depth/**gap** 列（gap 用于计数；默认自动识别
+  `Treat-*_gap`；Fisher 表原生带 `_gap` 列，无需预处理）。
+- 默认 `--min-depth 10`、`--alpha 0.05`、`--min-delta 0.05`、`--significance q`、
+  `--cores 1`；line 级表比 methylKit 版多 `beta_coef/beta_se/odds_ratio` 审计列，
+  summary JSON 记录两系 theta 与拟合失败计数。
+
 ## call_dependent_methylKit.R — PUS 依赖位点判定（methylKit 版，论文主用）
 
 比较 WT 与某 writer 基因的两个独立突变株系，判定 PUS 依赖位点（修饰在

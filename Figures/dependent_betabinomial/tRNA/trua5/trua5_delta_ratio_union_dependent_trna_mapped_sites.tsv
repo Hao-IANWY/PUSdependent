@@ -1,0 +1,7 @@
+Rep_ID	Representative_ID	display_Rep_ID	compartment	family_rank	matrix_col_id	value	n_sites	native_positions	native_chrs	tissues	peak_tissues	canonical_pos
+Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_5p_2	0.607003	8	27	tRNA-Nu-Cys-GCA-1,tRNA-Nu-Cys-GCA-10,tRNA-Nu-Cys-GCA-2,tRNA-Nu-Cys-GCA-3,tRNA-Nu-Cys-GCA-4,tRNA-Nu-Cys-GCA-5,tRNA-Nu-Cys-GCA-8,tRNA-Nu-Cys-GCA-9	leaf,Flower;Root,leaf,Flower	Flower;leaf	28
+Nu-Cys-GCA	tRNA-Nu-Cys-GCA-10	Cy-Cys-GCA	Cy	28	Acstem_5p_3	0.284949	2	28	tRNA-Nu-Cys-GCA-6,tRNA-Nu-Cys-GCA-7	leaf;leaf,Flower	leaf	29
+Nu-Gln-TTG	tRNA-Nu-Gln-TTG-1	Cy-Gln-TTG	Cy	30	Acstem_5p_2	0.395757	1	28	tRNA-Nu-Gln-TTG-1	Root,leaf,Flower	leaf	28
+Nu-Ile-TAT	tRNA-Nu-Ile-TAT-1	Cy-Ile-TAT	Cy	38	Acstem_5p_2	0.299491	2	29	tRNA-Nu-Ile-TAT-1,tRNA-Nu-Ile-TAT-2	Root,leaf,Flower	leaf	28
+Nu-iMet-CAT	tRNA-Nu-iMet-CAT-1	Cy-iMet-CAT	Cy	63	Acstem_5p_2	0.24507	4	27	tRNA-Nu-iMet-CAT-1,tRNA-Nu-iMet-CAT-2,tRNA-Nu-iMet-CAT-3,tRNA-Nu-iMet-CAT-4	Flower;Root,leaf,Flower	Flower	28
+Pt-Lys-TTT	tRNA-Pt-Lys-TTT-1	Pt-Lys-TTT	Pt	80	Acstem_5p_2	0.490952	1	27	tRNA-Pt-Lys-TTT-1	leaf,Flower	leaf	28

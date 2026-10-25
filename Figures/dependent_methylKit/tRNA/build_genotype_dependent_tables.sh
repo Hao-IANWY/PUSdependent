@@ -166,4 +166,91 @@ awk 'BEGIN {
   sort -t $'\t' -k1,1 -k3,3n -k2,2n "$TMP_BODY"
 } > "$UNION_OUT"
 
-log "$GENOTYPE: $(( $(wc -l < "$LONG_OUT") - 1 )) tissue-resolved rows, $(( $(wc -l < "$UNION_OUT") - 1 )) union sites"
+# ---------------------------------------------------------------------------
+# .full 表：leaf/Flower 行原样保留，Root 行替换为「另外两个组织 dependent 位点
+# 的并集」，修饰比一律取 Root 实测 —— WT 取 WT-Root_sites 的 Treat_avg_ratio
+# （已验证与各组织 dependent 表的 WT_Ratio 同源），株系取各自 Root
+# dependent-sites 的 Mut_Ratio；并集位点若不在 Root 候选宇宙（Root 无法测）则丢弃。
+# ---------------------------------------------------------------------------
+FULL_OUT="$OUT_DIR/${GENOTYPE}_all_tissues.full.dependent.tsv"
+
+WT_ROOT_FILE="$DEPENDENT_DIR/Root/$GENOTYPE/WT-Root_sites.Treat_avg_ratio.tsv"
+ROOT_LINE1_FILE="$DEPENDENT_DIR/Root/$GENOTYPE/${GENOTYPE}_1-Root.dependent-sites.tsv"
+ROOT_LINE2_FILE="$DEPENDENT_DIR/Root/$GENOTYPE/${GENOTYPE}_2-Root.dependent-sites.tsv"
+[[ -s "$WT_ROOT_FILE" ]] || error "Missing WT Root candidate table: $WT_ROOT_FILE"
+[[ -s "$ROOT_LINE1_FILE" ]] || error "Missing line-level table: $ROOT_LINE1_FILE"
+[[ -s "$ROOT_LINE2_FILE" ]] || error "Missing line-level table: $ROOT_LINE2_FILE"
+
+{
+  printf 'chr\tpos\tfix_pos\tstrand\tcontext\tWT_Ratio\tMut_Ratio\tDelta_Ratio(WT-Mut)\t%s\t%s\tTissue\n' \
+    "${GENOTYPE}_1" "${GENOTYPE}_2"
+  awk -F'\t' -v OFS='\t' \
+      -v genotype="$GENOTYPE" \
+      -v wt_root_file="$WT_ROOT_FILE" \
+      -v line1_file="$ROOT_LINE1_FILE" \
+      -v line2_file="$ROOT_LINE2_FILE" '
+  function load_cols(    i, name) {
+      delete col
+      for (i = 1; i <= NF; i++) {
+          name = $i
+          sub(/\r$/, "", name)
+          col[name] = i
+      }
+  }
+  function require_cols(required,    i, fields, name) {
+      split(required, fields, ",")
+      for (i in fields) {
+          name = fields[i]
+          if (!(name in col)) {
+              printf("Required column missing in %s: %s\n", FILENAME, name) > "/dev/stderr"
+              exit 1
+          }
+      }
+  }
+  FILENAME == wt_root_file {
+      if (FNR == 1) { load_cols(); require_cols("chr,pos,strand,Treat_avg_ratio"); next }
+      wt_root[$1 SUBSEP $2 SUBSEP $3] = $(col["Treat_avg_ratio"])
+      next
+  }
+  FILENAME == line1_file {
+      if (FNR == 1) { load_cols(); require_cols("chr,pos,strand,Mut_Ratio"); next }
+      mut1_root[$1 SUBSEP $2 SUBSEP $3] = $(col["Mut_Ratio"])
+      next
+  }
+  FILENAME == line2_file {
+      if (FNR == 1) { load_cols(); require_cols("chr,pos,strand,Mut_Ratio"); next }
+      mut2_root[$1 SUBSEP $2 SUBSEP $3] = $(col["Mut_Ratio"])
+      next
+  }
+  # 最后一个输入：all_tissues 纵表
+  FNR == 1 { next }
+  $NF == "Root" { next }                     # 原 Root 行整段抛弃，由并集重建
+  {
+      print                                  # leaf/Flower 行原样保留
+      skey = $1 SUBSEP $2 SUBSEP $4
+      if (!(skey in union_fix)) {            # 跨组织去重，记录首次出现的 fix_pos/context
+          union_order[++n_union] = skey
+          union_fix[skey] = $3
+          union_ctx[skey] = $5
+      }
+      next
+  }
+  END {
+      n_dropped = 0
+      for (i = 1; i <= n_union; i++) {
+          skey = union_order[i]
+          if (!(skey in wt_root)) { n_dropped++; continue }
+          split(skey, f, SUBSEP)
+          mut1 = (skey in mut1_root) ? mut1_root[skey] : 0
+          mut2 = (skey in mut2_root) ? mut2_root[skey] : 0
+          pooled_mut = (mut1 + mut2) / 2
+          print f[1], f[2], union_fix[skey], f[3], union_ctx[skey], \
+                wt_root[skey], pooled_mut, wt_root[skey] - pooled_mut, \
+                mut1, mut2, "Root"
+      }
+      printf("[data_prep] %s: .full Root rows = %d union sites (%d dropped: no Root measurement)\n", \
+             genotype, n_union - n_dropped, n_dropped) > "/dev/stderr"
+  }' "$WT_ROOT_FILE" "$ROOT_LINE1_FILE" "$ROOT_LINE2_FILE" "$TMP_LONG"
+} > "$FULL_OUT"
+
+log "$GENOTYPE: $(( $(wc -l < "$LONG_OUT") - 1 )) tissue-resolved rows, $(( $(wc -l < "$UNION_OUT") - 1 )) union sites, $(( $(wc -l < "$FULL_OUT") - 1 )) .full rows"

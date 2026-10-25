@@ -10,4 +10,5 @@ GENOTYPE="trua3"
 bash "$SCRIPT_DIR/../build_genotype_dependent_tables.sh" "$GENOTYPE" "$SCRIPT_DIR"
 
 test -s "$SCRIPT_DIR/${GENOTYPE}_all_tissues.dependent.tsv"
+test -s "$SCRIPT_DIR/${GENOTYPE}_all_tissues.full.dependent.tsv"
 test -s "$SCRIPT_DIR/${GENOTYPE}_union.dependent.tsv"

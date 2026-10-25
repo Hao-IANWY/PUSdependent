@@ -2,7 +2,8 @@
 # plot.R — 代表性核 tRNA 的 positive-site ratio 沿 canonical tRNA 结构布局的热图。
 #
 # 行 = 46 个核 tRNA 家族，代表成员取自 tRNA/count/ncRNA/family_top/family_top_tRNA.tsv
-#      （每个 anticodon 家族里 mean_CPM 最高的 tRNA），行序按 family 字典序。
+#      （每个 anticodon 家族里 mean_CPM 最高的 tRNA）。行序：先按氨基酸字母序，
+#      同氨基酸再按反密码子字母序；eMet/iMet 同属 Met，按 Met 归位（eMet 在前）。
 # 列 = canonical 0–76 位（按 17 个区段分块）。
 # 颜色 = 该家族在该 canonical 位上所有拷贝位点的 depth 加权平均 ratio。
 # Sprinzl 坐标由 data.sh 直接取自 WT_*_sites.positive.Sprinzl.tsv，本脚本只做
@@ -265,9 +266,16 @@ if (!file.exists(family_top_path)) {
 family_top <- readr::read_tsv(family_top_path, show_col_types = FALSE)
 
 # 行 = 核 tRNA 家族；代表成员（mean_CPM 最高）记录在 Representative_ID 列
+# 行序（老板 2026-10-25 定）：先按氨基酸字母序，同氨基酸再按反密码子字母序；
+# eMet/iMet 是小写开头，若按整名排序会沉底/散开，故归一成 Met 参与排序
 ordered_rep_ids <- family_top |>
   filter(str_starts(feature_id, "^tRNA-Nu-")) |>
-  arrange(family) |>
+  mutate(
+    aa = str_replace(str_remove(str_remove(family, "^Nu-"), "-[ACGT]{3}$"),
+                     "^[ei]Met$", "Met"),
+    anticodon = str_extract(family, "[ACGT]{3}$")
+  ) |>
+  arrange(aa, anticodon, family) |>
   pull(family)
 if (length(ordered_rep_ids) == 0) {
   stop("family_top 表里没有核 tRNA 家族: ", family_top_path)

@@ -207,12 +207,17 @@ build_single_panel_distribution_plot <- function(plot_df, genotype) {
     )
 }
 
-remove_obsolete_distribution_outputs <- function(out_dir, genotype) {
-  obsolete_files <- list.files(
-    out_dir,
-    pattern = paste0("^", genotype, ".*dependent_position_distribution\\.(pdf|png|svg)$"),
-    full.names = TRUE
-  )
+remove_obsolete_distribution_outputs <- function(out_dir, genotype, plot_specs) {
+  # 只清理本次要重写的 stem（按 output_suffix 精确匹配），
+  # 避免同目录下 .full 等并行变体的产物被误删
+  obsolete_files <- plot_specs |>
+    rowwise() |>
+    mutate(
+      stem = paste0(genotype, "_", output_suffix, "_dependent_position_distribution"),
+      paths = list(file.path(out_dir, paste0(stem, ".", c("pdf", "png", "svg"))))
+    ) |>
+    pull(paths) |>
+    unlist()
 
   invisible(file.remove(obsolete_files[file.exists(obsolete_files)]))
 }
@@ -224,12 +229,13 @@ save_single_panel_distribution_plots <- function(
   plot_specs,
   save_outputs = TRUE,
   plot_width = 6.2,
-  plot_height = 4.8
+  plot_height = 4.8,
+  file_tag = ""
 ) {
   plot_specs <- normalize_distribution_specs(plot_specs) |>
     mutate(output_suffix = as.character(output_suffix))
-  plot_data_tsv <- file.path(out_dir, paste0(genotype, "_dependent_position_distribution.tsv"))
-  summary_tsv <- file.path(out_dir, paste0(genotype, "_dependent_position_distribution_summary.tsv"))
+  plot_data_tsv <- file.path(out_dir, paste0(genotype, file_tag, "_dependent_position_distribution.tsv"))
+  summary_tsv <- file.path(out_dir, paste0(genotype, file_tag, "_dependent_position_distribution_summary.tsv"))
 
   summary_df <- plot_df |>
     group_by(position_group, Tissue, sample_group) |>
@@ -250,7 +256,7 @@ save_single_panel_distribution_plots <- function(
 
   if (save_outputs) {
     dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
-    remove_obsolete_distribution_outputs(out_dir, genotype = genotype)
+    remove_obsolete_distribution_outputs(out_dir, genotype = genotype, plot_specs = plot_specs)
     readr::write_tsv(plot_df, plot_data_tsv)
     readr::write_tsv(summary_df, summary_tsv)
 
@@ -308,7 +314,8 @@ run_single_panel_dependent_position_distributions <- function(
   plot_specs,
   save_outputs = TRUE,
   plot_width = 6.2,
-  plot_height = 4.8
+  plot_height = 4.8,
+  file_tag = ""
 ) {
   if (!file.exists(input_path)) {
     stop(
@@ -331,6 +338,7 @@ run_single_panel_dependent_position_distributions <- function(
     plot_specs = plot_specs,
     save_outputs = save_outputs,
     plot_width = plot_width,
-    plot_height = plot_height
+    plot_height = plot_height,
+    file_tag = file_tag
   )
 }

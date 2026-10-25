@@ -3,6 +3,7 @@
 #
 # 输入（跑 data_prep.sh 生成）：
 #   <genotype>_all_tissues.dependent.tsv  组织拆分的 dependent 位点（含 fix_pos 与每株系修饰比）
+#   <genotype>_all_tissues.full.dependent.tsv  .full. 版：Root 行替换为另两组织并集、修饰比取 Root 实测
 #   <genotype>_union.dependent.tsv        跨组织并集（仅 union 热图用）
 # 实现全在 ../dependent_trna_heatmap_common.R 与 ../dependent_trna_distribution_common.R，
 # 本文件只声明基因型、勾选本基因型要出的图。
@@ -51,3 +52,19 @@ distribution_result <- run_single_panel_dependent_position_distributions(
   )
 )
 print(distribution_result$metadata)
+
+# ---- .full. 版：Roots 组展示另外两个组织 dependent 位点的并集（修饰比取 Root 实测）；
+#      Leaves / Flowers 组与常规版相同。数据由 data_prep.sh 生成 *all_tissues.full* 表 ----
+full_distribution_result <- run_single_panel_dependent_position_distributions(
+  genotype = genotype,
+  input_path = file.path(script_dir, paste0(genotype, "_all_tissues.full.dependent.tsv")),
+  out_dir = script_dir,
+  file_tag = ".full",
+  plot_specs = tibble::tibble(
+    compartment = c("Cy"),
+    label = c(paste0("cy-tRNA Ψ", "38/39/40")),
+    fix_pos_values = list(c(38L, 39L, 40L)),
+    output_suffix = c("cy_38_39_40.full")
+  )
+)
+print(full_distribution_result$metadata)
