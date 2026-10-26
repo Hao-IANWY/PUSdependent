@@ -1,0 +1,7 @@
+section	set	key	value
+count	case	n_rows	67
+count	case	n_unique_sites	43
+count	case	dependent_in_1_tissues	28
+count	case	dependent_in_2_tissues	6
+count	case	dependent_in_3_tissues	9
+count	psi_union	n_sites	372

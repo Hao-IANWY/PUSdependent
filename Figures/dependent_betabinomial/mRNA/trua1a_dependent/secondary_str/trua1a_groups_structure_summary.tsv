@@ -1,0 +1,13 @@
+set	window	temp_C	n_sites	mean_center_unpaired_prob	median_mfe_per_nt	frac_center_paired_MFE
+Union (unique sites)	±25 nt	21	43	0.2334	-0.302	0.814
+Root-dependent	±25 nt	21	28	0.1998	-0.3057	0.8571
+Leaf-dependent	±25 nt	21	14	0.1828	-0.3126	0.8571
+Flower-dependent	±25 nt	21	25	0.3127	-0.302	0.72
+Union (unique sites)	±50 nt	21	43	0.2019	-0.3461	0.8605
+Root-dependent	±50 nt	21	28	0.1875	-0.3396	0.8929
+Leaf-dependent	±50 nt	21	14	0.185	-0.3452	0.8571
+Flower-dependent	±50 nt	21	25	0.2511	-0.3507	0.8
+Union (unique sites)	±100 nt	21	43	0.1885	-0.3636	0.8605
+Root-dependent	±100 nt	21	28	0.1878	-0.3668	0.8929
+Leaf-dependent	±100 nt	21	14	0.1991	-0.3836	0.8571
+Flower-dependent	±100 nt	21	25	0.2183	-0.3671	0.8
