@@ -11,7 +11,7 @@ Figures/dependent_betabinomial/
 ├── tRNA/    tRNA 图组全量：sites_count(+overlap) / loss_effect / motif /
 │            merge_heatmap / 7 个基因型热图+分布箱线图 / count_missed_dependent
 ├── mRNA/    polyARNA：sites_count(+overlap) / loss_effect / ratio_distribution /
-│            region_distribution
+│            region_distribution / heatmap（WT ≥20% dependent 位点跨基因型比例）
 └── rRNA/    polyARNA：sites_count(+overlap) / loss_effect / tissue_specificity
 ```
 
