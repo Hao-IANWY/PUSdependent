@@ -51,3 +51,19 @@ distribution_result <- run_single_panel_dependent_position_distributions(
   )
 )
 print(distribution_result$metadata)
+
+source(file.path(tRNA_dir, "dependent_trna_motif_common.R"))
+
+# ---- 位点 motif seqlogo：union 去重位点按 compartment × Sprinzl 位号选 5-nt 上下文 ----
+motif_result <- run_single_panel_dependent_motifs(
+  genotype = genotype,
+  input_path = file.path(script_dir, paste0(genotype, "_union.dependent.tsv")),
+  out_dir = script_dir,
+  plot_specs = tibble::tibble(
+    compartment = c("Cy", "Cy"),
+    label = c(paste0("cy-tRNA Ψ", "27/28"), paste0("cy-tRNA Ψ", "66/67/68")),
+    fix_pos_values = list(c(27L, 28L), c(66L, 67L, 68L)),
+    output_suffix = c("cy_27_28", "cy_66_67_68")
+  )
+)
+print(motif_result$metadata)

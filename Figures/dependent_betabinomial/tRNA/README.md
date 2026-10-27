@@ -17,6 +17,7 @@ Figures/dependent_betabinomial/tRNA/
 ├── build_genotype_dependent_tables.sh    7 个基因型共用的数据构建逻辑（fix_pos 直接取上游 Sprinzl_pos）
 ├── dependent_trna_heatmap_common.R       热图公共实现（组织拆分 + 跨组织并集）
 ├── dependent_trna_distribution_common.R  Ψ 位点分布箱线图公共实现
+├── dependent_trna_motif_common.R         位点 motif seqlogo 公共实现（与分布图同套选点口径）
 ├── sites_count/                          跨基因型：dependent 位点数堆叠柱状图
 ├── loss_effect/                          跨基因型：WT vs 突变体修饰比例散点
 ├── motif/                                跨基因型：各 基因型×组织 dependent 位点 5-nt 上下文 seqlogo（0 位点组合跳过）
@@ -109,19 +110,36 @@ Rscript plot.R                          # 只画图
 只有 28（41 个，Root 10 / leaf 15 / Flower 16），故不写成 trua1a 那样的合并面板。
 效应量很大：WT ~48–52% → 两个株系 ~13–28%，三个组织一致。
 
+**位点 motif seqlogo**（`trua1a` / `trua2` / `trua3` / `trua5` / `trua6`，`<g>_<suffix>_dependent_motif`）
+
+- 输入 `<g>_union.dependent.tsv`：跨组织去重，同一位点不因多组织重复而抬高 bits；
+  上下文取 5-nt `context`，x 轴 -2..+2、中心 0 位 = 修饰位点（Ψ 来源 U，图中恒为 T）
+- 选点口径与分布箱线图同构（compartment × Sprinzl 位号），每个组合一张 logo，样式与
+  `motif/`（基因型×组织全景版）一致；位点数落盘 `<g>_dependent_motif_site_counts.tsv`
+- 覆盖的组合（2026-10-27 老板指定；trua3 的 motif 只写 38/39，数据里本就没有 Cy_40
+  位点，与其分布图的 38/39/40 选择等价）：
+
+  | 基因型 | 面板 | 独立位点数 |
+  |---|---|---|
+  | trua1a | `cy_27_28`、`cy_66_67_68` | 41、19 |
+  | trua2 | `mt_27_28` | 9 |
+  | trua3 | `cy_38_39` | 22 |
+  | trua5 | `cy_28` | 15 |
+  | trua6 | `cy_38_39_40`、`mt_38_39_40` | 58、7（数据中实际落在 39/40） |
+
 ## 当前规模
 
 `all_tissues` 行数 = 该基因型三组织的 tRNA dependent 位点合计，与 `sites_count/dependent_site_count.tsv` 逐值一致。
 
 | 基因型 | all_tissues 行 | 并集位点 | 热图 panel 行（组织 × 家族） | 并集家族数 | 图 |
 |---|---|---|---|---|---|
-| trua1a | 179 | 72 | 54 | — | 组织拆分 + cy_27/28 + cy_66/67/68 |
+| trua1a | 179 | 72 | 54 | — | 组织拆分 + cy_27/28 + cy_66/67/68 + motif×2 |
 | trua1b | 13 | 9 | 6 | 5 | 组织拆分 + 并集 |
-| trua2 | 41 | 17 | 41 | — | 组织拆分 + mt_27/28 |
-| trua3 | 62 | 25 | 28 | — | 组织拆分 + cy_38/39/40 |
+| trua2 | 41 | 17 | 41 | — | 组织拆分 + mt_27/28 + motif×1 |
+| trua3 | 62 | 25 | 28 | — | 组织拆分 + cy_38/39/40 + motif×1 |
 | trua4 | 22 | 11 | 22 | 11 | 组织拆分 + 并集 |
-| trua5 | 44 | 18 | 14 | 5 | 组织拆分 + 并集 + cy_28 |
-| trua6 | 183 | 64 | 59 | — | 组织拆分 + cy_38/39/40 + mt_38/39/40 |
+| trua5 | 44 | 18 | 14 | 5 | 组织拆分 + 并集 + cy_28 + motif×1 |
+| trua6 | 183 | 64 | 59 | — | 组织拆分 + cy_38/39/40 + mt_38/39/40 + motif×2 |
 
 与 methylKit 版（`Figures/dependent_methylKit/tRNA`）的逐组织计数对照见
 `sites_count/overlap/dependent_site_overlap_summary.tsv`：tRNA-only 合计
@@ -140,6 +158,9 @@ methylKit 在 Root 的 line2 过离散 φ 爆炸把功效吃光（同表大量�
 
 ## 验证记录
 
+- motif seqlogo：`<g>_dependent_motif_site_counts.tsv` 的 n 与 union 表按
+  compartment × fix_pos 手工筛选一致（41/19/9/22/15/58/7），各组合中心碱基 100% 为
+  T（Ψ 来源 U）；运行会连带重刷同目录热图与分布图（同输入确定性重生成，内容不变）。
 - 数据侧：7 个基因型的 `all_tissues` 行数与 `sites_count/dependent_site_count.tsv`
   完全一致（179/13/41/62/22/44/183，合计 544 = STAT summary 547 − 3 个 sn/sno
   位点，`^tRNA-` 过滤口径）；并集行数 == 该表 distinct 位点数。
