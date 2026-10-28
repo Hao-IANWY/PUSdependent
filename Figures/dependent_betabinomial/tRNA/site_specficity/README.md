@@ -8,6 +8,7 @@
 
 - `pos27/` `pos28/` `pos29/` — 基因型 trua1a + trua5（anticodon stem 区，1A 管 27/29、5 管 28）
 - `pos38/` `pos39/` `pos40/` — 基因型 trua3 + trua6（anticodon loop 区，3 管 38、6 管 39/40）
+- `pos66/` `pos67/` `pos68/` — 基因型 trua1a（T loop 区；66 在代表 tRNA 口径下 0 位点，仅存空表）
 
 **分室只保留核（Nu）**（老板 2026-10-28 拍板：忽略 Mt/Pt；图面不标分室，
 分布图标题不带组织/n 标注）。
@@ -19,7 +20,7 @@ site_specficity/
 ├── build_site_specificity_table.sh   共享数据构建（tissue × genotypes × sprinzl_pos × compartments 参数化）
 ├── site_specificity_common.R         热图 + 分布图公共实现（多基因型：每基因型两列比例 + 两列 per-line dependent）
 ├── WT-Flower_sites.Sprinzl.tsv       共享中间产物：WT positive 宇宙的 Sprinzl 注释版（同组织各位号文件夹共用）
-├── pos27/ … pos40/
+├── pos27/ … pos68/
 │   ├── data_prep.sh                  绑定 TISSUE=Flower / GENOTYPES / POS=N / COMPARTMENTS=Nu
 │   ├── plot.R                        声明参数 + 勾选两张图
 │   ├── pos<N>_flower_site_table.tsv  入选位点宽表（一行一个 tRNA 位点）
@@ -79,15 +80,20 @@ site_specficity/
 | Ψ38 | 5 | — | — | **5** | 0 | 26.9% → 7.3/4.7% (3) |
 | Ψ39 | 16 | — | — | 1 | **12** | 61.8% → 13.3/14.9% (6) |
 | Ψ40 | 1（Ser-GCT） | — | — | 0 | **1** | 73.9% → 15.0/18.8% (6) |
+| Ψ66 | 0 | 0 | — | — | — | 无（Nu 代表 tRNA 无 WT 修饰的 66 位；全库仅 3 个非代表拷贝） |
+| Ψ67 | 1 | **1** | — | — | — | 51.8% → 6.1/3.0% (1a) |
+| Ψ68 | 6 | **4** | — | — | — | 41.8% → 5.7/3.6% (1a) |
 
 （加粗 = 双株系 simultaneously dependent 的位点数；"—" = 该位号图组未含此基因型）
 
 两组互为镜像的特异性：Ψ27/29 归 TRUA1A、Ψ28 归 TRUA5（anticodon stem）；Ψ38 归
-TRUA3、Ψ39/40 归 TRUA6（anticodon loop）。值得注意的单点：
+TRUA3、Ψ39/40 归 TRUA6（anticodon loop）；T loop 的 Ψ67/68 也归 TRUA1A
+（Ψ66 在该口径下无位点）。值得注意的单点：
 - tRNA-Nu-Cys-GCA-10 的 Ψ27 在 trua1a 不掉，但 Ψ28 在 trua1a 和 trua5 双 dependent
   ——同一条 tRNA 上两个位号各归其主还有交叉；
 - Ψ27 的 trua1a 例外 Arg-TCG-2（0.23 → 0.06，比例掉但 per-line q 未过门槛）；
-- Ψ39 的 Trp-CCA-1 只在 trua6_1 单边过门槛（_2 FALSE），红框 27 vs 双 TRUE 26 的差。
+- Ψ39 的 Trp-CCA-1 只在 trua6_1 单边过门槛（_2 FALSE），红框 27 vs 双 TRUE 26 的差；
+- Ψ68 的 Arg-CCG-1 与 Leu-AAG-2 两条株系都不是双 TRUE（红框 8 = 4×2）。
 
 ## 运行
 
