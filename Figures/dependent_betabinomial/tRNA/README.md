@@ -22,6 +22,7 @@ Figures/dependent_betabinomial/tRNA/
 ├── loss_effect/                          跨基因型：WT vs 突变体修饰比例散点
 ├── motif/                                跨基因型：各 基因型×组织 dependent 位点 5-nt 上下文 seqlogo（0 位点组合跳过）
 ├── merge_heatmap/                        跨基因型：每组织 dependent 位点并集 × (WT+7 突变体) 修饰比例热图
+├── site_specficity/                      按位号分文件夹：WT 在该位号有修饰的核代表 tRNA × 对应突变体组（见其 README）
 └── trua1a/ trua1b/ trua2/ trua3/ trua4/ trua5/ trua6/
     ├── data_prep.sh                      三行转发到 build_genotype_dependent_tables.sh
     ├── plot.R                            声明基因型 + 勾选本基因型要出的图
