@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
-# plot.R — Sprinzl 66 位点图组（Flower 组；一张热图 + 一张修饰比例分布图）
+# plot.R — Sprinzl 69 位点图组（Flower 组；一张热图 + 一张修饰比例分布图）
 #
-# 输入（跑 data_prep.sh 生成）：pos66_flower_site_table.tsv
+# 输入（跑 data_prep.sh 生成）：pos69_flower_site_table.tsv
 # 实现全在 ../site_specificity_common.R，本文件只声明参数。
 # 图面组织按项目统一口径显示 Flowers；底层目录/数据仍用 Flower。
 
@@ -21,12 +21,12 @@ source(file.path(shared_dir, "plot_tokens.R"))
 source(file.path(common_dir, "site_specificity_common.R"))
 
 genotypes <- c("trua1a")
-sprinzl_pos <- 66L
+sprinzl_pos <- 69L
 position_label <- paste0("Ψ", sprinzl_pos)
-input_path <- file.path(script_dir, "pos66_flower_site_table.tsv")
-file_prefix <- "pos66_flower"
+input_path <- file.path(script_dir, "pos69_flower_site_table.tsv")
+file_prefix <- "pos69_flower"
 
-# ---- 热图：行 = WT Ψ66 修饰的核代表 tRNA（WT 比例降序），列 = WT + 各株系 ----
+# ---- 热图：行 = WT Ψ69 修饰的核代表 tRNA（WT 比例降序），列 = WT + 各株系 ----
 heatmap_result <- run_site_specificity_heatmap(
   input_path = input_path,
   genotypes = genotypes,
