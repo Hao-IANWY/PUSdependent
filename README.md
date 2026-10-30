@@ -68,9 +68,9 @@ through the following stages:
    `<sample>_sites.positive.tsv` under `STAT/fisher/<ref_type>/`.
 6. **Downstream calls** — PUS writer-dependent sites are called from the
    positive-site tables with
-   [`downstream/call_dependent_methylKit.R`](BID-transcript.script/downstream/call_dependent_methylKit.R);
+   [`downstream/call_dependent_betabinomial.R`](BID-transcript.script/downstream/call_dependent_betabinomial.R);
    temperature-responsive sites with
-   [`downstream/call_temperature_response_methylKit.R`](BID-transcript.script/downstream/call_temperature_response_methylKit.R).
+   [`downstream/call_temperature_response_betabinomial.R`](BID-transcript.script/downstream/call_temperature_response_betabinomial.R).
    In parallel, the workflows emit raw per-gene expression matrices under
    `count/<ref_type>/` (Mock-group and all-samples).
 
@@ -86,9 +86,10 @@ spanning the site) and the gap count (reads carrying a deletion at the
 site); the ratio of gap count to depth estimates that replicate's Ψ
 fraction. This is formally
 identical to a bisulfite-seq measurement — coverage plus methylated-read
-counts — which is why the two differential callers below reuse the methylKit
-differential-methylation framework
-([Akalin et al., *Genome Biol* 2012](https://doi.org/10.1186/gb-2012-13-9-r87)).
+counts — and both differential callers below model it with a
+beta-binomial generalized linear mixed model, which accommodates the
+overdispersion of replicate-level gap ratios that a binomial model would
+understate.
 
 ### Identification of Ψ sites — [`bin/Pseudo_callsites.R`](BID-transcript.script/bin/Pseudo_callsites.R)
 
@@ -118,7 +119,7 @@ test and at least `min_pass_reps` replicates pass the per-replicate criteria
 chloroplast dataset. In the positive-site table, the reported ratio and depth
 are averaged over the passing replicates only.
 
-### Identification of PUS writer-dependent sites — [`downstream/call_dependent_methylKit.R`](BID-transcript.script/downstream/call_dependent_methylKit.R)
+### Identification of PUS writer-dependent sites — [`downstream/call_dependent_betabinomial.R`](BID-transcript.script/downstream/call_dependent_betabinomial.R)
 
 **The idea.** If a Ψ site is installed by a particular PUS enzyme, mutating
 that enzyme should make the modification disappear — the Treat-library gap
@@ -126,13 +127,6 @@ ratio at the site should fall back towards the Mock background. The script
 therefore asks one question per site — *is the modification fraction
 significantly lower in the mutant than in the WT?* — and answers it
 separately for each of the two independent mutant alleles of the writer gene.
-
-**Why a DNA-methylation tool can test this.** Per site and per replicate,
-BID-seq produces just two numbers: how many reads cover the site (depth) and
-how many of them carry a deletion (gap). That is exactly what bisulfite-seq
-produces for a cytosine (coverage and methylated reads), so the standard
-differential-methylation package methylKit can be reused as-is by reading
-the gap ratio as the "methylation frequency".
 
 **What the script does, step by step, per mutant allele:**
 
@@ -145,21 +139,25 @@ the gap ratio as the "methylation frequency".
    adjusted tables record uncovered sites as depth = 0) and keeps only
    complete cases. Mock libraries witness coverage only; the signal compared
    is the Treat gap ratio.
-3. **Test.** WT and mutant Treat replicates go through methylKit
-   (`methRead` → `unite` → `calculateDiffMeth`): a coverage-weighted
-   logistic regression of the gap ratio on genotype (WT = 1, mutant = 0),
-   with overdispersion estimated as in McCullagh and Nelder — the genotype
-   effect is referred to an F distribution when φ > 1 (chi-square otherwise)
-   — and p-values adjusted across sites with Benjamini–Hochberg (BH). The
-   BH q-value (two-sided FDR) is used for the call, with direction taken
-   from meth.diff: q < 0.05 and meth.diff > 0 (higher modification in WT)
-   are both required; the opposite direction never passes.
+3. **Test.** A beta-binomial generalized linear mixed model is fitted with
+   `glmmTMB`: a site-level random intercept shared across all gated sites
+   first estimates the global dispersion θ, which is then held fixed while
+   each site is refitted with `cbind(gap, depth − gap) ~ genotype`
+   (WT = 1, mutant = 0) against a null `~ 1`. The genotype term is tested
+   with a likelihood-ratio χ²(1) test — valid even for the fully separated
+   sites where "modified in WT, absent in every mutant replicate" would
+   break a Wald test — and the one-sided loss p-value is derived from the
+   full-model β sign (β < 0, i.e. lower modification in the mutant, takes
+   P/2). p-values are adjusted across all candidate sites of that allele
+   with Benjamini–Hochberg (BH), and the BH q-value is used for the call:
+   q < 0.05 is required; the opposite direction never passes.
 4. **Effect size.** Δ = WT_Ratio − Mut_Ratio, each term the arithmetic mean
    of the replicate Treat gap ratios. It is computed from the input tables,
-   independently of methylKit, so the reported difference always matches
-   the raw ratios.
-5. **Call.** Dependent in one allele: BH q < 0.05, meth.diff > 0, **and**
-   Δ ≥ 0.05.
+   independently of the model, so the reported difference always matches
+   the raw ratios. The required floor is 0.05 for mRNA sites and 0.10 for
+   rRNA sites.
+5. **Call.** Dependent in one allele: BH q < 0.05, **and** Δ ≥ the
+   effect-size floor.
    The final writer-dependent set keeps only sites dependent in **both**
    alleles, so a site cannot pass on the peculiarities of a single line;
    the mutant ratio reported there averages the two lines.
@@ -167,11 +165,11 @@ the gap ratio as the "methylation frequency".
 Outputs: per-allele `<allele>.dependent-sites.tsv`, the combined
 `<gene>.dependent.tsv`, and a summary JSON.
 
-### Identification of temperature-responsive sites — [`downstream/call_temperature_response_methylKit.R`](BID-transcript.script/downstream/call_temperature_response_methylKit.R)
+### Identification of temperature-responsive sites — [`downstream/call_temperature_response_betabinomial.R`](BID-transcript.script/downstream/call_temperature_response_betabinomial.R)
 
-Temperature-responsive sites are called with the same methylKit workflow,
-comparing the same WT material grown at the two temperatures (27 °C vs
-21 °C).
+Temperature-responsive sites are called with the same beta-binomial
+workflow, comparing the same WT material grown at the two temperatures
+(27 °C vs 21 °C).
 
 **Candidates and depth gate.** Candidates are the union of the positive
 sites called at either temperature (a site positive at only one temperature
@@ -182,10 +180,11 @@ excludes sites whose transcript is not expressed at one temperature, which
 would otherwise masquerade as a modification difference.
 
 **Test and call.** Because a temperature response can go in either
-direction, the two-sided test is used without a direction filter: a site is
-temperature-responsive when the BH q-value (two-sided FDR) < 0.05 and
-|Δ| ≥ 0.05 (group ratios are arithmetic means of the replicate Treat gap
-ratios), and the direction (increase/decrease at 27 °C) is recorded per site.
+direction, the two-sided likelihood-ratio test is used without a direction
+filter: a site is temperature-responsive when the BH q-value (two-sided
+FDR) < 0.05 and |Δ| ≥ 0.05 (group ratios are arithmetic means of the
+replicate Treat gap ratios), and the direction (increase/decrease at
+27 °C) is recorded per site.
 
 Outputs: `<group2>_vs_<group1>.all-sites.tsv`, `.response.tsv`, and a summary
 JSON with up/down counts.
@@ -288,9 +287,8 @@ snakemake \
 
 ### Downstream differential calls
 
-- The Bioconductor package
-  [`methylKit`](https://bioconductor.org/packages/methylKit/) (PUS
-  writer-dependent and temperature-responsive site calling).
+- R with the `glmmTMB`, `optparse`, `data.table` and `jsonlite` packages
+  (PUS writer-dependent and temperature-responsive site calling).
 
 ## Data availability
 

@@ -1,4 +1,0 @@
-Tissue	WT_Sites	Dependent_Sites	WT_Sites_Above_20pct	Dependent_Sites_Above_20pct	WT_Median_Ratio	Dependent_Median_Ratio	WT_Fraction_Above_20pct	Dependent_Fraction_Above_20pct
-Root	235	33	47	3	0.105176	0.0955377	0.2	0.0909090909090909
-Leaf	199	15	53	2	0.105333	0.089296	0.266331658291457	0.133333333333333
-Flower	163	27	62	7	0.142591	0.0917303	0.380368098159509	0.259259259259259

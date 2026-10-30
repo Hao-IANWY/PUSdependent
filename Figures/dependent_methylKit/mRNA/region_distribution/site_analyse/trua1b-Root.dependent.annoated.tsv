@@ -1,2 +1,0 @@
-chr	pos	strand	context	WT_Ratio	Mut_Ratio	Delta_Ratio(WT-Mut)	trua1b_1-Root_p.value	trua1b_1-Root_q.value	trua1b_2-Root_p.value	trua1b_2-Root_q.value	annoation
-AT2G45810.1	1642	+	GTTCA	0.289593666666667	0.186597	0.102996666666667	1.92804144045188e-05	0.00104114237784402	0.00124095907939947	0.026285769590916	CDS

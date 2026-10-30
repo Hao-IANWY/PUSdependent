@@ -1,8 +1,0 @@
-chr	pos	fix_pos	strand	context	WT_Ratio	Mut_Ratio	Delta_Ratio(WT-Mut)	Tissues	n_tissues	peak_tissue
-tRNA-Mt-Asn-GTT-1	39	40	+	ACTGA	0.403106	0.130336	0.27277	leaf	1	leaf
-tRNA-Pt-Asn-GTT-1	39	40	+	ACTGA	0.599742	0.172418	0.427324	leaf	1	leaf
-tRNA-Pt-Cys-GCA-1	38	39	+	AATCC	0.13531	0.0285785	0.106732	leaf,Flower	2	leaf
-tRNA-Pt-Leu-CAA-1	39	39	+	AATCT	0.432943	0.153085	0.279858	leaf,Flower	2	leaf
-tRNA-Pt-Pro-TGG-1	39	38	+	GGTAC	0.659774	0.194605	0.46517	leaf,Flower	2	leaf
-tRNA-Pt-Thr-TGT-1	39	39	+	AATGC	0.327484	0.0587615	0.268722	leaf,Flower	2	Flower
-tRNA-Pt-Tyr-GTA-1	40	39	+	AATTC	0.74324	0.341518	0.401722	leaf	1	leaf

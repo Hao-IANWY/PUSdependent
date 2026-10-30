@@ -13,8 +13,7 @@
 
 `n` = 该区段实际长度，`L` = 该区段固定长度（Sprinzl 布局，17 段共 77 个槽位，编号 0–76，
 其中 1–76 与 Sprinzl 编号一致；0 是额外 5′ 碱基槽，仅 His-GTG 使用）。
-半值取上（`int(x + 0.5)`），与 `Figures/dependent_methylKit/tRNA/build_genotype_dependent_tables.sh`
-的 awk 实现一致。
+半值取上（`int(x + 0.5)`）。
 
 注释来自同目录 `plantRNA_database_unique.tsv`（表二，220 条 unique tRNA，每条自带 17 段区段序列），
 因此**每个拷贝都用它自己的区段注释**，不依赖 family 代表；表里没有的 `chr`
@@ -23,7 +22,7 @@
 用法
 ----
     python3 add_sprinzl_pos.py --input tRNA/STAT/fisher/mRNA/trua1a_1_Flower_sites.positive.tsv
-    python3 add_sprinzl_pos.py --input tRNA/STAT/dependent_methylKit/ncRNA/Flower/trua1b/trua1b-Flower.dependent.tsv
+    python3 add_sprinzl_pos.py --input tRNA/STAT/dependent_betabinomial/ncRNA/Flower/trua1b/trua1b-Flower.dependent.tsv
     python3 add_sprinzl_pos.py -i in.tsv --chr-col chr --pos-col pos -o out.tsv
 
 输出

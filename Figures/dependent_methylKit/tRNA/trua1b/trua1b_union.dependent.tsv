@@ -1,7 +1,0 @@
-chr	pos	fix_pos	strand	context	WT_Ratio	Mut_Ratio	Delta_Ratio(WT-Mut)	Tissues	n_tissues	peak_tissue
-tRNA-Mt-Cys-GCA-1	24	25	+	TGTAT	0.0739493	0.0161835	0.0577658	leaf	1	leaf
-tRNA-Nu-Cys-GCA-1	27	28	+	AATTG	0.763603	0.536485	0.227119	leaf	1	leaf
-tRNA-Nu-Pro-TGG-2	37	38	+	GGTGC	0.555121	0.470054	0.0850673	leaf	1	leaf
-tRNA-Nu-Tyr-GTA-2	35	35	+	TGTAG	0.67887	0.554391	0.12448	leaf	1	leaf
-tRNA-Nu-eMet-CAT-1	32	31	+	GGTCT	0.590148	0.479038	0.11111	leaf	1	leaf
-tRNA-Pt-Arg-TCT-1	31	31	+	GGTCT	0.790558	0.732569	0.0579887	leaf	1	leaf

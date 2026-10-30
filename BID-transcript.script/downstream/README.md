@@ -2,26 +2,30 @@
 
 本目录的工具**不被任何 smk 调用**，均手动运行。
 
-## call_dependent_betabinomial.R — PUS 依赖位点判定（beta-binomial 版）
+## call_dependent_betabinomial.R — PUS 依赖位点判定（beta-binomial 版，主用）
 
-与下方 methylKit 版并列的另一个统计实现：CLI 接口、深度门槛、效应量口径、
+PUS 依赖位点判定的主用统计实现。CLI 接口、深度门槛、效应量口径、
 两株系 AND 判定与输出表结构（`<株系>.dependent-sites.tsv` / `<前缀>.dependent.tsv` /
-`<前缀>.dependent.summary.json`）与 methylKit 版完全同构，可直接用同一套
-run.sh 组织方式批量调用，只把检验换成 Jie Huang（Beacon）
+`<前缀>.dependent.summary.json`）沿用原 methylKit 版的约定，可直接用同一套
+run.sh 组织方式批量调用，检验用 Jie Huang（Beacon）
 `dependency_stats_standalone.R`（见仓库 `dependent_jiehuang/`）的方法：
 
 1. 在全部过深度门的位点上拟合含 site 随机截距的 beta-binomial GLMM，估全局
    离散度 theta；
-2. 固定 theta 逐位点拟合 `cbind(gap, depth-gap) ~ genotype`，取
-   `genotypemutant` 系数的单侧 Wald P（β<0 取 P/2）；
+2. 固定 theta 逐位点拟合 `cbind(gap, depth-gap) ~ genotype` 与 `~ 1` 两个
+   模型，取 genotype 项的似然比 χ²(1) 双侧 P（`--site-test lrt` 默认，
+   "WT 有、突变体全 0"的完全分离位点不退化；wald 为旧口径仅复现用），再按
+   full 模型 β 符号折单侧 loss P（β<0 取 P/2）；
 3. 单侧 P 在该株系全部候选位点内做 BH 校正，`q < --alpha` 且
-   `Delta_Ratio(WT-Mut) >= --min-delta` 判 dependent。
+   `Delta_Ratio(WT-Mut) >= --min-delta` 判 dependent。效应量门槛按 RNA
+   类别区分：mRNA 0.05，rRNA 0.10（由各 `STAT/dependent_betabinomial/run.sh`
+   控制，2026-10-30 起 rRNA 收紧）。
 
-与原作者脚本的两处有意差异（保持本流程判定框架，保证与 methylKit 版逐位点
-可比）：深度门槛沿用本流程严格口径（突变株每个 Mock/Treat 重复、WT 每个重复
-都须 depth≥10；原方法只要求每基因型 ≥2 个文库达标）；delta 用重复比例均值差
-（原方法用 pooled 差）。逐位点 p/β 已对拍与原版 bit 级一致（tRNA leaf trua1a
-567 候选、400 位点抽检，theta 10 位小数相同）。
+与原作者脚本的两处有意差异（保持本流程判定框架）：深度门槛沿用本流程严格
+口径（突变株每个 Mock/Treat 重复、WT 每个重复都须 depth≥10；原方法只要求
+每基因型 ≥2 个文库达标）；delta 用重复比例均值差（原方法用 pooled 差）。
+逐位点 p/β 已对拍与原版 bit 级一致（tRNA leaf trua1a 567 候选、400 位点
+抽检，theta 10 位小数相同）。
 
 ```bash
 Rscript downstream/call_dependent_betabinomial.R \
@@ -39,14 +43,16 @@ Rscript downstream/call_dependent_betabinomial.R \
 - `--tsv` 需含逐重复 Treat ratio/depth/**gap** 列（gap 用于计数；默认自动识别
   `Treat-*_gap`；Fisher 表原生带 `_gap` 列，无需预处理）。
 - 默认 `--min-depth 10`、`--alpha 0.05`、`--min-delta 0.05`、`--significance q`、
-  `--cores 1`；line 级表比 methylKit 版多 `beta_coef/beta_se/odds_ratio` 审计列，
-  summary JSON 记录两系 theta 与拟合失败计数。
+  `--site-test lrt`、`--cores 1`；line 级表带 `beta_coef/beta_se/odds_ratio`
+  审计列，summary JSON 记录两系 theta 与拟合失败计数。
 
-## call_dependent_methylKit.R — PUS 依赖位点判定（methylKit 版，论文主用）
+## call_dependent_methylKit.R — PUS 依赖位点判定（methylKit 版，保留的参考实现）
 
 比较 WT 与某 writer 基因的两个独立突变株系，判定 PUS 依赖位点（修饰在
 突变体中显著丢失）。统计检验复用 methylKit 差异甲基化框架——把每个位点的
-depth/gap 计数读作覆盖度/甲基化计数——原理与判定标准的完整描述见仓库顶层
+depth/gap 计数读作覆盖度/甲基化计数。**流程结果已迁移到上方 beta-binomial
+版，项目内各数据集的 `STAT/dependent_methylKit/` 结果目录已删除**，本脚本
+仅作为方法对照保留；原理与判定标准的完整描述见仓库顶层
 [README 的「位点鉴定统计方法」](../../README.zh-CN.md#位点鉴定统计方法)一节。
 
 ```bash
@@ -71,15 +77,17 @@ Rscript downstream/call_dependent_methylKit.R \
   `--methylkit-test F`；输出逐株系 `<株系>.dependent-sites.tsv`、合并的
   `<前缀>.dependent.tsv` 与 `<前缀>.dependent.summary.json`。
 
-## call_temperature_response_methylKit.R — 温度响应位点判定（methylKit 版）
+## call_temperature_response_betabinomial.R — 温度响应位点判定（beta-binomial 版，主用）
 
 比较同一 WT 材料在两个温度（如 27 °C vs 21 °C）下的修饰差异，判定温度
-响应位点；检验框架与依赖版相同，但不预设方向、直接使用双侧 p 值，方向
-（升/降）单列记录。原理详见仓库顶层
-[README 的「位点鉴定统计方法」](../../README.zh-CN.md#位点鉴定统计方法)。
+响应位点；检验框架与依赖版相同（beta-binomial GLMM + 似然比检验），但不
+预设方向、直接使用双侧 P 做 BH 校正，方向（升/降）单列记录。候选位点为
+两个温度 Fisher 阳性位点的并集（仅单一温度阳性的位点正是"另一温度修饰
+丢失"的强候选），由各 `STAT/Temperature_response_betabinomial/run.sh` 合并
+生成并批量调用；深度门槛、|Δ| ≥ 0.05 的效应量口径与依赖版一致。
 
 ```bash
-Rscript downstream/call_temperature_response_methylKit.R \
+Rscript downstream/call_temperature_response_betabinomial.R \
     --tsv WT_27_vs_WT_21.candidates.tsv \
     --key-cols chr,pos,strand \
     --group1 WT_21 --group2 WT_27 \
@@ -87,19 +95,16 @@ Rscript downstream/call_temperature_response_methylKit.R \
     --group1-mock-files  Mock-21-WT.rep1.adjusted.tsv,...（同上，rep1~rep3） \
     --group2-treat-files Treat-27-WT.rep1.adjusted.tsv,...（同上，rep1~rep3） \
     --group2-mock-files  Mock-27-WT.rep1.adjusted.tsv,...（同上，rep1~rep3） \
-    --outdir STAT/Temperature_response/mRNA
+    --outdir STAT/Temperature_response_betabinomial/mRNA
 ```
 
-- `--tsv` 为两个温度 Fisher 阳性位点的并集（`chr/pos/strand/context` 四
-  列），项目内由 `STAT/Temperature_response/run.sh` 从两张 Fisher 表合并
-  生成。
 - 输出 `<group2>_vs_<group1>.all-sites.tsv`、`.response.tsv`（含
   direction 列）与 `.response.summary.json`（含升/降计数）。
 
 ## call_dependent.py — PUS 依赖位点调用（纯效应量过渡版）
 
-只用 Δratio 阈值判定、不做显著性检验的早期版本；论文分析使用上方带统计
-检验的 `call_dependent_methylKit.R`。以 WT 候选位点 TSV 为基准，比较两个
+只用 Δratio 阈值判定、不做显著性检验的早期版本；正式分析使用上方带统计
+检验的 `call_dependent_betabinomial.R`。以 WT 候选位点 TSV 为基准，比较两个
 突变株系的 Treat/Mock adjusted TSV：
 
 ```bash

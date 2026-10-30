@@ -1,5 +1,5 @@
 comparison	n_sites	mean_difference	p_value	label
-WT_Flower vs WT_Root	6	0.180994166666667	0.0303553589678905	*
-WT_Flower vs WT_Leaf	6	0.122212888888889	0.0156263303619313	*
-mutant_Flower vs mutant_Root	6	0.0895202777777777	0.163928839948534	ns
-mutant_Flower vs mutant_Leaf	6	-0.0595945555555557	0.000356062323550524	***
+WT_Flower vs WT_Root	4	0.240984416666666	0.0469912694467017	*
+WT_Flower vs WT_Leaf	4	0.15358225	0.0388111159504869	*
+mutant_Flower vs mutant_Root	4	0.127730041666667	0.196115298450856	ns
+mutant_Flower vs mutant_Leaf	4	-0.068024375	0.00141039291602685	**

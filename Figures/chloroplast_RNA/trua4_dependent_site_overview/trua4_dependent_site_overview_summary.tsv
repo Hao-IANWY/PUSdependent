@@ -1,4 +1,0 @@
-rna_type	n_sites	n_dependent	label
-rRNA	4	2	n = 4; Dependent = 2
-tRNA	64	7	n = 64; Dependent = 7
-mRNA	18	0	n = 18; Dependent = 0
