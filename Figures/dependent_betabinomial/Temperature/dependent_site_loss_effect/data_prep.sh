@@ -20,7 +20,7 @@
 #   - site_status = dependent（落在最终交集表里的）/ wt_only（其余）。
 #
 # tRNA 侧注意：Temperature_tRNA 的参考是 tRNA-unique_sn_snoRNA.fa，混有 sn/snoRNA，
-# 必须按 ^tRNA- 过滤，只保留 tRNA 部分（与 Figures/dependent_methylKit/tRNA 同口径）。
+# 必须按 ^tRNA- 过滤，只保留 tRNA 部分（与 Figures/dependent_betabinomial/tRNA 同口径）。
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

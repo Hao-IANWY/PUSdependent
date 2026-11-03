@@ -8,12 +8,13 @@ dependent 位点。红点落在对角线下方（WT > Mut）即为 TRUA1B 依赖
 
 移植自论文版 `archive/20260902/paper/TRUA1B_thermomorphogenesis/dependent_site_loss_effect/`。
 三处不同：原图只有 mRNA，这里扩到 **mRNA / rRNA / tRNA 三类**（共 6 张）；数据源从旧
-`data.sh` 现拼换成 2026-09-25 换血后的三重复 beta-binomial LRT 口径；绘图样式改走 `Figures/shared`。
+`data.sh` 现拼换成三重复 beta-binomial LRT 口径（mRNA / rRNA 为 2026-09-25 换血版，
+tRNA 为 2026-11-02 全量换血版）；绘图样式改走 `Figures/shared`。
 
 ## 目录结构
 
 ```
-Figures/Temperature/dependent_site_loss_effect/
+Figures/dependent_betabinomial/Temperature/dependent_site_loss_effect/
 ├── data_prep.sh                              6 张表的构建逻辑（只产数据，不画图）
 ├── plot.R                                    逐张出图（pdf/png/svg）
 └── <rna>_<temp>_dependent_site_loss_effect.tsv / .pdf / .png / .svg
@@ -28,6 +29,8 @@ Figures/Temperature/dependent_site_loss_effect/
 | tRNA | `Temperature_tRNA/STAT/dependent_betabinomial/ncRNA/<temp>/trua1b/` |
 
 株系为 `trua1b_1` / `trua1b_3`（**trua1b_2 整线弃用**），每株系每温度 3 个生物学重复。
+mRNA / rRNA 输入自 2026-09-25 换血后未变；tRNA 输入为 2026-11-02 全量换血后的
+`Temperature_tRNA/STAT/dependent_betabinomial` 重跑结果（2026-11-02 14:54 完成）。
 
 每个组合用到三张表：
 
@@ -53,9 +56,9 @@ beta-binomial LRT `F` 检验、**BH q < 0.05**（方向为正，meth.diff > 0）
 ### tRNA 侧的 ^tRNA- 过滤
 
 `Temperature_tRNA` 的参考是 `tRNA-unique_sn_snoRNA.fa`，混有 snRNA / snoRNA，
-**必须按 `^tRNA-` 筛掉**（与 `Figures/dependent_beta-binomial LRT/tRNA`、同目录姊妹图
-`temperature_responsive_scatter` 同口径）。上游 ncRNA 全表 614 / 608 个候选位点，
-过滤后剩 503 / 508。
+**必须按 `^tRNA-` 筛掉**（与 `Figures/dependent_betabinomial/tRNA`、同目录姊妹图
+`temperature_responsive_scatter` 同口径）。当前上游 ncRNA 全表 547 / 555 个候选位点
+（21℃ / 27℃），过滤后剩 493 / 493。
 
 ### 位点数
 
@@ -65,11 +68,13 @@ beta-binomial LRT `F` 检验、**BH q < 0.05**（方向为正，meth.diff > 0）
 |---|---|---|---|---|
 | mRNA | 196 | 0 | 194 | 0 |
 | rRNA | 106 | 0 | 107 | 0 |
-| tRNA | 503 | 0 | 508 | 0 |
+| tRNA | 493 | 0 | 493 | 0 |
 
 **六张图全灰**：2026-10-20 启用 BH q 后，三类 RNA 在两个温度下都没有判出
-dependent 位点（旧版原始 p 口径下 mRNA 21℃ 有 5 个、tRNA 有 3 个）。按需求照出以
-保持三类齐全，`plot.R` 遇到零 dependent 会打一条日志，免得日后误判成数据没接上。
+dependent 位点（旧版原始 p 口径下 mRNA 21℃ 有 5 个、tRNA 有 3 个）。2026-11-02
+tRNA 全量换血重跑后仍为 0/0（WT 位点数由旧版 503 / 508 变为 493 / 493）。按需求
+照出以保持三类齐全，`plot.R` 遇到零 dependent 会打一条日志，免得日后误判成数据
+没接上。
 
 ## 运行
 

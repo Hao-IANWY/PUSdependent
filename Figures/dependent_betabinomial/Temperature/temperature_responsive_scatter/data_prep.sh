@@ -13,7 +13,7 @@
 # 回原始 fisher/adjustGap 重算，直接取库内产物，列名做一次规范化。
 #
 # tRNA 侧注意：Temperature_tRNA 的参考是 tRNA-unique_sn_snoRNA.fa，混有 sn/snoRNA，
-# 必须按 ^tRNA- 过滤，只保留 tRNA 部分（与 Figures/dependent_methylKit/tRNA 同口径）。
+# 必须按 ^tRNA- 过滤，只保留 tRNA 部分（与 Figures/dependent_betabinomial/tRNA 同口径）。
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

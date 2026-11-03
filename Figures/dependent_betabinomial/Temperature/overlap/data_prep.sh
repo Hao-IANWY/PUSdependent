@@ -13,7 +13,7 @@
 # （up_only / dependent_only / both），交给 plot.R 数三种计数画 2-set Venn。
 #
 # tRNA 侧注意：Temperature_tRNA 的参考是 tRNA-unique_sn_snoRNA.fa，混有 sn/snoRNA，
-# 两个集合都必须按 ^tRNA- 过滤（与 Figures/Temperature 其余图组同口径）。
+# 两个集合都必须按 ^tRNA- 过滤（与 Figures/dependent_betabinomial/Temperature 其余图组同口径）。
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

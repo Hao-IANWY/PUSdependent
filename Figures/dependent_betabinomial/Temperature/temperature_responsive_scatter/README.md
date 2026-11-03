@@ -8,12 +8,13 @@ Y 轴 = 27℃ 修饰比例，对角线为 y=x。落在对角线右下方的是 2
 
 移植自论文版 `archive/20260902/paper/TRUA1B_thermomorphogenesis/temperature_responsive_sites/`，
 三处不同：原图只有 mRNA，这里按 RNA 类型拆成 **mRNA / rRNA / tRNA 三张**；数据源从旧
-Fisher 口径换成 2026-09-25 换血后的三重复 beta-binomial LRT 口径；绘图样式改走 `Figures/shared`。
+Fisher 口径换成三重复 beta-binomial LRT 口径（mRNA / rRNA 为 2026-09-25 换血版，
+tRNA 为 2026-11-02 全量换血版）；绘图样式改走 `Figures/shared`。
 
 ## 目录结构
 
 ```
-Figures/Temperature/temperature_responsive_scatter/
+Figures/dependent_betabinomial/Temperature/temperature_responsive_scatter/
 ├── data_prep.sh                              三张表的构建逻辑（只产数据，不画图）
 ├── plot.R                                    逐张出图（pdf/png/svg）
 └── <rna>_temperature_responsive_scatter.tsv / .pdf / .png / .svg
@@ -50,20 +51,26 @@ adjustGap 重算两个温度的修饰比与 Mock 平均深度），与 archive �
 - `data_prep.sh` 把 `direction` 空值改写为 `non-responsive`，另两值改写为
   `up-regulated` / `down-regulated`（= 27℃ 上调 / 下调）。
 
-位点数与各 `STAT/Temperature_response/summary.tsv` 逐一对齐：
+位点数与各 `STAT/Temperature_response_betabinomial/summary.tsv`（tRNA 为
+`Temperature_tRNA` 同名目录）逐一对齐：
 
 | RNA 类型 | 候选位点 | 响应位点 | 27℃ 上调 | 27℃ 下调 |
 |---|---|---|---|---|
-| mRNA | 267 | 39 | 6 | 33 |
-| rRNA | 108 | 24 | 13 | 11 |
-| tRNA | 517 | 0 | 0 | 0 |
+| mRNA | 267 | 36 | 6 | 30 |
+| rRNA | 108 | 13 | 10 | 3 |
+| tRNA | 502 | 4 | 4 | 0 |
+
+mRNA / rRNA 的输入自 2026-09-25 换血后未变；tRNA 输入为 2026-11-02 全量换血后的
+重跑结果（`Temperature_tRNA/STAT/Temperature_response_betabinomial` 于 2026-11-02
+14:53 完成）。
 
 ### tRNA 侧的 ^tRNA- 过滤
 
 `Temperature_tRNA` 的参考是 `tRNA-unique_sn_snoRNA.fa`，混有 snRNA / snoRNA，
-**必须按 `^tRNA-` 筛掉**（与 `Figures/dependent_beta-binomial LRT/tRNA` 同口径）。SLIM
-口径下上游 ncRNA 全表 638 个候选、0 个响应位点；按 `^tRNA-` 过滤后为 517 / 0，
-tRNA 图全灰。
+**必须按 `^tRNA-` 筛掉**（与 `Figures/dependent_betabinomial/tRNA` 同口径）。当前
+上游 ncRNA 全表 567 个候选（`summary.tsv`：567 candidate / 558 tested / 4 responsive，
+4 up / 0 down）；按 `^tRNA-` 过滤后为 502 个候选（496 tested；5 个 depth_filter +
+1 个 boundary_p1）、4 个响应位点（全部 `up_in_WT_27`）。
 
 ## 运行
 

@@ -45,6 +45,20 @@ regulation_colors <- c(
 init_theme(base_size = SIZE_TOKENS$base_size, sizes = SIZE_TOKENS)
 
 build_plot <- function(df) {
+  # ggplot2 4.x 对 drop = FALSE 的空因子水平不画图例色标（tRNA 没有
+  # down-regulated 位点时该行只剩文字）。给缺失水平补一行 NA 坐标的种子数据，
+  # 只为生成图例色标，不会真的画点（na.rm = TRUE）。
+  missing_levels <- setdiff(regulation_levels, as.character(unique(df$regulation)))
+  legend_seed <- data.frame(
+    WT_21_Ratio = rep(NA_real_, length(missing_levels)),
+    WT_27_Ratio = rep(NA_real_, length(missing_levels)),
+    regulation = factor(missing_levels, levels = regulation_levels)
+  )
+  background_df <- bind_rows(
+    filter(df, .data$regulation == "non-responsive"),
+    legend_seed
+  )
+
   # 灰点先画、响应位点后画，保证响应位点压在灰点之上
   ggplot(df, aes(x = .data$WT_21_Ratio, y = .data$WT_27_Ratio)) +
     geom_abline(
@@ -55,9 +69,10 @@ build_plot <- function(df) {
       color = "grey45"
     ) +
     geom_point(
-      data = filter(df, .data$regulation == "non-responsive"),
+      data = background_df,
       aes(fill = .data$regulation),
-      shape = 21, size = 3.0, color = "black", stroke = 0.5, alpha = 0.88
+      shape = 21, size = 3.0, color = "black", stroke = 0.5, alpha = 0.88,
+      na.rm = TRUE
     ) +
     geom_point(
       data = filter(df, .data$regulation != "non-responsive"),

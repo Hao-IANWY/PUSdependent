@@ -1,0 +1,21 @@
+在启动过程中 - 警告信息:
+Setting LC_TIME failed, using "C" 
+警告信息:
+1: 程序包‘data.table’是用R版本4.4.3 来建造的 
+2: 程序包‘jsonlite’是用R版本4.4.3 来建造的 
+警告信息:
+In check_dep_version(dep_pkg = "TMB") : package version mismatch: 
+glmmTMB was built with TMB package version 1.9.19
+Current TMB package version is 1.9.23
+Please re-install glmmTMB from source or restore original ‘TMB’ package (see '?reinstalling' for more information)
+WT candidates: 505
+Flower_vs_Leaf theta: 292.7562
+Flower_vs_Leaf all sites: 505
+Flower_vs_Leaf dependent sites: 152
+Flower_vs_Leaf theta: 292.7562
+Flower_vs_Leaf all sites: 505
+Flower_vs_Leaf dependent sites: 152
+Final dependent sites: 152
+Final output: /home/haoli/project/shuangli/PUS/PUSdependent/Figures/wildtype_landscape/tissue_ratio/tRNA/betabinomial/leaf_vs_flower/leaf_vs_flower.dependent.tsv
+警告信息:
+程序包‘glmmTMB’是用R版本4.4.3 来建造的 

@@ -1,8 +1,10 @@
 # BID-seq Temperature tRNA Arabidopsis — totalRNA 流程（只分析 R2）
 # 假尿苷 tRNA 文库，R2 结构：8bp UMI + TATAGGG + 插入序列 + polyA 尾巴 + 接头。
-# 2026-09-24 数据换血：弃用旧 260129 数据与 trua1b_2（line2）整线；
-# 现 6 组（{WT,trua1b_1,trua1b_3} × {21,27}）× Mock/Treat × 3 repeats = 36 文库。
-# rep1/rep2 来自 merge_260702_260716（260702+260716 合并），rep3 来自 260909-T7PE150-127G。
+# 2026-11-02 第二次全量换血：09 版数据（merge_260702_260716 + 260909-T7PE150-127G）
+# 弃用并整体留档于 Temperature_tRNA/archive/；全部 36 文库改链新测序
+# 20261102-tRNA-temperature（4 批次 261019×2/261021/261102 已按生物名合并，映射见
+# 源目录 sample_mapping.tsv；已实测 R2 开头结构与旧数据一致，trim/umi 参数不变）。
+# 6 组（{WT,trua1b_1,trua1b_3} × {21,27}）× Mock/Treat × 3 repeats = 36 文库。
 # 参数沿用 tRNA/config.yaml 的 totalRNA 现行默认值；只跑 ncRNA（mRNA 两处已注释）。
 
 paths:
