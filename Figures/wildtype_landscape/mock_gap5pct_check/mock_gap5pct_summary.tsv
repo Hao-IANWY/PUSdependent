@@ -1,0 +1,10 @@
+RNA	Tissue	n_positive	n_fail_mock5pct	n_keep	pct_dropped	n_fail_mockdepth_ge10	n_fail_mockdepth_lt10	n_fail_1rep	n_fail_2rep	n_fail_3rep	n_fail_also_avg_ge5pct	median_max_mock_ratio_of_fail
+mRNA	Root	235	4	231	1.7	0	4	2	1	1	2	0.0931
+mRNA	Leaf	199	2	197	1.01	0	2	1	0	1	1	0.1319
+mRNA	Flower	163	1	162	0.61	0	1	0	1	0	1	0.0976
+rRNA	Root	101	3	98	2.97	0	3	1	0	2	3	0.1637
+rRNA	Leaf	104	2	102	1.92	0	2	0	0	2	2	0.1142
+rRNA	Flower	103	3	100	2.91	0	3	1	0	2	2	0.0567
+tRNA	Root	417	43	374	10.31	0	43	17	5	21	29	0.0854
+tRNA	Leaf	505	23	482	4.55	0	23	6	3	14	17	0.0746
+tRNA	Flower	499	27	472	5.41	0	27	3	2	22	25	0.071
