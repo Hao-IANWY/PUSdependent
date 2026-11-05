@@ -228,8 +228,10 @@ All five configs share one schema:
   - `min_gap`: Treat gap count per passing replicate;
   - `min_treat_ratio`: Treat gap ratio per passing replicate;
   - `ratio_fold`: Treat/Mock ratio fold-change;
-  - `min_pass_reps`: how many replicates must pass — 3 for all
-    three-replicate datasets, 2 for the two-replicate Chloroplast dataset.
+  - `min_pass_reps`: how many replicates must pass — 3 for the three-replicate
+    datasets and for the 8-replicate Temperature_tRNA dataset (at least three
+    biological replicates, consistent with the earlier 3-of-3 and 5-of-3
+    designs), 2 for the two-replicate Chloroplast dataset.
 - **`read_layout` / `rmdup` / `trim_galore_length`** — paired vs single-end
   input, whether to deduplicate, and the minimum read length kept after
   trimming.

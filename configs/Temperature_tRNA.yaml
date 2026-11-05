@@ -1,11 +1,17 @@
 # BID-seq Temperature tRNA Arabidopsis — totalRNA 流程（只分析 R2）
 # 假尿苷 tRNA 文库，R2 结构：8bp UMI + TATAGGG + 插入序列 + polyA 尾巴 + 接头。
-# 2026-11-02 第二次全量换血：09 版数据（merge_260702_260716 + 260909-T7PE150-127G）
-# 弃用并整体留档于 Temperature_tRNA/archive/；全部 36 文库改链新测序
-# 20261102-tRNA-temperature（4 批次 261019×2/261021/261102 已按生物名合并，映射见
-# 源目录 sample_mapping.tsv；已实测 R2 开头结构与旧数据一致，trim/umi 参数不变）。
-# 6 组（{WT,trua1b_1,trua1b_3} × {21,27}）× Mock/Treat × 3 repeats = 36 文库。
+# 2026-11-05 第三次重建：8 重复口径，96 文库（3 基因型 × 2 温度 × 2 处理 × 8 重复）。
+# 数据源严格按 data_source/source.tsv 的 Temperature_tRNA 192 行（96 文库 × R1/R2）
+# 建链，raw_data/links.sh 由该表驱动生成。重复号跨批次连续：
+#   rep1-2 = batch1（260129-T7-248G）
+#   rep3-5 = batch2（merge_260702_260716 + 260909-T7PE150-127G）
+#   rep6-8 = batch3（20261102-tRNA-temperature，4 个测序批次合并样本）
+# 基因型统一为 WT / trua1b_1 / trua1b_2（trua1b_2 = 旧标签 trua1b_2/trua1b_3
+# 同株系，老板 2026-11-04 拍板 _2==_3）；此前 3 重复版本的 36 文库结果留档于
+# Temperature_tRNA/archive/20261105_3rep_before_8rep_rebuild/。
 # 参数沿用 tRNA/config.yaml 的 totalRNA 现行默认值；只跑 ncRNA（mRNA 两处已注释）。
+# min_pass_reps 保持 3：即"8 个重复里至少 3 个通过"，与此前 3 中 3、polyA 5 中 3
+# 的"至少 3 个生物学重复"口径一致（老板 2026-11-05 拍板）。
 
 paths:
   script_dir: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin
@@ -33,7 +39,8 @@ pipeline:
       # mRNA: primary
 
   # 沿用当前 totalRNA 流程默认阈值（移植自 polyA 流程的硬编码/R 脚本默认值）。
-  # call sites 要求至少 3 个生物学重复通过：每组 3 重复，即 3 中 3（同 tRNA 突变体组先例）。
+  # call sites 要求至少 3 个生物学重复通过：8 重复设计下即 8 中 3
+  # （老板 2026-11-05 拍板，与此前 3 中 3 的"至少 3 个重复"口径一致）。
   filter:
     min_depth: 10           # filter_t_sites: 单重复 depth >= 此值
     min_avg_depth: 10       # Mock/Treat 组平均 depth >= 此值
@@ -41,7 +48,7 @@ pipeline:
     min_gap: 5              # 每个通过重复的 Treat gap >= 此值
     min_treat_ratio: 0.05   # 每个通过重复的 Treat ratio >= 此值
     ratio_fold: 2           # Treat ratio >= ratio_fold * Mock ratio
-    min_pass_reps: 3        # 至少这么多重复通过
+    min_pass_reps: 3        # 至少这么多重复通过（8 中 3）
 
   # totalRNA 只分析 R2：trim 单端模式处理 R2（--adapter AAAAAAAAAAA），
   # 去重用 seqkit rmdup -s。read1 仅作配对信息保留，不进入分析。
@@ -77,6 +84,26 @@ samples:
         file_index: Mock-21-WT.rep3
         read1: raw_data/Mock-21-WT.rep3.R1.fq.gz
         read2: raw_data/Mock-21-WT.rep3.R2.fq.gz
+      rep4:
+        file_index: Mock-21-WT.rep4
+        read1: raw_data/Mock-21-WT.rep4.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep4.R2.fq.gz
+      rep5:
+        file_index: Mock-21-WT.rep5
+        read1: raw_data/Mock-21-WT.rep5.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep5.R2.fq.gz
+      rep6:
+        file_index: Mock-21-WT.rep6
+        read1: raw_data/Mock-21-WT.rep6.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep6.R2.fq.gz
+      rep7:
+        file_index: Mock-21-WT.rep7
+        read1: raw_data/Mock-21-WT.rep7.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep7.R2.fq.gz
+      rep8:
+        file_index: Mock-21-WT.rep8
+        read1: raw_data/Mock-21-WT.rep8.R1.fq.gz
+        read2: raw_data/Mock-21-WT.rep8.R2.fq.gz
     treat:
       rep1:
         file_index: Treat-21-WT.rep1
@@ -90,7 +117,26 @@ samples:
         file_index: Treat-21-WT.rep3
         read1: raw_data/Treat-21-WT.rep3.R1.fq.gz
         read2: raw_data/Treat-21-WT.rep3.R2.fq.gz
-
+      rep4:
+        file_index: Treat-21-WT.rep4
+        read1: raw_data/Treat-21-WT.rep4.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep4.R2.fq.gz
+      rep5:
+        file_index: Treat-21-WT.rep5
+        read1: raw_data/Treat-21-WT.rep5.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep5.R2.fq.gz
+      rep6:
+        file_index: Treat-21-WT.rep6
+        read1: raw_data/Treat-21-WT.rep6.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep6.R2.fq.gz
+      rep7:
+        file_index: Treat-21-WT.rep7
+        read1: raw_data/Treat-21-WT.rep7.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep7.R2.fq.gz
+      rep8:
+        file_index: Treat-21-WT.rep8
+        read1: raw_data/Treat-21-WT.rep8.R1.fq.gz
+        read2: raw_data/Treat-21-WT.rep8.R2.fq.gz
   WT_27:
     sample_id: "WT_27"
     mock:
@@ -106,6 +152,26 @@ samples:
         file_index: Mock-27-WT.rep3
         read1: raw_data/Mock-27-WT.rep3.R1.fq.gz
         read2: raw_data/Mock-27-WT.rep3.R2.fq.gz
+      rep4:
+        file_index: Mock-27-WT.rep4
+        read1: raw_data/Mock-27-WT.rep4.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep4.R2.fq.gz
+      rep5:
+        file_index: Mock-27-WT.rep5
+        read1: raw_data/Mock-27-WT.rep5.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep5.R2.fq.gz
+      rep6:
+        file_index: Mock-27-WT.rep6
+        read1: raw_data/Mock-27-WT.rep6.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep6.R2.fq.gz
+      rep7:
+        file_index: Mock-27-WT.rep7
+        read1: raw_data/Mock-27-WT.rep7.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep7.R2.fq.gz
+      rep8:
+        file_index: Mock-27-WT.rep8
+        read1: raw_data/Mock-27-WT.rep8.R1.fq.gz
+        read2: raw_data/Mock-27-WT.rep8.R2.fq.gz
     treat:
       rep1:
         file_index: Treat-27-WT.rep1
@@ -119,7 +185,26 @@ samples:
         file_index: Treat-27-WT.rep3
         read1: raw_data/Treat-27-WT.rep3.R1.fq.gz
         read2: raw_data/Treat-27-WT.rep3.R2.fq.gz
-
+      rep4:
+        file_index: Treat-27-WT.rep4
+        read1: raw_data/Treat-27-WT.rep4.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep4.R2.fq.gz
+      rep5:
+        file_index: Treat-27-WT.rep5
+        read1: raw_data/Treat-27-WT.rep5.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep5.R2.fq.gz
+      rep6:
+        file_index: Treat-27-WT.rep6
+        read1: raw_data/Treat-27-WT.rep6.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep6.R2.fq.gz
+      rep7:
+        file_index: Treat-27-WT.rep7
+        read1: raw_data/Treat-27-WT.rep7.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep7.R2.fq.gz
+      rep8:
+        file_index: Treat-27-WT.rep8
+        read1: raw_data/Treat-27-WT.rep8.R1.fq.gz
+        read2: raw_data/Treat-27-WT.rep8.R2.fq.gz
   trua1b_1_21:
     sample_id: "trua1b_1_21"
     mock:
@@ -135,6 +220,26 @@ samples:
         file_index: Mock-21-trua1b_1.rep3
         read1: raw_data/Mock-21-trua1b_1.rep3.R1.fq.gz
         read2: raw_data/Mock-21-trua1b_1.rep3.R2.fq.gz
+      rep4:
+        file_index: Mock-21-trua1b_1.rep4
+        read1: raw_data/Mock-21-trua1b_1.rep4.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep4.R2.fq.gz
+      rep5:
+        file_index: Mock-21-trua1b_1.rep5
+        read1: raw_data/Mock-21-trua1b_1.rep5.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep5.R2.fq.gz
+      rep6:
+        file_index: Mock-21-trua1b_1.rep6
+        read1: raw_data/Mock-21-trua1b_1.rep6.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep6.R2.fq.gz
+      rep7:
+        file_index: Mock-21-trua1b_1.rep7
+        read1: raw_data/Mock-21-trua1b_1.rep7.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep7.R2.fq.gz
+      rep8:
+        file_index: Mock-21-trua1b_1.rep8
+        read1: raw_data/Mock-21-trua1b_1.rep8.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_1.rep8.R2.fq.gz
     treat:
       rep1:
         file_index: Treat-21-trua1b_1.rep1
@@ -148,7 +253,26 @@ samples:
         file_index: Treat-21-trua1b_1.rep3
         read1: raw_data/Treat-21-trua1b_1.rep3.R1.fq.gz
         read2: raw_data/Treat-21-trua1b_1.rep3.R2.fq.gz
-
+      rep4:
+        file_index: Treat-21-trua1b_1.rep4
+        read1: raw_data/Treat-21-trua1b_1.rep4.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep4.R2.fq.gz
+      rep5:
+        file_index: Treat-21-trua1b_1.rep5
+        read1: raw_data/Treat-21-trua1b_1.rep5.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep5.R2.fq.gz
+      rep6:
+        file_index: Treat-21-trua1b_1.rep6
+        read1: raw_data/Treat-21-trua1b_1.rep6.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep6.R2.fq.gz
+      rep7:
+        file_index: Treat-21-trua1b_1.rep7
+        read1: raw_data/Treat-21-trua1b_1.rep7.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep7.R2.fq.gz
+      rep8:
+        file_index: Treat-21-trua1b_1.rep8
+        read1: raw_data/Treat-21-trua1b_1.rep8.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_1.rep8.R2.fq.gz
   trua1b_1_27:
     sample_id: "trua1b_1_27"
     mock:
@@ -164,6 +288,26 @@ samples:
         file_index: Mock-27-trua1b_1.rep3
         read1: raw_data/Mock-27-trua1b_1.rep3.R1.fq.gz
         read2: raw_data/Mock-27-trua1b_1.rep3.R2.fq.gz
+      rep4:
+        file_index: Mock-27-trua1b_1.rep4
+        read1: raw_data/Mock-27-trua1b_1.rep4.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep4.R2.fq.gz
+      rep5:
+        file_index: Mock-27-trua1b_1.rep5
+        read1: raw_data/Mock-27-trua1b_1.rep5.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep5.R2.fq.gz
+      rep6:
+        file_index: Mock-27-trua1b_1.rep6
+        read1: raw_data/Mock-27-trua1b_1.rep6.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep6.R2.fq.gz
+      rep7:
+        file_index: Mock-27-trua1b_1.rep7
+        read1: raw_data/Mock-27-trua1b_1.rep7.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep7.R2.fq.gz
+      rep8:
+        file_index: Mock-27-trua1b_1.rep8
+        read1: raw_data/Mock-27-trua1b_1.rep8.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_1.rep8.R2.fq.gz
     treat:
       rep1:
         file_index: Treat-27-trua1b_1.rep1
@@ -177,61 +321,159 @@ samples:
         file_index: Treat-27-trua1b_1.rep3
         read1: raw_data/Treat-27-trua1b_1.rep3.R1.fq.gz
         read2: raw_data/Treat-27-trua1b_1.rep3.R2.fq.gz
-
-  trua1b_3_21:
-    sample_id: "trua1b_3_21"
+      rep4:
+        file_index: Treat-27-trua1b_1.rep4
+        read1: raw_data/Treat-27-trua1b_1.rep4.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep4.R2.fq.gz
+      rep5:
+        file_index: Treat-27-trua1b_1.rep5
+        read1: raw_data/Treat-27-trua1b_1.rep5.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep5.R2.fq.gz
+      rep6:
+        file_index: Treat-27-trua1b_1.rep6
+        read1: raw_data/Treat-27-trua1b_1.rep6.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep6.R2.fq.gz
+      rep7:
+        file_index: Treat-27-trua1b_1.rep7
+        read1: raw_data/Treat-27-trua1b_1.rep7.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep7.R2.fq.gz
+      rep8:
+        file_index: Treat-27-trua1b_1.rep8
+        read1: raw_data/Treat-27-trua1b_1.rep8.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_1.rep8.R2.fq.gz
+  trua1b_2_21:
+    sample_id: "trua1b_2_21"
     mock:
       rep1:
-        file_index: Mock-21-trua1b_3.rep1
-        read1: raw_data/Mock-21-trua1b_3.rep1.R1.fq.gz
-        read2: raw_data/Mock-21-trua1b_3.rep1.R2.fq.gz
+        file_index: Mock-21-trua1b_2.rep1
+        read1: raw_data/Mock-21-trua1b_2.rep1.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_2.rep1.R2.fq.gz
       rep2:
-        file_index: Mock-21-trua1b_3.rep2
-        read1: raw_data/Mock-21-trua1b_3.rep2.R1.fq.gz
-        read2: raw_data/Mock-21-trua1b_3.rep2.R2.fq.gz
+        file_index: Mock-21-trua1b_2.rep2
+        read1: raw_data/Mock-21-trua1b_2.rep2.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_2.rep2.R2.fq.gz
       rep3:
-        file_index: Mock-21-trua1b_3.rep3
-        read1: raw_data/Mock-21-trua1b_3.rep3.R1.fq.gz
-        read2: raw_data/Mock-21-trua1b_3.rep3.R2.fq.gz
+        file_index: Mock-21-trua1b_2.rep3
+        read1: raw_data/Mock-21-trua1b_2.rep3.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_2.rep3.R2.fq.gz
+      rep4:
+        file_index: Mock-21-trua1b_2.rep4
+        read1: raw_data/Mock-21-trua1b_2.rep4.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_2.rep4.R2.fq.gz
+      rep5:
+        file_index: Mock-21-trua1b_2.rep5
+        read1: raw_data/Mock-21-trua1b_2.rep5.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_2.rep5.R2.fq.gz
+      rep6:
+        file_index: Mock-21-trua1b_2.rep6
+        read1: raw_data/Mock-21-trua1b_2.rep6.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_2.rep6.R2.fq.gz
+      rep7:
+        file_index: Mock-21-trua1b_2.rep7
+        read1: raw_data/Mock-21-trua1b_2.rep7.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_2.rep7.R2.fq.gz
+      rep8:
+        file_index: Mock-21-trua1b_2.rep8
+        read1: raw_data/Mock-21-trua1b_2.rep8.R1.fq.gz
+        read2: raw_data/Mock-21-trua1b_2.rep8.R2.fq.gz
     treat:
       rep1:
-        file_index: Treat-21-trua1b_3.rep1
-        read1: raw_data/Treat-21-trua1b_3.rep1.R1.fq.gz
-        read2: raw_data/Treat-21-trua1b_3.rep1.R2.fq.gz
+        file_index: Treat-21-trua1b_2.rep1
+        read1: raw_data/Treat-21-trua1b_2.rep1.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_2.rep1.R2.fq.gz
       rep2:
-        file_index: Treat-21-trua1b_3.rep2
-        read1: raw_data/Treat-21-trua1b_3.rep2.R1.fq.gz
-        read2: raw_data/Treat-21-trua1b_3.rep2.R2.fq.gz
+        file_index: Treat-21-trua1b_2.rep2
+        read1: raw_data/Treat-21-trua1b_2.rep2.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_2.rep2.R2.fq.gz
       rep3:
-        file_index: Treat-21-trua1b_3.rep3
-        read1: raw_data/Treat-21-trua1b_3.rep3.R1.fq.gz
-        read2: raw_data/Treat-21-trua1b_3.rep3.R2.fq.gz
-
-  trua1b_3_27:
-    sample_id: "trua1b_3_27"
+        file_index: Treat-21-trua1b_2.rep3
+        read1: raw_data/Treat-21-trua1b_2.rep3.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_2.rep3.R2.fq.gz
+      rep4:
+        file_index: Treat-21-trua1b_2.rep4
+        read1: raw_data/Treat-21-trua1b_2.rep4.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_2.rep4.R2.fq.gz
+      rep5:
+        file_index: Treat-21-trua1b_2.rep5
+        read1: raw_data/Treat-21-trua1b_2.rep5.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_2.rep5.R2.fq.gz
+      rep6:
+        file_index: Treat-21-trua1b_2.rep6
+        read1: raw_data/Treat-21-trua1b_2.rep6.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_2.rep6.R2.fq.gz
+      rep7:
+        file_index: Treat-21-trua1b_2.rep7
+        read1: raw_data/Treat-21-trua1b_2.rep7.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_2.rep7.R2.fq.gz
+      rep8:
+        file_index: Treat-21-trua1b_2.rep8
+        read1: raw_data/Treat-21-trua1b_2.rep8.R1.fq.gz
+        read2: raw_data/Treat-21-trua1b_2.rep8.R2.fq.gz
+  trua1b_2_27:
+    sample_id: "trua1b_2_27"
     mock:
       rep1:
-        file_index: Mock-27-trua1b_3.rep1
-        read1: raw_data/Mock-27-trua1b_3.rep1.R1.fq.gz
-        read2: raw_data/Mock-27-trua1b_3.rep1.R2.fq.gz
+        file_index: Mock-27-trua1b_2.rep1
+        read1: raw_data/Mock-27-trua1b_2.rep1.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_2.rep1.R2.fq.gz
       rep2:
-        file_index: Mock-27-trua1b_3.rep2
-        read1: raw_data/Mock-27-trua1b_3.rep2.R1.fq.gz
-        read2: raw_data/Mock-27-trua1b_3.rep2.R2.fq.gz
+        file_index: Mock-27-trua1b_2.rep2
+        read1: raw_data/Mock-27-trua1b_2.rep2.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_2.rep2.R2.fq.gz
       rep3:
-        file_index: Mock-27-trua1b_3.rep3
-        read1: raw_data/Mock-27-trua1b_3.rep3.R1.fq.gz
-        read2: raw_data/Mock-27-trua1b_3.rep3.R2.fq.gz
+        file_index: Mock-27-trua1b_2.rep3
+        read1: raw_data/Mock-27-trua1b_2.rep3.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_2.rep3.R2.fq.gz
+      rep4:
+        file_index: Mock-27-trua1b_2.rep4
+        read1: raw_data/Mock-27-trua1b_2.rep4.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_2.rep4.R2.fq.gz
+      rep5:
+        file_index: Mock-27-trua1b_2.rep5
+        read1: raw_data/Mock-27-trua1b_2.rep5.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_2.rep5.R2.fq.gz
+      rep6:
+        file_index: Mock-27-trua1b_2.rep6
+        read1: raw_data/Mock-27-trua1b_2.rep6.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_2.rep6.R2.fq.gz
+      rep7:
+        file_index: Mock-27-trua1b_2.rep7
+        read1: raw_data/Mock-27-trua1b_2.rep7.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_2.rep7.R2.fq.gz
+      rep8:
+        file_index: Mock-27-trua1b_2.rep8
+        read1: raw_data/Mock-27-trua1b_2.rep8.R1.fq.gz
+        read2: raw_data/Mock-27-trua1b_2.rep8.R2.fq.gz
     treat:
       rep1:
-        file_index: Treat-27-trua1b_3.rep1
-        read1: raw_data/Treat-27-trua1b_3.rep1.R1.fq.gz
-        read2: raw_data/Treat-27-trua1b_3.rep1.R2.fq.gz
+        file_index: Treat-27-trua1b_2.rep1
+        read1: raw_data/Treat-27-trua1b_2.rep1.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_2.rep1.R2.fq.gz
       rep2:
-        file_index: Treat-27-trua1b_3.rep2
-        read1: raw_data/Treat-27-trua1b_3.rep2.R1.fq.gz
-        read2: raw_data/Treat-27-trua1b_3.rep2.R2.fq.gz
+        file_index: Treat-27-trua1b_2.rep2
+        read1: raw_data/Treat-27-trua1b_2.rep2.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_2.rep2.R2.fq.gz
       rep3:
-        file_index: Treat-27-trua1b_3.rep3
-        read1: raw_data/Treat-27-trua1b_3.rep3.R1.fq.gz
-        read2: raw_data/Treat-27-trua1b_3.rep3.R2.fq.gz
+        file_index: Treat-27-trua1b_2.rep3
+        read1: raw_data/Treat-27-trua1b_2.rep3.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_2.rep3.R2.fq.gz
+      rep4:
+        file_index: Treat-27-trua1b_2.rep4
+        read1: raw_data/Treat-27-trua1b_2.rep4.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_2.rep4.R2.fq.gz
+      rep5:
+        file_index: Treat-27-trua1b_2.rep5
+        read1: raw_data/Treat-27-trua1b_2.rep5.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_2.rep5.R2.fq.gz
+      rep6:
+        file_index: Treat-27-trua1b_2.rep6
+        read1: raw_data/Treat-27-trua1b_2.rep6.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_2.rep6.R2.fq.gz
+      rep7:
+        file_index: Treat-27-trua1b_2.rep7
+        read1: raw_data/Treat-27-trua1b_2.rep7.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_2.rep7.R2.fq.gz
+      rep8:
+        file_index: Treat-27-trua1b_2.rep8
+        read1: raw_data/Treat-27-trua1b_2.rep8.R1.fq.gz
+        read2: raw_data/Treat-27-trua1b_2.rep8.R2.fq.gz
