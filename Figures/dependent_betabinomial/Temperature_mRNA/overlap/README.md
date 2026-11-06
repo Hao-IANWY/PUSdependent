@@ -1,0 +1,68 @@
+# overlap — 27℃ 温度上调位点 vs 27℃ trua1b dependent 位点的 overlap Venn（mRNA / rRNA）
+
+## 目的
+
+看 27℃ 下**修饰升高**的位点，和 27℃ 下**需要 TRUA1B** 的位点，是不是同一批位点。
+左圈 = 27℃ 上调位点（WT_27 vs WT_21 双侧检验判为 up_in_WT_27），右圈 = 27℃ 的
+trua1b dependent 位点，中间是交集计数。
+
+tRNA 版在姊妹目录 `Figures/dependent_betabinomial/Temperature_tRNA/overlap/`。
+
+移植自论文版 `archive/20260902/paper/TRUA1B_thermomorphogenesis/temperature_responsive_dependent_overlap/`
+的 **`_27only` 2-set 变体**（原图只有 mRNA 一张，且是 2-set 与 3-set 一起出的），
+这里只出 2-set 并按 RNA 类型拆成 mRNA / rRNA 两张。
+
+## 数据来源
+
+| 集合 | 上游 |
+|---|---|
+| 27℃ 上调 | `Temperature/STAT/Temperature_response_betabinomial/<type>/WT_27_vs_WT_21.response.tsv`（`direction == up_in_WT_27`） |
+| 27℃ dependent | `Temperature/STAT/dependent_betabinomial/<type>/27/trua1b/trua1b-27.dependent.tsv` |
+
+位点主键 = `chr + pos + strand`；两组取并集后逐位点打标记，`combination` 记
+`up_only` / `dependent_only` / `both`。
+
+dependent 走 beta-binomial LRT 口径，与同目录姊妹图 `dependent_site_loss_effect`
+一致。mRNA / rRNA 输入为 2026-11-04 五重复口径重建后、2026-11-05 收尾的全量重跑
+结果（`Temperature/STAT/Temperature_response_betabinomial` 与 `dependent_betabinomial`）。
+
+## 结果：两组交集为 0
+
+| RNA 类型 | 27℃ 上调 | 27℃ dependent | **交集** |
+|---|---|---|---|
+| mRNA | 5 | 0 | **0** |
+| rRNA | 10 | 0 | **0** |
+
+2026-10-20 启用 BH q 后，mRNA 的 27℃ 上调位点从 10 降到 6；2026-11-05 五重复
+重跑后为 5（下调 35）。rRNA 五重复重跑后为 10（下调 6）。两类的右圈仍全为空。
+
+**注意这是个阴性结果**，且与论文版不同：论文版同一分析（mRNA、2 重复、Fisher 口径）
+是 26 / 8 / 1，交集有 8 个位点。新版数据里 mRNA 在 27℃ 一个 dependent 位点都
+没判出来，交集必然为 0。
+
+换口径也不改变结论：纯效应量版 STAT（旧 `Temperature/STAT/dependent`，基于
+2026-11-02 换血版、现已随换口径移除）在 27℃ 下曾判出 mRNA 4 个 dependent 位点，
+但**与上调集合仍然零重合**；放宽到 `pos ± 5bp` 容差同样零重合。即：在本套数据里，
+「27℃ 修饰升高」和「TRUA1B 依赖」是两批互不相交的位点。
+
+两类 RNA 在 BH 口径下 27℃ 都没有 dependent 位点，右圈全为空；按需求照出保持
+口径完整。
+
+## 为什么手绘圆
+
+`plot.R` 用 ggplot 的 `geom_polygon` 手画两个圆，而不是 `VennDiagram` 包
+（仓库里 `Figures/dependent_betabinomial/rRNA/sites_count/overlap` 用的是后者）。
+手绘的好处正是**空集合也能照常出图**——`VennDiagram` 遇到空集合会直接失败，
+而本分析里两类的右圈都是空的。圆的布局固定，不随集合大小或交集缩放。
+
+## 运行
+
+```bash
+bash data_prep.sh     # 只产 2 张 overlap TSV
+Rscript plot.R        # 只画 2 张 Venn
+```
+
+## 产物
+
+- `<rna>_27up_vs_trua1b_dependent_overlap.tsv` — 逐位点标记表
+- `<rna>_27up_vs_trua1b_dependent_venn.{pdf,png,svg}` — 9 × 7 in、600 dpi
