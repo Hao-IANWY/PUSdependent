@@ -1,0 +1,2 @@
+chr	pos	strand	context	WT_Ratio	Mut_Ratio	Delta_Ratio(WT-Mut)	trua2_1-Root_p.value	trua2_1-Root_q.value	trua2_2-Root_p.value	trua2_2-Root_q.value	annoation
+ATMG01360.1	970	+	TTTAG	0.383327666666667	0.1132335	0.270094166666667	1.33004460569321e-05	0.00312560482337905	4.05487284478866e-05	0.00952895118525335	CDS

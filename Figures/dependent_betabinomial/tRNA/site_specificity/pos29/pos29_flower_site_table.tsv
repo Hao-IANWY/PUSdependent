@@ -1,0 +1,2 @@
+chr	pos	fix_pos	strand	context	WT_Ratio	Treat_avg_depth	trua1a_1	trua1a_2	trua1a_1_dependent	trua1a_2_dependent	trua5_1	trua5_2	trua5_1_dependent	trua5_2_dependent
+tRNA-Nu-Val-TAC-1	29	29	+	TTTGC	0.433809	931	0.0463456666666667	0.041033	TRUE	TRUE	0.417517333333333	0.403374333333333	FALSE	FALSE

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='576.00pt' height='432.00pt' viewBox='0 0 576.00 432.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA='>
+    <rect x='0.00' y='0.00' width='576.00' height='432.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA=)'>
+<rect x='0.00' y='0.00' width='576.00' height='432.00' style='stroke-width: 3.20; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNjkuOTB8NTU2LjA3fDkuOTZ8MzgwLjE1'>
+    <rect x='69.90' y='9.96' width='486.18' height='370.18' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNjkuOTB8NTU2LjA3fDkuOTZ8MzgwLjE1)'>
+<rect x='69.90' y='9.96' width='486.18' height='370.18' style='stroke-width: 3.20; stroke: none;' />
+<rect x='79.25' y='40.81' width='93.50' height='308.49' style='stroke-width: 1.28; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #F57E66; fill-opacity: 0.85;' />
+<rect x='172.74' y='40.81' width='93.50' height='308.49' style='stroke-width: 1.28; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #F47A62; fill-opacity: 0.85;' />
+<rect x='266.24' y='40.81' width='93.50' height='308.49' style='stroke-width: 1.28; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #EE664D; fill-opacity: 0.83;' />
+<rect x='359.73' y='40.81' width='93.50' height='308.49' style='stroke-width: 1.28; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFE5DE; fill-opacity: 0.97;' />
+<rect x='453.23' y='40.81' width='93.50' height='308.49' style='stroke-width: 1.28; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFDFD6; fill-opacity: 0.96;' />
+<rect x='359.73' y='40.81' width='93.50' height='308.49' style='stroke-width: 1.92; stroke: #D7301F; stroke-linecap: butt; stroke-linejoin: miter;' />
+<rect x='453.23' y='40.81' width='93.50' height='308.49' style='stroke-width: 1.92; stroke: #D7301F; stroke-linecap: butt; stroke-linejoin: miter;' />
+<text x='126.00' y='198.81' text-anchor='middle' style='font-size: 10.50px; font-weight: bold; font-family: "Arial";'>74%</text>
+<text x='219.49' y='198.81' text-anchor='middle' style='font-size: 10.50px; font-weight: bold; font-family: "Arial";'>76%</text>
+<text x='312.99' y='198.81' text-anchor='middle' style='font-size: 10.50px; font-weight: bold; font-family: "Arial";'>87%</text>
+<text x='406.48' y='198.81' text-anchor='middle' style='font-size: 10.50px; font-weight: bold; font-family: "Arial";'>15%</text>
+<text x='499.98' y='198.81' text-anchor='middle' style='font-size: 10.50px; font-weight: bold; font-family: "Arial";'>19%</text>
+<rect x='69.90' y='9.96' width='486.18' height='370.18' style='stroke-width: 1.28;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA=)'>
+<text x='67.28' y='199.94' text-anchor='end' style='font-size: 13.65px; font-weight: bold; font-family: "Arial";'>Ser-GCT</text>
+<text x='113.75' y='395.61' style='font-size: 15.75px; font-weight: bold; font-family: "Arial";'>WT</text>
+<text x='191.46' y='395.61' style='font-size: 15.75px; font-weight: bold; font-style: italic; font-family: "Arial";'>trua3_1</text>
+<text x='284.96' y='395.61' style='font-size: 15.75px; font-weight: bold; font-style: italic; font-family: "Arial";'>trua3_2</text>
+<text x='378.45' y='395.61' style='font-size: 15.75px; font-weight: bold; font-style: italic; font-family: "Arial";'>trua6_1</text>
+<text x='471.95' y='395.61' style='font-size: 15.75px; font-weight: bold; font-style: italic; font-family: "Arial";'>trua6_2</text>
+<text x='11.96' y='419.16' style='font-size: 13.65px; font-weight: bold; font-family: "Arial";'>Red border: dependent in the corresponding mutant line</text>
+</g>
+</g>
+</svg>

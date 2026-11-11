@@ -1,0 +1,11 @@
+category	site_count	gene_count
+Root_input	235	216
+Leaf_input	199	190
+Flower_input	163	156
+root_unique	119	112
+leaf_unique	65	65
+flower_unique	44	43
+common	81	78
+Root_Leaf_shared_not_Flower	25	NA
+Root_Flower_shared_not_Leaf	10	NA
+Leaf_Flower_shared_not_Root	28	NA

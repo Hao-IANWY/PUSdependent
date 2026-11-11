@@ -1,0 +1,4 @@
+rna_type	purified_sites	leaf_sites	overlap_sites	purified_only_sites	leaf_only_sites	purified_overlap_pct	leaf_overlap_pct
+rRNA	3	4	3	0	1	100	75
+tRNA	59	64	55	4	9	93.22033898305084	85.9375
+mRNA	15	18	11	4	7	73.33333333333333	61.111111111111114

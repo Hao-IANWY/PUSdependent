@@ -1,0 +1,2 @@
+chr	pos	strand	context	WT_Ratio	Mut_Ratio	Delta_Ratio(WT-Mut)	trua3_1-leaf_p.value	trua3_1-leaf_q.value	trua3_2-leaf_p.value	trua3_2-leaf_q.value	annoation
+AT2G29650.1	1343	+	GTTTT	0.704597666666667	0.5909565	0.113641166666667	0.00121410027962416	0.0483211911290415	0.000795776014129025	0.0270916138764078	three_prime_UTR

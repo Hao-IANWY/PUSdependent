@@ -1,0 +1,2 @@
+chr	pos	fix_pos	strand	context	WT_Ratio	Treat_avg_depth	trua3_1	trua3_2	trua3_1_dependent	trua3_2_dependent	trua6_1	trua6_2	trua6_1_dependent	trua6_2_dependent
+tRNA-Nu-Ser-GCT-1	40	40	+	AGTAC	0.739071	1643	0.762909666666667	0.870973333333333	FALSE	FALSE	0.150142333333333	0.188479	TRUE	TRUE

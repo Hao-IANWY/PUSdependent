@@ -1,0 +1,7 @@
+rna_type	comparison	n_sites	r2	label
+rRNA	Root vs Leaf	99	0.9592974886980682	italic(r)^2 == 0.959
+rRNA	Root vs Flower	98	0.8648071774317326	italic(r)^2 == 0.865
+rRNA	Leaf vs Flower	101	0.9162355857991081	italic(r)^2 == 0.916
+tRNA	Root vs Leaf	410	0.7892509276530875	italic(r)^2 == 0.789
+tRNA	Root vs Flower	411	0.7700454778936766	italic(r)^2 == 0.770
+tRNA	Leaf vs Flower	492	0.9475996774610134	italic(r)^2 == 0.948

@@ -1,0 +1,81 @@
+# BID-seq Chloroplast Arabidopsis — totalRNA workflow (R2-only analysis)
+# Mapping route: Bowtie2 against the ncRNA reference, then STAR/Araport11 cDNA.
+# The two-reference order is fixed: ncRNA first (bowtie2 stage), mRNA second (STAR stage).
+
+paths:
+  script_dir: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin
+  pseudo_callsites_r: /home/HL/project/shuangli/PUS/PUSdependent/BID-transcript.script/bin/Pseudo_callsites.R
+  index_bowtie2: /home/HL/project/shuangli/PUS/Chloroplast/reference/ncRNA.fa
+  index_star: /home/HL/reference/Ath/TAIR/cDNA_STAR_index
+
+env:
+  python: /home/HL/miniforge3/envs/analysis/bin/python
+  r: /home/HL/miniforge3/envs/analysis/bin/R
+
+pipeline:
+  ref:
+    ncRNA: /home/HL/project/shuangli/PUS/Chloroplast/reference/ncRNA.fa
+    mRNA: /home/HL/reference/Ath/TAIR/Araport11_cdna_20220914_representative_gene_model
+  t_site_windows: 2
+
+  # Optional raw expression matrices. Keys must match pipeline.ref.
+  # Emits both a Mock-group matrix and an all_samples matrix per ref type.
+  # all_alignments is alignment-level counting; primary is read-level counting.
+  expression:
+    enabled: true
+    count_mode:
+      ncRNA: all_alignments
+      mRNA: primary
+
+  # Site-filtering thresholds (inherited from the poly(A) workflow defaults).
+  # Each group has 2 replicates; min_pass_reps takes the strictest value, 2.
+  filter:
+    min_depth: 10           # filter_t_sites: per-replicate depth >= this
+    min_avg_depth: 10       # group-level Mock/Treat mean depth >= this
+    max_padj: 0.01          # BH-adjusted p-value < this
+    min_gap: 5              # Treat gap >= this per passing replicate
+    min_treat_ratio: 0.05   # Treat ratio >= this per passing replicate
+    ratio_fold: 2           # Treat ratio >= ratio_fold * Mock ratio
+    min_pass_reps: 2        # at least this many replicates must pass
+
+  # The totalRNA workflow analyzes R2 only: trimming runs in single-end mode on
+  # R2 (--adapter AAAAAAAAAAA) and duplicates are removed with seqkit rmdup -s.
+  # R1 is kept as pairing information only and does not enter the analysis.
+  read_layout: paired
+  rmdup: true
+  trim_galore_length: 35
+
+  # R2 read structure: 8 bp UMI + TATAGGG + 2 bp, i.e. a fixed 17 bp prefix.
+  # R1 is sequenced from the other fragment end, so the fixed structure sits at
+  # the R1 3' end (trim_tail: 17). Only R2 is analyzed (trim/rmdup/umi_extract/
+  # alignment read R2 exclusively); the R1 entry is documentary only and does
+  # not affect any workflow output.
+  umi_extract:
+    R1:
+      trim_front: 0
+      trim_tail: 17
+    R2:
+      trim_front: 17
+      trim_tail: 0
+
+samples:
+  Chloroplast:
+    sample_id: "Chloroplast"
+    mock:
+      rep1:
+        file_index: Mock.rep1
+        read1: raw_data/Mock.rep1.R1.fq.gz
+        read2: raw_data/Mock.rep1.R2.fq.gz
+      rep2:
+        file_index: Mock.rep2
+        read1: raw_data/Mock.rep2.R1.fq.gz
+        read2: raw_data/Mock.rep2.R2.fq.gz
+    treat:
+      rep1:
+        file_index: Treat.rep1
+        read1: raw_data/Treat.rep1.R1.fq.gz
+        read2: raw_data/Treat.rep1.R2.fq.gz
+      rep2:
+        file_index: Treat.rep2
+        read1: raw_data/Treat.rep2.R1.fq.gz
+        read2: raw_data/Treat.rep2.R2.fq.gz

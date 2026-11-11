@@ -1,0 +1,313 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# Copyright © 2021 Ye Chang <yech1990@gmail.com>
+# Distributed under terms of the MIT license.
+#
+# MODIFIED: To output per-sample files with a new format.
+#
+# Created: 2021-05-19 17:42
+# Change Log:
+# 2022-07-26: add gap count into depth calculation
+# 2025-10-21: Refactored output to generate per-sample files.
+
+
+import gzip
+import sys
+import os  # <-- 新增：用于处理文件路径和目录
+import click
+
+MAX_GAP_LEN = 5
+UPSTREAM_NUM = 5
+UPSTREAM_WEIGHT = 0.5
+
+
+class Chunk:
+    def __init__(self, samples):
+        self.chrom = ""
+        self.strand = ""
+        # 核心数据结构，存储 {sample: {pos: stats}}
+        self.counts = {sample: {} for sample in samples}
+        self.nsample = len(samples)
+        self.samples = samples
+        self.pos = []
+
+
+def process_count(count, is_sort=False):
+    """
+    (此函数未修改)
+    识别一个样本中的缺失事件及其所有可能的候选位置。
+    """
+    count_exteneded = []
+    for pos, pos_stat in count.items():
+        if pos_stat["D"]:
+            for d_offset, d_length, d_count in pos_stat["D"]:
+
+                def get_bases(pos_shift):
+                    return [
+                        count[d_pos]["base"]
+                        for d_pos in range(
+                            pos + 1 + pos_shift,
+                            pos + d_length + pos_shift + 1,
+                        )
+                        if d_pos in count.keys()
+                    ]
+
+                bases = get_bases(0)
+                pos_extended = [pos + d_offset]
+                for pos_shift_sign in [-1, 1]:
+                    pos_shift = 1
+                    bases_shift = get_bases(pos_shift * pos_shift_sign)
+                    while bases_shift and bases == bases_shift:
+                        pos_extended.append(
+                            pos + pos_shift * pos_shift_sign + d_offset
+                        )
+                        pos_shift += 1
+                        bases_shift = get_bases(pos_shift * pos_shift_sign)
+                count_exteneded.append(
+                    [
+                        tuple(range(pos + 1, pos + 1 + d_length)),
+                        tuple(sorted(pos_extended)),
+                        d_count,
+                    ]
+                )
+    if is_sort:
+        count_exteneded = sorted(count_exteneded, key=lambda x: len(x[1]))
+    return count_exteneded
+
+
+def process_chunk(chunk):
+    """
+    (此函数未修改)
+    核心算法：为模糊的 gap 找到最佳位置并校正 depth 和 gap 计数。
+    """
+    pos_max = max(chunk.pos)
+    pos_min = min(chunk.pos)
+    sort_counts = sorted(
+        [
+            [*c, sample]
+            for sample, count in chunk.counts.items()
+            for c in process_count(count)
+        ],
+        key=lambda x: len(x[1]),
+    )
+    for gap_sites, gap_putatives, gap_count, sample in sort_counts:
+        count = chunk.counts[sample]
+        if len(gap_putatives) > 1:
+            if chunk.strand == "+":
+                gap_putatives = sorted(
+                    sorted(gap_putatives, reverse=True),
+                    key=lambda x: sum(
+                        sum(
+                            c[x + i]["gap"] * UPSTREAM_WEIGHT**i
+                            for c in chunk.counts.values()
+                        )
+                        for i in range(
+                            min(pos_max - x + 1, UPSTREAM_NUM),
+                        )
+                    ),
+                    reverse=True,
+                )
+            else:
+                gap_putatives = sorted(
+                    gap_putatives,
+                    key=lambda x: sum(
+                        sum(
+                            c[x - i]["gap"] * UPSTREAM_WEIGHT**i
+                            for c in chunk.counts.values()
+                        )
+                        for i in range(
+                            min(x - pos_min + 1, UPSTREAM_NUM),
+                        )
+                    ),
+                    reverse=True,
+                )
+        gap_best = gap_putatives[0]
+        if gap_best in count.keys():
+            count[gap_best]["gap"] += gap_count
+            for s in gap_sites:
+                if s != gap_best:
+                    if s in count.keys():
+                        count[s]["depth"] += gap_count
+                if gap_best not in gap_sites:
+                    count[gap_best]["depth"] -= gap_count
+
+
+# ==============================================================================
+# vvvvvvvvvvvvvvvv 主要修改区域 vvvvvvvvvvvvvvvvv
+# ==============================================================================
+
+def write_chunk(chunk, output_files):
+    """
+    (此函数已重写)
+    将一个处理完的 chunk 的数据，按新格式写入到各个样本对应的文件中。
+    
+    Args:
+        chunk (Chunk): 包含校正后数据的 Chunk 对象。
+        output_files (dict): 一个字典，映射样本名到其文件句柄。
+                             例如: {"sample1": <file_handler_1>, ...}
+    """
+    # 遍历 chunk 中的每一个基因组位置
+    for p in chunk.pos:
+        # 遍历 chunk 中的每一个样本
+        for sample, count in chunk.counts.items():
+            # 获取该样本对应的文件句柄
+            fh = output_files[sample]
+            
+            # 准备新格式需要的各个字段
+            chrom = chunk.chrom
+            pos = p
+            strand = chunk.strand
+            
+            # context 即为该位点的参考碱基
+            context = count[p]["base"]
+            
+            # gap 为校正后的 gap 计数值
+            gap = count[p]["gap"]
+            
+            # depth 为校正后的深度 (原始碱基深度 + 校正后的 gap 计数)
+            # 这与原始脚本的逻辑保持一致
+            depth = max(count[p]["depth"], 0) + gap
+            
+            # ratio = gap / depth，注意处理 depth 为 0 的情况以避免除零错误
+            ratio = (gap / depth) if depth > 0 else 0.0
+
+            # 格式化输出行并写入文件
+            out_line = (
+                f"{chrom}\t{pos}\t{strand}\t{context}\t"
+                f"{ratio:.6f}\t{depth}\t{gap}\n"
+            )
+            fh.write(out_line)
+
+
+def open_file(filename, mode):
+    """ (此函数未修改) """
+    if filename == "-":
+        if "r" in mode:
+            return sys.stdin
+        elif "w" in mode:
+            return sys.stdout
+    elif filename.endswith(".gz"):
+        if "r" in mode:
+            return gzip.open(filename, "rt")
+        elif "w" in mode:
+            return gzip.open(filename, "wt")
+    else:
+        return open(filename, mode)
+
+
+@click.command(
+    context_settings=dict(help_option_names=["-h", "--help"]),
+    no_args_is_help=True,
+)
+@click.option(
+    "-i",
+    "--input-file",
+    "input_file",
+    default="-",
+    help="Input file from 'count_bases_combined' rule (default: stdin)",
+)
+@click.option(
+    # <-- 修改点: 将 -o/--output 变为 --output-dir
+    "-o",
+    "--output-dir",
+    "output_dir",
+    required=True, # <-- 修改点: 设为必须参数，因为不能再默认输出到 stdout
+    help="Output directory to store per-sample files.",
+)
+def run_adjust(input_file, output_dir):
+    # <-- 新增: 创建输出目录，如果它不存在
+    os.makedirs(output_dir, exist_ok=True)
+    
+    output_files = {} # <-- 新增: 用于存储所有输出文件的句柄
+    
+    try:
+        with open_file(input_file, "r") as fi:
+            # depth,a,c,g,t,n,skip,gap,insert,delete,istat,dstat
+            names = [
+                "depth", "A", "C", "G", "T", "N", "Skip",
+                "Gap", "Insert", "Delete", "istat", "dstat",
+            ]
+            
+            # 读取表头并获取样本列表
+            header_line = fi.readline()
+            if not header_line:
+                print("Error: Input file is empty.", file=sys.stderr)
+                sys.exit(1)
+
+            _, _, _, _, *samples = header_line.strip().split("\t")
+            
+            # <-- 新增: 为每个样本创建输出文件，并写入新表头
+            new_header = "chr\tpos\tstrand\tcontext\tratio\tdepth\tgap\n"
+            for sample in samples:
+                filepath = os.path.join(output_dir, f"{sample}.adjusted.tsv")
+                fh = open(filepath, 'w')
+                fh.write(new_header)
+                output_files[sample] = fh
+
+            pos_pre = 0
+            chrom_pre = ""
+            chunk = Chunk(samples)
+            
+            # 主循环 (内部逻辑未改变)
+            for line in fi:
+                chrom, pos, base, strand, *stats = line.strip().split("\t")
+                pos = int(pos)
+                if pos != pos_pre + 1 or chrom != chrom_pre:
+                    if len(chunk.pos) > 0:
+                        if any(
+                            [c[p]["D"] for c in chunk.counts.values() for p in c]
+                        ):
+                            process_chunk(chunk)
+                        # <-- 修改点: 调用新的 write_chunk 函数
+                        write_chunk(chunk, output_files)
+                    chunk = Chunk(samples)
+                
+                # (数据解析部分未改变)
+                chunk.pos.append(pos)
+                for sample, stat in zip(samples, stats):
+                    *counts, istat, dstat = stat.split(",")
+                    pos_count = {x: int(y) for x, y in zip(names, counts)}
+                    pos_stat = {
+                        "base": base, # <-- "context" 的来源
+                        "D": [],
+                        "depth": (
+                            pos_count["A"] + pos_count["C"] + pos_count["G"] +
+                            pos_count["T"] + pos_count["N"]
+                        ),
+                        "gap": 0,
+                    }
+                    for d in dstat.split("|"):
+                        if d:
+                            d_motif, d_count = d.split(":")
+                            if len(d_motif) <= MAX_GAP_LEN:
+                                if strand == "+":
+                                    d_offset = len(d_motif)
+                                else:
+                                    d_offset = 1
+                                pos_stat["D"].append(
+                                    (d_offset, len(d_motif), int(d_count))
+                                )
+                    chunk.counts[sample][pos] = pos_stat
+                
+                chunk.chrom = chrom
+                chunk.strand = strand
+                chrom_pre = chrom
+                pos_pre = pos
+
+            # 处理并写入最后一个 chunk
+            if len(chunk.pos) > 0:
+                if any([c[p]["D"] for c in chunk.counts.values() for p in c]):
+                    process_chunk(chunk)
+                # <-- 修改点: 再次调用新的 write_chunk 函数
+                write_chunk(chunk, output_files)
+
+    finally:
+        # <-- 新增: 确保在程序结束时关闭所有打开的文件
+        for fh in output_files.values():
+            fh.close()
+        print(f"Processing complete. Per-sample files are saved in '{output_dir}'.")
+
+
+if __name__ == "__main__":
+    run_adjust()

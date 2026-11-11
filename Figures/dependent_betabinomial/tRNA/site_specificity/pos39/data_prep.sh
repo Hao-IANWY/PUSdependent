@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# data_prep.sh — Sprinzl position 39 site table (Flower panel)
+# Question: how many representative (nuclear-encoded) tRNAs are modified at Sprinzl
+#           position 39 in WT Flower, and what modification fractions do these tRNAs
+#           show in the two alleles each of trua3 and trua6?
+# Compartment restricted to Nu (nuclear only; Mt/Pt excluded).
+# All logic lives in the shared script ../build_site_specificity_table.sh; this file
+# only binds parameters.
+# To add a tissue: copy this directory and change TISSUE and the file name; to add a
+# position: copy this directory and change POS.
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+COMMON_DIR="$(dirname "$SCRIPT_DIR")"
+
+TISSUE="Flower"
+GENOTYPES="trua3,trua6"
+POS=39
+COMPARTMENTS="Nu"
+
+bash "$COMMON_DIR/build_site_specificity_table.sh" "$TISSUE" "$GENOTYPES" "$POS" "$SCRIPT_DIR" "$COMPARTMENTS"
+
+test -s "$SCRIPT_DIR/pos${POS}_flower_site_table.tsv"
