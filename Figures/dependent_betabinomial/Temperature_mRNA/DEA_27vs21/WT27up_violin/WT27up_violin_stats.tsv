@@ -1,0 +1,3 @@
+comparison	test_method	n_pairs	mean_diff_log2	ci95_low_log2	ci95_high_log2	t_statistic	df	p_value	p_holm
+WT vs trua1b_1	Paired t-test	891	-1.668	-1.725	-1.61	-56.77	890	4.64e-298	9.28e-298
+WT vs trua1b_2	Paired t-test	891	-1.66	-1.719	-1.601	-55.28	890	4.95e-290	4.95e-290
