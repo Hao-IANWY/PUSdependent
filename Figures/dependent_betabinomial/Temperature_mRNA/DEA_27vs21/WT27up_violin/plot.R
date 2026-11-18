@@ -4,14 +4,14 @@
 #          提琴图 + 显著性分析（仅 WT vs trua1b_1、WT vs trua1b_2）
 #
 # 铁律：数据只来自 read.table() 读取的 TSV（data_prep.sh 生成），绝不内嵌数据。
-#   WT27up_expr_27C.tsv : 长表（genotype / sample / feature_id / norm_count）
-#                         norm_count 为 DESeq2 归一化 count
+#   WT27up_expr_27C.tsv : 长表（genotype / sample / feature_id / tpm 等）
+#                         tpm = transcripts per million
 #
 # 展示：WT 中 27°C 显著上调的 891 个基因（padj<0.05, log2FC>=1），
-#       在三个基因型 27°C 条件下的表达量分布（log2 归一化 count + 1）
+#       在三个基因型 27°C 条件下的表达量分布（log2[TPM + 1]）
 #
 # 显著性分析设计（easyplot_analysis.R 受保护助手）：
-#   单元 unit   = 基因（feature_id）；配对值 = 该基因 3 个重复的 log2 表达均值
+#   单元 unit   = 基因（feature_id）；配对值 = 该基因 3 个重复的 log2(TPM+1) 均值
 #   设计 design = paired（同一批 891 个基因跨基因型天然配对）
 #   检验        = 配对 t 检验（双侧；n=891 对，t 近似稳健），
 #                 效应量 = 均值差（突变体 - WT）+ 95% CI
@@ -75,10 +75,10 @@ if (any(is.na(df[["genotype"]]))) {
   stop("Unexpected genotype in data: ",
        paste(setdiff(unique(df[["genotype"]]), genotypes), collapse = ", "))
 }
-stopifnot(is.numeric(df[["norm_count"]]))
+stopifnot(is.numeric(df[["tpm"]]))
 
-# 表达量：log2(DESeq2 归一化 count + 1)
-df[["expression"]] <- log2(df[["norm_count"]] + 1)
+# 表达量：log2(TPM + 1)
+df[["expression"]] <- log2(df[["tpm"]] + 1)
 y_data <- max(df[["expression"]])
 
 # ---- 显著性分析：基因配对 t 检验（WT vs 各突变体），Holm 校正 ----
@@ -116,9 +116,9 @@ stats_out <- do.call(rbind, lapply(seq_along(analysis), function(i) {
     comparison      = a$comparison,
     test_method     = tst$method,
     n_pairs         = r$n_pairs,
-    mean_diff_log2  = signif(eff$estimate, 4),
-    ci95_low_log2   = signif(eff$ci_low, 4),
-    ci95_high_log2  = signif(eff$ci_high, 4),
+    mean_diff_log2_tpm = signif(eff$estimate, 4),
+    ci95_low_log2_tpm   = signif(eff$ci_low, 4),
+    ci95_high_log2_tpm  = signif(eff$ci_high, 4),
     t_statistic     = signif(tst$statistic, 4),
     df              = round(tst$df, 1),
     p_value         = format(tst$p_value, digits = 3, scientific = TRUE),
@@ -180,7 +180,7 @@ p <- ggplot(df, aes(x = .data[["genotype"]], y = .data[["expression"]],
             family = "Arial", fontface = "bold", size = BASE_SIZE / 3.0) +
   labs(
     x = NULL,
-    y = "WT 27\u00B0C-up genes\n(log2 normalized counts)"
+    y = "WT 27\u00B0C-up genes\nlog2(TPM + 1)"
   ) +
   scale_fill_manual(values = GENO_COLORS) +
   scale_x_discrete(labels = c("WT", "*trua1b_1*", "*trua1b_2*")) +
