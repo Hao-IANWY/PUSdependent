@@ -95,6 +95,9 @@ for (g in genotypes) {
     stop("Genotype ", g, ": need >= 2 replicates per temperature")
 
   mat <- as.matrix(raw[, c(treat_s, ctrl_s)])
+  # feature_id 必须挂到矩阵行名上：header 与数据字段数相等时 read.table 不会
+  # 自动提升首列，缺这行 DESeq2 拿到默认整数行名，CSV 第一列就变成行号
+  rownames(mat) <- raw[[gene_col]]
   if (filter_type == "All") {
     keep <- apply(mat, 1, function(x) all(x > 0))
     mat  <- mat[keep, , drop = FALSE]
