@@ -22,6 +22,9 @@
 #   DATA_TSV     数据文件（默认 "WT27up_expr_27C.tsv"）
 #   THEME_R      theme.R 路径（默认上级目录 ../theme.R）
 #   ANALYSIS_R   easyplot_analysis.R 路径（默认 sci-plot skill 目录）
+#   LOG_BASE     对数底数（默认 2；设为 10 可生成 log10 版本）
+#   OUTPUT_STEM  图片文件名主干（默认随 LOG_BASE 自动命名）
+#   STATS_TSV    统计结果文件名（默认随 LOG_BASE 自动命名）
 #
 # 输出：WT27up_expression_violin.pdf/.png/.svg
 #       WT27up_violin_stats.tsv（配对检验完整统计结果）
@@ -41,6 +44,15 @@ theme_r    <- Sys.getenv("THEME_R",    unset = file.path("..", "theme.R"))
 data_tsv   <- Sys.getenv("DATA_TSV",   unset = "WT27up_expr_27C.tsv")
 analysis_r <- Sys.getenv("ANALYSIS_R",
                          unset = "/home/HL/.agents/skills/sci-plot/scripts/easyplot_analysis.R")
+log_base <- as.numeric(Sys.getenv("LOG_BASE", unset = "2"))
+if (!is.finite(log_base) || log_base <= 0 || log_base == 1) {
+  stop("LOG_BASE must be a positive number other than 1")
+}
+log_name <- if (log_base == 10) "log10" else if (log_base == 2) "log2" else paste0("log", log_base)
+default_stem <- if (log_base == 10) "WT27up_expression_violin_log10" else "WT27up_expression_violin"
+default_stats <- if (log_base == 10) "WT27up_violin_stats_log10.tsv" else "WT27up_violin_stats.tsv"
+output_stem <- Sys.getenv("OUTPUT_STEM", unset = default_stem)
+stats_tsv <- Sys.getenv("STATS_TSV", unset = default_stats)
 
 if (!file.exists(theme_r)) stop("theme.R not found: ", theme_r)
 source(theme_r)
@@ -77,8 +89,8 @@ if (any(is.na(df[["genotype"]]))) {
 }
 stopifnot(is.numeric(df[["tpm"]]))
 
-# 表达量：log2(TPM + 1)
-df[["expression"]] <- log2(df[["tpm"]] + 1)
+# 表达量：默认 log2(TPM + 1)，LOG_BASE=10 时为 log10(TPM + 1)
+df[["expression"]] <- log(df[["tpm"]] + 1, base = log_base)
 y_data <- max(df[["expression"]])
 
 # ---- 显著性分析：基因配对 t 检验（WT vs 各突变体），Holm 校正 ----
@@ -126,12 +138,13 @@ stats_out <- do.call(rbind, lapply(seq_along(analysis), function(i) {
     stringsAsFactors = FALSE
   )
 }))
-write.table(stats_out, "WT27up_violin_stats.tsv",
+names(stats_out) <- sub("log2", log_name, names(stats_out))
+write.table(stats_out, stats_tsv,
             sep = "\t", quote = FALSE, row.names = FALSE)
-message("[sci-plot] Wrote: WT27up_violin_stats.tsv")
+message("[sci-plot] Wrote: ", stats_tsv)
 
 # 括号使用用户指定的 ** 标注；按 Holm 校正后 p < 0.01 判定，
-# 精确原始/校正 p 值保存在 WT27up_violin_stats.tsv 中。
+# 精确原始/校正 p 值保存在本次运行输出的统计 TSV 中。
 fmt_p <- function(p) {
   if (p < 0.01) "**" else if (p < 0.05) "*" else "ns"
 }
@@ -145,9 +158,11 @@ GENO_COLORS <- c(
 
 # ---- 显著性括号几何 ----
 # 括号与 ** 也参与 y 轴范围计算，避免注释层把面板顶部额外撑出空白。
-stub     <- 0.45                                   # 括号两端竖线的下探深度
-h1       <- y_data + 0.8                           # WT vs trua1b_1 括号高度
-h2       <- y_data + 2.1                           # WT vs trua1b_2（更高一档）
+# 换对数底数时同步缩放几何距离，保持与 log2 版本相同的视觉布局。
+value_scale <- log(2) / log(log_base)
+stub     <- 0.45 * value_scale                     # 括号两端竖线的下探深度
+h1       <- y_data + 0.8 * value_scale             # WT vs trua1b_1 括号高度
+h2       <- y_data + 2.1 * value_scale             # WT vs trua1b_2（更高一档）
 brk_df <- rbind(
   data.frame(cmp = "WT vs trua1b_1", x = c(1, 1, 2, 2),
              y = c(h1, h1 + stub, h1 + stub, h1)),
@@ -157,7 +172,7 @@ brk_df <- rbind(
 lab_df <- data.frame(
   cmp   = c("WT vs trua1b_1", "WT vs trua1b_2"),
   x     = c(1.5, 2.0),
-  y     = c(h1, h2) + stub + 0.30,
+  y     = c(h1, h2) + stub + 0.30 * value_scale,
   label = vapply(seq_along(analysis),
                  function(i) fmt_p(adj$results[[i]]$p_adjusted), character(1))
 )
@@ -180,11 +195,11 @@ p <- ggplot(df, aes(x = .data[["genotype"]], y = .data[["expression"]],
             family = "Arial", fontface = "bold", size = BASE_SIZE / 3.0) +
   labs(
     x = NULL,
-    y = "WT 27\u00B0C-up genes\nlog2(TPM + 1)"
+    y = sprintf("WT 27\u00B0C-up genes\n%s(TPM + 1)", log_name)
   ) +
   scale_fill_manual(values = GENO_COLORS) +
   scale_x_discrete(labels = c("WT", "*trua1b_1*", "*trua1b_2*")) +
   scale_y_continuous(breaks = ax$breaks, expand = ax$expand)
 
-save_sciplot(p, "WT27up_expression_violin", width = FIG_WIDTH, height = FIG_HEIGHT)
-message("[sci-plot] Done: WT27up_expression_violin.{pdf,png,svg}")
+save_sciplot(p, output_stem, width = FIG_WIDTH, height = FIG_HEIGHT)
+message("[sci-plot] Done: ", output_stem, ".{pdf,png,svg}")
